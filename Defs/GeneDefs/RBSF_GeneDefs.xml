@@ -223,13 +223,16 @@
 		</symbolPack>
 	</GeneDef>
 	
-	<!-- Natural Connection --><!--TODO-->
+	<!-- Natural Connection -->
 
 	<GeneDef>
 		<defName>RBSF_NaturalConnection</defName>
 		<label>natural connection</label>
 		<description>Carriers of this gene are spiritually intertwined with nature. Plants around this pawn will have their growth rate increased. The rate of growth scales with the pawn's Nature Connection stat, which can be increased by equipping certain weapons and items of clothing.</description>
 		<iconPath>UI/GeneIcons/RBSF_NaturalConnection</iconPath>
+		<statFactors>
+			<RBSF_NatureConnection>1.15</RBSF_NatureConnection>
+		</statFactors>
 		<descriptionHyperlinks>
 			<StatDef>RBSF_NatureConnection</StatDef>
 		</descriptionHyperlinks>
@@ -249,7 +252,7 @@
 		</symbolPack>
 	</GeneDef>
 	
-	<!-- Chokevine Grasp --><!--TODO-->
+	<!-- Chokevine Grasp -->
 
 	<GeneDef>
 		<defName>RBSF_ChokevineGrasp</defName>

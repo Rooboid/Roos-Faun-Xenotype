@@ -82,15 +82,6 @@
 				<speed>0</speed>
 				<color>(105, 162, 78)</color>
 			</li>
-						<li>
-				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-				<scale>4</scale>
-				<positionRadius>0.2</positionRadius>
-				<spawnLocType>OnTarget</spawnLocType>
-				<fleckDef>ChokevineFleckA</fleckDef>
-				<rotation>0</rotation>
-				<angle>0</angle>
-			</li>
 		</children>
 	</EffecterDef>
 	
@@ -186,6 +177,20 @@
 		<fadeOutTime>1</fadeOutTime>
 		<growthRate>0</growthRate>
 	</FleckDef>
+	
+	<!-- Nature Growth Fleck: Green sparkle to indicate plants have grown -->
+	
+	  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>NatureGrowthFleck</defName>
+    <graphicData>
+      <texPath>Things/Mote/NatureGrowthFleck/RBSF_GrowthFleck</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.03</solidTime>
+    <fadeOutTime>1</fadeOutTime>
+  </FleckDef>
 	
 	<!-- Fae Vine Mote: Used by VineStun Effect, spawns static vine graphic on source -->
 	
