@@ -8,6 +8,7 @@ namespace Roos_Faun_Xenotype
     public static class RBSF_DefOf
     {
         //Abilites
-        public static FleckDef DustPuff;
+        public static FleckDef NatureGrowthFleck;
+        public static StatDef RBSF_NatureConnection;
     }
 }
