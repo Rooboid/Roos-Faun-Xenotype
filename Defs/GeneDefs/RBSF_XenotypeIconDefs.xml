@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!--============================== Fixed Xenotype Icons ============================-->
+	
+	<!-- Faun Xenotype -->
+	
+	<XenotypeIconDef>
+		<defName>RBF_Faun</defName>
+		<texPath>UI/XenotypeIcons/RBF_Faun</texPath>
+	</XenotypeIconDef>
+	
+	<!--============================== Custom Xenotype Icons ============================-->
+	<!-- Custom Xenotype A -->
+	
+	<XenotypeIconDef>
+		<defName>RBF_CustomXenotypeA</defName>
+		<texPath>UI/XenotypeIcons/Custom/RBF_CustomA</texPath>
+	</XenotypeIconDef>
+	
+	<!-- Custom Xenotype B -->
+	
+	<XenotypeIconDef>
+		<defName>RBF_CustomXenotypeB</defName>
+		<texPath>UI/XenotypeIcons/Custom/RBF_CustomB</texPath>
+	</XenotypeIconDef>
+	
+	<!-- Custom Xenotype C -->
+	
+	<XenotypeIconDef>
+		<defName>RBF_CustomXenotypeC</defName>
+		<texPath>UI/XenotypeIcons/Custom/RBF_CustomC</texPath>
+	</XenotypeIconDef>
+
+</Defs>

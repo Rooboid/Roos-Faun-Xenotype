@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!--============================== Roo's Satyr and Faun Xenotype Patches ============================-->
+	
+	<!--============================== Unguligrade patches ============================-->
+	<!-- Only adds the Unguiligrade Legs gene if it isn't already present i.e. within Roo's Minotaur Xenotypes -->
+	
+	<!-- Unguiligrade Legs body part (For VE) -->
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/GeneDef[defName="RBM_UnguligradeLegs"]</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<HediffDef ParentName="AddedBodyPartBase">
+					<defName>UnguligradeLegPart</defName>
+					<label>unguligrade leg</label>
+					<labelNoun>an unguligrade leg</labelNoun>
+					<description>An unguligrade leg with a cloven hoof, perfect for hotfooting it out of trouble, not-so-perfect for keeping the floor clean.</description>
+					<addedPartProps>
+						<solid>true</solid>
+						<partEfficiency>1</partEfficiency>
+					</addedPartProps>
+					<comps>
+						<li Class="HediffCompProperties_VerbGiver">
+							<tools>
+								<li>
+									<label>hoof</label>
+									<capacities>
+										<li>Blunt</li>
+									</capacities>
+									<power>8</power>
+									<cooldownTime>2</cooldownTime>
+									<soundMeleeHit>Pawn_Melee_Punch_HitPawn</soundMeleeHit>
+									<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+								</li>
+							</tools>
+						</li>
+					</comps>
+					<stages>
+						<li>
+							<minSeverity>0</minSeverity>
+							<statOffsets>
+								<StaggerDurationFactor>-0.13</StaggerDurationFactor>
+								<MoveSpeed>0.1</MoveSpeed>
+								<FilthRate>0.75</FilthRate>
+								<MeleeDodgeChance>2.5</MeleeDodgeChance>
+							</statOffsets>
+						</li>
+					</stages>
+				</HediffDef>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<!-- Unguiligrade Legs gene -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/GeneDef[defName="RBM_UnguligradeLegs"]</xpath>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<GeneDef>
+							<defName>RBM_UnguligradeLegs</defName>
+							<label>unguligrade legs</label>
+							<description>Carriers of this gene are born with sturdy legs and cloven hooves. The fur on their legs extends up to their stomachs and covers their groin.</description>
+							<biostatCpx>1</biostatCpx>
+							<biostatMet>-1</biostatMet>
+							<displayCategory>Miscellaneous</displayCategory>
+							<displayOrderInCategory>330</displayOrderInCategory>
+							<iconPath>UI/GeneIcons/RBM_BovineLegs</iconPath>
+							<iconColor>(0.75, 0.75, 0.75)</iconColor>
+							<symbolPack>
+								<prefixSymbols>
+									<li><symbol>faun</symbol></li>
+									<li><symbol>jog</symbol></li>
+									<li><symbol>bov</symbol></li>
+									<li><symbol>bolt</symbol></li>
+								</prefixSymbols>
+								<suffixSymbols>
+									<li><symbol>yr</symbol></li>
+									<li><symbol>ine</symbol></li>
+									<li><symbol>trotter</symbol></li>
+									<li><symbol>hoof</symbol></li>
+									<li><symbol>ped</symbol></li>
+								</suffixSymbols>
+							</symbolPack>
+							<!-- Thee following will occur if you ARE running vanilla framework expanded. If not, a patch is added to tie the gene buffs to the pawn, as opposed to the body part -->
+							<modExtensions>
+								<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VanillaGenesExpanded.GeneExtension">
+									<hediffsToBodyParts>
+										<li>
+											<hediff>UnguligradeLegPart</hediff>
+											<bodyparts>
+												<li>Leg</li>
+												<li>Leg</li>
+											</bodyparts>
+										</li>
+									</hediffsToBodyParts>
+								</li>
+							</modExtensions>
+						</GeneDef>
+					</value>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThoughtDef[defName="GroinUncovered_Disapproved_Male"]/nullifyingGenes</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[defName="GroinUncovered_Disapproved_Male"]/nullifyingGenes</xpath>
+						<value>
+							<li MayRequire="Ludeon.RimWorld.Biotech">RBM_UnguligradeLegs</li>
+						</value>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThoughtDef[defName="GroinUncovered_Disapproved_Social_Male"]/nullifyingGenes</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[defName="GroinUncovered_Disapproved_Social_Male"]/nullifyingGenes</xpath>
+						<value>
+							<li MayRequire="Ludeon.RimWorld.Biotech">RBM_UnguligradeLegs</li>
+						</value>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThoughtDef[defName="GroinOrChestUncovered_Disapproved_Male"]/nullifyingGenes</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[defName="GroinOrChestUncovered_Disapproved_Male"]/nullifyingGenes</xpath>
+						<value>
+							<li MayRequire="Ludeon.RimWorld.Biotech">RBM_UnguligradeLegs</li>
+						</value>
+					</match>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThoughtDef[defName="GroinOrChestUncovered_Disapproved_Social_Male"]/nullifyingGenes</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[defName="GroinOrChestUncovered_Disapproved_Social_Male"]/nullifyingGenes</xpath>
+						<value>
+							<li MayRequire="Ludeon.RimWorld.Biotech">RBM_UnguligradeLegs</li>
+						</value>
+					</match>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Expanded Framework</li>
+					</mods>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/GeneDef[defName="RBM_UnguligradeLegs"]</xpath>
+						<value>
+							<statOffsets>
+								<StaggerDurationFactor>-0.25</StaggerDurationFactor>
+								<MoveSpeed>0.2</MoveSpeed>
+								<FilthRate>1.5</FilthRate>
+								<MeleeDodgeChance>5</MeleeDodgeChance>
+							</statOffsets>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Expanded Framework</li>
+					</mods>
+					<match Class="PatchOperationFindMod">
+						<mods>
+							<li>Medical System Expansion 2</li>
+						</mods>
+						<match Class="PatchOperationReplace">
+							<xpath>Defs/GeneDef[defName="RBM_UnguligradeLegs"]</xpath>
+							<value>
+			
+								<GeneDef>
+									<defName>RBM_UnguligradeLegs</defName>
+									<label>unguligrade legs</label>
+									<description>Carriers of this gene are born with sturdy legs and cloven hooves. The fur on their legs extends up to their stomachs and covers their groin.</description>
+									<biostatCpx>1</biostatCpx>
+									<biostatMet>-1</biostatMet>
+									<displayCategory>Miscellaneous</displayCategory>
+									<displayOrderInCategory>330</displayOrderInCategory>
+									<iconPath>UI/GeneIcons/RBM_BovineLegs</iconPath>
+									<iconColor>(0.75, 0.75, 0.75)</iconColor>
+									<statOffsets>
+										<StaggerDurationFactor>-0.25</StaggerDurationFactor>
+										<MoveSpeed>0.2</MoveSpeed>
+										<FilthRate>1.5</FilthRate>
+										<MeleeDodgeChance>5</MeleeDodgeChance>
+									</statOffsets>
+									<symbolPack>
+										<prefixSymbols>
+											<li><symbol>faun</symbol></li>
+											<li><symbol>jog</symbol></li>
+											<li><symbol>bov</symbol></li>
+											<li><symbol>bolt</symbol></li>
+										</prefixSymbols>
+										<suffixSymbols>
+											<li><symbol>yr</symbol></li>
+											<li><symbol>ine</symbol></li>
+											<li><symbol>trotter</symbol></li>
+											<li><symbol>hoof</symbol></li>
+											<li><symbol>ped</symbol></li>
+										</suffixSymbols>
+									</symbolPack>
+								</GeneDef>
+							</value>
+						</match>
+					</match>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+	
+	<!--============================== PawnKind Patches ============================-->
+	<!-- Gives DLC / mod-appropriate apparel / mounts to PawnKinds -->
+	
+	<!--Add Ideology apparel to FaunFeral-->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[defName="RBSF_FaunFeral"]</xpath>
+			<value>
+				<apparelRequired>
+					<li>Apparel_Collar</li>
+					<li>Apparel_BodyStrap</li>
+				</apparelRequired>
+			</value>
+		</match>
+	</Operation>
+	
+	<!--============================== Modded Trait Patches ============================-->
+	<!-- Add compatibility with mods that add new traits. Replaces some vanilla traits with these in the BackstoryDefs -->
+	
+	<!-- Vanilla Traits Expanded Traits -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Traits Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+		
+				<!-- Archer Faun -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_ArcherFaun"]/forcedTraits</xpath>
+					<value>
+						<VTE_Ecologist>0</VTE_Ecologist>
+					</value>
+				</li>
+	
+				<!-- Snowy Scout -->
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/BackstoryDef[defName="RBSF_SnowyScout"]/forcedTraits/Nimble</xpath>
+					<value>
+						<VTE_ColdInclined>0</VTE_ColdInclined>
+					</value>
+				</li>
+	
+				<!-- Glaciologist -->
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/BackstoryDef[defName="RBSF_Glaciologist"]/forcedTraits/Industriousness</xpath>
+					<value>
+						<VTE_ColdInclined>0</VTE_ColdInclined>
+						<VTE_Academian>0</VTE_Academian>
+					</value>
+				</li>
+	
+				<!-- Hotelier Chef -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_HotelierChef"]/forcedTraits</xpath>
+					<value>
+						<VTE_Gastronomist>0</VTE_Gastronomist>
+					</value>
+				</li>
+	
+				<!-- Navigator -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_Navigator"]</xpath>
+					<value>
+						<forcedTraits>
+							<VTE_ChildOfSea>0</VTE_ChildOfSea>
+						</forcedTraits>
+					</value>
+				</li>
+	
+				<!-- Lost Child -->
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/BackstoryDef[defName="RBSF_LostChild"]/forcedTraits/RBSF_Uncouth</xpath>
+					<value>
+						<VTE_Brave>0</VTE_Brave>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+		
+	<!-- Consolidated Traits -->
+		
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>[LC] Consolidated Traits</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+		
+				<!--Introvert -->
+		
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_Introvert"]/forcedTraits</xpath>
+					<value>
+						<RCT_Nyctophobe>-1</RCT_Nyctophobe>
+					</value>
+				</li>
+			
+				<!--Saint -->
+			
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_Saint"]/forcedTraits</xpath>
+					<value>
+						<RCT_GreenThumb>0</RCT_GreenThumb>
+					</value>
+				</li>
+			
+				<!--Astronomer -->
+	
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/BackstoryDef[defName="RBSF_Astronomer"]/forcedTraits/NightOwl</xpath>
+					<value>
+						<RCT_Nyctophobe>1</RCT_Nyctophobe>
+					</value>
+				</li>
+			
+				<!--Sacrifice -->
+	
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_Sacrifice"]</xpath>
+					<value>
+						<forcedTraits>
+							<RCT_Rockhound>0</RCT_Rockhound>
+						</forcedTraits>
+					</value>
+				</li>
+			
+				<!--Flower Child -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_FlowerChild"]/forcedTraits</xpath>
+					<value>
+						<RCT_AnimalLover>0</RCT_AnimalLover>
+					</value>
+				</li>
+	
+				<!--Hotelier Builder -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_HotelierBuilder"]/forcedTraits</xpath>
+					<value>
+						<RCT_Builder>0</RCT_Builder>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>

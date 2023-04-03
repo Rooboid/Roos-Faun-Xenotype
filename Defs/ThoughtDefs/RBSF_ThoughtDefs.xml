@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!--====================== Constricted Long (Thought) ======================-->
+	<!-- Thought given to pawns constricted by the ChokevineGrip Ability who then gain the Vine Wrap Long HeDiff -->
+  
+	<ThoughtDef>
+		<defName>RBSFE_ConstrictedThoughtLong</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>RBSF_VineWrapHeDiffLong</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ChokevineThought/RBSF_ChokevineThought</icon>
+		<stages>
+			<li>
+				<label>trapped in vines</label>
+				<description>Ugh! Get these vines off of me!</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+</Defs>

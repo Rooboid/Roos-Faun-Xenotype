@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Faun Scientist - Appears rarely in Ancients and Outlander unions -->
+	
+	<PawnKindDef>
+		<defName>RBSF_FaunScientist</defName>
+		<race>Human</race>
+		<isFighter>True</isFighter>
+		<label>faun scientist</label>
+		<maxGenerationAge>85</maxGenerationAge>
+		<combatPower>65</combatPower>
+		<invNutrition>2.00</invNutrition>
+		<chemicalAddictionChance>0.06</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0.8</backstoryCryptosleepCommonality>
+		<initialWillRange>2~3</initialWillRange>
+		<initialResistanceRange>12~22</initialResistanceRange>
+		<acceptArrestChanceFactor>1.5</acceptArrestChanceFactor>
+		<itemQuality>Good</itemQuality>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesChildhood>
+					<li>FaunOnly</li>
+					<li>Outsider</li>
+					<li>SatyrandFaun</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>Scientist</li>
+					<li>FaunScientist</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>200~1500</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+			<li>Autopistol</li>
+			<li>Revolver</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>Apparel_CollarShirt</li>
+			<li>Apparel_Pants</li>
+			<li MayRequire="VanillaExpanded.VAPPE">VAE_Apparel_LabCoat</li>
+			<li MayRequire="VanillaExpanded.VAPPE">VAE_Headgear_SurgicalMask</li>
+		</apparelRequired>
+		<apparelMoney>400~6000</apparelMoney>
+		<apparelTags>
+			<li>IndustrialBasic</li>
+			<li>IndustrialAdvanced</li>
+			<li>SpacerMilitary</li>
+			<li>BeltDefensePop</li>
+			<li>BeltDefenseTox</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<specificApparelRequirements Inherit="False">
+			<li>
+				<bodyPartGroup>FullHead</bodyPartGroup>
+				<color>(220,220,220)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(220,220,220)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Legs</bodyPartGroup>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(220,220,220)</color>
+			</li>
+		</specificApparelRequirements>
+		<techHediffsMoney>2000~3000</techHediffsMoney>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<techHediffsChance>0.22</techHediffsChance>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">1</RBSF_Faun>
+			</xenotypeChances>
+		</xenotypeSet>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+		<gearHealthRange>1</gearHealthRange>
+		<skills>
+			<li>
+				<skill>Intellectual</skill>
+				<range>6~18</range>
+			</li>
+		</skills>
+		<disallowedTraits>
+			<li>BodyPurist</li>
+		</disallowedTraits>
+	</PawnKindDef>
+	
+	<!-- Feral Faun - Appears in tribes -->
+	
+	<PawnKindDef ParentName="TribalPenitentBase">
+		<defName>RBSF_FaunFeral</defName>
+		<label>feral faun</label>
+		<!-- -->
+		<race>Human</race>
+		<isFighter>True</isFighter>
+		<maxGenerationAge>60</maxGenerationAge>
+		<combatPower>50</combatPower>
+		<invNutrition>0</invNutrition>
+		<chemicalAddictionChance>0.08</chemicalAddictionChance>
+		<initialWillRange>2~3</initialWillRange>
+		<initialResistanceRange>5~18</initialResistanceRange>
+		<itemQuality>Normal</itemQuality>
+		<apparelColor>(35,35,35)</apparelColor>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<gearHealthRange>1</gearHealthRange>
+		<!-- -->
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FaunWild</li>
+					<li>Tribal</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>200~800</weaponMoney>
+		<weaponTags>
+			<li>NeolithicRangedBasic</li>
+			<li>NeolithicRangedDecent</li>
+			<li>NeolithicRangedAdvanced</li>
+		</weaponTags>
+		<xenotypeSet>
+			<xenotypeChances>
+				<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">1</RBSF_Faun>
+			</xenotypeChances>
+		</xenotypeSet>
+	</PawnKindDef>
+	
+</Defs>

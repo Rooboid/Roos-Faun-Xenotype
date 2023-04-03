@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--============================== Satyr and Faun Backstories - Childhood ============================-->
+
+	<!--============================== Clairvoyant ============================-->
+	<!-- Minor buff social and int -->
+
+	<BackstoryDef>
+		<defName>RBSF_Clairvoyant</defName>
+		<title>clairvoyant</title>
+		<titleShort>clairvoyant</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] always seemed to know more about the world than [PAWN_pronoun] should have, at [PAWN_possessive] age. Many villagefolk claimed that [PAWN_pronoun] was a messenger from above, and requested [PAWN_pronoun] insight into their futures.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+			<li>SatyrWild</li>
+			<li>FaunWild</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<disallowedTraits>
+			<Transhumanist>0</Transhumanist>
+			<Brawler>0</Brawler>
+			<PsychicSensitivity>-2</PsychicSensitivity>
+		</disallowedTraits>
+		<requiredWorkTags>
+			<li>Social</li>
+		</requiredWorkTags>
+	</BackstoryDef>
+	
+	<!--============================== Astronomer ============================-->
+	<!-- Great gains in intellectual, but saddled with "slow learner". -->
+
+	<BackstoryDef>
+		<defName>RBSF_Astronomer</defName>
+		<title>astronomer</title>
+		<titleShort>astronomer</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] always had [PAWN_possessive] heads in the clouds, looking at the vast, limitless space above, wishing to be part of it. [PAWN_nameDef] charted the stars for [PAWN_possessive] community, who shunned [PAWN_possessive] work, encouraging [PAWN_objective] to prioritise [PAWN_possessive] home planet before daydreaming about any others.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<SlowLearner>0</SlowLearner>
+			<NightOwl>0</NightOwl>
+		</forcedTraits>
+		<disallowedTraits>
+			<Undergrounder>0</Undergrounder>
+			<DrugDesire>2</DrugDesire>
+			<DrugDesire>1</DrugDesire>
+		</disallowedTraits>
+	</BackstoryDef>
+	
+	<!--============================== Archer ============================-->
+	<!-- Nice shooting gains -->
+
+	<BackstoryDef>
+		<defName>RBSF_ArcherFaun</defName>
+		<title>archer</title>
+		<titleShort>archer</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] learned the art of ranged combat from a young age, with [PAWN_possessive] mother, the clan leader, as [PAWN_possessive] teacher. Part of the clan’s oath was to never bring harm unto animals, and to only use their power against humans, insects and machines.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+			<li>FaunWild</li>
+			<li>SatyrWild</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Ascetic>0</Ascetic>
+		</forcedTraits>
+		<disallowedTraits>
+			<Bloodlust>0</Bloodlust>
+			<Gourmand>0</Gourmand>
+			<Transhumanist>0</Transhumanist>
+		</disallowedTraits>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<workDisables>
+			<li>Hauling</li>
+			<li>Cooking</li>
+		</workDisables>
+	</BackstoryDef>
+
+	<!--============================== Sacrifice ============================-->
+	<!-- Cult of the Faun -->
+
+	<BackstoryDef>
+		<defName>RBSF_Sacrifice</defName>
+		<title>sacrifice</title>
+		<titleShort>sacrifice</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] was captured by a religious sect and due to be offered to their God as a sacrifice. [PAWN_possessive] hopes of a gallant knight coming to [PAWN_possessive] rescue never came to fruition, so [PAWN_nameDef] took matters into [PAWN_possessive] own hooves, and tunnelled [PAWN_possessive] way to freedom.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Mining</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>-3</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>-3</value>
+			</li>
+		</skillGains>
+		<disallowedTraits>
+			<Beauty>-1</Beauty>
+			<Beauty>-2</Beauty>
+			<Immunity>1</Immunity>
+		</disallowedTraits>
+	</BackstoryDef>
+
+	<!--============================== Flower Child ============================-->
+	<!-- Forced violent trait, rare for the Satyr and Fauns, but locked out of some good traits -->
+
+	<BackstoryDef>
+		<defName>RBSF_FlowerChild</defName>
+		<title>flower child</title>
+		<titleShort>hermit</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] was raised by a tribe of compassionate and beautiful fauns, who taught [PAWN_objective] to appreciate, love and nurture the world around [PAWN_objective]. Seeing humans pave over the earth with their monochrome structures gave [PAWN_nameDef] a vendetta against all of mankind.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Plants</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Bloodlust>0</Bloodlust>
+		</forcedTraits>
+		<disallowedTraits>
+			<Kind>0</Kind>
+			<Industriousness>2</Industriousness>
+			<Industriousness>1</Industriousness>
+			<Immunity>1</Immunity>
+			<DrugDesire>2</DrugDesire>
+			<DrugDesire>1</DrugDesire>
+		</disallowedTraits>
+		<requiredWorkTags>
+			<li>PlantWork</li>
+		</requiredWorkTags>
+	</BackstoryDef>
+
+	<!--============================== Literate ============================-->
+	<!-- Good intellectual gains with the detriment of being locked out of quick sleeper and tough -->
+
+	<BackstoryDef>
+		<defName>RBSF_Literate</defName>
+		<title>literate</title>
+		<titleShort>writer</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>Unlike many of [PAWN_possessive] kin, [PAWN_nameDef] learned to read and write from studying stolen human texts. Over time, [PAWN_nameDef] penned fantastical stories about [PAWN_possessive] life in the wilderness, hoping for others to read of [PAWN_possessive] community’s ways.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<disallowedTraits>
+			<SlowLearner>0</SlowLearner>
+			<Tough>0</Tough>
+			<QuickSleeper>0</QuickSleeper>
+		</disallowedTraits>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+	</BackstoryDef>
+	
+	<!--============================== Satyr and Faun Backstories - Adulthood ============================-->
+	
+	<!--============================== Cup Bearer ============================-->
+	<!-- I guess this would buff cooking? -->
+	
+	<BackstoryDef>
+		<defName>RBSF_CupBearer</defName>
+		<title>cup bearer</title>
+		<titleShort>entertainer</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef] was a revered, high-ranked official who entertained and poured drinks for royalty alike during gatherings and soirées.</baseDesc>
+		<bodyTypeMale>Fat</bodyTypeMale>
+		<bodyTypeFemale>Fat</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>5</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<NaturalMood>1</NaturalMood>
+			<Industriousness>-1</Industriousness>
+		</forcedTraits>
+		<possessions>
+			<li>
+				<key>Beer</key>
+				<value>5</value>
+			</li>
+		</possessions>
+	</BackstoryDef>
+	
+		<!--============================== Archer ============================-->
+	<!-- Cute -->
+	
+	<BackstoryDef>
+		<defName>RBSF_GameArcher</defName>
+		<title>archer</title>
+		<titleShort>archer</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef] earned [PAWN_possessive] keep by venturing into the overgrowth and hunting big-game. The sprightly, young children of [PAWN_possessive] community owed their lives to [PAWN_nameDef], for no other hunter could bring home a feast large enough to feed the village like [PAWN_pronoun] could.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>5</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<ShootingAccuracy>1</ShootingAccuracy>
+		</forcedTraits>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</BackstoryDef>
+	
+	<!--============================== Snowy Scout ============================-->
+	<!-- Well-rounded and fantastic traits, but locked out of some really handy ones too -->
+
+	<BackstoryDef>
+		<defName>RBSF_SnowyScout</defName>
+		<title>snowy scout</title>
+		<titleShort>scout</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef], being well-adept at traversing treacherous terrain, patrolled the snowy peaks for stranded travellers. [PAWN_pronoun] filled these poor backpackers with beer and housed them in [PAWN_possessive] log hut until they were fully recovered and ready to move on. \n\n[PAWN_nameDef] grew attached to [PAWN_possessive] lodgers easily, and missed them terribly when they left.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Nimble>0</Nimble>
+			<Kind>0</Kind>
+		</forcedTraits>
+		<disallowedTraits>
+			<Tough>0</Tough>
+			<NaturalMood>2</NaturalMood>
+			<NaturalMood>1</NaturalMood>
+			<Nerves>2</Nerves>
+			<Nerves>1</Nerves>
+		</disallowedTraits>
+		<possessions>
+			<li>
+				<key>MedicineHerbal</key>
+				<value>7</value>
+			</li>
+		</possessions>
+	</BackstoryDef>
+	
+	<!--============================== Dancer ============================-->
+	<!-- Can't do much manual labour. If only there was a "dancing" work type... -->
+
+	<BackstoryDef>
+		<defName>RBSF_Dancer</defName>
+		<title>dancer</title>
+		<titleShort>dancer</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef] performed in a high-end tavern, catering to affluent and oftentimes undercover patrons, from royalty to lawmakers to powerful oligarchs. [PAWN_nameDef] perfected [PAWN_possessive] craft, specialising in native dances that showcased [PAWN_possessive] flexibility and grace. \n\nThe clattering of jewellery would ring within the tavern walls as patrons applauded [PAWN_possessive] talent.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Beauty>1</Beauty>
+			<Nimble>0</Nimble>
+		</forcedTraits>
+		<workDisables>
+			<li>Mining</li>
+			<li>Constructing</li>
+			<li>Cooking</li>
+		</workDisables>
+		<possessions>
+			<li>
+				<key>Gold</key>
+				<value>5</value>
+			</li>
+		</possessions>
+	</BackstoryDef>
+	
+	<!--============================== Glaciologist ============================-->
+	<!-- Amazing gains, especially early-game, but held back by body purist -->
+
+	<BackstoryDef>
+		<defName>RBSF_Glaciologist</defName>
+		<title>glaciologist</title>
+		<titleShort>glaciologist</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef] set up camp in the most bitter nooks of [PAWN_possessive] homeworld to study alpine terrain, creatures and phenomena. [PAWN_pronoun] became a master of survival, and [PAWN_possessive] furry unguligrade legs gave [PAWN_objective] a mighty advantage over [PAWN_possessive] fleshy co-workers.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Mining</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Industriousness>1</Industriousness>
+		</forcedTraits>
+	</BackstoryDef>
+	
+		<!--============================== Hotelier Builder ============================-->
+	<!-- We finish each other's... -->
+
+	<BackstoryDef>
+		<defName>RBSF_HotelierBuilder</defName>
+		<title>hotelier</title>
+		<titleShort>hotelier</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive]'s childhood friend built a hostel for wandering travellers. [PAWN_pronoun] made rooms for guests to rest in, while [PAWN_possessive] companion prepared hearty soups to fill their bellies.</baseDesc>
+		<bodyTypeMale>Hulk</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<NaturalMood>1</NaturalMood>
+		</forcedTraits>
+		<workDisables>
+			<li>Cooking</li>
+		</workDisables>
+	</BackstoryDef>
+	
+	<!--============================== Hotelier Chef ============================-->
+	<!-- ...Sentences -->
+
+	<BackstoryDef>
+		<defName>RBSF_HotelierChef</defName>
+		<title>hostel chef</title>
+		<titleShort>hotelier</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive]'s childhood friend built a hostel for wandering travellers. [PAWN_pronoun] brewed hearty, thick soups to feed the exhausted lodgers, while [PAWN_possessive] friend maintained the place.</baseDesc>
+		<bodyTypeMale>Fat</bodyTypeMale>
+		<bodyTypeFemale>Fat</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Cooking</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<NaturalMood>1</NaturalMood>
+		</forcedTraits>
+		<workDisables>
+			<li>Constructing</li>
+		</workDisables>
+	</BackstoryDef>
+	
+	<!--============================== Feral ============================-->
+	<!-- Used by feral PawnTypes -->
+	
+	<BackstoryDef>
+		<defName>RBSF_Feral</defName>
+		<title>feral</title>
+		<titleShort>feral</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] was captured and reared by pirates like a wild animal.</baseDesc>
+		<bodyTypeMale>Hulk</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+		<spawnCategories>
+			<li>FaunWild</li>
+			<li>SatyrWild</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>9</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>5</value>
+			</li>
+		</skillGains>
+		<disallowedTraits>
+			<NaturalMood>2</NaturalMood>
+			<TooSmart>0</TooSmart>
+		</disallowedTraits>
+		<workDisables>
+			<li>ManualSkilled</li>
+			<li>Social</li>
+			<li>Intellectual</li>
+		</workDisables>
+	</BackstoryDef>
+	
+</Defs>

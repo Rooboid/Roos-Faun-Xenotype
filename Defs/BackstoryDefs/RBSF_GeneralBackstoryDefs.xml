@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--============================== General Backstories - Childhood ============================-->
+	
+	<!--============================== Animal Lover ============================-->
+	<!-- Fantastic gains but incapable of a couple of work types -->
+	
+	<BackstoryDef>
+		<defName>RBSF_AnimalLover</defName>
+		<title>animal lover</title>
+		<titleShort>wild</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] was said to have been raised by wild deer. Because of this affinity with nature, [PAWN_nameDef] always seemed to attract the company of animals, and spent many an hour playing whimsical folk songs for the forest. [PAWN_pronoun] was proficient in playing both the panpipes and the lyre.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+			<li>Tribal</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Ascetic>0</Ascetic>
+		</forcedTraits>
+		<workDisables>
+			<li>Intellectual</li>
+			<li>Cleaning</li>
+		</workDisables>
+	</BackstoryDef>
+	
+	<!--============================== Navigator ============================-->
+	<!-- Great childhood with varied gains -->
+
+	<BackstoryDef>
+		<defName>RBSF_Navigator</defName>
+		<title>navigator</title>
+		<titleShort>navigator</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] was born to a crew of oceanic spelunkers, sailing from shore-to-shore in pursuit of rare treasures. [PAWN_nameDef] wasn’t just a stellar navigator, but also a daring explorer, a fantastic swimmer and a surprisingly-good cook.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+			<li>Tribal</li>
+			<li>Pirate</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Mining</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>PlantWork</li>
+			<li>Animals</li>
+		</workDisables>
+	</BackstoryDef>
+	
+	<!--============================== Lost Child ============================-->
+	<!-- Impressive crafting gain, but lacks ability to do much else -->
+
+	<BackstoryDef>
+		<defName>RBSF_LostChild</defName>
+		<title>lost child</title>
+		<titleShort>lost</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] never saw danger in the unknown. Only adventure. This thrill-seeking and curious approach to life lead the young [PAWN_nameDef into a volcanic forest, never to find [PAWN_possessive] way back home. A small family of wild Satyrs adopted [PAWN_objective], and taught [PAWN_objective] how to weave baskets, rope, clothes and weaponry from natural materials.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<spawnCategories>
+			<li>Tribal</li>
+			<li>FaunWild</li>
+			<li>SatyrWild</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>9</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Social</li>
+			<li>Cooking</li>
+			<li>Intellectual</li>
+			<li>Mining</li>
+		</workDisables>
+		<possessions>
+			<li>
+				<key>WoodLog</key>
+				<value>10</value>
+			</li>
+		</possessions>
+	</BackstoryDef>
+	
+	<!--============================== General Backstories - Adulthood ============================-->
+
+	<!--============================== Firework Maker / Pyrotechnist ============================-->
+	<!-- The minotaur didn't have many- or even any(?) traits that added pyromaniac, so here you go -->
+
+	<BackstoryDef>
+		<defName>RBSF_FireworkMaker</defName>
+		<title>firework maker</title>
+		<titleShort>pyrotechnist</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef] manufactured fireworks for spiritual and religious festivals. Being an alchemist of explosions taught [PAWN_objective] a surprising amount about firearms and other explosives, and thankfully enough, the thrill of the bangs and booms never seemed to get old.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+			<li>FaunScientist</li>
+			<li>Pirate</li>
+			<li>Offworld</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Shooting</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Pyromaniac>0</Pyromaniac>
+		</forcedTraits>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</BackstoryDef>
+
+	<!--============================== Palaeontologist ============================-->
+	<!-- Fleshes out the satyr's presence in the game, with amazing gains -->
+
+	<BackstoryDef>
+		<defName>RBSF_Palaeontologist</defName>
+		<title>palaeontologist</title>
+		<titleShort>palaeontologist</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef]’s passion in palaeontology was propelled by [PAWN_possessive] in satyrs. [PAWN_pronoun] is determined to uncover the origins of the satyr, and find evidence to suggest when they first began to inhabit the Rim. [PAWN_pronoun] underwent this mission alone, and learned a hefty amount about geology and geochronology along the way.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+			<li>FaunScientist</li>
+			<li>Scientist</li>
+			<li>Outlander</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Mining</key>
+				<value>9</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<TooSmart>0</TooSmart>
+		</forcedTraits>
+		<requiredWorkTags>
+			<li>Mining</li>
+		</requiredWorkTags>
+	</BackstoryDef>
+
+	<!--============================== Marine Biologist ============================-->
+	<!-- A weird but fun backstory with great gains -->
+
+	<BackstoryDef>
+		<defName>RBSF_MarineBiologist</defName>
+		<title>marine biologist</title>
+		<titleShort>biologist</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>Deep within the clutches of the oceanic trenches, [PAWN_nameDef] and [PAWN_possessive] crew harvested and performed tests on the creatures that lurked there. The darkness and isolation of being so far away from home somewhat comforted [PAWN_nameDef], for nobody was to know of [PAWN_possessive] sick, cannibalistic tendencies down there…</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<spawnCategories>
+			<li>FaunScientist</li>
+			<li>Scientist</li>
+			<li>Offworld</li>
+			<li>Pirate</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Mining</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Cannibal>0</Cannibal>
+			<Undergrounder>0</Undergrounder>
+		</forcedTraits>
+		<workDisables>
+			<li>ManualDumb</li>
+			<li>Social</li>
+			<li>Constructing</li>
+			<li>Crafting</li>
+		</workDisables>
+	</BackstoryDef>
+	
+	<!--============================== Stargazer ============================-->
+	<!-- An adult continuation of "Astronomer" -->
+
+	<BackstoryDef>
+		<defName>RBSF_Stargazer</defName>
+		<title>stargazer</title>
+		<titleShort>stargazer</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef] lost [PAWN_objective]self in the night sky, dreaming of a horned, starry-eyed race of xenos [PAWN_pronoun] had read about in fairytales. [PAWN_pronoun] charted the stars for [PAWN_possessive] tribe, and told stories of their beauty and splendour.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>Tribal</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Industriousness>-1</Industriousness>
+		</forcedTraits>
+		<workDisables>
+			<li>Mining</li>
+			<li>Violent</li>
+		</workDisables>
+	</BackstoryDef>
+	
+	<!--============================== Potter ============================-->
+	<!-- Incapable of firefighting, but great gains otherwise -->
+
+	<BackstoryDef>
+		<defName>RBSF_FearfulPotter</defName>
+		<title>potter</title>
+		<titleShort>potter</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef] created ceramic models of fauns in a communal, log-built studio nestled within the mountains. [PAWN_nameDef] made a meagre profit from [PAWN_possessive] crafts, despite [PAWN_possessive] talent. A dreadful, unsupervised kiln fire put an end to [PAWN_possessive] studio, and everything in it.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>Offworld</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Mining</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Firefighting</li>
+			<li>Caring</li>
+		</workDisables>
+	</BackstoryDef>
+	
+</Defs>

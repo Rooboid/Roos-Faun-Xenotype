@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--============================== Faun Backstories - Childhood ============================-->
+
+	<!--============================== Introvert ============================-->
+	<!-- Hopefully this backstory only generates on pawns older than six -->
+
+	<BackstoryDef>
+		<defName>RBSF_Introvert</defName>
+		<title>introvert</title>
+		<titleShort>shy</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] wouldn’t even utter a word to [PAWN_possessive] own parents until the age of six; [PAWN_pronoun] was so shy and introverted that anyone who could coax a word out of [PAWN_objective] was considered to be very special.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>FaunOnly</li>
+			<li>FaunWild</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>-8</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Wimp>0</Wimp>
+		</forcedTraits>
+	</BackstoryDef>
+	
+	<!--============================== Urban Faun ============================-->
+	<!-- So-so gains. Could have been an adulthood backstory, but I think it works best as a childhood one -->
+
+	<BackstoryDef>
+		<defName>RBSF_UrbanFaun</defName>
+		<title>urban faun</title>
+		<titleShort>scrounger</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] dreamed of an urban life, and set out to live within a sprawling, human civilisation. [PAWN_pronoun] rummaged through dustbins and dined on curbside leftovers to survive.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>FaunOnly</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Cooking</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-5</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>-3</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Ascetic>0</Ascetic>
+		</forcedTraits>
+	</BackstoryDef>
+
+	<!--============================== Unlikely Bandit ============================-->
+	<!-- A violent faun! -->
+
+	<BackstoryDef>
+		<defName>RBSF_UnlikelyBandit</defName>
+		<title>unlikely bandit</title>
+		<titleShort>bandit</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>[PAWN_nameDef] was found submerged in the river by a group of notorious bandits. Even they didn’t have the heart to neglect this young faun, and so rescued [PAWN_objective] and raised [PAWN_objective] to appreciate their cause.</baseDesc>
+		<bodyTypeMale>Hulk</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+		<spawnCategories>
+			<li>FaunOnly</li>
+			<li>FaunWild</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>6</value>
+			</li>
+			<li>
+				<key>Shooting</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</BackstoryDef>
+
+	<!--============================== Saint ============================-->
+	<!-- Huge medicine gains, but not a very versatile pawn at all -->
+
+	<BackstoryDef>
+		<defName>RBSF_Saint</defName>
+		<title>saint</title>
+		<titleShort>saint</titleShort>
+		<slot>Childhood</slot>
+		<baseDesc>Following a tragic wildfire, [PAWN_nameDef] stood amongst the ashes of its destruction, barely, but still, breathing. Though futile, [PAWN_possessive] bravery in attempting to save the creatures of the forest made spectators see [PAWN_objective] a figure of peace. [PAWN_pronoun] was worshipped as a saint by the pacifist settlers of the forest, who would offer gifts to [PAWN_objective] in exchange for a blessings and guidance.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>FaunOnly</li>
+			<li>FaunWild</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>9</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Beauty>1</Beauty>
+		</forcedTraits>
+		<workDisables>
+			<li>Violent</li>
+			<li>Firefighting</li>
+			<li>Social</li>
+			<li>Constructing</li>
+		</workDisables>
+	</BackstoryDef>
+	
+	<!--============================== Faun Backstories - Adulthood ============================-->
+
+	<!--============================== Osteologist ============================-->
+	<!-- Amazing gains, very few drawbacks -->
+
+	<BackstoryDef>
+		<defName>RBSF_Osteologist</defName>
+		<title>osteologist</title>
+		<titleShort>osteologist</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef]’s unique admiration for the skeletal form lead [PAWN_objective] to become an osteologist. A mere pile of bones is enough for anatomical prodigy [PAWN_nameDef] to give a detailed profile on the diet, decent and health of their owners.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>FaunOnly</li>
+			<li>FaunScientist</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Medicine</key>
+				<value>11</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Mining</key>
+				<value>4</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Psychopath>0</Psychopath>
+		</forcedTraits>
+		<disallowedTraits>
+			<DrugDesire>2</DrugDesire>
+			<DrugDesire>1</DrugDesire>
+		</disallowedTraits>
+	</BackstoryDef>
+	
+	<!--============================== Child Psychologist ============================-->
+	<!-- Fantastic gains but incapable of dumb labour -->
+
+	<BackstoryDef>
+		<defName>RBSF_ChildPsychologist</defName>
+		<title>child psychologist</title>
+		<titleShort>psychologist</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef] ventured into the field of child psychology and conducted behavioural tests on willing families and their young to determine what makes children so…peculiar. While [PAWN_pronoun] enjoys [PAWN_possessive] work, [PAWN_nameDef], knowing what [PAWN_pronoun] knows now, is set on the notion of never having children for [PAWN_objective]self.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>FaunOnly</li>
+			<li>FaunScientist</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Social</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>8</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Nerves>1</Nerves>
+			<Asexual>0</Asexual>
+		</forcedTraits>
+		<workDisables>
+			<li>ManualDumb</li>
+		</workDisables>
+	</BackstoryDef>
+	
+	<!--============================== Apiologist ============================-->
+	<!-- I love bees -->
+
+	<BackstoryDef>
+		<defName>RBSF_Apiologist</defName>
+		<title>apiologist</title>
+		<titleShort>apiologist</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>Sweeter than honey [PAWN_nameDef] had a penchant for bees, and worked as a melittologist. Unlike many in [PAWN_possessive] field, [PAWN_nameDef] studied bees in their natural habitats, and constructed an outdoor testing facility, which [PAWN_pronoun] dubbed the “laborapiary”.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<spawnCategories>
+			<li>FaunScientist</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>7</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Construction</key>
+				<value>5</value>
+			</li>
+
+		</skillGains>
+		<forcedTraits>
+			<Kind>0</Kind>
+		</forcedTraits>
+		<disallowedTraits>
+			<Undergrounder>0</Undergrounder>
+		</disallowedTraits>
+	</BackstoryDef>
+	
+</Defs>

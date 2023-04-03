@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+ <!-- Fae Faction Comms Overrides -->
+ 
+  <FaeFactionGreetingHostile>{NEGOTIATOR_labelShort} stands at the console for a while. \n\n...The calling tone trails off. It appears that {0} did not even attempt to receive your communications.</FaeFactionGreetingHostile>
+  <FaeFactionGreetingHostileAppreciative>{0} reticently answers your call. {0} demands that {NEGOTIATOR_labelShort} proves {NEGOTIATOR_possessive} trustworthiness by releasing prisoners or making peace with {0_objective} at {0_possessive} settlement before the two speak further. \n\nThe communication dissipates into static noise.</FaeFactionGreetingHostileAppreciative>
+  <FaeFactionGreetingWary>{0} responds to {NEGOTIATOR_labelShort}'s call and enquires what {0_pronoun} can do for you.</FaeFactionGreetingWary>
+  <FaeFactionGreetingWarm>{0} happily greets {NEGOTIATOR_labelShort}, and begins to serenade {NEGOTIATOR_objective} with a tune. As much as {NEGOTIATOR_labelShort} appreciates the gesture, {NEGOTIATOR_pronoun} tries to hurry the pleasantries along.</FaeFactionGreetingWarm>
+  <FaeMilitaryAidSent>{0}’s voice cracks as {0_pronoun} reluctantly agrees to send {0_possessive} fighters your way. \n\n{0_pronoun}and prays that they return safely.</FaeMilitaryAidSent>
+  
+  </LanguageData>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!--====================== Adds Xenotypes to Vanilla Factions - Faction Defs ======================-->
+
+	<!-- Outlanders -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+			<value>
+				<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.01</RBSF_Faun>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Beggars (Ideology)-->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef[defName="Beggars"]/xenotypeSet/xenotypeChances</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Beggars"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.07</RBSF_Faun>
+				</value>
+			</match>
+		</match>
+	</Operation>
+	
+	<!-- Pilgrims (Ideology)-->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef[defName="Pilgrims"]/xenotypeSet/xenotypeChances</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Pilgrims"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.07</RBSF_Faun>
+				</value>
+			</match>
+		</match>
+	</Operation>
+	
+	<!-- Pilgrims (Royalty)-->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.010</RBSF_Faun>
+				</value>
+			</match>
+		</match>
+	</Operation>
+	
+	<!--====================== Adds Xenotypes to Modded Factions - Faction Defs ======================-->
+	
+	<!-- VFE - Medieval Factions -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Medieval</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef[defName="VFEM_MedievalFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="VFEM_MedievalFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.025</RBSF_Faun>
+				</value>
+			</match>
+		</match>
+	</Operation>
+	
+	<!-- VFE - Classical Factions (Central) -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Classical</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef[defName="VFEC_CentralRepublic"]/xenotypeSet/xenotypeChances</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="VFEC_CentralRepublic"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.01</RBSF_Faun>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="VFEC_CentralRepublic"]</xpath>
+				<value>
+					<xenotypeSet>
+						<xenotypeChances>
+							<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.01</RBSF_Faun>
+						</xenotypeChances>
+					</xenotypeSet>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<!-- VFE - Classical Factions (Eastern) -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Classical</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef[defName="VFEC_EasternRepublic"]/xenotypeSet/xenotypeChances</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="VFEC_EasternRepublic"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.01</RBSF_Faun>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="VFEC_EasternRepublic"]</xpath>
+				<value>
+					<xenotypeSet>
+						<xenotypeChances>
+							<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.01</RBSF_Faun>
+						</xenotypeChances>
+					</xenotypeSet>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<!-- VFE - Viking Factions -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Vikings</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef[defName="VFEV_VikingBase"]/xenotypeSet/xenotypeChances</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="VFEV_VikingBase"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.1</RBSF_Faun>
+				</value>
+			</match>
+		</match>
+	</Operation>
+	
+	<!--Medieval Overhaul - Forest Faction -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Medieval Overhaul</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef[defName="DankPyon_Forest_Faction"]/xenotypeSet/xenotypeChances</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_Forest_Faction"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.13</RBSF_Faun>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_Forest_Faction"]</xpath>
+				<value>
+					<xenotypeSet>
+						<xenotypeChances>
+							<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.13</RBSF_Faun>
+						</xenotypeChances>
+					</xenotypeSet>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<!--Medieval Overhaul - Witch Faction -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Medieval Overhaul</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef[defName="DankPyon_Witch_Faction"]/xenotypeSet/xenotypeChances</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_Witch_Faction"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.1</RBSF_Faun>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_Witch_Faction"]</xpath>
+				<value>
+					<xenotypeSet>
+						<xenotypeChances>
+							<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.1</RBSF_Faun>
+						</xenotypeChances>
+					</xenotypeSet>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<!-- Elders Faction - Noble House Faction -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Elders Faction</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef[defName="FactionBase_Elders"]/xenotypeSet/xenotypeChances</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="FactionBase_Elders"]/xenotypeSet/xenotypeChances</xpath>
+				<value>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.1</RBSF_Faun>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="FactionBase_Elders"]</xpath>
+				<value>
+					<xenotypeSet>
+						<xenotypeChances>
+							<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.1</RBSF_Faun>
+						</xenotypeChances>
+					</xenotypeSet>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<!--====================== Adds Xenotypes to Vanilla Factions - PawnKind Defs ======================-->
+	
+	<!-- Adds bards and scientists to outlander innocents -->
+		
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="OutlanderFactionBase"]/pawnGroupMakers</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="OutlanderFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
+			<value>
+				<RBSF_FaunScientist>1</RBSF_FaunScientist>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Adds faun scientists to outlander raid -->
+		
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="OutlanderFactionBase"]/pawnGroupMakers</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+			<value>
+				<RBSF_FaunScientist>0.2</RBSF_FaunScientist>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Adds feral satyr/fauns to tribal raids -->
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="TribeBase"]/pawnGroupMakers</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="TribeBase"]/pawnGroupMakers/li[3]/options</xpath>
+			<value>
+				<RBSF_FaunFeral>1</RBSF_FaunFeral>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Adds feral satyr/fauns to tribal raids -->
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="TribeBase"]/pawnGroupMakers</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="TribeBase"]/pawnGroupMakers/li[4]/options</xpath>
+			<value>
+				<RBSF_FaunFeral>1</RBSF_FaunFeral>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

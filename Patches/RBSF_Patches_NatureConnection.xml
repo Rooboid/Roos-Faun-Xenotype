@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!--=========================== Roo's Satyr and Faun Xenotype Patches - Nature Connection =========================-->
+
+	<!--============================== Biotech ============================-->
+	<!-- Patches certain Biotech items to reduce Nature Connection stat -->
+
+	<!-- Mechlord Suit -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="Apparel_MechlordSuit"]/statBases</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Apparel_MechlordSuit"]/statBases</xpath>
+				<value>
+					<RBSF_NatureConnectionOffset>-0.5</RBSF_NatureConnectionOffset>
+				</value>
+			</match>
+			<!-- Do nothing if no match -->
+		</match>
+	</Operation>
+	
+	<!--Tox Pack -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="Apparel_PackTox"]/statBases</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Apparel_PackTox"]/statBases</xpath>
+				<value>
+					<RBSF_NatureConnectionOffset>-1.5</RBSF_NatureConnectionOffset>
+				</value>
+			</match>
+			<!-- Do nothing if no match -->
+		</match>
+	</Operation>
+	
+	<!--Bandwidth Pack -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="Apparel_PackBandwidth"]/statBases</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Apparel_PackBandwidth"]/statBases</xpath>
+				<value>
+					<RBSF_NatureConnectionOffset>-0.2</RBSF_NatureConnectionOffset>
+				</value>
+			</match>
+			<!-- Do nothing if no match -->
+		</match>
+	</Operation>
+	
+	<!--Bandwidth Pack -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="Apparel_PackControl"]/statBases</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Apparel_PackControl"]/statBases</xpath>
+				<value>
+					<RBSF_NatureConnectionOffset>-0.2</RBSF_NatureConnectionOffset>
+				</value>
+			</match>
+			<!-- Do nothing if no match -->
+		</match>
+	</Operation>
+	
+	<!--Toxbomb Launcher -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="Gun_ToxbombLauncher"]/equippedStatOffsets</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Gun_ToxbombLauncher"]/equippedStatOffsets</xpath>
+				<value>
+					<RBSF_NatureConnectionOffset>-1</RBSF_NatureConnectionOffset>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Gun_ToxbombLauncher"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<RBSF_NatureConnection>-1</RBSF_NatureConnection>
+					</equippedStatOffsets>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<!--Flamebow -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="Flamebow"]/equippedStatOffsets</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Flamebow"]/equippedStatOffsets</xpath>
+				<value>
+					<RBSF_NatureConnectionOffset>-0.3</RBSF_NatureConnectionOffset>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Flamebow"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<RBSF_NatureConnection>-0.3</RBSF_NatureConnection>
+					</equippedStatOffsets>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<!--============================== Vanilla ============================-->
+	<!-- Patches certain items to reduce Nature Connection stat -->
+	
+	<!--Incendiary Launcher -->
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Gun_IncendiaryLauncher"]/equippedStatOffsets</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Gun_IncendiaryLauncher"]/equippedStatOffsets</xpath>
+			<value>
+				<RBSF_NatureConnectionOffset>-0.5</RBSF_NatureConnectionOffset>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Gun_IncendiaryLauncher"]</xpath>
+			<value>
+				<equippedStatOffsets>
+					<RBSF_NatureConnection>-0.5</RBSF_NatureConnection>
+				</equippedStatOffsets>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!--Molotovs -->
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov"]/equippedStatOffsets</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov"]/equippedStatOffsets</xpath>
+			<value>
+				<RBSF_NatureConnectionOffset>-0.4</RBSF_NatureConnectionOffset>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov"]</xpath>
+			<value>
+				<equippedStatOffsets>
+					<RBSF_NatureConnection>-0.4</RBSF_NatureConnection>
+				</equippedStatOffsets>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!--============================== Mods ============================-->
+	<!-- Patches certain Modded items to reduce Nature Connection stat -->
+	
+	<!-- VFE - Classical - Wreath -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Classical</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="VFEC_Wreath"]/statBases</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="VFEC_Wreath"]/statBases</xpath>
+				<value>
+					<RBSF_NatureConnectionOffset>0.2</RBSF_NatureConnectionOffset>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="AnimaApparelBase"]</xpath>
+				<value>
+					<statBases>
+						<RBSF_NatureConnectionOffset>0.2</RBSF_NatureConnectionOffset>
+					</statBases>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<!-- Anima Gear - Tribalwear -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Anima Gear</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="Apparel_AnimaTribal"]/statBases</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Apparel_AnimaTribal"]/statBases</xpath>
+				<value>
+					<RBSF_NatureConnectionOffset>0.3</RBSF_NatureConnectionOffset>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Apparel_AnimaTribal"]</xpath>
+				<value>
+					<statBases>
+						<RBSF_NatureConnectionOffset>0.3</RBSF_NatureConnectionOffset>
+					</statBases>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<!-- Anima Gear - Anima Crown -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Anima Gear</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="Apparel_AnimaCrown"]/statBases</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Apparel_AnimaCrown"]/statBases</xpath>
+				<value>
+					<RBSF_NatureConnectionOffset>0.2</RBSF_NatureConnectionOffset>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Apparel_AnimaCrown"]</xpath>
+				<value>
+					<statBases>
+						<RBSF_NatureConnectionOffset>0.2</RBSF_NatureConnectionOffset>
+					</statBases>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<!-- Anima Gear - Anima War Mask -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Anima Gear</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="Apparel_AnimaWarMask"]/statBases</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Apparel_AnimaWarMask"]/statBases</xpath>
+				<value>
+					<RBSF_NatureConnectionOffset>0.2</RBSF_NatureConnectionOffset>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Apparel_AnimaWarMask"]</xpath>
+				<value>
+					<statBases>
+						<RBSF_NatureConnectionOffset>0.2</RBSF_NatureConnectionOffset>
+					</statBases>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<!-- Anima Gear - Anima War Veil -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Anima Gear</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="Apparel_AnimaWarVeil"]/statBases</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Apparel_AnimaWarVeil"]/statBases</xpath>
+				<value>
+					<RBSF_NatureConnectionOffset>0.2</RBSF_NatureConnectionOffset>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Apparel_AnimaWarVeil"]</xpath>
+				<value>
+					<statBases>
+						<RBSF_NatureConnectionOffset>0.2</RBSF_NatureConnectionOffset>
+					</statBases>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<!-- Anima Gear - Anima Staff -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Anima Gear</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[defName="MeleeWeapon_AnimaStaff"]/statBases</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="MeleeWeapon_AnimaStaff"]/statBases</xpath>
+				<value>
+					<RBSF_NatureConnectionOffset>0.6</RBSF_NatureConnectionOffset>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="MeleeWeapon_AnimaStaff"]</xpath>
+				<value>
+					<statBases>
+						<RBSF_NatureConnectionOffset>0.6</RBSF_NatureConnectionOffset>
+					</statBases>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+</Patch>

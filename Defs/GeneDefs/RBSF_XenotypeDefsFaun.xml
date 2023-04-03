@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<XenotypeDef>
+		<defName>RBSF_Faun</defName>
+		<label>faun</label>
+		<!-- Desc -->
+		<description>Fauns and Satyrs may be two sides of the same coin, but their temperaments hold very few similarities. The average Faun whittles away their days slowly and solitarily, requiring little more than the soil beneath their feet to stay content. \n\nCatching a glimpse of a Faun in the wild is akin to seeing a shooting star, as their meek and skittish ways typically confine them deep within the clutches of the forest, where the nature is lush and the streams flow with crystal-clear water. Though tricky to recruit, a willing Faun would be well-suited to providing a colony with beautifully kept fields and bountiful harvests; their meagre need for sleep makes them perfectly adapted for an early-morning start.</description>
+		<descriptionShort>Within the mossy groves of the untouched rim dwell the Fauns; a humanoid relative of the deer that possess a range of cervine features, such as their unique facial markings, bashful personalities and, most prominently, the majestic horns atop their heads.</descriptionShort>
+		<!-- Stats -->
+		<iconPath>UI/XenotypeIcons/RBF_Faun</iconPath>
+		<inheritable>true</inheritable>
+		<nameMaker>NamerPersonFaun_Male</nameMaker>
+		<nameMakerFemale>NamerPersonFaun_Female</nameMakerFemale>
+		<chanceToUseNameMaker>69</chanceToUseNameMaker> <!-- Nice -->
+		<combatPowerFactor>0.7</combatPowerFactor>
+		<soundDefOnImplant>RBSF_FaunImplant</soundDefOnImplant>
+		<genes>
+			<!-- Cosmetic -->
+			<li>RBSF_DeerHorns</li>
+			<li>RBSF_DeerEars</li>
+			<li>RBSF_DeerHead</li>
+			<li>RBSF_HorizontalPupils</li>
+			<li>RBM_UnguligradeLegs</li>
+			<!-- Hair -->
+			<li>Hair_DarkSaturatedReddish</li>
+			<li>Hair_ReddishBrown</li>
+			<li>Hair_DarkBrown</li>
+			<!-- Skills -->
+			<li>AptitudeTerrible_Melee</li>
+			<li>AptitudePoor_Shooting</li>
+			<li>AptitudeStrong_Plants</li>
+			<!-- Misc -->
+			<li>MinTemp_SmallDecrease</li>
+			<li>RBSF_ChokevineGrasp</li>
+			<li>RBSF_NaturalConnection</li>
+			<li>RBSF_Mood_Reclusive</li>
+			<li>MeleeDamage_Weak</li>
+		</genes>
+	</XenotypeDef>
+</Defs>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--====================== Nature Connection Ability Components ======================-->
+	<!-- Music Notes -->
+
+	<!-- VineStun Effect: Used by Faewhip and Anima Rod in RBSFE. Pawn becomes wrapped in vines, but it only looks OK if the pawn is also slowed. -->
+  
+	<EffecterDef>
+		<defName>VineStun_Effect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>1</scale>
+				<ticksBetweenMotes>80</ticksBetweenMotes>
+				<positionLerpFactor>0</positionLerpFactor>
+				<positionRadius>0</positionRadius>
+				<moteDef>Mote_FaeVine</moteDef>
+				<spawnLocType>OnSource</spawnLocType>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>FaeFleckA</fleckDef>
+				<burstCount>1</burstCount>
+				<scale>1~2</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SoundIntermittent</subEffecterClass>
+				<soundDef>RBSF_ChokeVineStun</soundDef>
+				<spawnLocType>OnTarget</spawnLocType>
+				<intermittentSoundInterval><min>30</min><max>160</max></intermittentSoundInterval>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+				<soundDef>RBSF_ChokeVineStun</soundDef>
+				<spawnLocType>OnTarget</spawnLocType>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<!--====================== Horn Ram Effect ======================-->
+	<!-- For Goat / Deer horns -->
+	
+	<!-- Ram Rings Fleck -->
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RBSF_RamRings</defName>
+		<graphicData>
+			<texPath>Things/Mote/RamRings/RBSF_RamRings</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.8</fadeInTime>
+		<solidTime>0.2</solidTime>
+		<fadeOutTime>0.2</fadeOutTime>
+		<growthRate>0.6</growthRate>
+	</FleckDef>
+	
+	<!-- Chokevine Warmup Effecter -->
+	
+		<EffecterDef>
+		<defName>RBSF_ChokeVineWarmupEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<fleckDef>FaeFleckA</fleckDef>
+				<chancePerTick>0.035</chancePerTick>
+				<scale>2~3</scale>
+				<rotationRate>-60~60</rotationRate>
+				<speed>0.6~1.8</speed>
+				<spawnLocType>OnTarget</spawnLocType>
+				<color>(105, 162, 78)</color>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<scale>0.5~1</scale>
+				<positionRadius>0</positionRadius>
+				<spawnLocType>OnTarget</spawnLocType>
+				<fleckDef>RBSF_RamRings</fleckDef>
+				<speed>0</speed>
+				<color>(105, 162, 78)</color>
+			</li>
+						<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<scale>4</scale>
+				<positionRadius>0.2</positionRadius>
+				<spawnLocType>OnTarget</spawnLocType>
+				<fleckDef>ChokevineFleckA</fleckDef>
+				<rotation>0</rotation>
+				<angle>0</angle>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<EffecterDef>
+		<defName>RBSF_HornRamEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>DustPuffThick</fleckDef>
+				<positionLerpFactor>0.6</positionLerpFactor>
+				<chancePerTick>0.2</chancePerTick>
+				<scale>2.5~4.5</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.0</positionRadius>
+				<fleckDef>BodyImpact</fleckDef>
+				<burstCount>1</burstCount>
+				<scale>0.4</scale>
+				<color>(255, 120, 30, 60)</color>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.2</positionRadius>
+				<fleckDef>AirPuff</fleckDef>
+				<burstCount>4~5</burstCount>
+				<speed>0.4~0.8</speed>
+				<scale>0.5~0.8</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.02</positionRadius>
+				<moteDef>Mote_SparkThrownFast</moteDef>
+				<burstCount>4~5</burstCount>
+				<speed>3.3~5</speed>
+				<scale>0.1~0.2</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.02</positionRadius>
+				<fleckDef>DustSlow</fleckDef>
+				<burstCount>1~1</burstCount>
+				<speed>0.3~0.4</speed>
+				<rotationRate>5~10</rotationRate>
+				<scale>0.3~0.5</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.1</positionRadius>
+				<fleckDef>SparkFlash</fleckDef>
+				<burstCount>1~1</burstCount>
+				<scale>0.9~1.3</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+		</children>
+		<offsetTowardsTarget>0.25~0.25</offsetTowardsTarget>
+		<positionRadius>0.1</positionRadius>
+	</EffecterDef>
+  
+	<!-- Fae Fleck: Smoky Explosion -->
+	
+	<FleckDef ParentName="FleckBase">
+		<defName>FaeFleckA</defName>
+		<graphicData>
+			<texPath>Things/Mote/MusicAura/RBSF_MusicAura</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<solidTime>0</solidTime>
+		<fadeInTime>0.1</fadeInTime>
+		<fadeOutTime>0.4</fadeOutTime>
+		<growthRate>1</growthRate>
+	</FleckDef>
+	
+	<!-- ChokeVine Fleck: Vines emerging from a crack in the ground -->
+	
+	<FleckDef ParentName="FleckBase">
+		<defName>ChokevineFleckA</defName>
+		<graphicData>
+			<texPath>Things/Mote/ChokevineCrack/RBSF_ChokevineCrack</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<solidTime>1</solidTime>
+		<fadeInTime>0.5</fadeInTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>0</growthRate>
+	</FleckDef>
+	
+	<!-- Fae Vine Mote: Used by VineStun Effect, spawns static vine graphic on source -->
+	
+	<ThingDef ParentName="MoteBase">
+		<defName>Mote_FaeVine</defName>
+		<graphicData>
+			<texPath>Things/Mote/FaeVines/RBSF_FaeVines</texPath>
+		</graphicData>
+		<thingClass>MoteBubble</thingClass>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.3</fadeInTime>
+			<solidTime>2</solidTime>
+			<fadeOutTime>0.3</fadeOutTime>
+		</mote>
+	</ThingDef>
+
+</Defs>

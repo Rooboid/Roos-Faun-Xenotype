@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--====================== Bases ======================-->
+  
+  <HeadTypeDef Name="DeerAverageFBase" ParentName="AverageBase" Abstract="True">
+    <randomChosen>false</randomChosen>
+    <gender>Female</gender>
+    <requiredGenes>
+      <li>RBSF_DeerHead</li>
+    </requiredGenes>
+  </HeadTypeDef>
+  
+    <HeadTypeDef Name="DeerAverageMBase" ParentName="AverageBase" Abstract="True">
+    <randomChosen>false</randomChosen>
+    <gender>Male</gender>
+    <requiredGenes>
+      <li>RBSF_DeerHead</li>
+    </requiredGenes>
+  </HeadTypeDef>
+  
+  
+	<!--====================== Average Heads ======================-->
+
+  <HeadTypeDef ParentName="DeerAverageFBase">
+    <defName>RBSF_AverageHeadF1</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadA/Female/RBSF_DeerHeadAfemale</graphicPath>
+  </HeadTypeDef>
+  
+    <HeadTypeDef ParentName="DeerAverageMBase">
+    <defName>RBSF_AverageHeadM2</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadB/Male/RBSF_DeerHeadBmale</graphicPath>
+  </HeadTypeDef>
+  
+    <HeadTypeDef ParentName="DeerAverageFBase">
+    <defName>RBSF_AverageHeadF2</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadB/Female/RBSF_DeerHeadBfemale</graphicPath>
+  </HeadTypeDef>
+  
+    <HeadTypeDef ParentName="DeerAverageMBase">
+    <defName>RBSF_AverageHeadM3</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadA/Male/RBSF_DeerHeadAmale</graphicPath>
+  </HeadTypeDef>
+  
+    <HeadTypeDef ParentName="DeerAverageFBase">
+    <defName>RBSF_AverageHeadF3</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadC/Female/RBSF_DeerHeadCfemale</graphicPath>
+  </HeadTypeDef>
+  
+    <HeadTypeDef ParentName="DeerAverageMBase">
+    <defName>RBSF_AverageHeadM1</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadC/Male/RBSF_DeerHeadCmale</graphicPath>
+  </HeadTypeDef>
+  
+      <HeadTypeDef ParentName="DeerAverageFBase">
+    <defName>RBSF_AverageHeadF4</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadD/Female/RBSF_DeerHeadDfemale</graphicPath>
+  </HeadTypeDef>
+  
+    <HeadTypeDef ParentName="DeerAverageMBase">
+    <defName>RBSF_AverageHeadM4</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadD/Male/RBSF_DeerHeadDmale</graphicPath>
+  </HeadTypeDef>
+  
+
+
+</Defs>

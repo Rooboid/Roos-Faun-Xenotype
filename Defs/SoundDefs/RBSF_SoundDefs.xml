@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Horn Ram -->
+	
+	<SoundDef>
+		<defName>RBSF_HornRam</defName>
+		<context>MapOnly</context>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipPath>RBSF_HornRam</clipPath>
+					</li>
+				</grains>
+				<volumeRange>35</volumeRange>
+				<distRange>5~25</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<!--====================== Misc Sounds ======================-->
+	<!-- Sounds that don't fit in other categories -->
+	
+	<!-- Faun Xenotype Sound -->
+
+	<SoundDef>
+		<defName>RBSF_FaunImplant</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RBSF_XenotypeSounds/RBSF_FaunImplant</clipPath>
+					</li>
+				</grains>
+				<volumeRange>50</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<!-- Chokevine Grasp Ability Cast Sound -->
+
+	<SoundDef>
+		<defName>RBSF_ChokeVineCast</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipPath>RBSF_ChokeVines</clipPath>
+					</li>
+				</grains>
+				<volumeRange>50</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<!-- Chokevine Grasp Ability Warmup Sound -->
+
+	<SoundDef>
+		<defName>RBSF_ChokeVineWarmup</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RBSF_ChokeVineWarmup/RBSF_ChokeVineWarmup</clipPath>
+					</li>
+				</grains>
+				<volumeRange>50</volumeRange>
+				<pitchRange>1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<!-- Chokevine Grasp Ability Sustain Sound -->
+
+	<SoundDef>
+		<defName>RBSF_ChokeVineStun</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipPath>RBSF_ChokeVineStun</clipPath>
+					</li>
+				</grains>
+				<volumeRange>30</volumeRange>
+				<pitchRange>0.7~1.3</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+</Defs>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!--====================== Cosmetic Genes ======================-->
+
+	<!-- Deer Ears -->
+	
+	<GeneDef ParentName="GeneEarsBase">
+		<defName>RBSF_DeerEars</defName>
+		<label>deer ears</label>
+		<description>Carriers of this gene possess deer-like ears.</description>
+		<iconPath>UI/GeneIcons/RBSF_DeerEars</iconPath>
+		<graphicData>
+			<graphicPaths>
+				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsA/RBSF_DeerEarsA</li>
+				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsB/RBSF_DeerEarsB</li>
+				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsC/RBSF_DeerEarsC</li>
+				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsD/RBSF_DeerEarsD</li>
+			</graphicPaths>
+			<colorType>Skin</colorType>
+			<layer>PostSkin</layer>
+		</graphicData>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>fau</symbol></li>
+				<li><symbol>cervi</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>dae</symbol></li>
+				<li><symbol>buck</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+	
+	<!-- Deer Horns -->
+
+	<GeneDef ParentName="GeneHeadboneBase">
+		<defName>RBSF_DeerHorns</defName>
+		<label>deer antlers</label>
+		<description>Carriers of this gene sport a pair of antlers atop their heads.</description>
+		<iconPath>UI/GeneIcons/RBSF_DeerHorns</iconPath>
+		<displayOrderInCategory>113</displayOrderInCategory>
+		<graphicData>
+			<graphicPaths>
+				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsA/RBSF_DeerHornsA</li>
+				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsB/RBSF_DeerHornsB</li>
+				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsC/RBSF_DeerHornsC</li>
+				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsD/RBSF_DeerHornsD</li>
+				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsE/RBSF_DeerHornsE</li>
+				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsF/RBSF_DeerHornsF</li>
+				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsG/RBSF_DeerHornsG</li>
+				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsH/RBSF_DeerHornsH</li>
+			</graphicPaths>
+			<color>(255, 255, 255)</color>
+			<layer>PostHeadgear</layer>
+			<drawNorthAfterHair>false</drawNorthAfterHair>
+		</graphicData>
+		<abilities>
+			<li>RBSF_Ability_Ram</li>
+		</abilities>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>bunt</symbol></li>
+				<li><symbol>rein</symbol></li>
+				<li><symbol>cari</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>bou</symbol></li>
+				<li><symbol>deer</symbol></li>
+				<li><symbol>elk</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+	
+	<!-- Deer Head -->
+	
+	<GeneDef ParentName="GeneJawBase">
+		<defName>RBSF_DeerHead</defName>
+		<label>deer head</label>
+		<labelShortAdj>cervid</labelShortAdj>
+		<description>Carriers of this gene possess a cervid head.</description>
+		<iconPath>UI/GeneIcons/RBSF_DeerHead</iconPath>
+		<displayCategory>Cosmetic</displayCategory>
+		<displayOrderInCategory>98</displayOrderInCategory>
+		<iconColor>(0.75, 0.75, 0.75)</iconColor>
+		<minMelanin>2</minMelanin>
+		<forcedHeadTypes>
+			<li>RBSF_AverageHeadF1</li>
+			<li>RBSF_AverageHeadF2</li>
+			<li>RBSF_AverageHeadF3</li>
+			<li>RBSF_AverageHeadF4</li>
+			<li>RBSF_AverageHeadM1</li>
+			<li>RBSF_AverageHeadM2</li>
+			<li>RBSF_AverageHeadM3</li>
+			<li>RBSF_AverageHeadF4</li>
+		</forcedHeadTypes>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>cervi</symbol></li>
+				<li><symbol>stag</symbol></li>
+				<li><symbol>deer</symbol></li>
+				<li><symbol>capreo</symbol></li>
+				<li><symbol>fa</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>ram</symbol></li>
+				<li><symbol>lope</symbol></li>
+				<li><symbol>deer</symbol></li>
+				<li><symbol>elk</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+	
+	<!--====================== Functional Genes ======================-->
+	<!-- Unguligrade Legs (Added via RBSF_Patches, not via genedefs, in case user is using Roo's Minotaur Xenotype-->
+		
+	<!-- 	<GeneDef>
+		<defName>RBM_UnguligradeLegs</defName>
+		<label>unguligrade legs</label>
+		<description>Carriers of this gene are born with sturdy legs and cloven hooves. The fur on their legs extends up to their stomachs and covers their groin.</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<displayOrderInCategory>330</displayOrderInCategory>
+		<iconPath>UI/GeneIcons/RBM_BovineLegs</iconPath>
+		<iconColor>(0.75, 0.75, 0.75)</iconColor>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>faun</symbol></li>
+				<li><symbol>jog</symbol></li>
+				<li><symbol>bov</symbol></li>
+				<li><symbol>bolt</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>yr</symbol></li>
+				<li><symbol>ine</symbol></li>
+				<li><symbol>trotter</symbol></li>
+				<li><symbol>hoof</symbol></li>
+				<li><symbol>ped</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+		<modExtensions>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VanillaGenesExpanded.GeneExtension">
+				<hediffsToBodyParts>
+					<li>
+						<hediff>UnguligradeLegPart</hediff>
+						<bodyparts>
+							<li>Leg</li>
+							<li>Leg</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef> -->
+
+	<!-- Reclusive -->
+		
+	<GeneDef ParentName="GeneMoodBase">
+		<defName>RBSF_Mood_Reclusive</defName>
+		<label>reclusive</label>
+		<description>The mood of these pawns depends on how big or small their faction is; the smaller it is, the happier they will be.</description>
+		<iconPath>UI/GeneIcons/RBSF_Reclusive</iconPath>
+		<displayOrderInCategory>40</displayOrderInCategory>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>1</biostatMet>
+		<forcedTraits>
+			<li>
+				<def>Recluse</def>
+			</li>
+		</forcedTraits>
+		<missingGeneRomanceChanceFactor>0.7</missingGeneRomanceChanceFactor>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>shy</symbol></li>
+				<li><symbol>meek</symbol></li>
+				<li><symbol>reclu</symbol></li>
+				<li><symbol>blush</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>mure</symbol></li>
+				<li><symbol>hide</symbol></li>
+				<li><symbol>peek</symbol></li>
+				<li><symbol>bash</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<!-- Horizontal Pupils -->
+	
+	<GeneDef ParentName="GeneEyeColor">
+		<defName>RBSF_HorizontalPupils</defName>
+		<label>horizontal pupils</label>
+		<description>Carriers of this gene have horizontal, slit-shaped pupils. These widen the carrier's field of view, though it's harder to see what's near, above and below them.</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>0</biostatMet>
+		<displayOrderInCategory>4</displayOrderInCategory>
+		<iconPath>UI/GeneIcons/RBSF_HorizontalPupils</iconPath>
+		<graphicData>
+			<drawScale>0.28</drawScale>
+			<graphicPath>Things/Pawn/Humanlike/Eyes/RBSF_HorizontalPupils/RBSF_HorizontalPupils</graphicPath>
+		</graphicData>
+		<statFactors>
+			<ShootingAccuracyFactor_Long>1.15</ShootingAccuracyFactor_Long>
+			<ShootingAccuracyFactor_Medium>1.08</ShootingAccuracyFactor_Medium>
+			<ShootingAccuracyFactor_Short>0.83</ShootingAccuracyFactor_Short>
+			<MortarMissRadiusFactor>1.5</MortarMissRadiusFactor>
+		</statFactors>
+		<!-- Symbol -->
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>hori</symbol></li>
+				<li><symbol>pano</symbol></li>
+				<li><symbol>prey</symbol></li>
+				<li><symbol>elon</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>gate</symbol></li>
+				<li><symbol>zontal</symbol></li>
+				<li><symbol>rama</symbol></li>
+				<li><symbol>plane</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+	
+	<!-- Natural Connection --><!--TODO-->
+
+	<GeneDef>
+		<defName>RBSF_NaturalConnection</defName>
+		<label>natural connection</label>
+		<description>Carriers of this gene are spiritually intertwined with nature. Plants around this pawn will have their growth rate increased. The rate of growth scales with the pawn's Nature Connection stat, which can be increased by equipping certain weapons and items of clothing.</description>
+		<iconPath>UI/GeneIcons/RBSF_NaturalConnection</iconPath>
+		<descriptionHyperlinks>
+			<StatDef>RBSF_NatureConnection</StatDef>
+		</descriptionHyperlinks>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<displayOrderInCategory>180</displayOrderInCategory>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>gaia</symbol></li>
+				<li><symbol>fae</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>sprout</symbol></li>
+				<li><symbol>yad</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+	
+	<!-- Chokevine Grasp --><!--TODO-->
+
+	<GeneDef>
+		<defName>RBSF_ChokevineGrasp</defName>
+		<label>chokevine grip</label>
+		<description>The user's connection with nature allows them to summon chokevines from the ground below, constricting and slowing an enemy in their grasp. The range of this ability scales with the pawn's Nature Connection stat, which can be increased by equipping certain weapons and items of clothing.</description>
+		<iconPath>UI/GeneIcons/RBSF_ChokevineGrasp</iconPath>
+		<descriptionHyperlinks>
+			<StatDef>RBSF_NatureConnection</StatDef>
+		</descriptionHyperlinks>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<displayCategory>Ability</displayCategory>
+		<displayOrderInCategory>180</displayOrderInCategory>
+		<abilities>
+			<li>RBSF_Ability_ChokevineGrasp</li>
+		</abilities>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>choke</symbol></li>
+				<li><symbol>thorn</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>vine</symbol></li>
+				<li><symbol>grasp</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+</Defs>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--====================== Faun Base ======================-->
+
+	<RulePackDef Name="NamerFaunBase" Abstract="True">
+		<rulePack>
+			<rulesStrings>
+				<li>r_name(p=5)->[firstName] [FaunPre][FaunSuf]</li>
+				<li>r_name(p=4)->[firstName] [FaunSurname]</li>
+				<li>r_name(p=2)->[FaunUni] [FaunSurname]</li>
+				<li>r_name(p=2)->[FaunUni] [FaunPre][FaunSuf]</li>
+				<li>r_name->[FaunFixedName]</li>
+				<li>r_name->[FaunPre][FaunSuf] [FaunPre][FaunSuf]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>FaunSurname->Names/Faun/Surnames_Faun</li>
+				<li>FaunUni->Names/ForenamesUnisex_SatyrandFaun</li>
+				<li>FaunPre->Names/Faun/Prefix_Faun</li>
+				<li>FaunSuf->Names/Faun/Suffix_Faun</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+		
+	<!--====================== Faun Forenames (Male) ======================-->
+		
+	<RulePackDef ParentName="NamerFaunBase">
+		<defName>NamerPersonFaun_Male</defName>
+		<rulePack>
+			<rulesRaw>
+				<li Class="Rule_NamePerson">
+					<keyword>firstName</keyword>
+					<gender>Male</gender>
+				</li>
+				<li Class="Rule_NamePerson">
+					<keyword>FaunFixedName</keyword>
+					<gender>Male</gender>
+				</li>
+			</rulesRaw>
+			<rulesStrings>
+				<li>firstName(p=10)->[SatyrFaunMasc]</li>
+				<li>FaunFixedName->[FaunFixedMasc]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>SatyrFaunMasc->Names/ForenamesMale_SatyrandFaun</li>
+				<li>FaunFixedMasc->Names/Faun/FixedNamesMale_Faun</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+		
+	<!--====================== Faun Forenames (Female) ======================-->
+		
+	<RulePackDef ParentName="NamerFaunBase">
+		<defName>NamerPersonFaun_Female</defName>
+		<rulePack>
+			<rulesRaw>
+				<li Class="Rule_NamePerson">
+					<keyword>firstName</keyword>
+					<gender>Female</gender>
+				</li>
+				<li Class="Rule_NamePerson">
+					<keyword>FaunFixedName</keyword>
+					<gender>Female</gender>
+				</li>
+			</rulesRaw>
+			<rulesStrings>
+				<li>firstName(p=10)->[SatyrFaunFem]</li>
+				<li>FaunFixedName->[FaunFixedFem]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>SatyrFaunFem->Names/ForenamesFemale_SatyrandFaun</li>
+				<li>FaunFixedFem->Names/Faun/FixedNamesFemale_Faun</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+		
+</Defs>
