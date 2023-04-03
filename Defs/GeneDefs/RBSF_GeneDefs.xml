@@ -227,6 +227,7 @@
 
 	<GeneDef>
 		<defName>RBSF_NaturalConnection</defName>
+		<geneClass>Roos_Faun_Xenotype.RBSF_NaturalConnection</geneClass>
 		<label>natural connection</label>
 		<description>Carriers of this gene are spiritually intertwined with nature. Plants around this pawn will have their growth rate increased. The rate of growth scales with the pawn's Nature Connection stat, which can be increased by equipping certain weapons and items of clothing.</description>
 		<iconPath>UI/GeneIcons/RBSF_NaturalConnection</iconPath>

@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RimWorld;
+
+using Verse;
 
 namespace Roos_Faun_Xenotype
 {
-    public class Class1
+    [DefOf]
+    public static class RBSF_DefOf
     {
+        //Abilites
+        public static FleckDef DustPuff;
     }
 }
