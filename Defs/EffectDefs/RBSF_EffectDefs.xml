@@ -60,7 +60,7 @@
 	
 	<!-- Chokevine Warmup Effecter -->
 	
-		<EffecterDef>
+	<EffecterDef>
 		<defName>RBSF_ChokeVineWarmupEffecter</defName>
 		<children>
 			<li>
@@ -180,17 +180,17 @@
 	
 	<!-- Nature Growth Fleck: Green sparkle to indicate plants have grown -->
 	
-	  <FleckDef ParentName="FleckBase_Thrown">
-    <defName>NatureGrowthFleck</defName>
-    <graphicData>
-      <texPath>Things/Mote/NatureGrowthFleck/RBSF_GrowthFleck</texPath>
-      <renderInstanced>true</renderInstanced>
-    </graphicData>
-    <altitudeLayer>MoteOverhead</altitudeLayer>
-    <fadeInTime>0.04</fadeInTime>
-    <solidTime>0.03</solidTime>
-    <fadeOutTime>1</fadeOutTime>
-  </FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>NatureGrowthFleck</defName>
+		<graphicData>
+			<texPath>Things/Mote/NatureGrowthFleck/RBSF_GrowthFleck</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.04</fadeInTime>
+		<solidTime>0.03</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+	</FleckDef>
 	
 	<!-- Fae Vine Mote: Used by VineStun Effect, spawns static vine graphic on source -->
 	
