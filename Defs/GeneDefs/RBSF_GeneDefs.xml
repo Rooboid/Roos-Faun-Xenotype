@@ -197,7 +197,7 @@
 		<displayOrderInCategory>4</displayOrderInCategory>
 		<iconPath>UI/GeneIcons/RBSF_HorizontalPupils</iconPath>
 		<graphicData>
-			<drawScale>0.28</drawScale>
+			<drawScale>0.05</drawScale>
 			<graphicPath>Things/Pawn/Humanlike/Eyes/RBSF_HorizontalPupils/RBSF_HorizontalPupils</graphicPath>
 		</graphicData>
 		<statFactors>

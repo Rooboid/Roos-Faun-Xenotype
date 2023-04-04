@@ -496,6 +496,35 @@
 		</workDisables>
 	</BackstoryDef>
 	
+		<!--============================== Riddler ============================-->
+	<!-- Forces lazy -->
+
+	<BackstoryDef>
+		<defName>RBSF_Riddler</defName>
+		<title>riddler</title>
+		<titleShort>riddler</titleShort>
+		<slot>Adulthood</slot>
+		<baseDesc>[PAWN_nameDef] engineered puzzle boxes and cryptic vessels for patrons to keep their treasures hidden from bandits. [PAWN_nameDef] prides [PAWN_objective]self in [PAWN_possessive] knack for riddles and trickery, but using one’s brain so intensely calls for one-or-two naps a day, just to wind down. Or so [PAWN_nameDef] says.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<spawnCategories>
+			<li>SatyrandFaun</li>
+		</spawnCategories>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>6</value>
+			</li>
+		</skillGains>
+		<forcedTraits>
+			<Industriousness>-1</Industriousness>
+		</forcedTraits>
+	</BackstoryDef>
+	
 	<!--============================== Feral ============================-->
 	<!-- Used by feral PawnTypes -->
 	
