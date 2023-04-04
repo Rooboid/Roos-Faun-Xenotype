@@ -1,5 +1,4 @@
-﻿using Roos_Faun_Xenotype;
-using Verse;
+﻿using Verse;
 
 namespace Roos_Faun_Xenotype
 {

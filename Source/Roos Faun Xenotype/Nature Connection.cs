@@ -1,8 +1,6 @@
 ﻿using RimWorld;
-using System.Collections.Generic;
 using System;
 using Verse;
-using RimWorld.QuestGen;
 
 namespace Roos_Faun_Xenotype
 {

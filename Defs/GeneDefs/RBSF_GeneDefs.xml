@@ -268,7 +268,7 @@
 		<displayCategory>Ability</displayCategory>
 		<displayOrderInCategory>180</displayOrderInCategory>
 		<abilities>
-			<li>RBSF_Ability_ChokevineGrasp</li>
+			<li>RBSF_AbilityChokevineGrasp</li>
 		</abilities>
 		<symbolPack>
 			<prefixSymbols>
