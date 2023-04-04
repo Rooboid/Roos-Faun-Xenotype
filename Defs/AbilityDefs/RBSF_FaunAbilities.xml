@@ -103,7 +103,7 @@
 	</ThingDef>
 	
 	<AbilityDef>
-		<defName>RBSF_Ability_ChokevineGrasp</defName>
+		<defName>RBSF_AbilityChokevineGrasp</defName>
 		<label>chokevine grasp</label>
 		<description>The user rises vines from the ground below a foe, slowing them for a short period of time. The range of this ability scales with the user's Nature Connection stat.</description>
 		<descriptionHyperlinks>
@@ -120,10 +120,11 @@
 			<Ability_Duration>12</Ability_Duration>
 		</statBases>
 		<verbProperties>
-			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<verbClass>Roos_Faun_Xenotype.RBSF_Verb_CastAbilityChokevineGrasp</verbClass>
 			<warmupEffecter>RBSF_ChokeVineWarmupEffecter</warmupEffecter>
 			<range>10</range>
 			<warmupTime>1.8</warmupTime>
+			<drawAimPie>False</drawAimPie>
 			<soundCast>RBSF_ChokeVineCast</soundCast>
 			<targetParams>
 				<canTargetLocations>false</canTargetLocations>
@@ -133,6 +134,7 @@
 			</targetParams>
 		</verbProperties>
 		<comps>
+			<li Class="Roos_Faun_Xenotype.RBSF_CompProperties_AbilityChokevineGrasp"/>
 			<li Class="CompProperties_AbilityFleckOnTarget">
 				<fleckDef>ChokevineFleckA</fleckDef>
 			</li>
@@ -151,7 +153,7 @@
 	<!-- Legacy version of the ability that doesn't use CompProperties_AbilityEffectWithDuration -->
 	
 	<!-- 		<AbilityDef>
-		<defName>RBSF_Ability_ChokevineGraspTEST</defName>
+		<defName>RBSF_AbilityChokevineGraspTEST</defName>
 		<label>chokevine grasp</label>
 		<description>The user rises vines from the ground below a foe, slowing them for a short period of time. The range of this ability scales with the user's Nature Connection stat.</description>
 		<descriptionHyperlinks>

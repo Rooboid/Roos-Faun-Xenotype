@@ -1,5 +1,4 @@
-﻿using Roos_Faun_Xenotype;
-using Verse;
+﻿using Verse;
 
 namespace Roos_Faun_Xenotype
 {
@@ -8,7 +7,7 @@ namespace Roos_Faun_Xenotype
     {
         static RBSF_Faun()
         {
-            Log.Message("FAUN STATIC CONSTRUCTOR lOADED.");
+            Log.Message("FAUN STATIC CONSTRUCTOR LOADED.");
         }
     }
 }
