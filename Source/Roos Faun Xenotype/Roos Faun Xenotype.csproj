@@ -49,10 +49,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Chokevine Grasp.cs" />
+    <Compile Include="DefOfs.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Nature Connection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
