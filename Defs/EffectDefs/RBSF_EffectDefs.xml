@@ -181,7 +181,7 @@
 	<!-- Nature Growth Fleck: Green sparkle to indicate plants have grown -->
 	
 	<FleckDef ParentName="FleckBase_Thrown">
-		<defName>NatureGrowthFleck</defName>
+		<defName>RBSF_NatureGrowthFleck</defName>
 		<graphicData>
 			<texPath>Things/Mote/NatureGrowthFleck/RBSF_GrowthFleck</texPath>
 			<renderInstanced>true</renderInstanced>
