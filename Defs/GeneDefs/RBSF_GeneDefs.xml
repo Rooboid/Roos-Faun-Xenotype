@@ -2,7 +2,6 @@
 <Defs>
 
 	<!--====================== Cosmetic Genes ======================-->
-
 	<!-- Deer Ears -->
 	
 	<GeneDef ParentName="GeneEarsBase">
@@ -17,6 +16,9 @@
 				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsC/RBSF_DeerEarsC</li>
 				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsD/RBSF_DeerEarsD</li>
 			</graphicPaths>
+			<drawOffsetNorth>(0.0, -0.1, 0.0)</drawOffsetNorth>
+			<drawOffsetSouth>(0.0, -0.1, 0.0)</drawOffsetSouth>
+			<drawOffsetEast>(0.0, -0.1, 0.0)</drawOffsetEast>
 			<colorType>Skin</colorType>
 			<layer>PostSkin</layer>
 		</graphicData>
@@ -55,6 +57,9 @@
 			<layer>PostHeadgear</layer>
 			<drawNorthAfterHair>false</drawNorthAfterHair>
 		</graphicData>
+		<exclusionTags>
+			<li>SerenSensors</li>
+		</exclusionTags>
 		<abilities>
 			<li>RBSF_Ability_Ram</li>
 		</abilities>
@@ -197,7 +202,7 @@
 		<displayOrderInCategory>4</displayOrderInCategory>
 		<iconPath>UI/GeneIcons/RBSF_HorizontalPupils</iconPath>
 		<graphicData>
-			<drawScale>0.05</drawScale>
+			<drawScale>0.07</drawScale>
 			<graphicPath>Things/Pawn/Humanlike/Eyes/RBSF_HorizontalPupils/RBSF_HorizontalPupils</graphicPath>
 		</graphicData>
 		<statFactors>

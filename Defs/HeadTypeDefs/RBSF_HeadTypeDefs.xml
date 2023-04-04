@@ -25,41 +25,49 @@
   <HeadTypeDef ParentName="DeerAverageFBase">
     <defName>RBSF_AverageHeadF1</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadA/Female/RBSF_DeerHeadAfemale</graphicPath>
+	<eyeOffsetEastWest>(0.11, 0, 0.19)</eyeOffsetEastWest>
   </HeadTypeDef>
   
     <HeadTypeDef ParentName="DeerAverageMBase">
-    <defName>RBSF_AverageHeadM2</defName>
-    <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadB/Male/RBSF_DeerHeadBmale</graphicPath>
+    <defName>RBSF_AverageHeadM1</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadA/Male/RBSF_DeerHeadAmale</graphicPath>
+	<eyeOffsetEastWest>(0.17, 0, 0.18)</eyeOffsetEastWest>
   </HeadTypeDef>
   
     <HeadTypeDef ParentName="DeerAverageFBase">
     <defName>RBSF_AverageHeadF2</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadB/Female/RBSF_DeerHeadBfemale</graphicPath>
+	<eyeOffsetEastWest>(0.17, 0, 0.19)</eyeOffsetEastWest>
   </HeadTypeDef>
   
     <HeadTypeDef ParentName="DeerAverageMBase">
-    <defName>RBSF_AverageHeadM3</defName>
-    <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadA/Male/RBSF_DeerHeadAmale</graphicPath>
+    <defName>RBSF_AverageHeadM2</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadB/Male/RBSF_DeerHeadBmale</graphicPath>
+	<eyeOffsetEastWest>(0.17, 0, 0.18)</eyeOffsetEastWest>
   </HeadTypeDef>
   
     <HeadTypeDef ParentName="DeerAverageFBase">
     <defName>RBSF_AverageHeadF3</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadC/Female/RBSF_DeerHeadCfemale</graphicPath>
+	<eyeOffsetEastWest>(0.11, 0, 0.19)</eyeOffsetEastWest>
   </HeadTypeDef>
   
     <HeadTypeDef ParentName="DeerAverageMBase">
-    <defName>RBSF_AverageHeadM1</defName>
+    <defName>RBSF_AverageHeadM3</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadC/Male/RBSF_DeerHeadCmale</graphicPath>
+	<eyeOffsetEastWest>(0.17, 0, 0.18)</eyeOffsetEastWest>
   </HeadTypeDef>
   
       <HeadTypeDef ParentName="DeerAverageFBase">
     <defName>RBSF_AverageHeadF4</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadD/Female/RBSF_DeerHeadDfemale</graphicPath>
+	<eyeOffsetEastWest>(0.11, 0, 0.19)</eyeOffsetEastWest>
   </HeadTypeDef>
   
     <HeadTypeDef ParentName="DeerAverageMBase">
     <defName>RBSF_AverageHeadM4</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/RBSF_DeerHeadD/Male/RBSF_DeerHeadDmale</graphicPath>
+	<eyeOffsetEastWest>(0.17, 0, 0.18)</eyeOffsetEastWest>
   </HeadTypeDef>
   
 
