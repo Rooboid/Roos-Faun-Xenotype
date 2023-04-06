@@ -33,7 +33,9 @@ namespace Roos_Faun_Xenotype
             for (var i = 0; i < numRetries; i++) {
 
                 var randLocInRadius = this.pawn.Position + (Rand.InsideUnitCircleVec3 * plantGrowRadius).ToIntVec3();
+                randLocInRadius = randLocInRadius.ClampInsideMap(this.pawn.Map);  
                 var cellThings = randLocInRadius.GetThingList(this.pawn.Map);
+
 
                 //check for plants on cell
                 foreach (var thing in cellThings)
