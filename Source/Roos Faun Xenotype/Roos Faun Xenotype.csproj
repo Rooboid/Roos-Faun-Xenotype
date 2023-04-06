@@ -51,7 +51,7 @@
   <ItemGroup>
     <Compile Include="Chokevine Grasp.cs" />
     <Compile Include="DefOfs.cs" />
-    <Compile Include="Startup.cs" />
+    <Compile Include="Startup Constructor.cs" />
     <Compile Include="Nature Connection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

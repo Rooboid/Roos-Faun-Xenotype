@@ -38,7 +38,7 @@ namespace Roos_Faun_Xenotype
         {
             var adjustedRange = 5 * this.caster.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
             Log.Message("Range adjusted to " + adjustedRange.ToString());
-            this.verbProps.range += this.caster.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
+            this.verbProps.range = adjustedRange;
 
             return base.ValidateTarget(target, showMessages);
 
