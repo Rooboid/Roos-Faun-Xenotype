@@ -6,9 +6,9 @@
 	<!-- Outlanders -->
 
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/FactionDef[defName="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+		<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
 		<match Class="PatchOperationAdd">
-			<xpath>Defs/FactionDef[defName="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+			<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
 			<value>
 				<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.01</RBSF_Faun>
 			</value>
@@ -49,7 +49,7 @@
 		</match>
 	</Operation>
 	
-	<!-- Pilgrims (Royalty)-->
+	<!-- Empire (Royalty)-->
 	
 	<Operation Class="PatchOperationFindMod">
 		<mods>
@@ -75,9 +75,9 @@
 			<li>Vanilla Factions Expanded - Medieval</li>
 		</mods>
 		<match Class="PatchOperationConditional">
-			<xpath>Defs/FactionDef[defName="VFEM_MedievalFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+			<xpath>Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/xenotypeSet/xenotypeChances</xpath>
 			<match Class="PatchOperationAdd">
-				<xpath>Defs/FactionDef[defName="VFEM_MedievalFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+				<xpath>Defs/FactionDef[@Name="VFEM_MedievalFactionBase"]/xenotypeSet/xenotypeChances</xpath>
 				<value>
 					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.025</RBSF_Faun>
 				</value>
@@ -92,15 +92,15 @@
 			<li>Vanilla Factions Expanded - Classical</li>
 		</mods>
 		<match Class="PatchOperationConditional">
-			<xpath>Defs/FactionDef[defName="VFEC_CentralRepublic"]/xenotypeSet/xenotypeChances</xpath>
+			<xpath>Defs/FactionDef[@Name="VFEC_CentralRepublic"]/xenotypeSet/xenotypeChances</xpath>
 			<match Class="PatchOperationAdd">
-				<xpath>Defs/FactionDef[defName="VFEC_CentralRepublic"]/xenotypeSet/xenotypeChances</xpath>
+				<xpath>Defs/FactionDef[@Name="VFEC_CentralRepublic"]/xenotypeSet/xenotypeChances</xpath>
 				<value>
 					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.01</RBSF_Faun>
 				</value>
 			</match>
 			<nomatch Class="PatchOperationAdd">
-				<xpath>Defs/FactionDef[defName="VFEC_CentralRepublic"]</xpath>
+				<xpath>Defs/FactionDef[@Name="VFEC_CentralRepublic"]</xpath>
 				<value>
 					<xenotypeSet>
 						<xenotypeChances>
@@ -146,11 +146,11 @@
 			<li>Vanilla Factions Expanded - Vikings</li>
 		</mods>
 		<match Class="PatchOperationConditional">
-			<xpath>Defs/FactionDef[defName="VFEV_VikingBase"]/xenotypeSet/xenotypeChances</xpath>
+			<xpath>Defs/FactionDef[@Name="VFEV_VikingBase"]/xenotypeSet/xenotypeChances</xpath>
 			<match Class="PatchOperationAdd">
-				<xpath>Defs/FactionDef[defName="VFEV_VikingBase"]/xenotypeSet/xenotypeChances</xpath>
+				<xpath>Defs/FactionDef[@Name="VFEV_VikingBase"]/xenotypeSet/xenotypeChances</xpath>
 				<value>
-					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.1</RBSF_Faun>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.07</RBSF_Faun>
 				</value>
 			</match>
 		</match>
@@ -217,9 +217,9 @@
 			<li>Elders Faction</li>
 		</mods>
 		<match Class="PatchOperationConditional">
-			<xpath>Defs/FactionDef[defName="FactionBase_Elders"]/xenotypeSet/xenotypeChances</xpath>
+			<xpath>Defs/FactionDef[@Name="FactionBase_Elders"]/xenotypeSet/xenotypeChances</xpath>
 			<match Class="PatchOperationAdd">
-				<xpath>Defs/FactionDef[defName="FactionBase_Elders"]/xenotypeSet/xenotypeChances</xpath>
+				<xpath>Defs/FactionDef[@Name="FactionBase_Elders"]/xenotypeSet/xenotypeChances</xpath>
 				<value>
 					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.1</RBSF_Faun>
 				</value>
@@ -239,12 +239,12 @@
 	
 	<!--====================== Adds Xenotypes to Vanilla Factions - PawnKind Defs ======================-->
 	
-	<!-- Adds bards and scientists to outlander innocents -->
+	<!-- Adds faun scientists to outlander innocents -->
 		
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/FactionDef[defName="OutlanderFactionBase"]/pawnGroupMakers</xpath>
+		<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers</xpath>
 		<match Class="PatchOperationAdd">
-			<xpath>Defs/FactionDef[defName="OutlanderFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
+			<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
 			<value>
 				<RBSF_FaunScientist>1</RBSF_FaunScientist>
 			</value>
@@ -254,33 +254,62 @@
 	<!-- Adds faun scientists to outlander raid -->
 		
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/FactionDef[defName="OutlanderFactionBase"]/pawnGroupMakers</xpath>
+		<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers</xpath>
 		<match Class="PatchOperationAdd">
-			<xpath>Defs/FactionDef[defName="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+			<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
 			<value>
-				<RBSF_FaunScientist>0.2</RBSF_FaunScientist>
+				<RBSF_FaunScientist>3</RBSF_FaunScientist>
 			</value>
 		</match>
 	</Operation>
 	
-	<!-- Adds feral satyr/fauns to tribal raids -->
+	<!-- Adds faun genehounds to outlander raid -->
+		
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+			<value>
+				<RBSF_FaunGenehound>1.4</RBSF_FaunGenehound>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Adds faun genehounds to empire raids -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[2]/options</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[2]/options</xpath>
+				<value>
+					<RBSF_FaunGenehound>1</RBSF_FaunGenehound>
+				</value>
+			</match>
+		</match>
+	</Operation>
+	
+	<!-- Adds feral fauns to tribal raids -->
 	
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/FactionDef[defName="TribeBase"]/pawnGroupMakers</xpath>
+		<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers</xpath>
 		<match Class="PatchOperationAdd">
-			<xpath>Defs/FactionDef[defName="TribeBase"]/pawnGroupMakers/li[3]/options</xpath>
+			<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[3]/options</xpath>
 			<value>
 				<RBSF_FaunFeral>1</RBSF_FaunFeral>
 			</value>
 		</match>
 	</Operation>
 	
-	<!-- Adds feral satyr/fauns to tribal raids -->
+	<!-- Adds feral fauns to tribal raids -->
 	
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/FactionDef[defName="TribeBase"]/pawnGroupMakers</xpath>
+		<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers</xpath>
 		<match Class="PatchOperationAdd">
-			<xpath>Defs/FactionDef[defName="TribeBase"]/pawnGroupMakers/li[4]/options</xpath>
+			<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[4]/options</xpath>
 			<value>
 				<RBSF_FaunFeral>1</RBSF_FaunFeral>
 			</value>

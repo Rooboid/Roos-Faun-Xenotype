@@ -210,7 +210,7 @@
 	</Operation>
 	
 	<!--============================== Nature Connection Patches ============================-->
-	<!-- Boosts appropriate stats in relation to the pawn's nature connection stat  -->
+	<!-- Boosts appropriate stats in relation to the pawn's nature connection stat -->
 	
 	<!-- Patch PlantHarvestYield -->
 	
@@ -434,6 +434,41 @@
 					</value>
 				</li>
 			</operations>
+		</match>
+	</Operation>
+	
+	<!-- [Alien/Race] Seren, from Stardust - Add RBSF_SerenAntlers gene, a hybrid of seren and faun horns -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>[Alien/Race] Seren, from Stardust</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<GeneDef ParentName="GeneHeadboneBase">
+					<defName>RBSF_SerenAntlers</defName>
+					<label>seren antlers</label>
+					<description>Seren sensors that have formed into the shape of a faun's antlers.</description>
+					<iconPath>UI/GeneIcons/RBSF_SerenAntlers</iconPath>
+					<displayOrderInCategory>115</displayOrderInCategory>
+					<graphicData>
+						<drawLoc>HeadTop</drawLoc>
+						<graphicPath>Things/Pawn/Humanlike/Horns/RBSF_SerenAntlers/RBSF_SerenAntlers</graphicPath>
+						<color>(255, 255, 255)</color>
+						<layer>PostHeadgear</layer>
+						<drawNorthAfterHair>false</drawNorthAfterHair>
+					</graphicData>
+					<exclusionTags>
+						<li>SerenSensors</li>
+					</exclusionTags>
+					<biostatCpx>0</biostatCpx>
+					<endogeneCategory>Headbone</endogeneCategory>
+					<displayCategory>Cosmetic</displayCategory>
+					<iconColor>(0.75, 0.75, 0.75)</iconColor>
+					<randomChosen>true</randomChosen>
+				</GeneDef>
+			</value>
 		</match>
 	</Operation>
 

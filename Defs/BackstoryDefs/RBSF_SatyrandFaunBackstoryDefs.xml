@@ -10,7 +10,7 @@
 		<title>clairvoyant</title>
 		<titleShort>clairvoyant</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] always seemed to know more about the world than [PAWN_pronoun] should have, at [PAWN_possessive] age. Many villagefolk claimed that [PAWN_pronoun] was a messenger from above, and requested [PAWN_pronoun] insight into their futures.</baseDesc>
+		<baseDesc>[PAWN_nameDef] always seemed to know more about the world than [PAWN_pronoun] should have, at [PAWN_possessive] age. Many villagefolk claimed that [PAWN_pronoun] was a messenger from above, and requested [PAWN_possessive] insight into their futures.</baseDesc>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>
@@ -399,7 +399,7 @@
 		<title>glaciologist</title>
 		<titleShort>glaciologist</titleShort>
 		<slot>Adulthood</slot>
-		<baseDesc>[PAWN_nameDef] set up camp in the most bitter nooks of [PAWN_possessive] homeworld to study alpine terrain, creatures and phenomena. [PAWN_pronoun] became a master of survival, and [PAWN_possessive] furry unguligrade legs gave [PAWN_objective] a mighty advantage over [PAWN_possessive] fleshy co-workers.</baseDesc>
+		<baseDesc>[PAWN_nameDef] set up camp in a bitter nook of [PAWN_possessive] homeworld to study alpine terrain, creatures and phenomena. [PAWN_pronoun] became a master of survival, and [PAWN_possessive] furry unguligrade legs gave [PAWN_objective] a mighty advantage over [PAWN_possessive] fleshy co-workers when scaling hazardous terrain.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>

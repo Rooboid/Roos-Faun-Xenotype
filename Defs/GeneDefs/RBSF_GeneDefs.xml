@@ -10,6 +10,7 @@
 		<description>Carriers of this gene possess deer-like ears.</description>
 		<iconPath>UI/GeneIcons/RBSF_DeerEars</iconPath>
 		<graphicData>
+		<graphicPath Inherit="False"/>
 			<graphicPaths>
 				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsA/RBSF_DeerEarsA</li>
 				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsB/RBSF_DeerEarsB</li>
@@ -18,7 +19,7 @@
 			</graphicPaths>
 			<drawOffsetNorth>(0.0, -0.1, 0.0)</drawOffsetNorth>
 			<drawOffsetSouth>(0.0, -0.1, 0.0)</drawOffsetSouth>
-			<drawOffsetEast>(0.0, -0.1, 0.0)</drawOffsetEast>
+			<drawOffsetEast>(-0.05, 0.0, 0.0)</drawOffsetEast>
 			<colorType>Skin</colorType>
 			<layer>PostSkin</layer>
 		</graphicData>

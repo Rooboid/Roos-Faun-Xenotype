@@ -35,6 +35,7 @@
 			<li>Gun</li>
 			<li>Autopistol</li>
 			<li>Revolver</li>
+			<li>NonLethal</li>
 		</weaponTags>
 		<apparelRequired>
 			<li>Apparel_CollarShirt</li>
@@ -65,6 +66,7 @@
 				<bodyPartGroup>Legs</bodyPartGroup>
 				<apparelLayer>OnSkin</apparelLayer>
 				<color>(220,220,220)</color>
+				<stuff>Synthread</stuff>
 			</li>
 		</specificApparelRequirements>
 		<techHediffsMoney>2000~3000</techHediffsMoney>
@@ -91,6 +93,153 @@
 		<disallowedTraits>
 			<li>BodyPurist</li>
 		</disallowedTraits>
+	</PawnKindDef>
+	
+	<!-- Faun Genehound - An armour-clad faun sent on a research mission to collect rare genpacks from desolate Rims -->
+	
+	<PawnKindDef>
+		<defName>RBSF_FaunGenehound</defName>
+		<race>Human</race>
+		<isFighter>True</isFighter>
+		<label>faun genehound</label>
+		<maxGenerationAge>50</maxGenerationAge>
+		<combatPower>150</combatPower>
+		<chemicalAddictionChance>0.06</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0.7</backstoryCryptosleepCommonality>
+		<initialWillRange>0~1</initialWillRange>
+		<initialResistanceRange>5~30</initialResistanceRange>
+		<itemQuality>Excellent</itemQuality>
+		<forcedHairColor>(231,242,237)</forcedHairColor>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesChildhood>
+					<li>FaunOnly</li>
+					<li>Outsider</li>
+					<li>SatyrandFaun</li>
+				</categoriesChildhood>
+				<categoriesAdulthood>
+					<li>Scientist</li>
+					<li>FaunScientist</li>
+				</categoriesAdulthood>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>2500~3500</weaponMoney>
+		<weaponTags>
+			<li>SpacerGun</li>
+			<li>LaserGun</li>
+			<li>UltratechMelee</li>
+		</weaponTags>
+		<apparelMoney>5000~8500</apparelMoney>
+		<apparelTags>
+			<li>IndustrialAdvanced</li>
+			<li>SpacerMilitary</li>
+			<li>BeltDefensePop</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
+		<specificApparelRequirements Inherit="False">
+			<li>
+				<bodyPartGroup>FullHead</bodyPartGroup>
+				<color>(231,242,237)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(231,242,237)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,175,198)</color>
+				<stuff>Hyperweave</stuff>
+			</li>
+			<li>
+				<bodyPartGroup>Legs</bodyPartGroup>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,175,198)</color>
+				<stuff>Hyperweave</stuff>
+			</li>
+		</specificApparelRequirements>
+		<techHediffsMoney>2000~5600</techHediffsMoney>
+		<techHediffsTags>
+			<li>Advanced</li>
+			<li>AdvancedWeapon</li>
+		</techHediffsTags>
+		    <techHediffsDisallowTags>
+			<li>PainCauser</li>
+			</techHediffsDisallowTags>
+		<techHediffsChance>1</techHediffsChance>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">1</RBSF_Faun>
+			</xenotypeChances>
+		</xenotypeSet>
+		<biocodeWeaponChance>0.2</biocodeWeaponChance>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<gearHealthRange>0.7~1</gearHealthRange>
+		<skills>
+			<li>
+				<skill>Intellectual</skill>
+				<range>6~18</range>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~12</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>6~12</range>
+			</li>
+		</skills>
+		<disallowedTraits>
+			<li>Wimp</li>
+			<li>Nudist</li>
+			<li>BodyPurist</li>
+		</disallowedTraits>
+		<inventoryOptions>
+			<skipChance>0.5</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Genepack</thingDef>
+					<countRange>1~2</countRange>
+				</li>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>10~30</countRange>
+				</li>
+								<li>
+					<thingDef>ArchiteCapsule</thingDef>
+					<countRange>1</countRange>
+				</li>
+								<li>
+					<thingDef>Xenogerm</thingDef>
+					<countRange>1~2</countRange>
+				</li>
+				<li MayRequire="sarg.alphagenes">
+					<thingDef>AG_Alphapack</thingDef>
+					<countRange>1</countRange>
+				</li>
+				<li MayRequire="sarg.alphagenes">
+					<thingDef>AG_Alphapack</thingDef>
+					<countRange>1</countRange>
+				</li>
+				<li MayRequire="sarg.alphagenes">
+					<thingDef>AG_Mixedpack</thingDef>
+					<countRange>0~1</countRange>
+				</li>
+				<li MayRequire="sarg.alphagenes">
+					<thingDef>AG_GeneRemover</thingDef>
+					<countRange>1</countRange>
+				</li>
+				<li MayRequire="sarg.alphagenes">
+					<thingDef>AG_XenotypeInjector</thingDef>
+					<countRange>1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
 	</PawnKindDef>
 	
 	<!-- Feral Faun - Appears in tribes -->

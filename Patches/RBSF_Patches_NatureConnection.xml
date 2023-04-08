@@ -189,7 +189,7 @@
 				</value>
 			</match>
 			<nomatch Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="AnimaApparelBase"]</xpath>
+				<xpath>Defs/ThingDef[defName="VFEC_Wreath"]</xpath>
 				<value>
 					<statBases>
 						<RBSF_NatureConnectionOffset>0.2</RBSF_NatureConnectionOffset>

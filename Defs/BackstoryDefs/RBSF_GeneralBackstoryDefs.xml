@@ -88,7 +88,7 @@
 		<title>lost child</title>
 		<titleShort>lost</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] never saw danger in the unknown. Only adventure. This thrill-seeking and curious approach to life lead the young [PAWN_nameDef into a volcanic forest, never to find [PAWN_possessive] way back home. A small family of wild Satyrs adopted [PAWN_objective], and taught [PAWN_objective] how to weave baskets, rope, clothes and weaponry from natural materials.</baseDesc>
+		<baseDesc>[PAWN_nameDef] never saw danger in the unknown. Only adventure. This thrill-seeking and curious approach to life lead the young [PAWN_nameDef] into a volcanic forest, never to find [PAWN_possessive] way back home. A small family of wild Satyrs adopted [PAWN_objective], and taught [PAWN_objective] how to weave baskets, rope, clothes and weaponry from natural materials.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>

@@ -1,52 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<AbilityCategoryDef>
-		<defName>Faun</defName>
-		<displayOrder>1502</displayOrder>
-	</AbilityCategoryDef>
-  
-  <!-- TODO: Can we make this ability optional? -->
-	<AbilityDef>
+	<!--====================== Horn Ram Ability ======================-->
+	<!-- Shared ability between the faun, satyr and minotaur (if the mod is enabled) -->
+
+	<AbilityDef ParentName="AbilityTouchBase">
 		<defName>RBSF_Ability_Ram</defName>
 		<label>horn ram</label>
-		<description>A last-resort attack wherein the user rams forwards wildly with their horns, causing those in their path to stumble onto the floor.</description>
+		<description>A last-resort attack wherein the user rams forwards wildly with their horns, causing those in their path to stumble onto the floor. The user will experience concussion for a few days.</description>
 		<iconPath>UI/GeneIcons/RBSF_Ability_Ram</iconPath>
 		<cooldownTicksRange>20000</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
 		<displayOrder>300</displayOrder>
-		<category>Faun</category>
 		<warmupStartSound>Longjump_Land</warmupStartSound>
-		<charges>2</charges>
 		<statBases>
 			<Ability_Duration>8</Ability_Duration>
 		</statBases>
 		<verbProperties>
 			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<drawAimPie>false</drawAimPie>
 			<warmupEffecter>RBSF_HornRamEffect</warmupEffecter>
-			<range>1</range>
+			<range>-1</range>
 			<warmupTime>0.1</warmupTime>
 			<soundCast>RBSF_HornRam</soundCast>
 			<targetParams>
-				<canTargetLocations>false</canTargetLocations>
-				<canTargetSelf>false</canTargetSelf>
-				<canTargetAnimals>True</canTargetAnimals>
-				<canTargetPawns>True</canTargetPawns>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetCorpses>false</canTargetCorpses>
+				<canTargetMechs>true</canTargetMechs>
+				<canTargetAnimals>true</canTargetAnimals>
 			</targetParams>
 		</verbProperties>
 		<comps>
-			<li Class="CompProperties_AbilityLaunchProjectile">
-				<projectileDef>Proj_Ram</projectileDef>
-			</li>
 			<li Class="CompProperties_AbilityFleckOnTarget">
 				<fleckDef>BloodSplash</fleckDef>
 			</li>
+			<li Class="CompProperties_AbilityGiveRandomHediff">
+				<options>
+					<li>
+						<hediffDef>RBSF_Floored</hediffDef>
+						<bodyPart>Torso</bodyPart>
+					</li>
+					<li>
+						<hediffDef>RBSF_Floored</hediffDef>
+						<bodyPart>Torso</bodyPart>
+					</li>
+				</options>
+				<allowDuplicates>false</allowDuplicates>
+			</li>
 			<li Class="CompProperties_AbilityGiveHediff">
 				<compClass>CompAbilityEffect_GiveHediff</compClass>
-				<hediffDef>RBSF_Floored</hediffDef>
+				<hediffDef>RBSF_Concussion</hediffDef>
+				<onlyApplyToSelf>true</onlyApplyToSelf>
 			</li>
 		</comps>
 	</AbilityDef>
+	
+	<!-- Floored Hediff - applied to pawns attacked with the horn ram ability -->
 	
 	<HediffDef>
 		<defName>RBSF_Floored</defName>
@@ -78,29 +88,39 @@
 		</stages>
 	</HediffDef>
 	
-	<ThingDef ParentName="BaseBullet">
-		<defName>Proj_Ram</defName>
-		<label>ram</label>
-		<category>Projectile</category>
-		<tickerType>Normal</tickerType>
-		<altitudeLayer>Projectile</altitudeLayer>
-		<useHitPoints>False</useHitPoints>
-		<neverMultiSelect>True</neverMultiSelect>
-		<graphicData>
-			<texPath>Things/Mote/RamRush</texPath>
-			<graphicClass>Graphic_Random</graphicClass>
-			<shaderType>MoteGlow</shaderType>
-			<drawSize>0.85</drawSize>
-		</graphicData>
-		<projectile>
-			<damageDef>Blunt</damageDef>
-			<speed>2000</speed>
-			<damageAmountBase>9</damageAmountBase>
-			<armorPenetrationBase>0.1</armorPenetrationBase>
-			<stoppingPower>5</stoppingPower>
-			<shadowSize>0</shadowSize>
-		</projectile>
-	</ThingDef>
+	<!-- Concussion - Applied to pawns who use the horn ram ability -->
+	
+	<HediffDef ParentName="InjuryBase">
+		<defName>RBSF_Concussion</defName>
+		<label>concussion</label>
+		<labelNoun>concussion</labelNoun>
+		<tendable>false</tendable>
+		<defaultLabelColor>(100, 105, 115)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<everCurableByItem>false</everCurableByItem>
+		<displayWound>false</displayWound>
+		<initialSeverity>1</initialSeverity>
+		<description>This pawn is dizzy and disorientated after a blow to the head. The symptoms will pass after a few days.</description>
+		<comps>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.4</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!--====================== Chokevine Grasp Ability ======================-->
+	<!-- Stuns foes, uses custom verb class and comp -->
 	
 	<AbilityDef>
 		<defName>RBSF_AbilityChokevineGrasp</defName>
@@ -113,7 +133,6 @@
 		<cooldownTicksRange>12000</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
 		<displayOrder>300</displayOrder>
-		<category>Faun</category>
 		<warmupStartSound>RBSF_ChokeVineWarmup</warmupStartSound>
 		<charges>1</charges>
 		<statBases>
@@ -150,51 +169,7 @@
 		</comps>
 	</AbilityDef>
 	
-	<!-- Legacy version of the ability that doesn't use CompProperties_AbilityEffectWithDuration -->
-	
-	<!-- 		<AbilityDef>
-		<defName>RBSF_AbilityChokevineGraspTEST</defName>
-		<label>chokevine grasp</label>
-		<description>The user rises vines from the ground below a foe, slowing them for a short period of time. The range of this ability scales with the user's Nature Connection stat.</description>
-		<descriptionHyperlinks>
-			<StatDef>RBSF_NatureConnection</StatDef>
-		</descriptionHyperlinks>
-		<iconPath>UI/GeneIcons/RBSF_ChokevineGrasp</iconPath>
-		<cooldownTicksRange>12000</cooldownTicksRange>
-		<aiCanUse>true</aiCanUse>
-		<displayOrder>300</displayOrder>
-		<category>Satyr</category>
-		<warmupStartSound>RBSF_ChokeVineWarmup</warmupStartSound>
-		<charges>1</charges>
-			<statBases>
-			<Ability_Duration>8</Ability_Duration>
-		</statBases>
-		<verbProperties>
-			<verbClass>Verb_CastAbilityTouch</verbClass>
-			<warmupEffecter>RBSF_ChokeVineWarmupEffecter</warmupEffecter>
-			<range>10</range>
-			<warmupTime>1.8</warmupTime>
-			<soundCast>RBSF_ChokeVineCast</soundCast>
-			<targetParams>
-				<canTargetLocations>false</canTargetLocations>
-				<canTargetSelf>false</canTargetSelf>
-				<canTargetAnimals>True</canTargetAnimals>
-				<canTargetPawns>True</canTargetPawns>
-			</targetParams>
-		</verbProperties>
-		<comps>
-			<li Class="CompProperties_AbilityFleckOnTarget">
-				<fleckDef>ChokevineFleckA</fleckDef>
-			</li>
-			<li Class="CompProperties_AbilityGiveHediff">
-				<compClass>CompAbilityEffect_GiveHediff</compClass>
-				<hediffDef>RBSF_VineWrapHeDiffLong</hediffDef>
-			</li>
-		</comps>
-	</AbilityDef> -->
-	
-	<!--====================== Vine Wrap HeDiff ======================-->
-	<!-- Constricted -->
+	<!-- Vine Wrap HeDiff - Applied to pawns effected by chokevine grasp -->
 
 	<HediffDef>
 		<defName>RBSF_VineWrapHeDiffLong</defName>
@@ -237,11 +212,35 @@
 						<setMax>0.05</setMax>
 					</li>
 				</capMods>
-<!-- 			<statFactors>
-					<MoveSpeed>-20</MoveSpeed>
-				</statFactors> -->
 			</li>
 		</stages>
 	</HediffDef>
+	
+	<!--====================== Legacy ======================-->
+	<!-- Goes unused -->
+	
+<!-- 	<ThingDef ParentName="BaseBullet">
+		<defName>Proj_Ram</defName>
+		<label>ram</label>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<texPath>Things/Mote/RamRush</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Blunt</damageDef>
+			<speed>2000</speed>
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetrationBase>0.1</armorPenetrationBase>
+			<stoppingPower>5</stoppingPower>
+			<shadowSize>0</shadowSize>
+		</projectile>
+	</ThingDef> -->
   
 </Defs>
