@@ -4,8 +4,10 @@ using Verse;
 
 namespace Roos_Faun_Xenotype
 {
+    
     public class RBSF_CompAbilityEffect_ChokevineGrasp : CompAbilityEffect
     {
+
         public new RBSF_CompProperties_AbilityChokevineGrasp Props
         {
             get
@@ -17,10 +19,29 @@ namespace Roos_Faun_Xenotype
         //Main 'Chokevine Grasp' ability method - ensnares pawns.
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            target.Pawn?.needs?.mood?.thoughts?.memories?.TryGainMemory(RBSF_DefOf.RBSFE_ConstrictedThought);
+
             base.Apply(target, dest);
             
             target.Pawn.stances.stunner.StunFor(Props.stunDuration, this.parent.pawn);
+            //MoteMaker.MakeThoughtBubble(this.parent.pawn, "Textures/Things/Mote/ChokevineThought/RBSF_ChokevineThought.png", true);
+            //Thought thought = ThoughtMaker.MakeThought(RBSF_DefOf.RBSFE_ConstrictedThought);
+            
+
+
         }
+
+        //  Adjusts range to scale with nature connection on gizmo update.
+        public override void OnGizmoUpdate()
+        {
+            base.OnGizmoUpdate();
+
+            var adjustedRange = 5 * this.parent.pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
+            Log.Message("Range adjusted to " + adjustedRange.ToString() + " by gizmo update");
+
+            this.parent.pawn.abilities.GetAbility(RBSF_DefOf.RBSF_AbilityChokevineGrasp).verb.verbProps.range = adjustedRange;
+        }
+
     }
 
     public class RBSF_CompProperties_AbilityChokevineGrasp : CompProperties_AbilityEffect
@@ -34,6 +55,8 @@ namespace Roos_Faun_Xenotype
 
     public class RBSF_Verb_CastAbilityChokevineGrasp : Verb_CastAbilityTouch
     {
+
+        //  Adjusts range to scale with nature connection when casting.
         public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true)
         {
             var adjustedRange = 5 * this.caster.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
@@ -44,4 +67,6 @@ namespace Roos_Faun_Xenotype
 
         }
     }
+
+    
 }
