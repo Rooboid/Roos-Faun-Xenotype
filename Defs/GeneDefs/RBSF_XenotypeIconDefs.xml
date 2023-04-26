@@ -31,5 +31,12 @@
 		<defName>RBF_CustomXenotypeC</defName>
 		<texPath>UI/XenotypeIcons/Custom/RBF_CustomC</texPath>
 	</XenotypeIconDef>
+	
+	<!-- Custom Xenotype D -->
+	
+	<XenotypeIconDef>
+		<defName>RBF_CustomXenotypeD</defName>
+		<texPath>UI/XenotypeIcons/Custom/RBF_CustomD</texPath>
+	</XenotypeIconDef>
 
 </Defs>

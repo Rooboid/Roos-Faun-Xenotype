@@ -315,5 +315,17 @@
 			</value>
 		</match>
 	</Operation>
+	
+		<!-- Adds feral fauns to Pirate raids -->
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[1]/options</xpath>
+			<value>
+				<RBSF_FaunFeral>1.3</RBSF_FaunFeral>
+			</value>
+		</match>
+	</Operation>
 
 </Patch>
