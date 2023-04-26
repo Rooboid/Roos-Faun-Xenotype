@@ -61,9 +61,6 @@
 		<exclusionTags>
 			<li>SerenSensors</li>
 		</exclusionTags>
-		<abilities>
-			<li>RBSF_Ability_Ram</li>
-		</abilities>
 		<symbolPack>
 			<prefixSymbols>
 				<li><symbol>bunt</symbol></li>

@@ -1,124 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<!--====================== Horn Ram Ability ======================-->
-	<!-- Shared ability between the faun, satyr and minotaur (if the mod is enabled) -->
-
-	<AbilityDef ParentName="AbilityTouchBase">
-		<defName>RBSF_Ability_Ram</defName>
-		<label>horn ram</label>
-		<description>A last-resort attack wherein the user rams forwards wildly with their horns, causing those in their path to stumble onto the floor. The user will experience concussion for a few days.</description>
-		<iconPath>UI/GeneIcons/RBSF_Ability_Ram</iconPath>
-		<cooldownTicksRange>20000</cooldownTicksRange>
-		<aiCanUse>true</aiCanUse>
-		<displayOrder>300</displayOrder>
-		<warmupStartSound>Longjump_Land</warmupStartSound>
-		<statBases>
-			<Ability_Duration>8</Ability_Duration>
-		</statBases>
-		<verbProperties>
-			<verbClass>Verb_CastAbilityTouch</verbClass>
-			<drawAimPie>false</drawAimPie>
-			<warmupEffecter>RBSF_HornRamEffect</warmupEffecter>
-			<range>-1</range>
-			<warmupTime>0.1</warmupTime>
-			<soundCast>RBSF_HornRam</soundCast>
-			<targetParams>
-				<canTargetPawns>true</canTargetPawns>
-				<canTargetBuildings>false</canTargetBuildings>
-				<canTargetCorpses>false</canTargetCorpses>
-				<canTargetMechs>true</canTargetMechs>
-				<canTargetAnimals>true</canTargetAnimals>
-			</targetParams>
-		</verbProperties>
-		<comps>
-			<li Class="CompProperties_AbilityFleckOnTarget">
-				<fleckDef>BloodSplash</fleckDef>
-			</li>
-			<li Class="CompProperties_AbilityGiveRandomHediff">
-				<options>
-					<li>
-						<hediffDef>RBSF_Floored</hediffDef>
-						<bodyPart>Torso</bodyPart>
-					</li>
-					<li>
-						<hediffDef>RBSF_Floored</hediffDef>
-						<bodyPart>Torso</bodyPart>
-					</li>
-				</options>
-				<allowDuplicates>false</allowDuplicates>
-			</li>
-			<li Class="CompProperties_AbilityGiveHediff">
-				<compClass>CompAbilityEffect_GiveHediff</compClass>
-				<hediffDef>RBSF_Concussion</hediffDef>
-				<onlyApplyToSelf>true</onlyApplyToSelf>
-			</li>
-		</comps>
-	</AbilityDef>
-	
-	<!-- Floored Hediff - applied to pawns attacked with the horn ram ability -->
-	
-	<HediffDef>
-		<defName>RBSF_Floored</defName>
-		<label>floored by impact</label>
-		<labelNoun>floored</labelNoun>
-		<defaultLabelColor>(100, 105, 115)</defaultLabelColor>
-		<hediffClass>HediffWithComps</hediffClass>
-		<everCurableByItem>false</everCurableByItem>
-		<tendable>false</tendable>
-		<displayWound>false</displayWound>
-		<initialSeverity>1</initialSeverity>
-		<description>This pawn has been knocked to the floor by a forceful impact.</description>
-		<comps>
-			<li Class="HediffCompProperties_Disappears">
-				<showRemainingTime>true</showRemainingTime>
-				<disappearsAfterTicks>500</disappearsAfterTicks>
-			</li>
-			<li Class="HediffCompProperties_DisappearsOnDeath"/>
-		</comps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>Moving</capacity>
-						<offset>-0.95</offset>
-					</li>
-				</capMods>
-			</li>
-		</stages>
-	</HediffDef>
-	
-	<!-- Concussion - Applied to pawns who use the horn ram ability -->
-	
-	<HediffDef ParentName="InjuryBase">
-		<defName>RBSF_Concussion</defName>
-		<label>concussion</label>
-		<labelNoun>concussion</labelNoun>
-		<tendable>false</tendable>
-		<defaultLabelColor>(100, 105, 115)</defaultLabelColor>
-		<hediffClass>HediffWithComps</hediffClass>
-		<everCurableByItem>false</everCurableByItem>
-		<displayWound>false</displayWound>
-		<initialSeverity>1</initialSeverity>
-		<description>This pawn is dizzy and disorientated after a blow to the head. The symptoms will pass after a few days.</description>
-		<comps>
-			<li Class="HediffCompProperties_DisappearsOnDeath"/>
-			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-0.4</severityPerDay>
-			</li>
-		</comps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<offset>-0.15</offset>
-					</li>
-				</capMods>
-			</li>
-		</stages>
-	</HediffDef>
-	
 	<!--====================== Chokevine Grasp Ability ======================-->
 	<!-- Stuns foes, uses custom verb class and comp -->
 	
@@ -216,10 +98,121 @@
 		</stages>
 	</HediffDef>
 	
-	<!--====================== Legacy ======================-->
-	<!-- Goes unused -->
+	<!--====================== Horn Ram Ability (Unused) ======================-->
+	<!-- Shared ability between the faun, satyr and minotaur (if the mod is enabled) -->
+
+	<!-- <AbilityDef ParentName="AbilityTouchBase">
+		<defName>RBSF_Ability_Ram</defName>
+		<label>horn ram</label>
+		<description>A last-resort attack wherein the user rams forwards wildly with their horns, causing those in their path to stumble onto the floor. The user will experience concussion for a few days.</description>
+		<iconPath>UI/GeneIcons/RBSF_Ability_Ram</iconPath>
+		<cooldownTicksRange>20000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<displayOrder>300</displayOrder>
+		<warmupStartSound>Longjump_Land</warmupStartSound>
+		<statBases>
+			<Ability_Duration>8</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<warmupEffecter>RBSF_HornRamEffect</warmupEffecter>
+			<range>-1</range>
+			<warmupTime>0.1</warmupTime>
+			<soundCast>RBSF_HornRam</soundCast>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetCorpses>false</canTargetCorpses>
+				<canTargetMechs>true</canTargetMechs>
+				<canTargetAnimals>true</canTargetAnimals>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>BloodSplash</fleckDef>
+			</li>
+			<li Class="CompProperties_AbilityGiveRandomHediff">
+				<options>
+					<li>
+						<hediffDef>RBSF_Floored</hediffDef>
+						<bodyPart>Torso</bodyPart>
+					</li>
+					<li>
+						<hediffDef>RBSF_Floored</hediffDef>
+						<bodyPart>Torso</bodyPart>
+					</li>
+				</options>
+				<allowDuplicates>false</allowDuplicates>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>RBSF_Concussion</hediffDef>
+				<onlyApplyToSelf>true</onlyApplyToSelf>
+			</li>
+		</comps>
+	</AbilityDef>
 	
-<!-- 	<ThingDef ParentName="BaseBullet">
+	<HediffDef>
+		<defName>RBSF_Floored</defName>
+		<label>floored by impact</label>
+		<labelNoun>floored</labelNoun>
+		<defaultLabelColor>(100, 105, 115)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<everCurableByItem>false</everCurableByItem>
+		<tendable>false</tendable>
+		<displayWound>false</displayWound>
+		<initialSeverity>1</initialSeverity>
+		<description>This pawn has been knocked to the floor by a forceful impact.</description>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+				<disappearsAfterTicks>500</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.95</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="InjuryBase">
+		<defName>RBSF_Concussion</defName>
+		<label>concussion</label>
+		<labelNoun>concussion</labelNoun>
+		<tendable>false</tendable>
+		<defaultLabelColor>(100, 105, 115)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<everCurableByItem>false</everCurableByItem>
+		<displayWound>false</displayWound>
+		<initialSeverity>1</initialSeverity>
+		<description>This pawn is dizzy and disorientated after a blow to the head. The symptoms will pass after a few days.</description>
+		<comps>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.4</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThingDef ParentName="BaseBullet">
 		<defName>Proj_Ram</defName>
 		<label>ram</label>
 		<category>Projectile</category>
