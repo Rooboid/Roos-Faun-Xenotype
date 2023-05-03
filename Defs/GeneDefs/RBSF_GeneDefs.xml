@@ -204,10 +204,11 @@
 			<graphicPath>Things/Pawn/Humanlike/Eyes/RBSF_HorizontalPupils/RBSF_HorizontalPupils</graphicPath>
 		</graphicData>
 		<statFactors>
-			<ShootingAccuracyFactor_Long>1.15</ShootingAccuracyFactor_Long>
-			<ShootingAccuracyFactor_Medium>1.08</ShootingAccuracyFactor_Medium>
-			<ShootingAccuracyFactor_Short>0.83</ShootingAccuracyFactor_Short>
-			<MortarMissRadiusFactor>1.5</MortarMissRadiusFactor>
+						<ShootingAccuracyFactor_Long>1.004</ShootingAccuracyFactor_Long>
+						<ShootingAccuracyFactor_Medium>1.002</ShootingAccuracyFactor_Medium>
+						<ShootingAccuracyFactor_Short>0.96</ShootingAccuracyFactor_Short>
+						<ShootingAccuracyFactor_Touch>0.5</ShootingAccuracyFactor_Touch>
+						<MortarMissRadiusFactor>1.5</MortarMissRadiusFactor>
 		</statFactors>
 		<!-- Symbol -->
 		<symbolPack>

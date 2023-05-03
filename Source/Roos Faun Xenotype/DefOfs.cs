@@ -13,6 +13,6 @@ namespace Roos_Faun_Xenotype
 
         public static AbilityDef RBSF_AbilityChokevineGrasp;
 
-        public static ThoughtDef RBSFE_ConstrictedThought;
+        //public static ThoughtDef RBSFE_ConstrictedThought;
     }
 }

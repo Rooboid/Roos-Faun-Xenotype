@@ -19,7 +19,7 @@ namespace Roos_Faun_Xenotype
         //Main 'Chokevine Grasp' ability method - ensnares pawns.
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            target.Pawn?.needs?.mood?.thoughts?.memories?.TryGainMemory(RBSF_DefOf.RBSFE_ConstrictedThought);
+            //target.Pawn?.needs?.mood?.thoughts?.memories?.TryGainMemory(RBSF_DefOf.RBSFE_ConstrictedThought);
 
             base.Apply(target, dest);
             

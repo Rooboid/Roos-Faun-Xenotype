@@ -81,7 +81,7 @@
 		<title>archer</title>
 		<titleShort>archer</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] learned the art of ranged combat from a young age, with [PAWN_possessive] mother, the clan leader, as [PAWN_possessive] teacher. Part of the clan’s oath was to never bring harm unto animals, and to only use their power against humans, insects and machines.</baseDesc>
+		<baseDesc>[PAWN_nameDef] learned the art of ranged combat from a young age, with [PAWN_possessive] mother, the clan leader, as [PAWN_possessive] teacher. Part of the clan’s oath was to never bring harm unto animals.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>
@@ -156,7 +156,7 @@
 	</BackstoryDef>
 
 	<!--============================== Flower Child ============================-->
-	<!-- Forced violent trait, rare for the Satyr and Fauns, but locked out of some good traits -->
+	<!-- Forced violent trait, rare for the satyr and fauns, but locked out of some good traits -->
 
 	<BackstoryDef>
 		<defName>RBSF_FlowerChild</defName>

@@ -4,15 +4,15 @@
 		<defName>RBSF_Faun</defName>
 		<label>faun</label>
 		<!-- Desc -->
-		<description>Fauns and Satyrs may be two sides of the same coin, but their temperaments hold very few similarities. The average Faun whittles away their days slowly and solitarily, requiring little more than the soil beneath their feet to stay content. \n\nCatching a glimpse of a Faun in the wild is akin to seeing a shooting star, as their meek and skittish ways typically confine them deep within the clutches of the forest, where the nature is lush and the streams flow with crystal-clear water. Though tricky to recruit, a willing Faun would be well-suited to providing a colony with beautifully kept fields and bountiful harvests; their meagre need for sleep makes them perfectly adapted for an early-morning start.</description>
-		<descriptionShort>Within the mossy groves of the untouched rim dwell the Fauns; a humanoid relative of the deer that possess a range of cervine features, such as their unique facial markings, bashful personalities and, most prominently, the majestic horns atop their heads.</descriptionShort>
+		<description>The skittish and mysterious fauns lurk in solitude within the greenest, dreamiest groves of the Rim. Though their bold antlers set them apart from their frisky cousins – the Satyr – but it’s far easier to track down a faun by carefully observing the flora in the vicinity. A sudden bloom in plant-life may indicate the presence of a Faun, but with this, may also indicate that the Faun is ready to use their psychic connection with the earth in self-defence. \n\nFauns are agile, fragile and reluctant to engage in conflict. Despite this, Glitterworld science facilities have been known to vatgrow Fauns for their intelligence and horticultural connection, often dispatching them onto Rimworlds as armour-clad field researchers.</description>
+		<descriptionShort>Within the mossy groves of the untouched rim dwell the fauns; a humanoid relative of the deer that possessess a range of cervine traits, such as unique facial markings, bashful personalities and, most prominently, the majestic antlers atop their heads.</descriptionShort>
 		<!-- Stats -->
 		<iconPath>UI/XenotypeIcons/RBF_Faun</iconPath>
 		<inheritable>true</inheritable>
 		<nameMaker>NamerPersonFaun_Male</nameMaker>
 		<nameMakerFemale>NamerPersonFaun_Female</nameMakerFemale>
 		<chanceToUseNameMaker>69</chanceToUseNameMaker> <!-- Nice -->
-		<combatPowerFactor>0.7</combatPowerFactor>
+		<combatPowerFactor>0.8</combatPowerFactor>
 		<soundDefOnImplant>RBSF_FaunImplant</soundDefOnImplant>
 		<genes>
 			<!-- Cosmetic -->
