@@ -10,7 +10,7 @@ namespace Roos_Faun_Xenotype
         {
             Harmony harmony = new Harmony("rimworld.mod.rooboid.faun");
             harmony.PatchAll();
-            Log.Message("FAUN STATIC CONSTRUCTOR LOADED.");
+            Log.Message("Roos_Faun_Xenotype Mod Harmony Patches Loaded");
         }
     }
 }
