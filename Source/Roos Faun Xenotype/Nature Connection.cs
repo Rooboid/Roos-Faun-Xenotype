@@ -27,7 +27,7 @@ namespace Roos_Faun_Xenotype
             var plantGrowRadius = 5.5f;
             var numRetries = 20;
 
-            Log.Message("Natural Connection scanning");
+            //Log.Message("Natural Connection scanning");
 
             //tries a random location around the pawn 'numRetries' times - if it finds a plant, progress its growth by 1 day.
             for (var i = 0; i < numRetries; i++) {
@@ -65,7 +65,7 @@ namespace Roos_Faun_Xenotype
                     FleckMaker.Static(plant.Position, plant.Map, RBSF_DefOf.RBSF_NatureGrowthFleck, 2f);
                     this.pawn.Map.mapDrawer.MapMeshDirty(plant.Position, MapMeshFlag.Things);
 
-                    Log.Message("Plant found at " + plant.Position + " in iteration " + i);
+                    //Log.Message("Plant found at " + plant.Position + " in iteration " + i);
                     return;
                     
                 }
