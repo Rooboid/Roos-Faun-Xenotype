@@ -85,18 +85,18 @@
 		</match>
 	</Operation>
 	
-	<!-- VFE - Classical Factions (Central) -->
+	<!-- VFE - Classical Factions -->
 
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Vanilla Factions Expanded - Classical</li>
 		</mods>
 		<match Class="PatchOperationConditional">
-			<xpath>Defs/FactionDef[@Name="VFEC_CentralRepublic"]/xenotypeSet/xenotypeChances</xpath>
+			<xpath>Defs/FactionDef[@Name="VFEC_RepublicBase"]/xenotypeSet/xenotypeChances</xpath>
 			<match Class="PatchOperationAdd">
-				<xpath>Defs/FactionDef[@Name="VFEC_CentralRepublic"]/xenotypeSet/xenotypeChances</xpath>
+				<xpath>Defs/FactionDef[@Name="VFEC_RepublicBase"]/xenotypeSet/xenotypeChances</xpath>
 				<value>
-					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.01</RBSF_Faun>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.04</RBSF_Faun>
 				</value>
 			</match>
 			<nomatch Class="PatchOperationAdd">
@@ -104,34 +104,7 @@
 				<value>
 					<xenotypeSet>
 						<xenotypeChances>
-							<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.01</RBSF_Faun>
-						</xenotypeChances>
-					</xenotypeSet>
-				</value>
-			</nomatch>
-		</match>
-	</Operation>
-	
-	<!-- VFE - Classical Factions (Eastern) -->
-
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Vanilla Factions Expanded - Classical</li>
-		</mods>
-		<match Class="PatchOperationConditional">
-			<xpath>Defs/FactionDef[defName="VFEC_EasternRepublic"]/xenotypeSet/xenotypeChances</xpath>
-			<match Class="PatchOperationAdd">
-				<xpath>Defs/FactionDef[defName="VFEC_EasternRepublic"]/xenotypeSet/xenotypeChances</xpath>
-				<value>
-					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.01</RBSF_Faun>
-				</value>
-			</match>
-			<nomatch Class="PatchOperationAdd">
-				<xpath>Defs/FactionDef[defName="VFEC_EasternRepublic"]</xpath>
-				<value>
-					<xenotypeSet>
-						<xenotypeChances>
-							<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.01</RBSF_Faun>
+							<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.04</RBSF_Faun>
 						</xenotypeChances>
 					</xenotypeSet>
 				</value>
@@ -224,16 +197,6 @@
 					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.1</RBSF_Faun>
 				</value>
 			</match>
-			<nomatch Class="PatchOperationAdd">
-				<xpath>Defs/FactionDef[defName="FactionBase_Elders"]</xpath>
-				<value>
-					<xenotypeSet>
-						<xenotypeChances>
-							<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.1</RBSF_Faun>
-						</xenotypeChances>
-					</xenotypeSet>
-				</value>
-			</nomatch>
 		</match>
 	</Operation>
 	

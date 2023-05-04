@@ -380,10 +380,12 @@
 	
 				<!-- Lost Child -->
 
-				<li Class="PatchOperationReplace">
-					<xpath>Defs/BackstoryDef[defName="RBSF_LostChild"]/forcedTraits/RBSF_Uncouth</xpath>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_LostChild"]</xpath>
 					<value>
-						<VTE_Brave>0</VTE_Brave>
+						<forcedTraits>
+							<VTE_Brave>0</VTE_Brave>
+						</forcedTraits>
 					</value>
 				</li>
 			</operations>
