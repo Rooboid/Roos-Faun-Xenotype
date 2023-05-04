@@ -1,4 +1,5 @@
 ﻿using Verse;
+using HarmonyLib;
 
 namespace Roos_Faun_Xenotype
 {
@@ -7,6 +8,8 @@ namespace Roos_Faun_Xenotype
     {
         static RBSF_Faun()
         {
+            Harmony harmony = new Harmony("rimworld.mod.rooboid.faun");
+            harmony.PatchAll();
             Log.Message("FAUN STATIC CONSTRUCTOR LOADED.");
         }
     }
