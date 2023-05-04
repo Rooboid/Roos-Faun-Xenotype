@@ -254,7 +254,7 @@
 		<title>charitable</title>
 		<titleShort>charitable</titleShort>
 		<slot>Adulthood</slot>
-		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] siblings established a makeshift shelter for children of war. What [PAWN_pronoun] lacked domestic skills, [PAWN_nameDef] made up for in creative ones, and [PAWN_pronoun] would sing to the orphans every night; songs of love, compassion and new beginnings. Though [PAWN_possessive] heart was full of love, [PAWN_possessive] mind was very rarely filled with anything but Z’s, dreams and countable sheep.</baseDesc>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] siblings established a makeshift shelter for children of war. What [PAWN_pronoun] lacked domestic skills, [PAWN_nameDef] made up for in creative ones, and [PAWN_pronoun] would sing to the orphans every night; songs of love, compassion and new beginnings.</baseDesc>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>

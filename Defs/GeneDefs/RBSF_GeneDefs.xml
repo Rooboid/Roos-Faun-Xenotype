@@ -10,7 +10,7 @@
 		<description>Carriers of this gene possess deer-like ears.</description>
 		<iconPath>UI/GeneIcons/RBSF_DeerEars</iconPath>
 		<graphicData>
-		<graphicPath Inherit="False"/>
+			<graphicPath Inherit="False"/>
 			<graphicPaths>
 				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsA/RBSF_DeerEarsA</li>
 				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsB/RBSF_DeerEarsB</li>
@@ -204,11 +204,11 @@
 			<graphicPath>Things/Pawn/Humanlike/Eyes/RBSF_HorizontalPupils/RBSF_HorizontalPupils</graphicPath>
 		</graphicData>
 		<statFactors>
-						<ShootingAccuracyFactor_Long>1.004</ShootingAccuracyFactor_Long>
-						<ShootingAccuracyFactor_Medium>1.002</ShootingAccuracyFactor_Medium>
-						<ShootingAccuracyFactor_Short>0.96</ShootingAccuracyFactor_Short>
-						<ShootingAccuracyFactor_Touch>0.5</ShootingAccuracyFactor_Touch>
-						<MortarMissRadiusFactor>1.5</MortarMissRadiusFactor>
+			<ShootingAccuracyFactor_Long>1.004</ShootingAccuracyFactor_Long>
+			<ShootingAccuracyFactor_Medium>1.002</ShootingAccuracyFactor_Medium>
+			<ShootingAccuracyFactor_Short>0.96</ShootingAccuracyFactor_Short>
+			<ShootingAccuracyFactor_Touch>0.5</ShootingAccuracyFactor_Touch>
+			<MortarMissRadiusFactor>1.5</MortarMissRadiusFactor>
 		</statFactors>
 		<!-- Symbol -->
 		<symbolPack>

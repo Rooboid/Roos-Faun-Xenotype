@@ -10,7 +10,7 @@
 		<title>clairvoyant</title>
 		<titleShort>clairvoyant</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] always seemed to know more about the world than [PAWN_pronoun] should have, at [PAWN_possessive] age. Many villagefolk claimed that [PAWN_pronoun] was a messenger from above, and requested [PAWN_possessive] insight into their futures.</baseDesc>
+		<baseDesc>[PAWN_nameDef] always seemed to know more about the world than [PAWN_pronoun] should have at [PAWN_possessive] age. Many villagefolk claimed that [PAWN_pronoun] was a messenger from above, and requested [PAWN_possessive] insight into their futures.</baseDesc>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>
@@ -46,7 +46,7 @@
 		<title>astronomer</title>
 		<titleShort>astronomer</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] always had [PAWN_possessive] heads in the clouds, looking at the vast, limitless space above, wishing to be part of it. [PAWN_nameDef] charted the stars for [PAWN_possessive] community, who shunned [PAWN_possessive] work, encouraging [PAWN_objective] to prioritise [PAWN_possessive] home planet before daydreaming about any others.</baseDesc>
+		<baseDesc>[PAWN_nameDef] always had [PAWN_possessive] head in the clouds, looking at the vast, limitless space above, wishing to be part of it. [PAWN_nameDef] charted the stars for [PAWN_possessive] community, who shunned [PAWN_possessive] work, encouraging [PAWN_objective] to prioritise [PAWN_possessive] home planet before daydreaming about any others.</baseDesc>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>
@@ -128,7 +128,7 @@
 		<title>sacrifice</title>
 		<titleShort>sacrifice</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] was captured by a religious sect and due to be offered to their God as a sacrifice. [PAWN_possessive] hopes of a gallant knight coming to [PAWN_possessive] rescue never came to fruition, so [PAWN_nameDef] took matters into [PAWN_possessive] own hooves, and tunnelled [PAWN_possessive] way to freedom.</baseDesc>
+		<baseDesc>[PAWN_nameDef] was captured by a religious sect and was due to be offered to their God as a sacrifice. [PAWN_possessive] hopes of a gallant knight coming to [PAWN_possessive] rescue never came to fruition, so [PAWN_nameDef] took matters into [PAWN_possessive] own hooves, and [PAWN)pronoun] tunnelled [PAWN_possessive] way to freedom.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>
