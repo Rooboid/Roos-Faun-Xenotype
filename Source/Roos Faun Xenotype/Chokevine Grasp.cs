@@ -50,7 +50,7 @@ namespace Roos_Faun_Xenotype
         {
             this.compClass = typeof(RBSF_CompAbilityEffect_ChokevineGrasp);
         }
-        public int stunDuration = 360;
+        public int stunDuration = 720;
     }
 
     public class RBSF_Verb_CastAbilityChokevineGrasp : Verb_CastAbilityTouch
