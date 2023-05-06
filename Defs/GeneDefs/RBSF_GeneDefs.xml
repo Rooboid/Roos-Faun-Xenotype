@@ -206,9 +206,9 @@
 		<statFactors>
 			<ShootingAccuracyFactor_Long>1.004</ShootingAccuracyFactor_Long>
 			<ShootingAccuracyFactor_Medium>1.002</ShootingAccuracyFactor_Medium>
-			<ShootingAccuracyFactor_Short>0.96</ShootingAccuracyFactor_Short>
-			<ShootingAccuracyFactor_Touch>0.5</ShootingAccuracyFactor_Touch>
-			<MortarMissRadiusFactor>1.5</MortarMissRadiusFactor>
+			<ShootingAccuracyFactor_Short>0.992</ShootingAccuracyFactor_Short>
+			<ShootingAccuracyFactor_Touch>0.985</ShootingAccuracyFactor_Touch>
+			<MortarMissRadiusFactor>1.2</MortarMissRadiusFactor>
 		</statFactors>
 		<!-- Symbol -->
 		<symbolPack>
