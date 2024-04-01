@@ -25,12 +25,12 @@ namespace Roos_Faun_Xenotype
                 return;
 
             var plantGrowRadius = 5.5f;
-            var numRetries = 20;
+            var numTilesToScan = 5;
 
             //Log.Message("Natural Connection scanning");
 
             //tries a random location around the pawn 'numRetries' times - if it finds a plant, progress its growth by 1 day.
-            for (var i = 0; i < numRetries; i++) {
+            for (var i = 0; i < numTilesToScan; i++) {
 
                 var randLocInRadius = this.pawn.Position + (Rand.InsideUnitCircleVec3 * plantGrowRadius).ToIntVec3();
                 randLocInRadius = randLocInRadius.ClampInsideMap(this.pawn.Map);  
@@ -56,9 +56,9 @@ namespace Roos_Faun_Xenotype
                         break;
                     }
 
-                    //Grow plant equal to 1 day of growing.
+                    //Grow plants equal to total of 1 day of growing. (halved due to 50% darkness)
                     var growthPerDay = 1f / plant.def.plant.growDays;
-                    var growthPerTrigger = growthPerDay / 2;
+                    var growthPerTrigger = growthPerDay / 10;
                     plant.Growth += growthPerTrigger;
 
                     //make fleck and redraw map area
@@ -66,7 +66,7 @@ namespace Roos_Faun_Xenotype
                     this.pawn.Map.mapDrawer.MapMeshDirty(plant.Position, MapMeshFlag.Things);
 
                     //Log.Message("Plant found at " + plant.Position + " in iteration " + i);
-                    return;
+                    //return;
                     
                 }
             }
