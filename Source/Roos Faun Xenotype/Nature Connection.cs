@@ -63,7 +63,7 @@ namespace Roos_Faun_Xenotype
 
                     //make fleck and redraw map area
                     FleckMaker.Static(plant.Position, plant.Map, RBSF_DefOf.RBSF_NatureGrowthFleck, 2f);
-                    this.pawn.Map.mapDrawer.MapMeshDirty(plant.Position, MapMeshFlag.Things);
+                    this.pawn.Map.mapDrawer.MapMeshDirty(plant.Position, MapMeshFlagDefOf.Things);
 
                     //Log.Message("Plant found at " + plant.Position + " in iteration " + i);
                     //return;
