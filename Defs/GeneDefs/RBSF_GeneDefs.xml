@@ -4,12 +4,12 @@
 	<!--====================== Cosmetic Genes ======================-->
 	<!-- Deer Ears -->
 	
-	<GeneDef ParentName="GeneEarsBase">
+	<GeneDef ParentName="GeneEarsBase"> <!-- mid update -->
 		<defName>RBSF_DeerEars</defName>
 		<label>deer ears</label>
 		<description>Carriers of this gene possess deer-like ears.</description>
 		<iconPath>UI/GeneIcons/RBSF_DeerEars</iconPath>
-		<graphicData>
+		<!-- <graphicData>
 			<graphicPath Inherit="False"/>
 			<graphicPaths>
 				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsA/RBSF_DeerEarsA</li>
@@ -22,7 +22,25 @@
 			<drawOffsetEast>(-0.05, 0.0, 0.0)</drawOffsetEast>
 			<colorType>Skin</colorType>
 			<layer>PostSkin</layer>
-		</graphicData>
+		</graphicData> -->
+		
+		<renderNodeProperties>
+		  <li>
+			<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+			<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+			<texPath>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsA/RBSF_DeerEarsA</texPath>
+			<colorType>Skin</colorType>
+			<parentTagDef>Head</parentTagDef>
+			<useSkinShader>true</useSkinShader>
+			<useRottenColor>true</useRottenColor>
+			<rotDrawMode>Fresh, Rotting</rotDrawMode>
+			<drawData>
+			  <defaultData>
+				<layer>70</layer>
+			  </defaultData>
+			</drawData>
+		  </li>
+		</renderNodeProperties>
 		<symbolPack>
 			<prefixSymbols>
 				<li><symbol>fau</symbol></li>
