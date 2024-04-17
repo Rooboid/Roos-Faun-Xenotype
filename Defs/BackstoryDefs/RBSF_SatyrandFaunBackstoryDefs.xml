@@ -19,14 +19,8 @@
 			<li>FaunWild</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Social</key>
-				<value>3</value>
-			</li>
-			<li>
-				<key>Intellectual</key>
-				<value>3</value>
-			</li>
+			<Social>3</Social>
+			<Intellectual>3</Intellectual>
 		</skillGains>
 		<disallowedTraits>
 			<Transhumanist>0</Transhumanist>
@@ -53,14 +47,8 @@
 			<li>SatyrandFaun</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Intellectual</key>
-				<value>7</value>
-			</li>
-			<li>
-				<key>Crafting</key>
-				<value>2</value>
-			</li>
+			<Intellectual>7</Intellectual>
+			<Crafting>2</Crafting>
 		</skillGains>
 		<forcedTraits>
 			<SlowLearner>0</SlowLearner>
@@ -90,18 +78,9 @@
 			<li>SatyrWild</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Shooting</key>
-				<value>6</value>
-			</li>
-			<li>
-				<key>Animals</key>
-				<value>3</value>
-			</li>
-			<li>
-				<key>Plants</key>
-				<value>3</value>
-			</li>
+			<Shooting>6</Shooting>
+			<Animals>3</Animals>
+			<Plants>3</Plants>
 		</skillGains>
 		<forcedTraits>
 			<Ascetic>0</Ascetic>
@@ -135,18 +114,9 @@
 			<li>SatyrandFaun</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Mining</key>
-				<value>6</value>
-			</li>
-			<li>
-				<key>Intellectual</key>
-				<value>-3</value>
-			</li>
-			<li>
-				<key>Animals</key>
-				<value>-3</value>
-			</li>
+			<Mining>6</Mining>
+			<Intellectual>-3</Intellectual>
+			<Animals>-3</Animals>
 		</skillGains>
 		<disallowedTraits>
 			<Beauty>-1</Beauty>
@@ -170,14 +140,8 @@
 			<li>SatyrandFaun</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Plants</key>
-				<value>6</value>
-			</li>
-			<li>
-				<key>Social</key>
-				<value>3</value>
-			</li>
+			<Plants>6</Plants>
+			<Social>3</Social>
 		</skillGains>
 		<forcedTraits>
 			<Bloodlust>0</Bloodlust>
@@ -210,14 +174,8 @@
 			<li>SatyrandFaun</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Intellectual</key>
-				<value>5</value>
-			</li>
-			<li>
-				<key>Artistic</key>
-				<value>2</value>
-			</li>
+			<Intellectual>5</Intellectual>
+			<Artistic>2</Artistic>
 		</skillGains>
 		<disallowedTraits>
 			<SlowLearner>0</SlowLearner>
@@ -246,24 +204,15 @@
 			<li>SatyrandFaun</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Social</key>
-				<value>5</value>
-			</li>
-			<li>
-				<key>Cooking</key>
-				<value>5</value>
-			</li>
+			<Social>5</Social>
+			<Cooking>5</Cooking>
 		</skillGains>
 		<forcedTraits>
 			<NaturalMood>1</NaturalMood>
 			<Industriousness>-1</Industriousness>
 		</forcedTraits>
 		<possessions>
-			<li>
-				<key>Beer</key>
-				<value>5</value>
-			</li>
+			<Beer>5</Beer>
 		</possessions>
 	</BackstoryDef>
 	
@@ -282,14 +231,8 @@
 			<li>SatyrandFaun</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Shooting</key>
-				<value>8</value>
-			</li>
-			<li>
-				<key>Cooking</key>
-				<value>5</value>
-			</li>
+			<Shooting>8</Shooting>
+			<Cooking>5</Cooking>
 		</skillGains>
 		<forcedTraits>
 			<ShootingAccuracy>1</ShootingAccuracy>
@@ -314,22 +257,10 @@
 			<li>SatyrandFaun</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Cooking</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Medicine</key>
-				<value>2</value>
-			</li>
-			<li>
-				<key>Construction</key>
-				<value>2</value>
-			</li>
-			<li>
-				<key>Plants</key>
-				<value>2</value>
-			</li>
+			<Cooking>4</Cooking>
+			<Medicine>2</Medicine>
+			<Construction>2</Construction>
+			<Plants>2</Plants>
 		</skillGains>
 		<forcedTraits>
 			<Nimble>0</Nimble>
@@ -343,10 +274,7 @@
 			<Nerves>1</Nerves>
 		</disallowedTraits>
 		<possessions>
-			<li>
-				<key>MedicineHerbal</key>
-				<value>7</value>
-			</li>
+			<MedicineHerbal>7</MedicineHerbal>
 		</possessions>
 	</BackstoryDef>
 	
@@ -365,14 +293,8 @@
 			<li>SatyrandFaun</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Artistic</key>
-				<value>5</value>
-			</li>
-			<li>
-				<key>Social</key>
-				<value>4</value>
-			</li>
+			<Artistic>5</Artistic>
+			<Social>4</Social>
 		</skillGains>
 		<forcedTraits>
 			<Beauty>1</Beauty>
@@ -384,10 +306,7 @@
 			<li>Cooking</li>
 		</workDisables>
 		<possessions>
-			<li>
-				<key>Gold</key>
-				<value>5</value>
-			</li>
+			<Gold>5</Gold>
 		</possessions>
 	</BackstoryDef>
 	
@@ -406,26 +325,11 @@
 			<li>SatyrandFaun</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Intellectual</key>
-				<value>6</value>
-			</li>
-			<li>
-				<key>Mining</key>
-				<value>6</value>
-			</li>
-			<li>
-				<key>Cooking</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Construction</key>
-				<value>4</value>
-			</li>
-			<li>
-				<key>Animals</key>
-				<value>2</value>
-			</li>
+			<Intellectual>6</Intellectual>
+			<Mining>6</Mining>
+			<Cooking>4</Cooking>
+			<Construction>4</Construction>
+			<Animals>2</Animals>
 		</skillGains>
 		<forcedTraits>
 			<Industriousness>1</Industriousness>
@@ -447,14 +351,8 @@
 			<li>SatyrandFaun</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Construction</key>
-				<value>8</value>
-			</li>
-			<li>
-				<key>Crafting</key>
-				<value>4</value>
-			</li>
+			<Construction>8</Construction>
+			<Crafting>4</Crafting>
 		</skillGains>
 		<forcedTraits>
 			<NaturalMood>1</NaturalMood>
@@ -479,14 +377,8 @@
 			<li>SatyrandFaun</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Cooking</key>
-				<value>8</value>
-			</li>
-			<li>
-				<key>Crafting</key>
-				<value>4</value>
-			</li>
+			<Cooking>8</Cooking>
+			<Crafting>4</Crafting>
 		</skillGains>
 		<forcedTraits>
 			<NaturalMood>1</NaturalMood>
@@ -511,14 +403,8 @@
 			<li>SatyrandFaun</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Crafting</key>
-				<value>8</value>
-			</li>
-			<li>
-				<key>Intellectual</key>
-				<value>6</value>
-			</li>
+			<Crafting>8</Crafting>
+			<Intellectual>6</Intellectual>
 		</skillGains>
 		<forcedTraits>
 			<Industriousness>-1</Industriousness>
@@ -541,14 +427,8 @@
 			<li>SatyrWild</li>
 		</spawnCategories>
 		<skillGains>
-			<li>
-				<key>Melee</key>
-				<value>9</value>
-			</li>
-			<li>
-				<key>Animals</key>
-				<value>5</value>
-			</li>
+			<Melee>9</Melee>
+			<Animals>5</Animals>
 		</skillGains>
 		<disallowedTraits>
 			<NaturalMood>2</NaturalMood>
