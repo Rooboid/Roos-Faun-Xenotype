@@ -79,7 +79,7 @@
 			<colorType>Custom</colorType>
 			<color>(255,255,255)</color>
 			<parentTagDef>Head</parentTagDef>
-			<useSkinShader>true</useSkinShader>
+			<useSkinShader>false</useSkinShader>
 			<useRottenColor>false</useRottenColor>
 			<rotDrawMode>Fresh, Rotting</rotDrawMode>
 			<drawData>
