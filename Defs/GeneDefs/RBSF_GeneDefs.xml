@@ -61,8 +61,12 @@
 		<description>Carriers of this gene sport a pair of antlers atop their heads.</description>
 		<iconPath>UI/GeneIcons/RBSF_DeerHorns</iconPath>
 		<displayOrderInCategory>113</displayOrderInCategory>
-		<graphicData>
-			<graphicPaths>
+		
+		<renderNodeProperties>
+		  <li>
+			<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+			<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+			<texPaths>
 				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsA/RBSF_DeerHornsA</li>
 				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsB/RBSF_DeerHornsB</li>
 				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsC/RBSF_DeerHornsC</li>
@@ -71,11 +75,21 @@
 				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsF/RBSF_DeerHornsF</li>
 				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsG/RBSF_DeerHornsG</li>
 				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsH/RBSF_DeerHornsH</li>
-			</graphicPaths>
-			<color>(255, 255, 255)</color>
-			<layer>PostHeadgear</layer>
-			<drawNorthAfterHair>false</drawNorthAfterHair>
-		</graphicData>
+			</texPaths>
+			<colorType>Custom</colorType>
+			<color>(255,255,255)</color>
+			<parentTagDef>Head</parentTagDef>
+			<useSkinShader>true</useSkinShader>
+			<useRottenColor>false</useRottenColor>
+			<rotDrawMode>Fresh, Rotting</rotDrawMode>
+			<drawData>
+			  <defaultData>
+				<layer>70</layer>
+			  </defaultData>
+			</drawData>
+		  </li>
+		</renderNodeProperties>
+
 		<exclusionTags>
 			<li>SerenSensors</li>
 		</exclusionTags>
@@ -217,10 +231,40 @@
 		<biostatMet>0</biostatMet>
 		<displayOrderInCategory>4</displayOrderInCategory>
 		<iconPath>UI/GeneIcons/RBSF_HorizontalPupils</iconPath>
-		<graphicData>
-			<drawScale>0.07</drawScale>
-			<graphicPath>Things/Pawn/Humanlike/Eyes/RBSF_HorizontalPupils/RBSF_HorizontalPupils</graphicPath>
-		</graphicData>
+		<renderNodeProperties>
+		  <li Class="PawnRenderNodeProperties_Eye">
+			<texPath>Things/Pawn/Humanlike/Eyes/RBSF_HorizontalPupils/RBSF_HorizontalPupils</texPath>
+			<anchorTag>RightEye</anchorTag>
+			<rotDrawMode>Fresh, Rotting</rotDrawMode>
+			<parentTagDef>Head</parentTagDef>
+			<drawSize>0.07</drawSize>
+			<side>Right</side>
+			<drawData>
+			  <defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+			  </defaultData>
+			</drawData>
+		  </li>
+		  <li Class="PawnRenderNodeProperties_Eye">
+			<texPath>Things/Pawn/Humanlike/Eyes/RBSF_HorizontalPupils/RBSF_HorizontalPupils</texPath>
+			<anchorTag>LeftEye</anchorTag>
+			<rotDrawMode>Fresh, Rotting</rotDrawMode>
+			<parentTagDef>Head</parentTagDef>
+			<drawSize>0.07</drawSize>
+			<side>Left</side>
+			<drawData>
+			  <defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+			  </defaultData>
+			  <dataWest>
+				<flip>false</flip>
+			  </dataWest>
+			</drawData>
+		  </li>
+		</renderNodeProperties>
 		<statFactors>
 			<ShootingAccuracyFactor_Long>1.004</ShootingAccuracyFactor_Long>
 			<ShootingAccuracyFactor_Medium>1.002</ShootingAccuracyFactor_Medium>

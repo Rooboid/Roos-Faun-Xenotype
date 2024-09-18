@@ -89,12 +89,17 @@
 									<li><symbol>ped</symbol></li>
 								</suffixSymbols>
 							</symbolPack>
-							<graphicData>
-								<fur>RBM_UnguligradeLegs</fur>
-								<colorType>Hair</colorType>
-								<skinIsHairColor>false</skinIsHairColor>
-								<tattoosVisible>true</tattoosVisible>
-							</graphicData>
+							<renderNodeProperties>
+								<li>
+									<debugLabel>Fur</debugLabel>
+									<nodeClass>PawnRenderNode_Fur</nodeClass>
+									<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+									<baseLayer>5</baseLayer>
+									<rotDrawMode>Fresh, Rotting</rotDrawMode>
+									<colorType>Hair</colorType>
+									<parentTagDef>Body</parentTagDef>
+								</li>
+							</renderNodeProperties>
 							<!-- Thee following will occur if you ARE running vanilla framework expanded. If not, a patch is added to tie the gene buffs to the pawn, as opposed to the body part -->
 							<modExtensions>
 								<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VanillaGenesExpanded.GeneExtension">
@@ -216,21 +221,6 @@
 			</operations>
 		</nomatch>
 	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-        <xpath>Defs/GeneDef[defName="RBM_UnguligradeLegs"]/graphicData/fur</xpath>
-        <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/GeneDef[defName="RBM_UnguligradeLegs"]</xpath>
-            <value>
-				<graphicData>
-					<fur>RBM_UnguligradeLegs</fur>
-					<colorType>Hair</colorType>
-					<skinIsHairColor>false</skinIsHairColor>
-					<tattoosVisible>true</tattoosVisible>
-				</graphicData>
-            </value>
-        </nomatch>
-    </Operation>
 	
 	<!--============================== Nature Connection Patches ============================-->
 	<!-- Boosts appropriate stats in relation to the pawn's nature connection stat -->
@@ -477,13 +467,23 @@
 					<description>Seren sensors that have formed into the shape of a faun's antlers.</description>
 					<iconPath>UI/GeneIcons/RBSF_SerenAntlers</iconPath>
 					<displayOrderInCategory>115</displayOrderInCategory>
-					<graphicData>
-						<drawLoc>HeadTop</drawLoc>
-						<graphicPath>Things/Pawn/Humanlike/Horns/RBSF_SerenAntlers/RBSF_SerenAntlers</graphicPath>
-						<color>(255, 255, 255)</color>
-						<layer>PostHeadgear</layer>
-						<drawNorthAfterHair>false</drawNorthAfterHair>
-					</graphicData>
+					<renderNodeProperties>
+					  <li>
+						<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+						<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+						<texPath>Things/Pawn/Humanlike/Horns/RBSF_SerenAntlers/RBSF_SerenAntlers</texPath>
+						<colorType>Skin</colorType>
+						<parentTagDef>Head</parentTagDef>
+						<useSkinShader>true</useSkinShader>
+						<useRottenColor>true</useRottenColor>
+						<rotDrawMode>Fresh, Rotting</rotDrawMode>
+						<drawData>
+						  <defaultData>
+							<layer>70</layer>
+						  </defaultData>
+						</drawData>
+					  </li>
+					</renderNodeProperties>
 					<exclusionTags>
 						<li>SerenSensors</li>
 					</exclusionTags>

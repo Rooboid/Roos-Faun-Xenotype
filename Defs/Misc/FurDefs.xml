@@ -3,7 +3,7 @@
 
   <FurDef>
     <defName>RBM_UnguligradeLegs</defName>
-    <noGraphic>true</noGraphic>
+	<noGraphic>true</noGraphic>
     <bodyTypeGraphicPaths>
       <Male>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Male>
       <Female>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Female>

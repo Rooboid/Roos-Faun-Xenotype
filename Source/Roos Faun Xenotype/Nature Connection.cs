@@ -7,6 +7,7 @@ namespace Roos_Faun_Xenotype
 
     public class RBSF_NaturalConnection : Gene
     {
+
         // Randomly grows plants in an area around naturally connected pawns
         public override void Tick()
         {

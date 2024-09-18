@@ -28,7 +28,7 @@
 		<minValue>0.3</minValue>
 		<displayPriorityInCategory>696900</displayPriorityInCategory>
 		<parts>
-			<li Class="StatPart_ApparelStatOffset">
+			<li Class="StatPart_GearStatOffset">
 				<apparelStat>RBSF_NatureConnectionOffset</apparelStat>
 				<includeWeapon>true</includeWeapon>
 			</li>
