@@ -266,11 +266,11 @@
 		  </li>
 		</renderNodeProperties>
 		<statFactors>
-			<ShootingAccuracyFactor_Long>1.004</ShootingAccuracyFactor_Long>
-			<ShootingAccuracyFactor_Medium>1.002</ShootingAccuracyFactor_Medium>
-			<ShootingAccuracyFactor_Short>0.992</ShootingAccuracyFactor_Short>
-			<ShootingAccuracyFactor_Touch>0.985</ShootingAccuracyFactor_Touch>
-			<MortarMissRadiusFactor>1.2</MortarMissRadiusFactor>
+			<ShootingAccuracyFactor_Long>1.05</ShootingAccuracyFactor_Long>
+			<ShootingAccuracyFactor_Medium>1.02</ShootingAccuracyFactor_Medium>
+			<ShootingAccuracyFactor_Short>0.92</ShootingAccuracyFactor_Short>
+			<ShootingAccuracyFactor_Touch>0.85</ShootingAccuracyFactor_Touch>
+			<MortarMissRadiusFactor>0.9</MortarMissRadiusFactor>
 		</statFactors>
 		<!-- Symbol -->
 		<symbolPack>
