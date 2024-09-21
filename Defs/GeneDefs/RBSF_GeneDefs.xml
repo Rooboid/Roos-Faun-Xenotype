@@ -4,7 +4,7 @@
 	<!--====================== Cosmetic Genes ======================-->
 	<!-- Deer Ears -->
 	
-	<GeneDef ParentName="GeneEarsBase"> <!-- mid update -->
+	<GeneDef ParentName="GeneEarsBase"><!-- mid update -->
 		<defName>RBSF_DeerEars</defName>
 		<label>deer ears</label>
 		<description>Carriers of this gene possess deer-like ears.</description>
@@ -25,21 +25,21 @@
 		</graphicData> -->
 		
 		<renderNodeProperties>
-		  <li>
-			<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
-			<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-			<texPath>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsA/RBSF_DeerEarsA</texPath>
-			<colorType>Skin</colorType>
-			<parentTagDef>Head</parentTagDef>
-			<useSkinShader>true</useSkinShader>
-			<useRottenColor>true</useRottenColor>
-			<rotDrawMode>Fresh, Rotting</rotDrawMode>
-			<drawData>
-			  <defaultData>
-				<layer>70</layer>
-			  </defaultData>
-			</drawData>
-		  </li>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsA/RBSF_DeerEarsA</texPath>
+				<colorType>Skin</colorType>
+				<parentTagDef>Head</parentTagDef>
+				<useSkinShader>true</useSkinShader>
+				<useRottenColor>true</useRottenColor>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<defaultData>
+						<layer>70</layer>
+					</defaultData>
+				</drawData>
+			</li>
 		</renderNodeProperties>
 		<symbolPack>
 			<prefixSymbols>
@@ -63,31 +63,31 @@
 		<displayOrderInCategory>113</displayOrderInCategory>
 		
 		<renderNodeProperties>
-		  <li>
-			<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
-			<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-			<texPaths>
-				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsA/RBSF_DeerHornsA</li>
-				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsB/RBSF_DeerHornsB</li>
-				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsC/RBSF_DeerHornsC</li>
-				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsD/RBSF_DeerHornsD</li>
-				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsE/RBSF_DeerHornsE</li>
-				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsF/RBSF_DeerHornsF</li>
-				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsG/RBSF_DeerHornsG</li>
-				<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsH/RBSF_DeerHornsH</li>
-			</texPaths>
-			<colorType>Custom</colorType>
-			<color>(255,255,255)</color>
-			<parentTagDef>Head</parentTagDef>
-			<useSkinShader>false</useSkinShader>
-			<useRottenColor>false</useRottenColor>
-			<rotDrawMode>Fresh, Rotting</rotDrawMode>
-			<drawData>
-			  <defaultData>
-				<layer>70</layer>
-			  </defaultData>
-			</drawData>
-		  </li>
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPaths>
+					<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsA/RBSF_DeerHornsA</li>
+					<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsB/RBSF_DeerHornsB</li>
+					<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsC/RBSF_DeerHornsC</li>
+					<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsD/RBSF_DeerHornsD</li>
+					<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsE/RBSF_DeerHornsE</li>
+					<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsF/RBSF_DeerHornsF</li>
+					<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsG/RBSF_DeerHornsG</li>
+					<li>Things/Pawn/Humanlike/Horns/RBSF_DeerHornsH/RBSF_DeerHornsH</li>
+				</texPaths>
+				<colorType>Custom</colorType>
+				<color>(255,255,255)</color>
+				<parentTagDef>Head</parentTagDef>
+				<useSkinShader>false</useSkinShader>
+				<useRottenColor>false</useRottenColor>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawData>
+					<defaultData>
+						<layer>70</layer>
+					</defaultData>
+				</drawData>
+			</li>
 		</renderNodeProperties>
 
 		<exclusionTags>
@@ -232,38 +232,38 @@
 		<displayOrderInCategory>4</displayOrderInCategory>
 		<iconPath>UI/GeneIcons/RBSF_HorizontalPupils</iconPath>
 		<renderNodeProperties>
-		  <li Class="PawnRenderNodeProperties_Eye">
-			<texPath>Things/Pawn/Humanlike/Eyes/RBSF_HorizontalPupils/RBSF_HorizontalPupils</texPath>
-			<anchorTag>RightEye</anchorTag>
-			<rotDrawMode>Fresh, Rotting</rotDrawMode>
-			<parentTagDef>Head</parentTagDef>
-			<drawSize>0.07</drawSize>
-			<side>Right</side>
-			<drawData>
-			  <defaultData>
-				<layer>54</layer>
-				<offset>(0, 0, -0.25)</offset>
-			  </defaultData>
-			</drawData>
-		  </li>
-		  <li Class="PawnRenderNodeProperties_Eye">
-			<texPath>Things/Pawn/Humanlike/Eyes/RBSF_HorizontalPupils/RBSF_HorizontalPupils</texPath>
-			<anchorTag>LeftEye</anchorTag>
-			<rotDrawMode>Fresh, Rotting</rotDrawMode>
-			<parentTagDef>Head</parentTagDef>
-			<drawSize>0.07</drawSize>
-			<side>Left</side>
-			<drawData>
-			  <defaultData>
-				<layer>54</layer>
-				<offset>(0, 0, -0.25)</offset>
-				<flip>true</flip>
-			  </defaultData>
-			  <dataWest>
-				<flip>false</flip>
-			  </dataWest>
-			</drawData>
-		  </li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Things/Pawn/Humanlike/Eyes/RBSF_HorizontalPupils/RBSF_HorizontalPupils</texPath>
+				<anchorTag>RightEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.07</drawSize>
+				<side>Right</side>
+				<drawData>
+					<defaultData>
+						<layer>54</layer>
+						<offset>(0, 0, -0.25)</offset>
+					</defaultData>
+				</drawData>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Things/Pawn/Humanlike/Eyes/RBSF_HorizontalPupils/RBSF_HorizontalPupils</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.07</drawSize>
+				<side>Left</side>
+				<drawData>
+					<defaultData>
+						<layer>54</layer>
+						<offset>(0, 0, -0.25)</offset>
+						<flip>true</flip>
+					</defaultData>
+					<dataWest>
+						<flip>false</flip>
+					</dataWest>
+				</drawData>
+			</li>
 		</renderNodeProperties>
 		<statFactors>
 			<ShootingAccuracyFactor_Long>1.05</ShootingAccuracyFactor_Long>
@@ -350,38 +350,71 @@
 	
 	<!-- Mech Terror -->
 	
-	  <GeneDef>
-    <defName>RBSF_MechTerror</defName>
-    <label>mechaphobia</label>
-    <labelShortAdj>mechaphobic</labelShortAdj>
-    <description>Carriers of this gene have an intense fear of mechanoids. When mechanoids are close, there is a chance they will have a mental breakdown at any moment.</description>
-    <customEffectDescriptions>
-      <li>May have a mental breakdown when near mechanoids.</li>
-    </customEffectDescriptions>
-<!--     <suppressedTraits>
+	<GeneDef>
+		<defName>RBSF_MechTerror</defName>
+		<label>mechaphobia</label>
+		<labelShortAdj>mechaphobic</labelShortAdj>
+		<description>Carriers of this gene have an intense fear of mechanoids. When mechanoids are close, there is a chance they will have a mental breakdown at any moment.</description>
+		<customEffectDescriptions>
+			<li>May have a mental breakdown when near mechanoids.</li>
+		</customEffectDescriptions>
+		<!--     <suppressedTraits>
       <li>
         <def>Pyromaniac</def>
       </li>
     </suppressedTraits> -->
-    <displayCategory>ResistanceAndWeakness</displayCategory>
-    <displayOrderInCategory>81</displayOrderInCategory>
-    <iconPath>UI/Icons/Genes/Gene_FireTerror</iconPath>
-    <mentalBreakMtbDays>0.1</mentalBreakMtbDays>
-    <mentalBreakDef>FireTerror</mentalBreakDef>
-    <biostatMet>4</biostatMet>
-  </GeneDef>
+		<displayCategory>ResistanceAndWeakness</displayCategory>
+		<displayOrderInCategory>81</displayOrderInCategory>
+		<iconPath>UI/Icons/Genes/Gene_FireTerror</iconPath>
+		<mentalBreakMtbDays>0.1</mentalBreakMtbDays>
+		<mentalBreakDef>FireTerror</mentalBreakDef>
+		<biostatMet>4</biostatMet>
+	</GeneDef>
   
-  <ThoughtDef>
-    <defName>RBSF_MechTerrorThought</defName>
-    <workerClass>ThoughtWorker_Mechphobia</workerClass>
-    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+	<ThoughtDef>
+		<defName>RBSF_MechTerrorThought</defName>
+		<workerClass>Roos_Faun_Xenotype.ThoughtWorker_Mechphobia</workerClass>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>afraid of mechanoids</label>
+				<description>AAAAAA!</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<MentalBreakDef>
+    <defName>RBSF_MinorCatatonic</defName>
+    <label>catatonic</label>
+    <baseCommonality>0</baseCommonality>
+    <intensity>Major</intensity>
+    <workerClass>Roos_Faun_Xenotype.MentalBreakWorker_MinorCatatonic</workerClass>
+  </MentalBreakDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+    <defName>RBSF_MinorCatatonicBreakdown</defName>
+    <label>catatonic breakdown</label>
+    <labelNoun>a catatonic breakdown</labelNoun>
+    <description>A state of mental shock which leads to a total inability to function. The victim collapses, effectively unconscious.</description>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1000~3000</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_RecoveryThought">
+        <thought>Catharsis</thought>
+      </li>
+    </comps>
     <stages>
       <li>
-        <label>afraid of mechanoids</label>
-        <description>AAAAAA!</description>
-        <baseMoodEffect>-10</baseMoodEffect>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
       </li>
     </stages>
-  </ThoughtDef>
+  </HediffDef>
 
 </Defs>
