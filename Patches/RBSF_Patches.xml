@@ -74,6 +74,8 @@
 							<displayOrderInCategory>330</displayOrderInCategory>
 							<iconPath>UI/GeneIcons/RBM_BovineLegs</iconPath>
 							<iconColor>(0.75, 0.75, 0.75)</iconColor>
+							<fur>RBM_UnguligradeLegs</fur>
+							<!-- <tattoosVisible>false</tattoosVisible> -->
 							<symbolPack>
 								<prefixSymbols>
 									<li><symbol>faun</symbol></li>
@@ -90,15 +92,16 @@
 								</suffixSymbols>
 							</symbolPack>
 							<renderNodeProperties>
-								<li>
-									<debugLabel>Fur</debugLabel>
-									<nodeClass>PawnRenderNode_Fur</nodeClass>
-									<workerClass>PawnRenderNodeWorker_Fur</workerClass>
-									<baseLayer>5</baseLayer>
-									<rotDrawMode>Fresh, Rotting</rotDrawMode>
-									<colorType>Hair</colorType>
-									<parentTagDef>Body</parentTagDef>
-								</li>
+							  <li>
+								
+								<debugLabel>Fur</debugLabel>
+								<nodeClass>PawnRenderNode_Fur</nodeClass>
+								<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+								<baseLayer>5</baseLayer>
+								<rotDrawMode>Fresh, Rotting</rotDrawMode>
+								<colorType>Hair</colorType>
+								<parentTagDef>Body</parentTagDef>
+							  </li>
 							</renderNodeProperties>
 							<!-- Thee following will occur if you ARE running vanilla framework expanded. If not, a patch is added to tie the gene buffs to the pawn, as opposed to the body part -->
 							<modExtensions>
@@ -114,7 +117,6 @@
 									</hediffsToBodyParts>
 								</li>
 							</modExtensions>
-							
 						</GeneDef>
 					</value>
 				</li>
