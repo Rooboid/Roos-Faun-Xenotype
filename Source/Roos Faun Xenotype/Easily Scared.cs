@@ -56,7 +56,7 @@ namespace Roos_Faun_Xenotype
         {
             pawn.health.AddHediff(RBSF_DefOf.RBSF_TinyCatatonicBreakdown, null, null, null);
             RBSF_DefOf.RBSF_MyotoniaFaint.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map, false));
-            base.TrySendLetter(pawn, "LetterCatatonicMentalBreak", reason);
+            base.TrySendLetter(pawn, "RBSF_LetterTinyCatatonicMentalBreak", reason);
             return true;
         }
     }
