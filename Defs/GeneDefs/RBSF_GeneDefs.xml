@@ -402,7 +402,7 @@
 		<displayCategory>ResistanceAndWeakness</displayCategory>
 		<displayOrderInCategory>82</displayOrderInCategory>
 		<iconPath>UI/GeneIcons/RBSF_Mechanophobia</iconPath>
-		<mentalBreakMtbDays>0.05</mentalBreakMtbDays>
+		<mentalBreakMtbDays>0</mentalBreakMtbDays>
 		<mentalBreakDef>RBSF_MinorCatatonic</mentalBreakDef>
 		<biostatMet>8</biostatMet>
 	</GeneDef>
@@ -439,7 +439,7 @@
 		<description>A state of mental shock caused by a genetic fear of something. The victim becomes frozen in fear, unable to move.</description>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>20000~35000</disappearsAfterTicks>
+				<disappearsAfterTicks>15000~25000</disappearsAfterTicks>
 			</li>
 		</comps>
 		<stages>
