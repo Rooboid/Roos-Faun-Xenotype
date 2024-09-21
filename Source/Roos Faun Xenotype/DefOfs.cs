@@ -21,6 +21,10 @@ namespace Roos_Faun_Xenotype
 
         public static HediffDef RBSF_MinorCatatonicBreakdown;
 
+        public static HediffDef RBSF_TinyCatatonicBreakdown;
+        
+        public static SoundDef RBSF_MyotoniaFaint;
+
         //public static ThoughtDef RBSFE_ConstrictedThought;
     }
 }
