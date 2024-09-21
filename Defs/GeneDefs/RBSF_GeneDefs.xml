@@ -351,35 +351,35 @@
 	<!-- Mech Terror -->
 	
 	<GeneDef>
-		<defName>RBSF_MechTerror</defName>
-		<label>mechaphobia</label>
-		<labelShortAdj>mechaphobic</labelShortAdj>
-		<description>Carriers of this gene have an intense fear of mechanoids. When mechanoids are close, there is a chance they will have a mental breakdown at any moment.</description>
+		<defName>RBSF_Mechanophobia</defName>
+		<label>mechanophobia</label>
+		<labelShortAdj>mechanophobic</labelShortAdj>
+		<description>Carriers of this gene have a biological fear of mechanoids. When mechanoids are close by, even allied ones, there is a chance they will freeze in fear at any moment.</description>
 		<customEffectDescriptions>
 			<li>May have a mental breakdown when near mechanoids.</li>
 		</customEffectDescriptions>
-		<!--     <suppressedTraits>
+		<!--<suppressedTraits>
       <li>
         <def>Pyromaniac</def>
       </li>
     </suppressedTraits> -->
 		<displayCategory>ResistanceAndWeakness</displayCategory>
 		<displayOrderInCategory>81</displayOrderInCategory>
-		<iconPath>UI/Icons/Genes/Gene_FireTerror</iconPath>
-		<mentalBreakMtbDays>0.1</mentalBreakMtbDays>
+		<iconPath>UI/GeneIcons/RBSF_Mechanophobia</iconPath>
+		<mentalBreakMtbDays>0.08</mentalBreakMtbDays>
 		<mentalBreakDef>RBSF_MinorCatatonic</mentalBreakDef>
-		<biostatMet>4</biostatMet>
+		<biostatMet>3</biostatMet>
 	</GeneDef>
   
 	<ThoughtDef>
-		<defName>RBSF_MechTerrorThought</defName>
-		<workerClass>Roos_Faun_Xenotype.ThoughtWorker_Mechphobia</workerClass>
+		<defName>RBSF_MechanophobiaThought</defName>
+		<workerClass>Roos_Faun_Xenotype.ThoughtWorker_Mechanophobia</workerClass>
 		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
 		<stages>
 			<li>
-				<label>afraid of mechanoids</label>
-				<description>AAAAAA!</description>
-				<baseMoodEffect>-10</baseMoodEffect>
+				<label>afraid of nearby mechanoids</label>
+				<description>I've never seen something so unnatural! I need to get out of here!</description>
+				<baseMoodEffect>-20</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>
@@ -395,15 +395,12 @@
 	
 	<HediffDef ParentName="DiseaseBase">
 		<defName>RBSF_MinorCatatonicBreakdown</defName>
-		<label>catatonic breakdown</label>
-		<labelNoun>a catatonic breakdown</labelNoun>
-		<description>A state of mental shock which leads to a total inability to function. The victim collapses, effectively unconscious.</description>
+		<label>frozen in fear</label>
+		<labelNoun>mechanoid terror</labelNoun>
+		<description>A state of mental shock caused by a genetic fear of mechanoids. The victim becomes frozen in fear, unable to move.</description>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>1000~3000</disappearsAfterTicks>
-			</li>
-			<li Class="HediffCompProperties_RecoveryThought">
-				<thought>Catharsis</thought>
+				<disappearsAfterTicks>20000~35000</disappearsAfterTicks>
 			</li>
 		</comps>
 		<stages>
