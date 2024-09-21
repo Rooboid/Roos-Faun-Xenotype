@@ -4,7 +4,7 @@ using Verse.AI;
 
 namespace Roos_Faun_Xenotype
 {
-    public class ThoughtWorker_Mechphobia : ThoughtWorker
+    public class ThoughtWorker_Mechanophobia : ThoughtWorker
     {
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
@@ -12,7 +12,7 @@ namespace Roos_Faun_Xenotype
             {
                 return ThoughtState.Inactive;
             }
-            if (p.genes == null || !p.genes.HasActiveGene(RBSF_DefOf.RBSF_MechTerror) || !ThoughtWorker_Mechphobia.NearMech(p))
+            if (p.genes == null || !p.genes.HasActiveGene(RBSF_DefOf.RBSF_Mechanophobia) || !ThoughtWorker_Mechanophobia.NearMech(p))
             {
                 return ThoughtState.Inactive;
             }
@@ -47,7 +47,7 @@ namespace Roos_Faun_Xenotype
     {
         public override bool BreakCanOccur(Pawn pawn)
         {
-            return pawn.Spawned && base.BreakCanOccur(pawn) && ThoughtWorker_Mechphobia.NearMech(pawn);
+            return pawn.Spawned && base.BreakCanOccur(pawn) && ThoughtWorker_Mechanophobia.NearMech(pawn);
         }
 
         public override bool TryStart(Pawn pawn, string reason, bool causedByMood)
