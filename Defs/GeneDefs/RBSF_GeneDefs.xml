@@ -389,15 +389,14 @@
 		<label>catatonic</label>
 		<baseCommonality>0</baseCommonality>
 		<intensity>Extreme</intensity>
-		<!-- <requiredGene>RBSF_MechTerror</requiredGene> -->
 		<workerClass>Roos_Faun_Xenotype.MentalBreakWorker_MinorCatatonic</workerClass>
 	</MentalBreakDef>
 	
 	<HediffDef ParentName="DiseaseBase">
 		<defName>RBSF_MinorCatatonicBreakdown</defName>
 		<label>frozen in fear</label>
-		<labelNoun>mechanoid terror</labelNoun>
-		<description>A state of mental shock caused by a genetic fear of mechanoids. The victim becomes frozen in fear, unable to move.</description>
+		<labelNoun>fear frozen</labelNoun>
+		<description>A state of mental shock caused by a genetic fear of something. The victim becomes frozen in fear, unable to move.</description>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<disappearsAfterTicks>20000~35000</disappearsAfterTicks>
