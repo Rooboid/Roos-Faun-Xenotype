@@ -69,7 +69,7 @@
 							<label>unguligrade legs</label>
 							<description>Carriers of this gene are born with sturdy legs and cloven hooves. The fur on their legs extends up to their stomachs and covers their groin.</description>
 							<biostatCpx>1</biostatCpx>
-							<biostatMet>-1</biostatMet>
+							<biostatMet>-2</biostatMet>
 							<displayCategory>Miscellaneous</displayCategory>
 							<displayOrderInCategory>330</displayOrderInCategory>
 							<iconPath>UI/GeneIcons/RBM_BovineLegs</iconPath>
@@ -166,7 +166,7 @@
 							<statOffsets>
 								<StaggerDurationFactor>-0.25</StaggerDurationFactor>
 								<MoveSpeed>0.2</MoveSpeed>
-								<FilthRate>1.5</FilthRate>
+								<FilthRate>5</FilthRate>
 								<MeleeDodgeChance>5</MeleeDodgeChance>
 							</statOffsets>
 						</value>
@@ -195,10 +195,10 @@
 									<iconPath>UI/GeneIcons/RBM_BovineLegs</iconPath>
 									<iconColor>(0.75, 0.75, 0.75)</iconColor>
 									<statOffsets>
-										<StaggerDurationFactor>-0.25</StaggerDurationFactor>
+										<!-- <StaggerDurationFactor>-0.25</StaggerDurationFactor> -->
 										<MoveSpeed>0.2</MoveSpeed>
-										<FilthRate>1.5</FilthRate>
-										<MeleeDodgeChance>5</MeleeDodgeChance>
+										<FilthRate>5</FilthRate>
+										<MeleeDodgeChance>10</MeleeDodgeChance>
 									</statOffsets>
 									<symbolPack>
 										<prefixSymbols>
