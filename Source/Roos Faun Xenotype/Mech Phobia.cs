@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using Verse;
+using Verse.AI;
 
 namespace Roos_Faun_Xenotype
 {
@@ -41,4 +42,20 @@ namespace Roos_Faun_Xenotype
 
         public const float mechRadius = 9.9f;
     }
+
+    public class MentalBreakWorker_MinorCatatonic : MentalBreakWorker
+    {
+        public override bool BreakCanOccur(Pawn pawn)
+        {
+            return pawn.IsColonist && pawn.Spawned && base.BreakCanOccur(pawn);
+        }
+
+        public override bool TryStart(Pawn pawn, string reason, bool causedByMood)
+        {
+            pawn.health.AddHediff(RBSF_DefOf.RBSF_MinorCatatonicBreakdown, null, null, null);
+            base.TrySendLetter(pawn, "LetterCatatonicMentalBreak", reason);
+            return true;
+        }
+    }
 }
+

@@ -17,6 +17,8 @@ namespace Roos_Faun_Xenotype
 
         public static GeneDef RBM_UnguligradeLegs;
 
+        public static HediffDef RBSF_MinorCatatonicBreakdown;
+
         //public static ThoughtDef RBSFE_ConstrictedThought;
     }
 }
