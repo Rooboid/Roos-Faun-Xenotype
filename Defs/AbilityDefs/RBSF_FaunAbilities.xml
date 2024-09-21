@@ -23,7 +23,7 @@
 		<verbProperties>
 			<verbClass>Roos_Faun_Xenotype.RBSF_Verb_CastAbilityChokevineGrasp</verbClass>
 			<warmupEffecter>RBSF_ChokeVineWarmupEffecter</warmupEffecter>
-			<range>10</range>
+			<range>15</range>
 			<warmupTime>1.8</warmupTime>
 			<drawAimPie>False</drawAimPie>
 			<soundCast>RBSF_ChokeVineCast</soundCast>

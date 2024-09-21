@@ -32,7 +32,7 @@
 						<clipPath>RBSF_MyotoniaFaint</clipPath>
 					</li>
 				</grains>
-				<volumeRange>35</volumeRange>
+				<volumeRange>75</volumeRange>
 				<distRange>5~25</distRange>
 			</li>
 		</subSounds>

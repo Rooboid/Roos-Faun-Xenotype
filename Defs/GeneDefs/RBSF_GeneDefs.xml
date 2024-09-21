@@ -4,7 +4,7 @@
 	<!--====================== Cosmetic Genes ======================-->
 	<!-- Deer Ears -->
 	
-	<GeneDef ParentName="GeneEarsBase"><!-- mid update -->
+	<GeneDef ParentName="GeneEarsBase">
 		<defName>RBSF_DeerEars</defName>
 		<label>deer ears</label>
 		<description>Carriers of this gene possess deer-like ears.</description>
@@ -23,7 +23,6 @@
 			<colorType>Skin</colorType>
 			<layer>PostSkin</layer>
 		</graphicData> -->
-		
 		<renderNodeProperties>
 			<li>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
@@ -348,28 +347,37 @@
 		</symbolPack>
 	</GeneDef>
 	
-	<!-- Mech Terror -->
+	<!-- Mech Terror / Mechanophobia / Mechaphobia Gene -->
+	<!-- Triggers RBSF_MinorCatatonic MentalBreakDef and RBSF_MechanophobiaThought-->
 	
 	<GeneDef>
 		<defName>RBSF_Mechanophobia</defName>
-		<label>mechaphobia</label> <!-- I HATE that we have to change the name from the def, but the full word doesn't graphically fit on one line. -->
+		<label>mechaphobia</label><!-- I hate that we have to change the name from the def, but the full word doesn't graphically fit on one line. -->
 		<labelShortAdj>mechaphobic</labelShortAdj>
-		<description>Carriers of this gene have a biological fear of mechanoids. When mechanoids are close by, even allied ones, there is a chance they will collapse in fear at any moment.</description>
+		<description>Carriers of this gene have a biological fear of mechanoids. When mechanoids are close-by, even allied ones, there is a chance they will collapse in fear at any moment.</description>
 		<customEffectDescriptions>
 			<li>May have a mental breakdown when near mechanoids.</li>
 		</customEffectDescriptions>
-		<!--<suppressedTraits>
-      <li>
-        <def>Pyromaniac</def>
-      </li>
-    </suppressedTraits> -->
+		<biostatMet>3</biostatMet>
 		<displayCategory>ResistanceAndWeakness</displayCategory>
 		<displayOrderInCategory>81</displayOrderInCategory>
 		<iconPath>UI/GeneIcons/RBSF_Mechanophobia</iconPath>
 		<mentalBreakMtbDays>0.08</mentalBreakMtbDays>
 		<mentalBreakDef>RBSF_MinorCatatonic</mentalBreakDef>
-		<biostatMet>3</biostatMet>
+		<!-- Symbol -->
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>teca</symbol></li>
+				<li><symbol>mani</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>feit</symbol></li>
+				<li><symbol>lent</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
 	</GeneDef>
+	
+	<!-- Mech Terror / Mechanophobia/ Mechaphobia Thought -->
   
 	<ThoughtDef>
 		<defName>RBSF_MechanophobiaThought</defName>
@@ -384,12 +392,13 @@
 		</stages>
 	</ThoughtDef>
 	
-	<!-- Myotonia -->
+	<!-- Myotonia Gene -->
 	
 	<GeneDef>
 		<defName>RBSF_Myotonia</defName>
 		<label>myotonia</label>
 		<labelShortAdj>myotonic</labelShortAdj>
+		<biostatMet>8</biostatMet>
 		<description>Myotonia, or 'fainting goat syndrome' is a genetic condition that causes pawns to collapse when they're startled. Though these pawns recover quickly, the tiniest thing can trigger their myotonia again, causing them to pass out multiple times in a row. \n\nThings that can trigger myotonia include fire, manhunting animals and enemies.</description>
 		<customEffectDescriptions>
 			<li>Will faint when frightened.</li>
@@ -404,8 +413,26 @@
 		<displayOrderInCategory>82</displayOrderInCategory>
 		<mentalBreakMtbDays>0.001</mentalBreakMtbDays>
 		<mentalBreakDef>RBSF_TinyCatatonic</mentalBreakDef>
-		<biostatMet>8</biostatMet>
+		<!-- Symbol -->
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>myo</symbol></li>
+				<li><symbol>faint</symbol></li>
+				<li><symbol>pho</symbol></li>
+				<li><symbol>tende</symbol></li>
+				<li><symbol>pyg</symbol></li>
+				<li><symbol>baa</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>nia</symbol></li>
+				<li><symbol>ssee</symbol></li>
+				<li><symbol>my</symbol></li>
+				<li><symbol>bia</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
 	</GeneDef>
+	
+	<!-- Myotonia Thought -->
   
 	<ThoughtDef>
 		<defName>RBSF_MyotoniaThought</defName>
@@ -414,77 +441,10 @@
 		<stages>
 			<li>
 				<label>myotonic</label>
-				<description>Aaagh, I need to get out of here!</description>
+				<description>I'm so frightened, I can't move!</description>
 				<baseMoodEffect>-20</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>
 	
-	
-	<!-- MOVE BELOW -->
-
-	
-	<MentalBreakDef>
-		<defName>RBSF_MinorCatatonic</defName>
-		<label>catatonic</label>
-		<baseCommonality>0</baseCommonality>
-		<intensity>Extreme</intensity>
-		<workerClass>Roos_Faun_Xenotype.MentalBreakWorker_MinorCatatonic</workerClass>
-	</MentalBreakDef>
-	
-	<HediffDef ParentName="DiseaseBase">
-		<defName>RBSF_MinorCatatonicBreakdown</defName>
-		<label>frozen in fear</label>
-		<labelNoun>fear frozen</labelNoun>
-		<description>A state of mental shock caused by a genetic fear of something. The victim becomes frozen in fear, unable to move.</description>
-		<comps>
-			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>2000~12500</disappearsAfterTicks>
-			</li>
-		</comps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<setMax>0.1</setMax>
-					</li>
-				</capMods>
-			</li>
-		</stages>
-	</HediffDef>
-	
-		<!-- MOVE BELOW -->
-
-	
-	<MentalBreakDef>
-		<defName>RBSF_TinyCatatonic</defName>
-		<label>myotonic</label>
-		<baseCommonality>0</baseCommonality>
-		<intensity>Major</intensity>
-		<workerClass>Roos_Faun_Xenotype.MentalBreakWorker_TinyCatatonic</workerClass>
-	</MentalBreakDef>
-	
-	<HediffDef ParentName="DiseaseBase">
-		<defName>RBSF_TinyCatatonicBreakdown</defName>
-		<label>myotonic</label>
-		<labelNoun>Myotonia</labelNoun>
-		<description>A state of temporary paralytic shock caused by genetic myotonia. \n\nTriggers of myotonia include being near fire, manhunting animals and enemies.</description>
-		<comps>
-			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>500~1500</disappearsAfterTicks>
-			</li>
-		</comps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<setMax>0.1</setMax>
-					</li>
-				</capMods>
-			</li>
-		</stages>
-	</HediffDef>
-
 </Defs>
