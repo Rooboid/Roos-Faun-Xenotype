@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chokevine Grasp.cs" />
+    <Compile Include="Easily Scared.cs" />
     <Compile Include="Mechanophobia.cs" />
     <Compile Include="DefOfs.cs" />
     <Compile Include="PawnFur.cs" />

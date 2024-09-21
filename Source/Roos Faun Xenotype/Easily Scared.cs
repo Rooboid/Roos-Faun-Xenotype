@@ -4,7 +4,7 @@ using Verse.AI;
 
 namespace Roos_Faun_Xenotype
 {
-    public class ThoughtWorker_Mechanophobia : ThoughtWorker
+    public class ThoughtWorker_Myotonia : ThoughtWorker
     {
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
@@ -12,14 +12,14 @@ namespace Roos_Faun_Xenotype
             {
                 return ThoughtState.Inactive;
             }
-            if (p.genes == null || !p.genes.HasActiveGene(RBSF_DefOf.RBSF_Mechanophobia) || !ThoughtWorker_Mechanophobia.NearMech(p))
+            if (p.genes == null || !p.genes.HasActiveGene(RBSF_DefOf.RBSF_Myotonia) || !ThoughtWorker_Myotonia.NearThreat(p))
             {
                 return ThoughtState.Inactive;
             }
             return ThoughtState.ActiveAtStage(0);
         }
 
-        public static bool NearMech(Pawn pawn)
+        public static bool NearThreat(Pawn pawn)
         {
             Map mapHeld = pawn.MapHeld;
             if (mapHeld == null)
@@ -27,12 +27,14 @@ namespace Roos_Faun_Xenotype
                 return false;
             }
             IntVec3 positionHeld = pawn.PositionHeld;
-            int num = GenRadial.NumCellsInRadius(mechRadius);
+            int num = GenRadial.NumCellsInRadius(fearRadius);
             for (int i = 0; i < num; i++)
             {
                 IntVec3 intVec = pawn.Position + GenRadial.RadialPattern[i];
                 Pawn nearPawn = intVec.GetFirstPawn(mapHeld);
-                if (intVec.InBounds(mapHeld) && !intVec.Fogged(mapHeld) && GenSight.LineOfSight(positionHeld, intVec, mapHeld, true, null, 0, 0) && nearPawn != null && nearPawn.RaceProps?.FleshType == FleshTypeDefOf.Mechanoid)
+                bool isHostile = nearPawn != null && nearPawn.HostileTo(pawn) && !nearPawn.ThreatDisabled(nearPawn);
+                bool isNearFire = intVec.ContainsStaticFire(mapHeld);
+                if (intVec.InBounds(mapHeld) && !intVec.Fogged(mapHeld) && GenSight.LineOfSight(positionHeld, intVec, mapHeld, true, null, 0, 0) && (isHostile || isNearFire))
                 {
                     return true;
                 }
@@ -40,22 +42,7 @@ namespace Roos_Faun_Xenotype
             return false;
         }
 
-        public const float mechRadius = 9.9f;
-    }
-
-    public class MentalBreakWorker_MinorCatatonic : MentalBreakWorker
-    {
-        public override bool BreakCanOccur(Pawn pawn)
-        {
-            return pawn.Spawned && base.BreakCanOccur(pawn) && ThoughtWorker_Mechanophobia.NearMech(pawn);
-        }
-
-        public override bool TryStart(Pawn pawn, string reason, bool causedByMood)
-        {
-            pawn.health.AddHediff(RBSF_DefOf.RBSF_MinorCatatonicBreakdown, null, null, null);
-            base.TrySendLetter(pawn, "LetterCatatonicMentalBreak", reason);
-            return true;
-        }
+        public const float fearRadius = 9.9f;
     }
 }
 
