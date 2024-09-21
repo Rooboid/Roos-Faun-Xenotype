@@ -47,7 +47,7 @@ namespace Roos_Faun_Xenotype
     {
         public override bool BreakCanOccur(Pawn pawn)
         {
-            return pawn.IsColonist && pawn.Spawned && base.BreakCanOccur(pawn);
+            return pawn.Spawned && base.BreakCanOccur(pawn) && ThoughtWorker_Mechphobia.NearMech(pawn);
         }
 
         public override bool TryStart(Pawn pawn, string reason, bool causedByMood)
