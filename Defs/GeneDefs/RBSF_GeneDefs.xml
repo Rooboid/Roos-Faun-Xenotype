@@ -384,6 +384,46 @@
 		</stages>
 	</ThoughtDef>
 	
+	<!-- Myotonia -->
+	
+	<GeneDef>
+		<defName>RBSF_Myotonia</defName>
+		<label>myotonia</label>
+		<labelShortAdj>myotonic</labelShortAdj>
+		<description>Carriers of this gene have a biological fear of mechanoids. When mechanoids are close by, even allied ones, there is a chance they will freeze in fear at any moment.</description>
+		<customEffectDescriptions>
+			<li>May have a mental breakdown when near mechanoids.</li>
+		</customEffectDescriptions>
+		<suppressedTraits>
+			<li>
+				<def>Pyromaniac</def>
+			</li>
+		</suppressedTraits>
+		<displayCategory>ResistanceAndWeakness</displayCategory>
+		<displayOrderInCategory>82</displayOrderInCategory>
+		<iconPath>UI/GeneIcons/RBSF_Mechanophobia</iconPath>
+		<mentalBreakMtbDays>0.05</mentalBreakMtbDays>
+		<mentalBreakDef>RBSF_MinorCatatonic</mentalBreakDef>
+		<biostatMet>8</biostatMet>
+	</GeneDef>
+  
+	<ThoughtDef>
+		<defName>RBSF_MyotoniaThought</defName>
+		<workerClass>Roos_Faun_Xenotype.ThoughtWorker_Myotonia</workerClass>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>myotonic</label>
+				<description>Baa!</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	
+	<!-- MOVE BELOW -->
+
+	
 	<MentalBreakDef>
 		<defName>RBSF_MinorCatatonic</defName>
 		<label>catatonic</label>
