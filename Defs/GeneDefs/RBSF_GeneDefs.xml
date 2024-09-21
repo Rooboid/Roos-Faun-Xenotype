@@ -352,9 +352,9 @@
 	
 	<GeneDef>
 		<defName>RBSF_Mechanophobia</defName>
-		<label>mechanophobia</label>
-		<labelShortAdj>mechanophobic</labelShortAdj>
-		<description>Carriers of this gene have a biological fear of mechanoids. When mechanoids are close by, even allied ones, there is a chance they will freeze in fear at any moment.</description>
+		<label>mechaphobia</label> <!-- I HATE that we have to change the name from the def, but the full word doesn't graphically fit on one line. -->
+		<labelShortAdj>mechaphobic</labelShortAdj>
+		<description>Carriers of this gene have a biological fear of mechanoids. When mechanoids are close by, even allied ones, there is a chance they will collapse in fear at any moment.</description>
 		<customEffectDescriptions>
 			<li>May have a mental breakdown when near mechanoids.</li>
 		</customEffectDescriptions>
@@ -390,10 +390,11 @@
 		<defName>RBSF_Myotonia</defName>
 		<label>myotonia</label>
 		<labelShortAdj>myotonic</labelShortAdj>
-		<description>Carriers of this gene have a biological fear of mechanoids. When mechanoids are close by, even allied ones, there is a chance they will freeze in fear at any moment.</description>
+		<description>Myotonia, or 'fainting goat syndrome' is a genetic condition that causes pawns to collapse when they're startled. Though these pawns recover quickly, the tiniest thing can trigger their myotonia again, causing them to pass out multiple times in a row. \n\nThings that can trigger myotonia include fire, manhunting animals and enemies.</description>
 		<customEffectDescriptions>
-			<li>May have a mental breakdown when near mechanoids.</li>
+			<li>Will faint when frightened.</li>
 		</customEffectDescriptions>
+		<iconPath>UI/GeneIcons/RBSF_Myotonia</iconPath>
 		<suppressedTraits>
 			<li>
 				<def>Pyromaniac</def>
@@ -401,9 +402,8 @@
 		</suppressedTraits>
 		<displayCategory>ResistanceAndWeakness</displayCategory>
 		<displayOrderInCategory>82</displayOrderInCategory>
-		<iconPath>UI/GeneIcons/RBSF_Mechanophobia</iconPath>
-		<mentalBreakMtbDays>0</mentalBreakMtbDays>
-		<mentalBreakDef>RBSF_MinorCatatonic</mentalBreakDef>
+		<mentalBreakMtbDays>0.001</mentalBreakMtbDays>
+		<mentalBreakDef>RBSF_TinyCatatonic</mentalBreakDef>
 		<biostatMet>8</biostatMet>
 	</GeneDef>
   
@@ -414,7 +414,7 @@
 		<stages>
 			<li>
 				<label>myotonic</label>
-				<description>Baa!</description>
+				<description>Aaagh, I need to get out of here!</description>
 				<baseMoodEffect>-20</baseMoodEffect>
 			</li>
 		</stages>
@@ -439,7 +439,40 @@
 		<description>A state of mental shock caused by a genetic fear of something. The victim becomes frozen in fear, unable to move.</description>
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>15000~25000</disappearsAfterTicks>
+				<disappearsAfterTicks>2000~12500</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+		<!-- MOVE BELOW -->
+
+	
+	<MentalBreakDef>
+		<defName>RBSF_TinyCatatonic</defName>
+		<label>myotonic</label>
+		<baseCommonality>0</baseCommonality>
+		<intensity>Major</intensity>
+		<workerClass>Roos_Faun_Xenotype.MentalBreakWorker_TinyCatatonic</workerClass>
+	</MentalBreakDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>RBSF_TinyCatatonicBreakdown</defName>
+		<label>myotonic</label>
+		<labelNoun>Myotonia</labelNoun>
+		<description>A state of temporary paralytic shock caused by genetic myotonia. \n\nTriggers of myotonia include being near fire, manhunting animals and enemies.</description>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>500~1500</disappearsAfterTicks>
 			</li>
 		</comps>
 		<stages>

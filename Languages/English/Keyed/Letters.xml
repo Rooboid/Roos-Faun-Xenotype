@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Minor Catatonic mental break -->
+  <RBSF_LetterMinorCatatonicMentalBreak>{0} has fainted due to a genetic fear of something nearby. {PAWN_pronoun} will get back up in a couple of hours.</RBSF_LetterMinorCatatonicMentalBreak>
+  
+    <!-- Tiny Catatonic mental break -->
+  <RBSF_LetterTinyCatatonicMentalBreak>{0} has fainted due to genetic myotonia. \n\nTriggers of myotonia include being near fire, manhunting animals and enemies.\n\n {PAWN_pronoun} will get back up in a few moments, but you may want to {PAWN_objective} away from any triggering stimuli before {PAWN_pronoun} faints again.</RBSF_LetterTinyCatatonicMentalBreak>
+  
+  </LanguageData>

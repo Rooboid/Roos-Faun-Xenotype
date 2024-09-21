@@ -19,6 +19,25 @@
 		</subSounds>
 	</SoundDef>
 	
+	<!-- Myotonic Faint (Used by myotonic pawns when they mental break) -->
+	
+	<SoundDef>
+		<defName>RBSF_MyotoniaFaint</defName>
+		<context>MapOnly</context>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipPath>RBSF_MyotoniaFaint</clipPath>
+					</li>
+				</grains>
+				<volumeRange>35</volumeRange>
+				<distRange>5~25</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
 	<!--====================== Misc Sounds ======================-->
 	<!-- Sounds that don't fit in other categories -->
 	
