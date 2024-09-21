@@ -13,6 +13,8 @@ namespace Roos_Faun_Xenotype
 
         public static AbilityDef RBSF_AbilityChokevineGrasp;
 
+        public static GeneDef RBSF_MechTerror;
+
         public static GeneDef RBM_UnguligradeLegs;
 
         //public static ThoughtDef RBSFE_ConstrictedThought;
