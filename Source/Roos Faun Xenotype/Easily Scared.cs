@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 using Verse.AI;
+using Verse.Sound;
 
 namespace Roos_Faun_Xenotype
 {
@@ -43,6 +44,21 @@ namespace Roos_Faun_Xenotype
         }
 
         public const float fearRadius = 9.9f;
+    }
+    public class MentalBreakWorker_TinyCatatonic : MentalBreakWorker
+    {
+        public override bool BreakCanOccur(Pawn pawn)
+        {
+            return pawn.Spawned && base.BreakCanOccur(pawn) && ThoughtWorker_Myotonia.NearThreat(pawn);
+        }
+
+        public override bool TryStart(Pawn pawn, string reason, bool causedByMood)
+        {
+            pawn.health.AddHediff(RBSF_DefOf.RBSF_TinyCatatonicBreakdown, null, null, null);
+            RBSF_DefOf.RBSF_MyotoniaFaint.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map, false));
+            base.TrySendLetter(pawn, "LetterCatatonicMentalBreak", reason);
+            return true;
+        }
     }
 }
 
