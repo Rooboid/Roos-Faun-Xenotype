@@ -227,7 +227,7 @@
 		<defName>RBSF_HorizontalPupils</defName>
 		<label>horizontal pupils</label>
 		<description>Carriers of this gene have horizontal, slit-shaped pupils. These widen the carrier's field of view, though it's harder to see what's near, above and below them.</description>
-		<biostatCpx>1</biostatCpx>
+		<biostatCpx>0</biostatCpx>
 		<biostatMet>0</biostatMet>
 		<displayOrderInCategory>4</displayOrderInCategory>
 		<iconPath>UI/GeneIcons/RBSF_HorizontalPupils</iconPath>

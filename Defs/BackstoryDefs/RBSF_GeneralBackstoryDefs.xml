@@ -39,7 +39,7 @@
 		<title>navigator</title>
 		<titleShort>navigator</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] was born to a crew of oceanic spelunkers, sailing from shore-to-shore in pursuit of rare treasures. [PAWN_nameDef] wasn’t just a stellar navigator, but also a daring explorer, a fantastic swimmer and a surprisingly-good cook.</baseDesc>
+		<baseDesc>[PAWN_nameDef] was born to a crew of oceanic spelunkers, sailing from shore-to-shore in pursuit of rare treasures. [PAWN_nameDef] wasn’t just a stellar navigator, but also a daring explorer, a fantastic swimmer and a surprisingly good cook.</baseDesc>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>
@@ -67,7 +67,7 @@
 		<title>lost child</title>
 		<titleShort>lost</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] never saw danger in the unknown. Only adventure. This thrill-seeking and curious approach to life lead the young [PAWN_nameDef] into a volcanic forest, never to find [PAWN_possessive] way back home. A small family of wild Satyrs adopted [PAWN_objective], and taught [PAWN_objective] how to weave baskets, rope, clothes and weaponry from natural materials.</baseDesc>
+		<baseDesc>[PAWN_nameDef] never saw danger in the unknown, only adventure. This thrill-seeking and curious approach to life lead the young [PAWN_nameDef] into a volcanic forest, never to find [PAWN_possessive] way back home. A small family of wild Satyrs adopted [PAWN_objective], and taught [PAWN_objective] how to weave baskets, rope, clothes and weaponry from natural materials.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>

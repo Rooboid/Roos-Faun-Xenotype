@@ -105,6 +105,7 @@
 		<maxGenerationAge>50</maxGenerationAge>
 		<combatPower>150</combatPower>
 		<chemicalAddictionChance>0.06</chemicalAddictionChance>
+		<invNutrition>1</invNutrition>
 		<backstoryCryptosleepCommonality>0.7</backstoryCryptosleepCommonality>
 		<initialWillRange>0~1</initialWillRange>
 		<initialResistanceRange>5~30</initialResistanceRange>

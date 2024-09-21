@@ -33,7 +33,7 @@
 		<title>urban faun</title>
 		<titleShort>scrounger</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] dreamed of an urban life, and set out to live within a sprawling, human civilisation. [PAWN_pronoun] rummaged through dustbins and dined on curbside leftovers to survive.</baseDesc>
+		<baseDesc>[PAWN_nameDef] dreamed of an urban life, and set out to live within a sprawling, human civilisation. [PAWN_pronoun] rummaged through dustbins and ate leftovers to survive.</baseDesc>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>
@@ -59,7 +59,7 @@
 		<title>unlikely bandit</title>
 		<titleShort>bandit</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] was found submerged in the river by a group of notorious bandits. Even they didn’t have the heart to neglect this young faun, and so rescued [PAWN_objective] and raised [PAWN_objective] to appreciate their cause.</baseDesc>
+		<baseDesc>[PAWN_nameDef] was saved from drowning by a group of notorious bandits. Even they didn’t have the heart to neglect this adorable, young faun, and so raised [PAWN_objective] as their own. Over time, [PAWN_pronoun] learned to appreciate [PAWN_possessive] saviours' dastardly cause.</baseDesc>
 		<bodyTypeMale>Hulk</bodyTypeMale>
 		<bodyTypeFemale>Hulk</bodyTypeFemale>
 		<spawnCategories>
@@ -83,7 +83,7 @@
 		<title>saint</title>
 		<titleShort>saint</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>Following a tragic wildfire, [PAWN_nameDef] stood amongst the ashes of its destruction, barely, but still, breathing. Though futile, [PAWN_possessive] bravery in attempting to save the creatures of the forest made spectators see [PAWN_objective] a figure of peace. [PAWN_pronoun] was worshipped as a saint by the pacifist settlers of the forest, who would offer gifts to [PAWN_objective] in exchange for a blessings and guidance.</baseDesc>
+		<baseDesc>Following a tragic wildfire, [PAWN_nameDef] scrambled to save the injured wildlife that lie in its wake. [PAWN_possessive] bravery resulted in [PAWN_objective] becoming a figure of peace. [PAWN_pronoun] was worshipped as a saint by the pacifist settlers of the forest, who offered gifts to [PAWN_objective] in exchange for [PAWN_possessive] blessings and guidance.</baseDesc>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>
@@ -114,7 +114,7 @@
 		<title>osteologist</title>
 		<titleShort>osteologist</titleShort>
 		<slot>Adulthood</slot>
-		<baseDesc>[PAWN_nameDef]’s unique admiration for the skeletal form lead [PAWN_objective] to become an osteologist. A mere pile of bones is enough for anatomical prodigy [PAWN_nameDef] to give a detailed profile on the diet, decent and health of their owners.</baseDesc>
+		<baseDesc>[PAWN_nameDef]’s unique admiration for the skeletal form lead [PAWN_objective] to become an osteologist. \n\nA mere pile of bones was enough for anatomical prodigy [PAWN_nameDef] to give a detailed profile on the diet, age and health of their owners.</baseDesc>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>
@@ -143,7 +143,7 @@
 		<title>child psychologist</title>
 		<titleShort>psychologist</titleShort>
 		<slot>Adulthood</slot>
-		<baseDesc>[PAWN_nameDef] ventured into the field of child psychology and conducted behavioural tests on willing families and their young to determine what makes children so…peculiar. While [PAWN_pronoun] enjoys [PAWN_possessive] work, [PAWN_nameDef], knowing what [PAWN_pronoun] knows now, is set on the notion of never having children for [PAWN_objective]self.</baseDesc>
+		<baseDesc>[PAWN_nameDef] worked in the field of child psychology and conducted behavioural tests on willing participants to determine what makes children so unique. While [PAWN_pronoun] enjoyed [PAWN_possessive] work, [PAWN_pronoun] always detested having to be around children off the clock.</baseDesc>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>
@@ -168,10 +168,10 @@
 
 	<BackstoryDef>
 		<defName>RBSF_Apiologist</defName>
-		<title>apiologist</title>
-		<titleShort>apiologist</titleShort>
+		<title>melittologist</title>
+		<titleShort>melittologist</titleShort>
 		<slot>Adulthood</slot>
-		<baseDesc>Sweeter than honey [PAWN_nameDef] had a penchant for bees, and worked as a melittologist. Unlike many in [PAWN_possessive] field, [PAWN_nameDef] studied bees in their natural habitats, and constructed an outdoor testing facility, which [PAWN_pronoun] dubbed the “laborapiary”.</baseDesc>
+		<baseDesc>Sweeter than honey [PAWN_nameDef] had a penchant for bees, and worked as a melittologist. [PAWN_nameDef] began by studying bees in their natural habitats, eventually constructing [PAWN_possessive] own outdoor testing facility, which [PAWN_pronoun] dubbed the “laborapiary”.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>
@@ -200,7 +200,7 @@
 		<title>charitable</title>
 		<titleShort>charitable</titleShort>
 		<slot>Adulthood</slot>
-		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] siblings established a makeshift shelter for children of war. What [PAWN_pronoun] lacked domestic skills, [PAWN_nameDef] made up for in creative ones, and [PAWN_pronoun] would sing to the orphans every night; songs of love, compassion and new beginnings.</baseDesc>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] siblings established a makeshift shelter for children of war. What [PAWN_pronoun] lacked domestic skills, [PAWN_pronoun] made up for in creative ones, and [PAWN_pronoun] would sing to the orphans every night. Songs of love, songs of compassion and songs of new beginnings.</baseDesc>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>

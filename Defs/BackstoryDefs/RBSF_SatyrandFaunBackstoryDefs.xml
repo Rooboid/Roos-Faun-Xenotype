@@ -10,7 +10,7 @@
 		<title>clairvoyant</title>
 		<titleShort>clairvoyant</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] always seemed to know more about the world than [PAWN_pronoun] should have at [PAWN_possessive] age. Many villagefolk claimed that [PAWN_pronoun] was a messenger from above, and requested [PAWN_possessive] insight into their futures.</baseDesc>
+		<baseDesc>[PAWN_nameDef] always seemed to know more about the world than [PAWN_pronoun] should have at [PAWN_possessive] age. Many villagefolk claimed that [PAWN_pronoun] was a messenger from above, and begged for [PAWN_possessive] insight into their futures.</baseDesc>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>
@@ -69,7 +69,7 @@
 		<title>archer</title>
 		<titleShort>archer</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] learned the art of ranged combat from a young age, with [PAWN_possessive] mother, the clan leader, as [PAWN_possessive] teacher. Part of the clan’s oath was to never bring harm unto animals.</baseDesc>
+		<baseDesc>[PAWN_nameDef] learned the art of ranged combat from a young age, with [PAWN_possessive] mother — the clan leader — as [PAWN_possessive] teacher. Part of the clan’s oath was to never bring harm unto animals.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>
@@ -133,7 +133,7 @@
 		<title>flower child</title>
 		<titleShort>hermit</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] was raised by a tribe of compassionate and beautiful fauns, who taught [PAWN_objective] to appreciate, love and nurture the world around [PAWN_objective]. Seeing humans pave over the earth with their monochrome structures gave [PAWN_nameDef] a vendetta against all of mankind.</baseDesc>
+		<baseDesc>[PAWN_nameDef] was raised by a tribe of compassionate and beautiful fauns, who taught [PAWN_objective] to appreciate, love and nurture the world around [PAWN_objective]. Seeing humans pave over [PAWN_possessive] planet with their monochrome structures gave [PAWN_nameDef] a vendetta against all of mankind.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>
@@ -167,7 +167,7 @@
 		<title>literate</title>
 		<titleShort>writer</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>Unlike many of [PAWN_possessive] kin, [PAWN_nameDef] learned to read and write from studying stolen human texts. Over time, [PAWN_nameDef] penned fantastical stories about [PAWN_possessive] life in the wilderness, hoping for others to read of [PAWN_possessive] community’s ways.</baseDesc>
+		<baseDesc>Unlike many of [PAWN_possessive] kin, [PAWN_nameDef] learned to read and write by reading stolen human texts. Over time, [PAWN_nameDef] penned fantastical stories about [PAWN_possessive] life in the wilderness, hoping for others to read about the ways of [PAWN_possessive] community.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>
@@ -197,7 +197,7 @@
 		<title>cup bearer</title>
 		<titleShort>entertainer</titleShort>
 		<slot>Adulthood</slot>
-		<baseDesc>[PAWN_nameDef] was a revered, high-ranked official who entertained and poured drinks for royalty alike during gatherings and soirées.</baseDesc>
+		<baseDesc>[PAWN_nameDef] was a revered, high-ranked official who entertained and poured drinks during aristocratic gatherings and soirées.</baseDesc>
 		<bodyTypeMale>Fat</bodyTypeMale>
 		<bodyTypeFemale>Fat</bodyTypeFemale>
 		<spawnCategories>
@@ -286,7 +286,7 @@
 		<title>dancer</title>
 		<titleShort>dancer</titleShort>
 		<slot>Adulthood</slot>
-		<baseDesc>[PAWN_nameDef] performed in a high-end tavern, catering to affluent and oftentimes undercover patrons, from royalty to lawmakers to powerful oligarchs. [PAWN_nameDef] perfected [PAWN_possessive] craft, specialising in native dances that showcased [PAWN_possessive] flexibility and grace. \n\nThe clattering of jewellery would ring within the tavern walls as patrons applauded [PAWN_possessive] talent.</baseDesc>
+		<baseDesc>[PAWN_nameDef] performed in a high-end tavern, catering to affluent and oftentimes undercover patrons, from royalty to oligarchs. [PAWN_nameDef] perfected [PAWN_possessive] craft, specialising in native dances that showcased [PAWN_possessive] flexibility and grace. \n\nThe sound of clattering jewellery would ring within the tavern walls as patrons applauded [PAWN_possessive] talent.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>
@@ -318,7 +318,7 @@
 		<title>glaciologist</title>
 		<titleShort>glaciologist</titleShort>
 		<slot>Adulthood</slot>
-		<baseDesc>[PAWN_nameDef] set up camp in a bitter nook of [PAWN_possessive] homeworld to study alpine terrain, creatures and phenomena. [PAWN_pronoun] became a master of survival, and [PAWN_possessive] furry unguligrade legs gave [PAWN_objective] a mighty advantage over [PAWN_possessive] fleshy co-workers when scaling hazardous terrain.</baseDesc>
+		<baseDesc>[PAWN_nameDef] set up camp in a bitter nook of [PAWN_possessive] homeworld to study alpine terrain, creatures and phenomena. [PAWN_pronoun] became a master of survival, and [PAWN_possessive] furry unguligrade legs gave [PAWN_objective] a mighty advantage over [PAWN_possessive] fleshy co-workers in the snow.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>
@@ -336,7 +336,7 @@
 		</forcedTraits>
 	</BackstoryDef>
 	
-		<!--============================== Hotelier Builder ============================-->
+	<!--============================== Hotelier Builder ============================-->
 	<!-- We finish each other's... -->
 
 	<BackstoryDef>
@@ -344,7 +344,7 @@
 		<title>hotelier</title>
 		<titleShort>hotelier</titleShort>
 		<slot>Adulthood</slot>
-		<baseDesc>[PAWN_nameDef] and [PAWN_possessive]'s childhood friend built a hostel for wandering travellers. [PAWN_pronoun] made rooms for guests to rest in, while [PAWN_possessive] companion prepared hearty soups to fill their bellies.</baseDesc>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] childhood friend built a hostel for wandering travellers. [PAWN_pronoun] made rooms for guests to rest in, while [PAWN_possessive] companion prepared hearty soups to fill their bellies.</baseDesc>
 		<bodyTypeMale>Hulk</bodyTypeMale>
 		<bodyTypeFemale>Hulk</bodyTypeFemale>
 		<spawnCategories>
@@ -363,14 +363,14 @@
 	</BackstoryDef>
 	
 	<!--============================== Hotelier Chef ============================-->
-	<!-- ...Sentences -->
+	<!-- ...sandwiches. -->
 
 	<BackstoryDef>
 		<defName>RBSF_HotelierChef</defName>
 		<title>hostel chef</title>
 		<titleShort>hotelier</titleShort>
 		<slot>Adulthood</slot>
-		<baseDesc>[PAWN_nameDef] and [PAWN_possessive]'s childhood friend built a hostel for wandering travellers. [PAWN_pronoun] brewed hearty, thick soups to feed the exhausted lodgers, while [PAWN_possessive] friend maintained the place.</baseDesc>
+		<baseDesc>[PAWN_nameDef] and [PAWN_possessive] childhood friend built a hostel for wandering travellers. [PAWN_pronoun] brewed hearty, thick soups to feed the exhausted lodgers, while [PAWN_possessive] friend maintained the place.</baseDesc>
 		<bodyTypeMale>Fat</bodyTypeMale>
 		<bodyTypeFemale>Fat</bodyTypeFemale>
 		<spawnCategories>
@@ -388,7 +388,7 @@
 		</workDisables>
 	</BackstoryDef>
 	
-		<!--============================== Riddler ============================-->
+	<!--============================== Riddler ============================-->
 	<!-- Forces lazy -->
 
 	<BackstoryDef>
@@ -396,7 +396,7 @@
 		<title>riddler</title>
 		<titleShort>riddler</titleShort>
 		<slot>Adulthood</slot>
-		<baseDesc>[PAWN_nameDef] engineered puzzle boxes and cryptic vessels for patrons to keep their treasures hidden from bandits. [PAWN_nameDef] prides [PAWN_objective]self in [PAWN_possessive] knack for riddles and trickery, but using one’s brain so intensely calls for one-or-two naps a day, just to wind down. Or so [PAWN_nameDef] says.</baseDesc>
+		<baseDesc>[PAWN_nameDef] engineered puzzle boxes, cryptic vessels and safes. [PAWN_nameDef] prides [PAWN_objective]self in [PAWN_possessive] knack for riddles and trickery, but using one’s brain so intensely calls for a couple of naps a day. Or so [PAWN_nameDef] says.</baseDesc>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>
