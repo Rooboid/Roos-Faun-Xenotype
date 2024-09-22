@@ -32,10 +32,14 @@ namespace Roos_Faun_Xenotype
             for (int i = 0; i < num; i++)
             {
                 IntVec3 intVec = pawn.Position + GenRadial.RadialPattern[i];
+                if (!intVec.InBounds(mapHeld) || intVec.Fogged(mapHeld) || !GenSight.LineOfSight(positionHeld, intVec, mapHeld, true, null, 0, 0))
+                {
+                    continue;
+                }
                 Pawn nearPawn = intVec.GetFirstPawn(mapHeld);
                 bool isHostile = nearPawn != null && nearPawn.HostileTo(pawn) && !nearPawn.ThreatDisabled(nearPawn);
-                bool isNearFire = intVec.ContainsStaticFire(mapHeld);
-                if (intVec.InBounds(mapHeld) && !intVec.Fogged(mapHeld) && GenSight.LineOfSight(positionHeld, intVec, mapHeld, true, null, 0, 0) && (isHostile || isNearFire))
+                bool isOnFire = intVec.ContainsStaticFire(mapHeld);
+                if (isHostile || isOnFire)
                 {
                     return true;
                 }

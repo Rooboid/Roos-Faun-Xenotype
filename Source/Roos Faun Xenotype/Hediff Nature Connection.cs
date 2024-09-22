@@ -12,7 +12,7 @@ namespace Roos_Faun_Xenotype
             if (base.Pawn.IsHashIntervalTick(60))
             {
                 var numPlants = CountNearPlants(parent.pawn);
-                Log.Message("counted " + numPlants + " plants near " + parent.pawn.Name.ToStringShort);
+                //Log.Message("counted " + numPlants + " plants near " + parent.pawn.Name.ToStringShort);
                 int severity;
                 switch (numPlants)
                 {
@@ -51,10 +51,15 @@ namespace Roos_Faun_Xenotype
             {
                 //Scan radius around pawn for plants
                 IntVec3 intVec = positionHeld + GenRadial.RadialPattern[i];
+
+                if (!intVec.InBounds(mapHeld) || intVec.Fogged(mapHeld))
+                {
+                    continue;
+                }
                 Plant plant = intVec.GetPlant(mapHeld);
 
                 //count plants
-                if (intVec.InBounds(mapHeld) && !intVec.Fogged(mapHeld) && plant != null)
+                if (plant != null)
                 {
                     if (plant.def.plant.IsTree && !plant.def.plant.isStump)
                     {

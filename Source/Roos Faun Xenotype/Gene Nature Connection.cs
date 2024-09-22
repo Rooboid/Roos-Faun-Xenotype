@@ -49,6 +49,10 @@ namespace Roos_Faun_Xenotype
             {
                 //get random nearby cell, and check if it has a plant on it
                 var randLocInRadius = pawn.Position + (Rand.InsideUnitCircleVec3 * plantGrowRadius).ToIntVec3();
+                if (!randLocInRadius.InBounds(pawn.Map))
+                {
+                    continue;
+                }
                 var plant = randLocInRadius.GetPlant(pawn.Map);
                 if (plant == null || plant.LifeStage != PlantLifeStage.Growing)
                 {

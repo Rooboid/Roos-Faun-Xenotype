@@ -31,8 +31,12 @@ namespace Roos_Faun_Xenotype
             for (int i = 0; i < num; i++)
             {
                 IntVec3 intVec = pawn.Position + GenRadial.RadialPattern[i];
+                if (!intVec.InBounds(mapHeld) || intVec.Fogged(mapHeld) || !GenSight.LineOfSight(positionHeld, intVec, mapHeld, true, null, 0, 0))
+                {
+                    continue;
+                }
                 Pawn nearPawn = intVec.GetFirstPawn(mapHeld);
-                if (intVec.InBounds(mapHeld) && !intVec.Fogged(mapHeld) && GenSight.LineOfSight(positionHeld, intVec, mapHeld, true, null, 0, 0) && nearPawn != null && nearPawn.RaceProps?.FleshType == FleshTypeDefOf.Mechanoid)
+                if (nearPawn != null && nearPawn.RaceProps?.FleshType == FleshTypeDefOf.Mechanoid)
                 {
                     return true;
                 }
