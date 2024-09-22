@@ -99,7 +99,151 @@
 		</stages>
 	</HediffDef>
 	
-	<!-- Nature Connection HeDiff - Given to Pawns by the Natural Connection Gene -->
+	<!--====================== Spore Cloud Ability ======================-->
+	<!-- Gives allies a pleasant high, gives foes a bad trip -->
+	
+	<AbilityDef>
+		<defName>RBSF_AbilitySporeCloud</defName>
+		<label>spore cloud</label>
+		<description>The user fires a psychadelic cloud of smoke into the air, giving allies in range a pleasant high, and foes a disorientating trip. The range of this ability scales with the user's Nature Connection stat.</description>
+		<descriptionHyperlinks>
+			<GeneDef>RBSF_NaturalConnection</GeneDef>
+			<StatDef>RBSF_NatureConnection</StatDef>
+		</descriptionHyperlinks>
+		<iconPath>UI/GeneIcons/RBSF_SporeCloud</iconPath>
+		<cooldownTicksRange>60000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<displayOrder>301</displayOrder>
+		<warmupStartSound>RBSF_ChokeVineWarmup</warmupStartSound> <!-- TODO -->
+		<charges>1</charges>
+		<statBases>
+			<Ability_Duration>5</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Roos_Faun_Xenotype.RBSF_Verb_CastAbilityChokevineGrasp</verbClass>
+			<warmupEffecter>RBSF_ChokeVineWarmupEffecter</warmupEffecter>
+			<range>10</range>
+			<warmupTime>0.5</warmupTime>
+			<drawAimPie>False</drawAimPie>
+			<soundCast>RBSF_ChokeVineCast</soundCast> <!-- TODO -->
+			<targetParams>
+				<canTargetLocations>True</canTargetLocations>
+				<canTargetSelf>True</canTargetSelf>
+				<canTargetAnimals>True</canTargetAnimals>
+				<canTargetPawns>True</canTargetPawns>
+			</targetParams>
+		</verbProperties>
+	</AbilityDef>
+	
+		<!-- Bad Trip Hediff - Applied to hostile pawns effected by Spore Cloud -->
+
+	<HediffDef>
+		<defName>RBSF_BadTripHediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>spore cloud high</label>
+		<labelNoun>bad trip</labelNoun>
+		<defaultLabelColor>(130, 160, 240)</defaultLabelColor>
+		<description>The pawn is having a debilitating bad trip due to the effects of an enemy spore cloud.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<maxSeverity>20</maxSeverity>
+		<isBad>true</isBad>
+		<initialSeverity>1</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-80</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>VineStun_Effect</stateEffecter> <!-- TO DO -->
+			</li>
+		</comps>
+		<injuryProps>
+			<destroyedLabel>destroyed</destroyedLabel>
+			<destroyedOutLabel>destroyed</destroyedOutLabel>
+		</injuryProps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>fading trip</label>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-5</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-5</offset>
+					</li>
+				</capMods>
+			</li>
+						<li>
+				<minSeverity>10</minSeverity>
+				<label>bad trip</label>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-10</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-10</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+			<!-- Good Trip Hediff - Applied to hostile pawns effected by Spore Cloud -->
+
+	<HediffDef>
+		<defName>RBSF_GoodTripHediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>spore cloud high</label>
+		<labelNoun>good trip</labelNoun>
+		<defaultLabelColor>(225, 162, 240)</defaultLabelColor>
+		<description>The pawn is having a fluffy and pleasant trip due to the effects of an ally's spore cloud.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<initialSeverity>1</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-80</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>VineStun_Effect</stateEffecter> <!-- TO DO -->
+			</li>
+		</comps>
+		<injuryProps>
+			<destroyedLabel>destroyed</destroyedLabel>
+			<destroyedOutLabel>destroyed</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+	
+		<!-- Good Trip Thought -->
+
+	<ThoughtDef>
+		<defName>RBSF_GoodTripThought</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>RBSF_GoodTripHediff</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>pleasant spore trip</label>
+				<description>I can smell colours, I can see sounds...</description>
+				<baseMoodEffect>7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!--====================== Nature Connection HeDiff ======================-->
+	<!-- Given to Pawns by the Natural Connection Gene -->
 	
 	<HediffDef>
 		<defName>RBSF_NatureConnectionOffset</defName>
