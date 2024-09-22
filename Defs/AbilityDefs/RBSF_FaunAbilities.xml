@@ -9,6 +9,7 @@
 		<label>chokevine grasp</label>
 		<description>The user rises vines from the ground below a foe, slowing them for a short period of time. The range of this ability scales with the user's Nature Connection stat.</description>
 		<descriptionHyperlinks>
+			<GeneDef>RBSF_NaturalConnection</GeneDef>
 			<StatDef>RBSF_NatureConnection</StatDef>
 		</descriptionHyperlinks>
 		<iconPath>UI/GeneIcons/RBSF_ChokevineGrasp</iconPath>

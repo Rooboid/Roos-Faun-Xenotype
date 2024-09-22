@@ -293,16 +293,16 @@
 		<defName>RBSF_NaturalConnection</defName>
 		<geneClass>Roos_Faun_Xenotype.RBSF_NaturalConnection</geneClass>
 		<label>natural connection</label>
-		<description>Carriers of this gene are spiritually intertwined with nature. Plants around this pawn will grow much faster. The rate of the plants' growth scales with the pawn's Nature Connection stat.\n\nNature Connection can be increased by equipping certain weapons and items of clothing.</description>
-		<iconPath>UI/GeneIcons/RBSF_NaturalConnection</iconPath>
-		<statFactors>
-			<RBSF_NatureConnection>1.15</RBSF_NatureConnection>
-		</statFactors>
+		<description>Carriers of this gene are spiritually intertwined with nature. Plants around this pawn will grow much faster. The rate of the plants' growth scales with the pawn's Nature Connection stat.\n\nThe Nature Connection stat can be increased by being around trees or equipping certain weapons and items of clothing.</description>
 		<descriptionHyperlinks>
 			<StatDef>RBSF_NatureConnection</StatDef>
 		</descriptionHyperlinks>
+		<iconPath>UI/GeneIcons/RBSF_NaturalConnection</iconPath>
+		<statFactors>
+			<RBSF_NatureConnection>1.10</RBSF_NatureConnection>
+		</statFactors>
 		<biostatCpx>1</biostatCpx>
-		<biostatMet>-1</biostatMet>
+		<biostatMet>-2</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<displayOrderInCategory>180</displayOrderInCategory>
 		<symbolPack>
@@ -322,7 +322,7 @@
 	<GeneDef>
 		<defName>RBSF_ChokevineGrasp</defName>
 		<label>chokevine grasp</label>
-		<description>Carriers of this gene can summon chokevines from the ground below, constricting and holding enemies still.\n\nThe range of this ability scales with the pawn's Nature Connection stat, which can be increased by equipping certain weapons and items of clothing.</description>
+		<description>Carriers of this gene can summon chokevines from the ground below, constricting and holding enemies still.\n\nThe range of this ability scales with the pawn's Nature Connection stat, which can be increased by having the Natural Connection gene or equipping certain weapons and apparel.</description>
 		<iconPath>UI/GeneIcons/RBSF_ChokevineGrasp</iconPath>
 		<descriptionHyperlinks>
 			<StatDef>RBSF_NatureConnection</StatDef>
@@ -353,7 +353,7 @@
 		<defName>RBSF_Mechanophobia</defName>
 		<label>mechaphobia</label><!-- I hate that we have to change the name from the def, but the full word doesn't graphically fit on one line. -->
 		<labelShortAdj>mechaphobic</labelShortAdj>
-		<description>Carriers of this gene have a biological fear of mechanoids. When mechanoids are close-by, even allied ones, there is a chance they will collapse in fear at any moment.</description>
+		<description>Carriers of this gene have a biological fear of mechanoids. When mechanoids are close, even allied ones, there is a chance that the pawn will collapse in fear at any moment.</description>
 		<customEffectDescriptions>
 			<li>May have a mental breakdown when near mechanoids.</li>
 		</customEffectDescriptions>
@@ -400,10 +400,7 @@
 		<biostatMet>8</biostatMet>
 		<description>Myotonia, or 'fainting goat syndrome' is a genetic condition that causes pawns to collapse when they're startled. \n\nThough these pawns recover quickly, the tiniest thing can trigger their myotonia again, causing them to pass out multiple times in a row.</description>
 		<customEffectDescriptions>
-			<li>Pawn will temporarily faint when near things that frighten them, such as:\n
-				- fire;\n
-				- manhunting animals;\n
-				- hostile pawns.</li>
+			<li>Pawn will temporarily faint when near things that frighten them, such as, fire, mechanoids, manhunting animals and hostile pawns.</li>
 		</customEffectDescriptions>
 		<iconPath>UI/GeneIcons/RBSF_Myotonia</iconPath>
 		<suppressedTraits>
