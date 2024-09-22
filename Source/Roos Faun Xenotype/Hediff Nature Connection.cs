@@ -4,7 +4,7 @@ using Verse;
 
 namespace Roos_Faun_Xenotype
 {
-    public class RBSF_NatureConnectionOffsetComp : HediffComp
+    public class Comp_NatureConnectionHediff : HediffComp
     {
         //Scales severity with number of nearby plants
         public override void CompPostTick(ref float severityAdjustment)
@@ -13,23 +13,23 @@ namespace Roos_Faun_Xenotype
             {
                 var numPlants = CountNearPlants(parent.pawn);
                 Log.Message("counted " + numPlants + " plants near " + parent.pawn.Name.ToStringShort);
-                var severity = 0;
+                int severity;
                 switch (numPlants)
                 {
-                    case int i when i < 10:
-                        severity = 1;
-                        break;
-                    case int i when i < 20:
-                        severity = 2;
+                    case int i when i < 15:
+                        severity = 0;
                         break;
                     case int i when i < 30:
-                        severity = 3;
+                        severity = 1;
                         break;
                     case int i when i < 40:
-                        severity = 4;
+                        severity = 2;
+                        break;
+                    case int i when i < 50:
+                        severity = 3;
                         break;
                     default:
-                        severity = 5;
+                        severity = 4;
                         break;
                 }
                 this.parent.Severity = severity;
@@ -45,9 +45,9 @@ namespace Roos_Faun_Xenotype
             }
             IntVec3 positionHeld = pawn.PositionHeld;
             float plantRadius = 10.9f;
-            int num = GenRadial.NumCellsInRadius(plantRadius);
-            int plantCount = 0;
-            for (int i = 0; i < num; i++)
+            int numCells = GenRadial.NumCellsInRadius(plantRadius);
+            float plantTotalWeight = 0;
+            for (int i = 0; i < numCells; i++)
             {
                 //Scan radius around pawn for plants
                 IntVec3 intVec = positionHeld + GenRadial.RadialPattern[i];
@@ -58,17 +58,27 @@ namespace Roos_Faun_Xenotype
                 {
                     if (plant.def.plant.IsTree && !plant.def.plant.isStump)
                     {
-                        if (plant.def == ThingDefOf.Plant_TreeGauranlen || plant.def == ThingDefOf.Plant_TreeAnima) //Trees count 50x
+                        if (plant.def == ThingDefOf.Plant_TreeGauranlen || plant.def == ThingDefOf.Plant_TreeAnima) //Trees count 35x
                         {
-                            plantCount += 50;
+                            plantTotalWeight += 35;
+                            //specialTreeCount += 1;
+                            continue;
                         }
-                        plantCount += 5; //Trees count 5x
+                        plantTotalWeight += 1; //Trees count 1x
                         continue;
                     }
-                    plantCount += 1;
+                    plantTotalWeight += 0.1f; //Other plants count 0.1x
                 }
             }
-            return plantCount;
+            return (int)plantTotalWeight;
         }
     }
+    public class CompProperties_NatureConnectionHediff : HediffCompProperties
+    {
+        public CompProperties_NatureConnectionHediff()
+        {
+            this.compClass = typeof(Comp_NatureConnectionHediff);
+        }
+     }
+    
 }
