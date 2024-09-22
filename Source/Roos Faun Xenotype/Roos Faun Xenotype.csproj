@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ability Chokevine Grasp.cs" />
+    <Compile Include="Ability Treewalk.cs" />
     <Compile Include="Ability Spore Cloud.cs" />
     <Compile Include="Gene Myotonia.cs" />
     <Compile Include="Gene Mechanophobia.cs" />

@@ -27,6 +27,10 @@ namespace Roos_Faun_Xenotype
 
         public static HediffDef RBSF_NatureConnectionOffset;
 
+        public static HediffDef RBSF_BadTripHediff;
+
+        public static HediffDef RBSF_GoodTripHediff;
+
         public static SoundDef RBSF_MyotoniaFaint;
 
         //public static ThoughtDef RBSFE_ConstrictedThought;
