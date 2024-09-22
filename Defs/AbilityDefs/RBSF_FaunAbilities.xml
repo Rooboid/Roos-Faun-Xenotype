@@ -133,6 +133,9 @@
 				<canTargetPawns>True</canTargetPawns>
 			</targetParams>
 		</verbProperties>
+				<comps>
+			<li Class="Roos_Faun_Xenotype.CompProperties_AbilitySporeCloud"/>
+		</comps>
 	</AbilityDef>
 	
 		<!-- Bad Trip Hediff - Applied to hostile pawns effected by Spore Cloud -->
