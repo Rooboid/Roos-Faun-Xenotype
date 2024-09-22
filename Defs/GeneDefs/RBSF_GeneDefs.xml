@@ -321,7 +321,7 @@
 
 	<GeneDef>
 		<defName>RBSF_ChokevineGrasp</defName>
-		<label>chokevine grip</label>
+		<label>chokevine grasp</label>
 		<description>Carriers of this gene can summon chokevines from the ground below, constricting and holding enemies still.\n\nThe range of this ability scales with the pawn's Nature Connection stat, which can be increased by equipping certain weapons and items of clothing.</description>
 		<iconPath>UI/GeneIcons/RBSF_ChokevineGrasp</iconPath>
 		<descriptionHyperlinks>
