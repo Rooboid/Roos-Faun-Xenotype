@@ -53,13 +53,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chokevine Grasp.cs" />
-    <Compile Include="Easily Scared.cs" />
-    <Compile Include="Mechanophobia.cs" />
+    <Compile Include="Ability Chokevine Grasp.cs" />
+    <Compile Include="Ability Spore Cloud.cs" />
+    <Compile Include="Gene Myotonia.cs" />
+    <Compile Include="Gene Mechanophobia.cs" />
     <Compile Include="DefOfs.cs" />
+    <Compile Include="Hediff Nature Connection.cs" />
     <Compile Include="PawnFur.cs" />
     <Compile Include="Startup Constructor.cs" />
-    <Compile Include="Nature Connection.cs" />
+    <Compile Include="Gene Nature Connection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
