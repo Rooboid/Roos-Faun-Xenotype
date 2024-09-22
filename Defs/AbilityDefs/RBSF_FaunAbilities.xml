@@ -111,35 +111,40 @@
 		<displayWound>false</displayWound>
 		<description>This pawn makes plants around them grow faster. The more trees you have, the faster the plants will grow.</description>
 		<comps>
-			<li Class="Roos_Faun_Xenotype.RBSF_NatureConnectionOffsetComp"/>
+			<li Class = "Roos_Faun_Xenotype.RBSF_NatureConnectionOffsetComp"/>
 		</comps>
 		<stages>
 			<li>
 				<label>inactive</label>
+				<minSeverity>0</minSeverity>
 				<statOffsets>
 					<RBSF_NatureConnectionOffset>0.0</RBSF_NatureConnectionOffset>
 				</statOffsets>
 			</li>
 			<li>
 				<label>weak</label>
+				<minSeverity>20</minSeverity>
 				<statOffsets>
 					<RBSF_NatureConnectionOffset>0.25</RBSF_NatureConnectionOffset>
 				</statOffsets>
 			</li>
 			<li>
 				<label>moderate</label>
+				<minSeverity>40</minSeverity>
 				<statOffsets>
 					<RBSF_NatureConnectionOffset>0.5</RBSF_NatureConnectionOffset>
 				</statOffsets>
 			</li>
 			<li>
 				<label>strong</label>
+				<minSeverity>60</minSeverity>
 				<statOffsets>
 					<RBSF_NatureConnectionOffset>0.75</RBSF_NatureConnectionOffset>
 				</statOffsets>
 			</li>
 			<li>
 				<label>flourishing</label>
+				<minSeverity>80</minSeverity>
 				<statOffsets>
 					<RBSF_NatureConnectionOffset>1</RBSF_NatureConnectionOffset>
 				</statOffsets>
