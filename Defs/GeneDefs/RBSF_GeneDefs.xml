@@ -88,8 +88,7 @@
 				</drawData>
 			</li>
 		</renderNodeProperties>
-
-		<exclusionTags>
+		<exclusionTags> <!-- Compatibility with the Seren -->
 			<li>SerenSensors</li>
 		</exclusionTags>
 		<symbolPack>
@@ -112,7 +111,7 @@
 		<defName>RBSF_DeerHead</defName>
 		<label>deer head</label>
 		<labelShortAdj>cervid</labelShortAdj>
-		<description>Carriers of this gene possess a cervid head.</description>
+		<description>Carriers of this gene have a cervid head.</description>
 		<iconPath>UI/GeneIcons/RBSF_DeerHead</iconPath>
 		<displayCategory>Cosmetic</displayCategory>
 		<displayOrderInCategory>98</displayOrderInCategory>
@@ -193,7 +192,7 @@
 	<GeneDef ParentName="GeneMoodBase">
 		<defName>RBSF_Mood_Reclusive</defName>
 		<label>reclusive</label>
-		<description>The mood of these pawns depends on how big or small their faction is; the smaller it is, the happier they will be.</description>
+		<description>The mood of these pawns depends on how big or small their faction is; the smaller it is, the happier they will be. \n\nThey are also less likely to romance pawns who are not also reclusive.</description>
 		<iconPath>UI/GeneIcons/RBSF_Reclusive</iconPath>
 		<displayOrderInCategory>40</displayOrderInCategory>
 		<biostatCpx>1</biostatCpx>
@@ -294,7 +293,7 @@
 		<defName>RBSF_NaturalConnection</defName>
 		<geneClass>Roos_Faun_Xenotype.RBSF_NaturalConnection</geneClass>
 		<label>natural connection</label>
-		<description>Carriers of this gene are spiritually intertwined with nature. Plants around this pawn will have their growth rate increased. The rate of growth scales with the pawn's Nature Connection stat, which can be increased by equipping certain weapons and items of clothing.</description>
+		<description>Carriers of this gene are spiritually intertwined with nature. Plants around this pawn will grow much faster. The rate of the plants' growth scales with the pawn's Nature Connection stat.\n\nNature Connection can be increased by equipping certain weapons and items of clothing.</description>
 		<iconPath>UI/GeneIcons/RBSF_NaturalConnection</iconPath>
 		<statFactors>
 			<RBSF_NatureConnection>1.15</RBSF_NatureConnection>
@@ -323,7 +322,7 @@
 	<GeneDef>
 		<defName>RBSF_ChokevineGrasp</defName>
 		<label>chokevine grip</label>
-		<description>The user's connection with nature allows them to summon chokevines from the ground below, constricting and slowing an enemy in their grasp. The range of this ability scales with the pawn's Nature Connection stat, which can be increased by equipping certain weapons and items of clothing.</description>
+		<description>Carriers of this gene can summon chokevines from the ground below, constricting and holding enemies still.\n\nThe range of this ability scales with the pawn's Nature Connection stat, which can be increased by equipping certain weapons and items of clothing.</description>
 		<iconPath>UI/GeneIcons/RBSF_ChokevineGrasp</iconPath>
 		<descriptionHyperlinks>
 			<StatDef>RBSF_NatureConnection</StatDef>
@@ -399,9 +398,12 @@
 		<label>myotonia</label>
 		<labelShortAdj>myotonic</labelShortAdj>
 		<biostatMet>8</biostatMet>
-		<description>Myotonia, or 'fainting goat syndrome' is a genetic condition that causes pawns to collapse when they're startled. Though these pawns recover quickly, the tiniest thing can trigger their myotonia again, causing them to pass out multiple times in a row. \n\nThings that can trigger myotonia include fire, manhunting animals and enemies.</description>
+		<description>Myotonia, or 'fainting goat syndrome' is a genetic condition that causes pawns to collapse when they're startled. \n\nThough these pawns recover quickly, the tiniest thing can trigger their myotonia again, causing them to pass out multiple times in a row.</description>
 		<customEffectDescriptions>
-			<li>Will faint when frightened.</li>
+			<li>Pawn will temporarily faint when near things that frighten them, such as:\n
+				- fire;\n
+				- manhunting animals;\n
+				- hostile pawns.</li>
 		</customEffectDescriptions>
 		<iconPath>UI/GeneIcons/RBSF_Myotonia</iconPath>
 		<suppressedTraits>

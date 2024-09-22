@@ -43,10 +43,9 @@
 						<li>
 							<minSeverity>0</minSeverity>
 							<statOffsets>
-								<StaggerDurationFactor>-0.13</StaggerDurationFactor>
-								<MoveSpeed>0.1</MoveSpeed>
-								<FilthRate>0.75</FilthRate>
-								<MeleeDodgeChance>2.5</MeleeDodgeChance>
+								<MoveSpeed>0.15</MoveSpeed>
+								<FilthRate>5</FilthRate>
+								<MeleeDodgeChance>10</MeleeDodgeChance>
 							</statOffsets>
 						</li>
 					</stages>
@@ -164,10 +163,9 @@
 						<xpath>Defs/GeneDef[defName="RBM_UnguligradeLegs"]</xpath>
 						<value>
 							<statOffsets>
-								<StaggerDurationFactor>-0.25</StaggerDurationFactor>
-								<MoveSpeed>0.2</MoveSpeed>
+								<MoveSpeed>0.15</MoveSpeed>
 								<FilthRate>5</FilthRate>
-								<MeleeDodgeChance>5</MeleeDodgeChance>
+								<MeleeDodgeChance>10</MeleeDodgeChance>
 							</statOffsets>
 						</value>
 					</nomatch>
@@ -196,7 +194,7 @@
 									<iconColor>(0.75, 0.75, 0.75)</iconColor>
 									<statOffsets>
 										<!-- <StaggerDurationFactor>-0.25</StaggerDurationFactor> -->
-										<MoveSpeed>0.2</MoveSpeed>
+										<MoveSpeed>0.15</MoveSpeed>
 										<FilthRate>5</FilthRate>
 										<MeleeDodgeChance>10</MeleeDodgeChance>
 									</statOffsets>
