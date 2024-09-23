@@ -99,6 +99,43 @@
 		</stages>
 	</HediffDef>
 	
+	<!--====================== Tree Walk Ability ======================-->
+	<!-- teleports a pawn to a tree -->
+	
+	<AbilityDef>
+		<defName>RBSF_AbilityTreeWalk</defName>
+		<label>tree walk</label>
+		<description>The user ZOOP.</description>
+		<descriptionHyperlinks>
+			<GeneDef>RBSF_NaturalConnection</GeneDef>
+			<StatDef>RBSF_NatureConnection</StatDef>
+		</descriptionHyperlinks>
+		<iconPath>UI/GeneIcons/RBSF_SporeCloud</iconPath>
+		<cooldownTicksRange>60000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<displayOrder>301</displayOrder>
+		<warmupStartSound>RBSF_ChokeVineWarmup</warmupStartSound> <!-- TODO -->
+		<charges>1</charges>
+		<statBases>
+			<Ability_Duration>5</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Roos_Faun_Xenotype.RBSF_Verb_CastAbilityChokevineGrasp</verbClass>
+			<warmupEffecter>RBSF_ChokeVineWarmupEffecter</warmupEffecter>
+			<range>10</range>
+			<warmupTime>0.5</warmupTime>
+			<drawAimPie>False</drawAimPie>
+			<soundCast>RBSF_ChokeVineCast</soundCast> <!-- TODO -->
+			<targetParams>
+				<!-- <targetSpecificThing>True</targetSpecificThing> -->
+				<canTargetPlants>True</canTargetPlants>
+			</targetParams>
+		</verbProperties>
+				<comps>
+			<li Class="Roos_Faun_Xenotype.CompProperties_AbilityTreeWalk"/>
+		</comps>
+	</AbilityDef>
+	
 	<!--====================== Spore Cloud Ability ======================-->
 	<!-- Gives allies a pleasant high, gives foes a bad trip -->
 	

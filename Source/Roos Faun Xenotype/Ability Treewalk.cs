@@ -1,9 +1,11 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using RimWorld.Planet;
 using Verse;
 
 namespace Roos_Faun_Xenotype
 {
+    //Currently Unused
     public class CompAbilityEffect_Treewalk : CompAbilityEffect
     {
         //Main 'Treewalk' ability method - teleports a pawn to a tree
@@ -13,7 +15,7 @@ namespace Roos_Faun_Xenotype
             IntVec3 position = target.Cell;
             Map map = pawn.Map;
             base.Apply(target, dest);
-            pawn.Position = target.Cell;
+            SkipUtility.SkipTo(pawn, position, map);
         }
 
         //Draws radius circle
@@ -48,12 +50,23 @@ namespace Roos_Faun_Xenotype
             }
             return false;
         }
+
     }
     public class CompProperties_AbilityTreewalk : CompProperties_AbilityEffect
     {
         public CompProperties_AbilityTreewalk()
         {
             this.compClass = typeof(CompAbilityEffect_Treewalk);
+        }
+    }
+
+    public class RBSF_TargetOnlyTrees : TargetingParameters
+    {
+        public bool canTargetBlockedLocations = true;
+
+        public bool CanTarget(TargetInfo target, Ability ability)
+        {
+            return base.CanTarget(target) && canTargetBlockedLocations && target.Cell.GetPlant(target.Map).def.plant.IsTree;
         }
     }
 }
