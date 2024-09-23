@@ -35,6 +35,8 @@ namespace Roos_Faun_Xenotype
 
         public static DamageDef RBSF_SporeCloudDamage;
 
+        public static EffecterDef RBSF_SporeCloudExplosionEffect;
+
         //public static ThoughtDef RBSFE_ConstrictedThought;
     }
 }

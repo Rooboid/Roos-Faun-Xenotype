@@ -120,12 +120,13 @@
 			<Ability_Duration>5</Ability_Duration>
 		</statBases>
 		<verbProperties>
-			<verbClass>Roos_Faun_Xenotype.RBSF_Verb_CastAbilityChokevineGrasp</verbClass>
+			<verbClass>Roos_Faun_Xenotype.RBSF_Verb_CastAbilityTreewalk</verbClass>
 			<warmupEffecter>RBSF_ChokeVineWarmupEffecter</warmupEffecter>
 			<range>10</range>
 			<warmupTime>0.5</warmupTime>
 			<drawAimPie>False</drawAimPie>
 			<soundCast>RBSF_ChokeVineCast</soundCast> <!-- TODO -->
+			<requireLineOfSight>False</requireLineOfSight>
 			<targetParams>
 				<!-- <targetSpecificThing>True</targetSpecificThing> -->
 				<canTargetPlants>True</canTargetPlants>
@@ -159,12 +160,12 @@
 			<Ability_Duration>5</Ability_Duration>
 		</statBases>
 		<verbProperties>
-			<verbClass>Roos_Faun_Xenotype.RBSF_Verb_CastAbilityChokevineGrasp</verbClass>
+			<verbClass>Roos_Faun_Xenotype.RBSF_Verb_CastAbilitySporeCloud</verbClass>
 			<warmupEffecter>RBSF_SporeCloudChargeEffect</warmupEffecter>
 			<range>10</range>
 			<warmupTime>0.9</warmupTime>
 			<drawAimPie>False</drawAimPie>
-			<!-- <soundCast>RBSF_SporeCloudCast</soundCast> -->
+			<soundCast>RBSF_SporeCloudCast</soundCast>
 			<targetParams>
 				<canTargetLocations>True</canTargetLocations>
 				<canTargetSelf>True</canTargetSelf>
@@ -621,7 +622,7 @@
 			<texPath>Things/Mote/SporeCloud/SporeCloudExplosion/RBSF_SporeCloudExplosionSpores2</texPath>
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
-		<altitudeLayer>MoteLow</altitudeLayer>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<solidTime>0.1</solidTime>
 		<fadeInTime>0.5</fadeInTime>
 		<fadeOutTime>3</fadeOutTime>
@@ -630,26 +631,26 @@
 	
 	<!-- Spore Damage -->
 
-	<DamageDef>
+<!-- 	<DamageDef>
 		<defName>RBSF_SporeCloudDamage</defName>
 		<label>spore cloud</label>
 		<workerClass>DamageWorker_AddInjury</workerClass>
 		<deathMessage>{0} has somehow died because of a spore cloud, which should not happen.</deathMessage>
 		<hediff>Bruise</hediff>
-		<defaultDamage>0</defaultDamage>
+		<defaultDamage>1</defaultDamage>
 		<canInterruptJobs>false</canInterruptJobs>
 		<makesAnimalsFlee>true</makesAnimalsFlee>
 		<impactSoundType>Bullet</impactSoundType>
 		<armorCategory>Blunt</armorCategory>
 		<isRanged>true</isRanged>
 		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
-		<!-- Effects -->
 		<damageEffecter>RBSF_SporeCloudExplosionEffect</damageEffecter>
-		<explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+		<explosionCellFleck>RBSF_SporeCloudExplosionFleckA</explosionCellFleck>
+		<explosionInteriorEffecter>RBSF_SporeCloudExplosionEffect</explosionInteriorEffecter>
 		<explosionColorCenter>(228, 157, 245)</explosionColorCenter>
 		<explosionColorEdge>(0.3, 0.70, 0.88, 0.05)</explosionColorEdge>
 		<soundExplosion>RBSF_SporeCloudCast</soundExplosion>
-	</DamageDef>
+	</DamageDef> -->
 
   
 </Defs>

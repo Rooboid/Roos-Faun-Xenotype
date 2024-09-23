@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 using Verse;
 using Verse.AI;
 
@@ -31,7 +32,7 @@ namespace Roos_Faun_Xenotype
         //Draws radius circle
         public override void DrawEffectPreview(LocalTargetInfo target)
         {
-            var adjustedRadius = 4 * this.parent.pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
+            var adjustedRadius = 2.5f * this.parent.pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
             GenDraw.DrawRadiusRing(target.Cell, adjustedRadius);
         }
 
@@ -73,19 +74,37 @@ namespace Roos_Faun_Xenotype
                     pawn.health.AddHediff(RBSF_DefOf.RBSF_GoodTripHediff);
                 }
             }
-            return true;
+            int num = GenRadial.NumCellsInRadius(radius);
+            for (int i = 0; i < num; i++)
+            {
+                IntVec3 intVec = position + GenRadial.RadialPattern[i];
+                RBSF_DefOf.RBSF_SporeCloudExplosionEffect.Spawn(intVec, map, 1f);
+            }
+            return false;
         }
     }
+
+
     public class CompProperties_AbilitySporeCloud : CompProperties_AbilityEffect
     {
         public CompProperties_AbilitySporeCloud()
         {
             this.compClass = typeof(CompAbilityEffect_SporeCloud);
         }
-
-        public ThingDef spawnedThingDef;
-
     }
 
+    public class RBSF_Verb_CastAbilitySporeCloud : Verb_CastAbilityTouch
+    {
 
+        //  Adjusts range to scale with nature connection when casting.
+        public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true)
+        {
+            var adjustedRange = 4 * this.caster.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
+            //Log.Message("Range adjusted to " + adjustedRange.ToString());
+            this.verbProps.range = adjustedRange;
+
+            return base.ValidateTarget(target, showMessages);
+
+        }
+    }
 }
