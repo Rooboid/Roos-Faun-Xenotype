@@ -123,7 +123,7 @@
 			<match Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[@Name="VFEV_VikingBase"]/xenotypeSet/xenotypeChances</xpath>
 				<value>
-					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.07</RBSF_Faun>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.05</RBSF_Faun>
 				</value>
 			</match>
 		</match>
@@ -209,7 +209,7 @@
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
 			<value>
-				<RBSF_FaunScientist>1</RBSF_FaunScientist>
+				<RBSF_FaunScientist>0.5</RBSF_FaunScientist>
 			</value>
 		</match>
 	</Operation>
@@ -221,7 +221,7 @@
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
 			<value>
-				<RBSF_FaunScientist>3</RBSF_FaunScientist>
+				<RBSF_FaunScientist>2</RBSF_FaunScientist>
 			</value>
 		</match>
 	</Operation>
@@ -249,7 +249,7 @@
 			<match Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[2]/options</xpath>
 				<value>
-					<RBSF_FaunGenehound>1</RBSF_FaunGenehound>
+					<RBSF_FaunGenehound>0.5</RBSF_FaunGenehound>
 				</value>
 			</match>
 		</match>
@@ -262,7 +262,7 @@
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[3]/options</xpath>
 			<value>
-				<RBSF_FaunFeral>1</RBSF_FaunFeral>
+				<RBSF_FaunFeral>0.5</RBSF_FaunFeral>
 			</value>
 		</match>
 	</Operation>
@@ -274,7 +274,7 @@
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[4]/options</xpath>
 			<value>
-				<RBSF_FaunFeral>1</RBSF_FaunFeral>
+				<RBSF_FaunFeral>0.5</RBSF_FaunFeral>
 			</value>
 		</match>
 	</Operation>
@@ -286,7 +286,7 @@
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[1]/options</xpath>
 			<value>
-				<RBSF_FaunFeral>1.3</RBSF_FaunFeral>
+				<RBSF_FaunFeral>0.8</RBSF_FaunFeral>
 			</value>
 		</match>
 	</Operation>
