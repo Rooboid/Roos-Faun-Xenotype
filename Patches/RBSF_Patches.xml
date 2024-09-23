@@ -3,56 +3,10 @@
 
 	<!--============================== Roo's Satyr and Faun Xenotype Patches ============================-->
 	
+	<!-- Removed functionality to turn unguligrade legs into individual HeDiffs; we were having too many compatibility issues with them and decided to remove it. -->
+	
 	<!--============================== Unguligrade patches ============================-->
 	<!-- Only adds the Unguiligrade Legs gene if it isn't already present i.e. within Roo's Minotaur Xenotypes -->
-	
-	<!-- Unguiligrade Legs body part (For VE) -->
-	
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/GeneDef[defName="RBM_UnguligradeLegs"]</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs</xpath>
-			<value>
-				<HediffDef ParentName="AddedBodyPartBase">
-					<defName>UnguligradeLegPart</defName>
-					<label>unguligrade leg</label>
-					<labelNoun>an unguligrade leg</labelNoun>
-					<description>An unguligrade leg with a cloven hoof, perfect for hotfooting it out of trouble, not-so-perfect for keeping the floor clean.</description>
-					<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
-					<addedPartProps>
-						<solid>true</solid>
-						<partEfficiency>1</partEfficiency>
-					</addedPartProps>
-					<comps>
-						<li Class="HediffCompProperties_VerbGiver">
-							<tools>
-								<li>
-									<label>hoof</label>
-									<capacities>
-										<li>Blunt</li>
-									</capacities>
-									<power>8</power>
-									<cooldownTime>2</cooldownTime>
-									<soundMeleeHit>Pawn_Melee_Punch_HitPawn</soundMeleeHit>
-									<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-								</li>
-							</tools>
-						</li>
-					</comps>
-					<stages>
-						<li>
-							<minSeverity>0</minSeverity>
-							<statOffsets>
-								<MoveSpeed>0.15</MoveSpeed>
-								<FilthRate>5</FilthRate>
-								<MeleeDodgeChance>10</MeleeDodgeChance>
-							</statOffsets>
-						</li>
-					</stages>
-				</HediffDef>
-			</value>
-		</nomatch>
-	</Operation>
 
 	<!-- Unguiligrade Legs gene -->
 
@@ -91,34 +45,21 @@
 								</suffixSymbols>
 							</symbolPack>
 							<renderNodeProperties>
-							  <li>
+								<li>
 								
-								<debugLabel>Fur</debugLabel>
-								<nodeClass>PawnRenderNode_Fur</nodeClass>
-								<workerClass>PawnRenderNodeWorker_Fur</workerClass>
-								<baseLayer>5</baseLayer>
-								<rotDrawMode>Fresh, Rotting</rotDrawMode>
-								<colorType>Hair</colorType>
-								<parentTagDef>Body</parentTagDef>
-							  </li>
-							</renderNodeProperties>
-							<!-- Thee following will occur if you ARE running vanilla framework expanded. If not, a patch is added to tie the gene buffs to the pawn, as opposed to the body part -->
-							<modExtensions>
-								<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VanillaGenesExpanded.GeneExtension">
-									<hediffsToBodyParts>
-										<li>
-											<hediff>UnguligradeLegPart</hediff>
-											<bodyparts>
-												<li>Leg</li>
-												<li>Leg</li>
-											</bodyparts>
-										</li>
-									</hediffsToBodyParts>
+									<debugLabel>Fur</debugLabel>
+									<nodeClass>PawnRenderNode_Fur</nodeClass>
+									<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+									<baseLayer>5</baseLayer>
+									<rotDrawMode>Fresh, Rotting</rotDrawMode>
+									<colorType>Hair</colorType>
+									<parentTagDef>Body</parentTagDef>
 								</li>
-							</modExtensions>
+							</renderNodeProperties>
 						</GeneDef>
 					</value>
 				</li>
+				
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThoughtDef[defName="GroinUncovered_Disapproved_Male"]/nullifyingGenes</xpath>
 					<match Class="PatchOperationAdd">
@@ -128,6 +69,7 @@
 						</value>
 					</match>
 				</li>
+				
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThoughtDef[defName="GroinUncovered_Disapproved_Social_Male"]/nullifyingGenes</xpath>
 					<match Class="PatchOperationAdd">
@@ -137,6 +79,7 @@
 						</value>
 					</match>
 				</li>
+				
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThoughtDef[defName="GroinOrChestUncovered_Disapproved_Male"]/nullifyingGenes</xpath>
 					<match Class="PatchOperationAdd">
@@ -146,6 +89,7 @@
 						</value>
 					</match>
 				</li>
+				
 				<li Class="PatchOperationConditional">
 					<xpath>Defs/ThoughtDef[defName="GroinOrChestUncovered_Disapproved_Social_Male"]/nullifyingGenes</xpath>
 					<match Class="PatchOperationAdd">
@@ -155,69 +99,7 @@
 						</value>
 					</match>
 				</li>
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>Vanilla Expanded Framework</li>
-					</mods>
-					<nomatch Class="PatchOperationAdd">
-						<xpath>Defs/GeneDef[defName="RBM_UnguligradeLegs"]</xpath>
-						<value>
-							<statOffsets>
-								<MoveSpeed>0.15</MoveSpeed>
-								<FilthRate>5</FilthRate>
-								<MeleeDodgeChance>10</MeleeDodgeChance>
-							</statOffsets>
-						</value>
-					</nomatch>
-				</li>
-				<li Class="PatchOperationFindMod">
-					<mods>
-						<li>Vanilla Expanded Framework</li>
-					</mods>
-					<match Class="PatchOperationFindMod">
-						<mods>
-							<li>Medical System Expansion 2</li>
-						</mods>
-						<match Class="PatchOperationReplace">
-							<xpath>Defs/GeneDef[defName="RBM_UnguligradeLegs"]</xpath>
-							<value>
-			
-								<GeneDef>
-									<defName>RBM_UnguligradeLegs</defName>
-									<label>unguligrade legs</label>
-									<description>Carriers of this gene are born with sturdy legs and cloven hooves. The fur on their legs extends up to their stomachs and covers their groin.</description>
-									<biostatCpx>1</biostatCpx>
-									<biostatMet>-1</biostatMet>
-									<displayCategory>Miscellaneous</displayCategory>
-									<displayOrderInCategory>330</displayOrderInCategory>
-									<iconPath>UI/GeneIcons/RBM_BovineLegs</iconPath>
-									<iconColor>(0.75, 0.75, 0.75)</iconColor>
-									<statOffsets>
-										<!-- <StaggerDurationFactor>-0.25</StaggerDurationFactor> -->
-										<MoveSpeed>0.15</MoveSpeed>
-										<FilthRate>5</FilthRate>
-										<MeleeDodgeChance>10</MeleeDodgeChance>
-									</statOffsets>
-									<symbolPack>
-										<prefixSymbols>
-											<li><symbol>faun</symbol></li>
-											<li><symbol>jog</symbol></li>
-											<li><symbol>bov</symbol></li>
-											<li><symbol>bolt</symbol></li>
-										</prefixSymbols>
-										<suffixSymbols>
-											<li><symbol>yr</symbol></li>
-											<li><symbol>ine</symbol></li>
-											<li><symbol>trotter</symbol></li>
-											<li><symbol>hoof</symbol></li>
-											<li><symbol>ped</symbol></li>
-										</suffixSymbols>
-									</symbolPack>
-								</GeneDef>
-							</value>
-						</match>
-					</match>
-				</li>
+				
 			</operations>
 		</nomatch>
 	</Operation>
@@ -468,21 +350,21 @@
 					<iconPath>UI/GeneIcons/RBSF_SerenAntlers</iconPath>
 					<displayOrderInCategory>115</displayOrderInCategory>
 					<renderNodeProperties>
-					  <li>
-						<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
-						<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-						<texPath>Things/Pawn/Humanlike/Horns/RBSF_SerenAntlers/RBSF_SerenAntlers</texPath>
-						<colorType>Skin</colorType>
-						<parentTagDef>Head</parentTagDef>
-						<useSkinShader>true</useSkinShader>
-						<useRottenColor>true</useRottenColor>
-						<rotDrawMode>Fresh, Rotting</rotDrawMode>
-						<drawData>
-						  <defaultData>
-							<layer>70</layer>
-						  </defaultData>
-						</drawData>
-					  </li>
+						<li>
+							<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+							<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+							<texPath>Things/Pawn/Humanlike/Horns/RBSF_SerenAntlers/RBSF_SerenAntlers</texPath>
+							<colorType>Skin</colorType>
+							<parentTagDef>Head</parentTagDef>
+							<useSkinShader>true</useSkinShader>
+							<useRottenColor>true</useRottenColor>
+							<rotDrawMode>Fresh, Rotting</rotDrawMode>
+							<drawData>
+								<defaultData>
+									<layer>70</layer>
+								</defaultData>
+							</drawData>
+						</li>
 					</renderNodeProperties>
 					<exclusionTags>
 						<li>SerenSensors</li>

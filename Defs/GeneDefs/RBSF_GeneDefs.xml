@@ -7,22 +7,8 @@
 	<GeneDef ParentName="GeneEarsBase">
 		<defName>RBSF_DeerEars</defName>
 		<label>deer ears</label>
-		<description>Carriers of this gene possess deer-like ears.</description>
+		<description>Carriers of this gene have deer-like ears.</description>
 		<iconPath>UI/GeneIcons/RBSF_DeerEars</iconPath>
-		<!-- <graphicData>
-			<graphicPath Inherit="False"/>
-			<graphicPaths>
-				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsA/RBSF_DeerEarsA</li>
-				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsB/RBSF_DeerEarsB</li>
-				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsC/RBSF_DeerEarsC</li>
-				<li>Things/Pawn/Humanlike/Ears/RBSF_DeerEarsD/RBSF_DeerEarsD</li>
-			</graphicPaths>
-			<drawOffsetNorth>(0.0, -0.1, 0.0)</drawOffsetNorth>
-			<drawOffsetSouth>(0.0, -0.1, 0.0)</drawOffsetSouth>
-			<drawOffsetEast>(-0.05, 0.0, 0.0)</drawOffsetEast>
-			<colorType>Skin</colorType>
-			<layer>PostSkin</layer>
-		</graphicData> -->
 		<renderNodeProperties>
 			<li>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
@@ -192,7 +178,7 @@
 	<GeneDef ParentName="GeneMoodBase">
 		<defName>RBSF_Mood_Reclusive</defName>
 		<label>reclusive</label>
-		<description>The mood of these pawns depends on how big or small their faction is; the smaller it is, the happier they will be. \n\nThey are also less likely to romance pawns who are not also reclusive.</description>
+		<description>The mood of these pawns depends on how big or small their faction is; the smaller it is, the happier they will be.</description>
 		<iconPath>UI/GeneIcons/RBSF_Reclusive</iconPath>
 		<displayOrderInCategory>40</displayOrderInCategory>
 		<biostatCpx>1</biostatCpx>
@@ -202,7 +188,6 @@
 				<def>Recluse</def>
 			</li>
 		</forcedTraits>
-		<missingGeneRomanceChanceFactor>0.7</missingGeneRomanceChanceFactor>
 		<symbolPack>
 			<prefixSymbols>
 				<li><symbol>shy</symbol></li>
@@ -293,7 +278,7 @@
 		<defName>RBSF_NaturalConnection</defName>
 		<geneClass>Roos_Faun_Xenotype.RBSF_NaturalConnection</geneClass>
 		<label>natural connection</label>
-		<description>Carriers of this gene are spiritually intertwined with nature. Plants around this pawn will grow much faster. The rate of the plants' growth scales with the pawn's Nature Connection stat.\n\nThe Nature Connection stat can be increased by being around trees or equipping certain weapons and items of clothing.</description>
+		<description>Carriers of this gene are spiritually intertwined with nature. The more trees present within their home, the faster nearby plants will grow.\n\nThe rate of the plants' growth scales with the pawn's Nature Connection stat, which can be increased further by equipping certain weapons and items of clothing.</description>
 		<descriptionHyperlinks>
 			<StatDef>RBSF_NatureConnection</StatDef>
 		</descriptionHyperlinks>
@@ -322,7 +307,7 @@
 	<GeneDef>
 		<defName>RBSF_ChokevineGrasp</defName>
 		<label>chokevine grasp</label>
-		<description>Carriers of this gene can summon chokevines from the ground below, constricting and holding enemies still.\n\nThe range of this ability scales with the pawn's Nature Connection stat, which can be increased by having the Natural Connection gene or equipping certain weapons and apparel.</description>
+		<description>Carriers of this gene can summon chokevines from the ground below, constricting and holding enemies still.\n\nThe range of this ability scales with the pawn's Nature Connection stat, which can be increased by having the Natural Connection gene or by equipping certain weapons and apparel.</description>
 		<iconPath>UI/GeneIcons/RBSF_ChokevineGrasp</iconPath>
 		<descriptionHyperlinks>
 			<StatDef>RBSF_NatureConnection</StatDef>
@@ -351,7 +336,7 @@
 	<GeneDef>
 		<defName>RBSF_SporeCloud</defName>
 		<label>spore cloud</label>
-		<description>Carriers of this gene can expel clouds of psychadelic spores from their hands. Allies who stand within these clouds will recieve a pleasant high, whilst foes will experience a disorientating bad trip.\n\nThe range of this ability scales with the pawn's Nature Connection stat, which can be increased by having the Natural Connection gene or equipping certain weapons and apparel.</description>
+		<description>Carriers of this gene can expel psychedelic spores from their hands. Allies within these spore clouds will receive a pleasant high, whilst foes will experience a disorientatingly bad trip.\n\nThe range of this ability scales with the pawn's Nature Connection stat, which can be increased by having the Natural Connection gene or equipping certain weapons and apparel.</description>
 		<iconPath>UI/GeneIcons/RBSF_SporeCloud</iconPath>
 		<descriptionHyperlinks>
 			<StatDef>RBSF_NatureConnection</StatDef>
@@ -432,9 +417,9 @@
 		<label>myotonia</label>
 		<labelShortAdj>myotonic</labelShortAdj>
 		<biostatMet>8</biostatMet>
-		<description>Myotonia, or 'fainting goat syndrome' is a genetic condition that causes pawns to collapse when they're startled. \n\nThough these pawns recover quickly, the tiniest thing can trigger their myotonia again, causing them to pass out multiple times in a row.</description>
+		<description>Myotonia, or 'fainting goat syndrome' is a genetic condition that causes pawns to freeze up and collapse when they are startled.</description>
 		<customEffectDescriptions>
-			<li>Pawn will temporarily faint when near things that frighten them, such as, fire, mechanoids, manhunting animals and hostile pawns.</li>
+			<li>May become instantly downed when near fire, manhunting animals or hostile pawns.</li>
 		</customEffectDescriptions>
 		<iconPath>UI/GeneIcons/RBSF_Myotonia</iconPath>
 		<suppressedTraits>
@@ -474,7 +459,7 @@
 		<stages>
 			<li>
 				<label>myotonic</label>
-				<description>I'm so frightened, I can't move!</description>
+				<description>Aaaaaagh! Scary!</description>
 				<baseMoodEffect>-20</baseMoodEffect>
 			</li>
 		</stages>

@@ -15,9 +15,9 @@
 		<iconPath>UI/GeneIcons/RBSF_ChokevineGrasp</iconPath>
 		<cooldownTicksRange>12000</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
+		<showCastingProgressBar>true</showCastingProgressBar>
 		<displayOrder>300</displayOrder>
 		<warmupStartSound>RBSF_ChokeVineWarmup</warmupStartSound>
-		<charges>1</charges>
 		<statBases>
 			<Ability_Duration>12</Ability_Duration>
 		</statBases>
@@ -142,27 +142,29 @@
 	<AbilityDef>
 		<defName>RBSF_AbilitySporeCloud</defName>
 		<label>spore cloud</label>
-		<description>The user fires a psychadelic cloud of smoke into the air, giving allies in range a pleasant high, and foes a disorientating trip. The range of this ability scales with the user's Nature Connection stat.</description>
+		<description>The user fires a psychadelic cloud of smoke into the air, giving allies in range a short, pleasant high, and foes a disorientating trip. The range of this ability scales with the user's Nature Connection stat.</description>
 		<descriptionHyperlinks>
 			<GeneDef>RBSF_NaturalConnection</GeneDef>
 			<StatDef>RBSF_NatureConnection</StatDef>
 		</descriptionHyperlinks>
 		<iconPath>UI/GeneIcons/RBSF_SporeCloud</iconPath>
-		<cooldownTicksRange>60000</cooldownTicksRange>
+		<cooldownTicksRange>120000</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
 		<displayOrder>301</displayOrder>
-		<warmupStartSound>RBSF_ChokeVineWarmup</warmupStartSound> <!-- TODO -->
-		<charges>1</charges>
+		<warmupStartSound>RBSF_SporeCloudWarmup</warmupStartSound>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<statBases>
 			<Ability_Duration>5</Ability_Duration>
 		</statBases>
 		<verbProperties>
 			<verbClass>Roos_Faun_Xenotype.RBSF_Verb_CastAbilityChokevineGrasp</verbClass>
-			<warmupEffecter>RBSF_ChokeVineWarmupEffecter</warmupEffecter>
+			<warmupEffecter>RBSF_SporeCloudChargeEffect</warmupEffecter>
 			<range>10</range>
-			<warmupTime>0.5</warmupTime>
+			<warmupTime>0.9</warmupTime>
 			<drawAimPie>False</drawAimPie>
-			<soundCast>RBSF_ChokeVineCast</soundCast> <!-- TODO -->
+			<!-- <soundCast>RBSF_SporeCloudCast</soundCast> -->
 			<targetParams>
 				<canTargetLocations>True</canTargetLocations>
 				<canTargetSelf>True</canTargetSelf>
@@ -170,12 +172,12 @@
 				<canTargetPawns>True</canTargetPawns>
 			</targetParams>
 		</verbProperties>
-				<comps>
+		<comps>
 			<li Class="Roos_Faun_Xenotype.CompProperties_AbilitySporeCloud"/>
 		</comps>
 	</AbilityDef>
 	
-		<!-- Bad Trip Hediff - Applied to hostile pawns effected by Spore Cloud -->
+	<!-- Bad Trip Hediff - Applied to hostile pawns effected by Spore Cloud -->
 
 	<HediffDef>
 		<defName>RBSF_BadTripHediff</defName>
@@ -183,20 +185,20 @@
 		<label>spore cloud high</label>
 		<labelNoun>bad trip</labelNoun>
 		<defaultLabelColor>(130, 160, 240)</defaultLabelColor>
-		<description>The pawn is having a debilitating bad trip due to the effects of an enemy spore cloud.</description>
+		<description>A debilitatingly bad trip due to being exposed to an enemy spore cloud.</description>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<makesSickThought>false</makesSickThought>
 		<tendable>false</tendable>
 		<makesAlert>false</makesAlert>
-		<maxSeverity>20</maxSeverity>
 		<isBad>true</isBad>
-		<initialSeverity>1</initialSeverity>
+		<initialSeverity>20</initialSeverity>
+		<maxSeverity>20</maxSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-80</severityPerDay>
+				<severityPerDay>-110</severityPerDay>
 			</li>
 			<li Class="HediffCompProperties_Effecter">
-				<stateEffecter>VineStun_Effect</stateEffecter> <!-- TO DO -->
+				<stateEffecter>RBSF_SporeCloudNegEffect</stateEffecter>
 			</li>
 		</comps>
 		<injuryProps>
@@ -210,32 +212,33 @@
 				<capMods>
 					<li>
 						<capacity>Sight</capacity>
-						<offset>-5</offset>
+						<offset>-0.15</offset>
 					</li>
 					<li>
 						<capacity>Hearing</capacity>
-						<offset>-5</offset>
+						<offset>-0.15</offset>
 					</li>
 				</capMods>
 			</li>
-						<li>
+			<li>
 				<minSeverity>10</minSeverity>
 				<label>bad trip</label>
+				<vomitMtbDays>0.1</vomitMtbDays>
 				<capMods>
 					<li>
 						<capacity>Sight</capacity>
-						<offset>-10</offset>
+						<offset>-0.2</offset>
 					</li>
 					<li>
 						<capacity>Hearing</capacity>
-						<offset>-10</offset>
+						<offset>-0.2</offset>
 					</li>
 				</capMods>
 			</li>
 		</stages>
 	</HediffDef>
 	
-			<!-- Good Trip Hediff - Applied to hostile pawns effected by Spore Cloud -->
+	<!-- Good Trip Hediff - Applied to hostile pawns effected by Spore Cloud -->
 
 	<HediffDef>
 		<defName>RBSF_GoodTripHediff</defName>
@@ -243,29 +246,35 @@
 		<label>spore cloud high</label>
 		<labelNoun>good trip</labelNoun>
 		<defaultLabelColor>(225, 162, 240)</defaultLabelColor>
-		<description>The pawn is having a fluffy and pleasant trip due to the effects of an ally's spore cloud.</description>
+		<description>A fluffy and psychadelic trip caused by being exposed to an ally's spore cloud.</description>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<makesSickThought>false</makesSickThought>
 		<tendable>false</tendable>
 		<makesAlert>false</makesAlert>
-		<maxSeverity>1</maxSeverity>
+		<maxSeverity>20</maxSeverity>
 		<isBad>false</isBad>
-		<initialSeverity>1</initialSeverity>
+		<initialSeverity>20</initialSeverity>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-80</severityPerDay>
+				<severityPerDay>-110</severityPerDay>
 			</li>
 			<li Class="HediffCompProperties_Effecter">
-				<stateEffecter>VineStun_Effect</stateEffecter> <!-- TO DO -->
+				<stateEffecter>RBSF_SporeCloudPosEffect</stateEffecter>
 			</li>
 		</comps>
 		<injuryProps>
 			<destroyedLabel>destroyed</destroyedLabel>
 			<destroyedOutLabel>destroyed</destroyedOutLabel>
 		</injuryProps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>good trip</label>
+			</li>
+		</stages>
 	</HediffDef>
 	
-		<!-- Good Trip Thought -->
+	<!-- Good Trip Thought -->
 
 	<ThoughtDef>
 		<defName>RBSF_GoodTripThought</defName>
@@ -278,6 +287,23 @@
 				<label>pleasant spore trip</label>
 				<description>I can smell colours, I can see sounds...</description>
 				<baseMoodEffect>7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Bad Trip Thought -->
+
+	<ThoughtDef>
+		<defName>RBSF_BadTripThought</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>RBSF_BadTripHediff</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>bad spore trip</label>
+				<description>Everything around me is so bright and fuzzy...</description>
+				<baseMoodEffect>-5</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>
@@ -296,7 +322,7 @@
 		<displayWound>false</displayWound>
 		<description>This pawn makes plants around them grow faster. The more trees you have, the faster the plants will grow.</description>
 		<comps>
-			<li Class = "Roos_Faun_Xenotype.CompProperties_NatureConnectionHediff"/>
+			<li Class="Roos_Faun_Xenotype.CompProperties_NatureConnectionHediff"/>
 		</comps>
 		<stages>
 			<li>
@@ -336,5 +362,294 @@
 			</li>
 		</stages>
 	</HediffDef>
+	
+	<!-- Effects -->
+	
+	<EffecterDef>
+		<defName>RBSF_SporeCloudNegEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>1~2.5</scale>
+				<ticksBetweenMotes>20</ticksBetweenMotes>
+				<positionLerpFactor>0.2</positionLerpFactor>
+				<positionRadius>0.1</positionRadius>
+				<moteDef>Mote_SporeCloudNeg</moteDef>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>RBSF_MushroomMoteNeg</moteDef>
+				<spawnLocType>OnSource</spawnLocType>
+				<rotationRate>0</rotationRate>
+				<angle>-90~90</angle>
+				<speed>0</speed>
+				<burstCount>1</burstCount>
+				<ticksBetweenMotes>50</ticksBetweenMotes>
+				<positionLerpFactor>1</positionLerpFactor>
+				<scale>0.5~1.5</scale>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+		</children>
+	</EffecterDef>
+	
+		<EffecterDef>
+		<defName>RBSF_SporeCloudPosEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>1~2.5</scale>
+				<ticksBetweenMotes>20</ticksBetweenMotes>
+				<positionLerpFactor>0.2</positionLerpFactor>
+				<positionRadius>0.1</positionRadius>
+				<moteDef>Mote_SporeCloudPos</moteDef>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>RBSF_MushroomMotePos</moteDef>
+				<spawnLocType>OnSource</spawnLocType>
+				<rotationRate>0</rotationRate>
+				<angle>-90~90</angle>
+				<speed>0</speed>
+				<burstCount>1</burstCount>
+				<ticksBetweenMotes>50</ticksBetweenMotes>
+				<positionLerpFactor>1</positionLerpFactor>
+				<scale>0.5~1.5</scale>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<!-- Spore Cloud Neg Mote -->
+	
+		<ThingDef ParentName="MoteBase">
+		<defName>Mote_SporeCloudNeg</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeCloudNeg/RBSF_SporeCloudNeg</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>false</drawOffscreen>
+		<mote>
+			<fadeInTime>1</fadeInTime>
+			<solidTime>0</solidTime>
+			<fadeOutTime>1</fadeOutTime>
+			<growthRate>0.2</growthRate>
+		</mote>
+	</ThingDef>
+	
+		<!-- Spore Cloud Pos Mote -->
+	
+		<ThingDef ParentName="MoteBase">
+		<defName>Mote_SporeCloudPos</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeCloudPos/RBSF_SporeCloudPos</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>false</drawOffscreen>
+		<mote>
+			<fadeInTime>1</fadeInTime>
+			<solidTime>0</solidTime>
+			<fadeOutTime>1</fadeOutTime>
+			<growthRate>0.2</growthRate>
+		</mote>
+		
+	</ThingDef>
+	
+  <ThingDef ParentName="MoteBase">
+    <defName>RBSF_MushroomMotePos</defName>
+	    <graphicData>
+      <texPath>Things/Mote/SporeCloud/SporeShroomPos</texPath>
+      <graphicClass>Graphic_MoteRandom</graphicClass>
+	  <shaderType>Mote</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+		<fadeInTime>0.4</fadeInTime>
+		<solidTime>0.2</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>1</growthRate>
+    </mote>
+  </ThingDef>
+  
+    <ThingDef ParentName="MoteBase">
+    <defName>RBSF_MushroomMoteNeg</defName>
+	    <graphicData>
+      <texPath>Things/Mote/SporeCloud/SporeShroomNeg</texPath>
+      <graphicClass>Graphic_MoteRandom</graphicClass>
+	  <shaderType>Mote</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+		<fadeInTime>0.4</fadeInTime>
+		<solidTime>0.2</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>1</growthRate>
+    </mote>
+  </ThingDef>
+  
+  	<ThingDef ParentName="MoteBase">
+		<defName>RBSF_SporeCloudWarmup</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeCloudWarmup/RBSF_SporeCloudWarmup</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>false</drawOffscreen>
+		<mote>
+			<fadeInTime>1.8</fadeInTime>
+			<solidTime>0</solidTime>
+			<fadeOutTime>0.5</fadeOutTime>
+			<growthRate>-2</growthRate>
+		</mote>
+	</ThingDef>
+  
+  		<EffecterDef>
+		<defName>RBSF_SporeCloudChargeEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>RBSF_SporeCloudWarmup</moteDef>
+				<scale>4</scale>
+				<rotationRate>0</rotationRate>
+				<spawnLocType>OnSource</spawnLocType>
+				<ticksBetweenMotes>999</ticksBetweenMotes>
+				<positionRadius>0</positionRadius>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>1~2.5</scale>
+				<ticksBetweenMotes>5</ticksBetweenMotes>
+				<positionLerpFactor>0.2</positionLerpFactor>
+				<positionRadius>0.1</positionRadius>
+				<moteDef>Mote_SporeCloudPos</moteDef>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>RBSF_MushroomMoteNeg</moteDef>
+				<spawnLocType>OnSource</spawnLocType>
+				<rotationRate>0.2</rotationRate>
+				<angle>-90~90</angle>
+				<speed>0</speed>
+				<burstCount>1</burstCount>
+				<ticksBetweenMotes>5</ticksBetweenMotes>
+				<positionLerpFactor>1</positionLerpFactor>
+				<scale>0.5~1.5</scale>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>Fleck_VaporizeRays_B</fleckDef>
+				<burstCount>1</burstCount>
+				<rotationRate>-10</rotationRate>
+				<spawnLocType>OnSource</spawnLocType>
+				<scale>0.7</scale>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<!-- Spore Cloud Explosion -->
+	
+		<EffecterDef>
+		<defName>RBSF_SporeCloudExplosionEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>RBSF_SporeCloudExplosionFleckA</fleckDef>
+				<burstCount>1~1</burstCount>
+				<scale>3</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>RBSF_SporeCloudExplosionFleckB</fleckDef>
+				<burstCount>1~3</burstCount>
+				<scale>3</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>RBSF_SporeCloudExplosionFleckC</fleckDef>
+				<burstCount>1</burstCount>
+				<scale>2</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>DustPuffLong</fleckDef>
+				<burstCount>1</burstCount>
+				<rotationRate>-20</rotationRate>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+		</children>
+	</EffecterDef>
+	
+		<!-- Spore Cloud Flecks -->
+	
+	<FleckDef ParentName="FleckBase">
+		<defName>RBSF_SporeCloudExplosionFleckA</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeCloudExplosion/RBSF_SporeCloudExplosionPuff</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteLow</altitudeLayer>
+		<solidTime>1</solidTime>
+		<fadeInTime>0.1</fadeInTime>
+		<fadeOutTime>0.3</fadeOutTime>
+		<growthRate>-0.3</growthRate>
+	</FleckDef>
+	
+		<FleckDef ParentName="FleckBase">
+		<defName>RBSF_SporeCloudExplosionFleckB</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeCloudExplosion/RBSF_SporeCloudExplosionSpores1</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteLow</altitudeLayer>
+		<solidTime>0.3</solidTime>
+		<fadeInTime>0.3</fadeInTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>0.5</growthRate>
+	</FleckDef>
+	
+		<FleckDef ParentName="FleckBase">
+		<defName>RBSF_SporeCloudExplosionFleckC</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeCloudExplosion/RBSF_SporeCloudExplosionSpores2</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteLow</altitudeLayer>
+		<solidTime>0.1</solidTime>
+		<fadeInTime>0.5</fadeInTime>
+		<fadeOutTime>3</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<!-- Spore Damage -->
+
+	<DamageDef>
+		<defName>RBSF_SporeCloudDamage</defName>
+		<label>spore cloud</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<deathMessage>{0} has somehow died because of a spore cloud, which should not happen.</deathMessage>
+		<hediff>Bruise</hediff>
+		<defaultDamage>0</defaultDamage>
+		<canInterruptJobs>false</canInterruptJobs>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		<impactSoundType>Bullet</impactSoundType>
+		<armorCategory>Blunt</armorCategory>
+		<isRanged>true</isRanged>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<!-- Effects -->
+		<damageEffecter>RBSF_SporeCloudExplosionEffect</damageEffecter>
+		<explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+		<explosionColorCenter>(228, 157, 245)</explosionColorCenter>
+		<explosionColorEdge>(0.3, 0.70, 0.88, 0.05)</explosionColorEdge>
+		<soundExplosion>RBSF_SporeCloudCast</soundExplosion>
+	</DamageDef>
+
   
 </Defs>
