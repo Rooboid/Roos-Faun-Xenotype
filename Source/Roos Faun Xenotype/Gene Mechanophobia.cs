@@ -51,7 +51,7 @@ namespace Roos_Faun_Xenotype
     {
         public override bool BreakCanOccur(Pawn pawn)
         {
-            return pawn.Spawned && base.BreakCanOccur(pawn) && ( ThoughtWorker_Mechanophobia.NearMech(pawn) || ThoughtWorker_Myotonia.NearThreat(pawn) );
+            return pawn.Spawned && base.BreakCanOccur(pawn) && ThoughtWorker_Mechanophobia.NearMech(pawn);
         }
 
         public override bool TryStart(Pawn pawn, string reason, bool causedByMood)
