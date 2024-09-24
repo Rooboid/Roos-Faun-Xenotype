@@ -14,11 +14,11 @@ namespace Roos_Faun_Xenotype
                 var numPlants = CountNearPlants(parent.pawn);
                 Log.Message(numPlants + " plant score near " + Pawn.Name.ToStringShort);
                 //Log.Message("counted " + numPlants + " plants near " + parent.pawn.Name.ToStringShort);
-                int severity;
+                float severity;
                 switch (numPlants)
                 {
                     case int i when i < 15:
-                        severity = 0;
+                        severity = 0.5f;
                         break;
                     case int i when i < 30:
                         severity = 1;
@@ -62,7 +62,7 @@ namespace Roos_Faun_Xenotype
             float plantTotalWeight = 0;
             foreach (Thing plant in nearPlantsList)
             {
-                if (!isTree(plant))
+                if (!IsTree(plant))
                 {
                     plantTotalWeight += 0.1f;
                     continue;
@@ -78,7 +78,7 @@ namespace Roos_Faun_Xenotype
             return (int)plantTotalWeight;
         }
 
-        private static bool isTree(Thing thing)
+        private static bool IsTree(Thing thing)
         {
             if (thing.def.plant.IsTree && !thing.def.plant.isStump)
             {
