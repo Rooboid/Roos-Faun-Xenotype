@@ -59,6 +59,7 @@
     <Compile Include="Gene Myotonia.cs" />
     <Compile Include="Gene Mechanophobia.cs" />
     <Compile Include="DefOfs.cs" />
+    <Compile Include="Gene Growing Aura.cs" />
     <Compile Include="Hediff Nature Connection.cs" />
     <Compile Include="PawnFur.cs" />
     <Compile Include="Startup Constructor.cs" />

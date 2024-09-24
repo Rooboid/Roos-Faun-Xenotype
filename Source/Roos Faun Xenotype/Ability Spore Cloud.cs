@@ -1,12 +1,6 @@
 ﻿using RimWorld;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
 using Verse;
-using Verse.AI;
 
 namespace Roos_Faun_Xenotype
 {
@@ -50,9 +44,9 @@ namespace Roos_Faun_Xenotype
         }
         public static bool SporeExplodeInArea(IntVec3 position, Map map, float radius, Pawn caster)
         {
-            if (map == null) 
-            { 
-                return false; 
+            if (map == null)
+            {
+                return false;
             }
 
             List<Pawn> mapPawns = (List<Pawn>)map.mapPawns.AllPawnsSpawned;
@@ -65,7 +59,7 @@ namespace Roos_Faun_Xenotype
 
                 if (isInRange && notMech) //Tox mask check?
                 {
-                    if (pawn.HostileTo(caster)) 
+                    if (pawn.HostileTo(caster))
                     {
                         pawn.health.AddHediff(RBSF_DefOf.RBSF_BadTripHediff);
                         continue;

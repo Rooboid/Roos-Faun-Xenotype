@@ -1,10 +1,9 @@
 ﻿using RimWorld;
-using Roos_Faun_Xenotype;
 using Verse;
 
 namespace Roos_Faun_Xenotype
 {
-    
+
     public class RBSF_CompAbilityEffect_ChokevineGrasp : CompAbilityEffect
     {
 
@@ -61,5 +60,5 @@ namespace Roos_Faun_Xenotype
         }
     }
 
-    
+
 }

@@ -1,5 +1,4 @@
-﻿using HarmonyLib;
-using RimWorld;
+﻿using RimWorld;
 using RimWorld.Planet;
 using Verse;
 
@@ -68,7 +67,7 @@ namespace Roos_Faun_Xenotype
             var adjustedRange = 16 * this.caster.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
             this.verbProps.range = adjustedRange;
 
-            if (base.ValidateTarget(target,showMessages) == false)
+            if (base.ValidateTarget(target, showMessages) == false)
             {
                 return false;
             }

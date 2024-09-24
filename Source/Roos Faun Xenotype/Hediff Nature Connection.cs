@@ -1,5 +1,5 @@
 ﻿using RimWorld;
-using System;
+using System.Collections.Generic;
 using Verse;
 
 namespace Roos_Faun_Xenotype
@@ -9,9 +9,10 @@ namespace Roos_Faun_Xenotype
         //Scales severity with number of nearby plants
         public override void CompPostTick(ref float severityAdjustment)
         {
-            if (base.Pawn.IsHashIntervalTick(60))
+            if (base.Pawn.IsHashIntervalTick(120))
             {
                 var numPlants = CountNearPlants(parent.pawn);
+                Log.Message(numPlants + " plant score near " + Pawn.Name.ToStringShort);
                 //Log.Message("counted " + numPlants + " plants near " + parent.pawn.Name.ToStringShort);
                 int severity;
                 switch (numPlants)
@@ -43,39 +44,47 @@ namespace Roos_Faun_Xenotype
             {
                 return -1;
             }
-            IntVec3 positionHeld = pawn.PositionHeld;
-            float plantRadius = 10.9f;
-            int numCells = GenRadial.NumCellsInRadius(plantRadius);
-            float plantTotalWeight = 0;
-            for (int i = 0; i < numCells; i++)
-            {
-                //Scan radius around pawn for plants
-                IntVec3 intVec = positionHeld + GenRadial.RadialPattern[i];
 
-                if (!intVec.InBounds(mapHeld) || intVec.Fogged(mapHeld))
+            float plantSearchRadius = 5f;
+
+            // List all plants
+            IEnumerable<IntVec3> cellList = GenRadial.RadialCellsAround(pawn.PositionHeld, plantSearchRadius, true);
+
+            var nearPlantsList = new List<Thing>();
+            foreach (var cell in cellList)
+            {
+                if (cell == null || !cell.InBounds(mapHeld) || cell.Fogged(mapHeld)) continue;
+                Plant plant = cell.GetPlant(mapHeld);
+                if (plant == null) continue;
+                nearPlantsList.Add(plant);
+            }
+
+            float plantTotalWeight = 0;
+            foreach (Thing plant in nearPlantsList)
+            {
+                if (!isTree(plant))
                 {
+                    plantTotalWeight += 0.1f;
                     continue;
                 }
-                Plant plant = intVec.GetPlant(mapHeld);
-
-                //count plants
-                if (plant != null)
+                // Special trees count 35x
+                if (plant.def == ThingDefOf.Plant_TreeGauranlen || plant.def == ThingDefOf.Plant_TreeAnima)
                 {
-                    if (plant.def.plant.IsTree && !plant.def.plant.isStump)
-                    {
-                        if (plant.def == ThingDefOf.Plant_TreeGauranlen || plant.def == ThingDefOf.Plant_TreeAnima) //Trees count 35x
-                        {
-                            plantTotalWeight += 35;
-                            //specialTreeCount += 1;
-                            continue;
-                        }
-                        plantTotalWeight += 1; //Trees count 1x
-                        continue;
-                    }
-                    plantTotalWeight += 0.1f; //Other plants count 0.1x
+                    plantTotalWeight += 35;
+                    continue;
                 }
+                plantTotalWeight += 1; //Regular trees count 1x
             }
             return (int)plantTotalWeight;
+        }
+
+        private static bool isTree(Thing thing)
+        {
+            if (thing.def.plant.IsTree && !thing.def.plant.isStump)
+            {
+                return false;
+            }
+            return true;
         }
     }
     public class CompProperties_NatureConnectionHediff : HediffCompProperties
@@ -84,6 +93,6 @@ namespace Roos_Faun_Xenotype
         {
             this.compClass = typeof(Comp_NatureConnectionHediff);
         }
-     }
-    
+    }
+
 }
