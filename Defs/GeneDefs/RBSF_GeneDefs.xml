@@ -288,8 +288,8 @@
 		</statFactors>
 		<biostatCpx>1</biostatCpx>
 		<biostatMet>-2</biostatMet>
-		<displayCategory>Miscellaneous</displayCategory>
-		<displayOrderInCategory>180</displayOrderInCategory>
+		<displayCategory>RBSF_NaturalConnectionGeneCategory</displayCategory>
+		<displayOrderInCategory>10</displayOrderInCategory>
 		<symbolPack>
 			<prefixSymbols>
 				<li><symbol>gaia</symbol></li>
@@ -314,8 +314,8 @@
 		</descriptionHyperlinks>
 		<biostatCpx>1</biostatCpx>
 		<biostatMet>-1</biostatMet>
-		<displayCategory>Ability</displayCategory>
-		<displayOrderInCategory>180</displayOrderInCategory>
+		<displayCategory>RBSF_NaturalConnectionGeneCategory</displayCategory>
+		<displayOrderInCategory>20</displayOrderInCategory>
 		<abilities>
 			<li>RBSF_AbilityChokevineGrasp</li>
 		</abilities>
@@ -336,15 +336,15 @@
 	<GeneDef>
 		<defName>RBSF_SporeCloud</defName>
 		<label>spore cloud</label>
-		<description>Carriers of this gene can expel psychedelic spores from their hands. Allies within these spore clouds will receive a pleasant high, whilst foes will experience a disorientatingly bad trip.\n\nThe range of this ability scales with the pawn's Nature Connection stat, which can be increased by having the Natural Connection gene or equipping certain weapons and apparel.</description>
+		<description>Carriers of this gene can expel psychedelic spores from their hands. Allies within these spore clouds will receive a pleasant high, whilst foes will experience a disorientatingly bad trip.\n\nThe range of this ability scales with the pawn's Nature Connection stat, which can be increased by having the Natural Connection gene or by equipping certain weapons and apparel.</description>
 		<iconPath>UI/GeneIcons/RBSF_SporeCloud</iconPath>
 		<descriptionHyperlinks>
 			<StatDef>RBSF_NatureConnection</StatDef>
 		</descriptionHyperlinks>
 		<biostatCpx>1</biostatCpx>
 		<biostatMet>-1</biostatMet>
-		<displayCategory>Ability</displayCategory>
-		<displayOrderInCategory>181</displayOrderInCategory>
+		<displayCategory>RBSF_NaturalConnectionGeneCategory</displayCategory>
+		<displayOrderInCategory>21</displayOrderInCategory>
 		<abilities>
 			<li>RBSF_AbilitySporeCloud</li>
 		</abilities>
@@ -365,6 +365,38 @@
 		</symbolPack>
 	</GeneDef>
 	
+		<!-- Tree Skip -->
+
+	<GeneDef>
+		<defName>RBSF_TreeSkip</defName>
+		<label>tree skip</label>
+		<description>Carriers of this gene can teleport to a nearby tree when their Nature Connection is high enough. \n\nThe range of this ability scales with the pawn's Nature Connection stat, which can be increased by having the Natural Connection gene or by equipping certain weapons and apparel.</description>
+		<iconPath>UI/GeneIcons/RBSF_TreeSkip</iconPath>
+		<descriptionHyperlinks>
+			<StatDef>RBSF_NatureConnection</StatDef>
+		</descriptionHyperlinks>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<displayCategory>RBSF_NaturalConnectionGeneCategory</displayCategory>
+		<displayOrderInCategory>22</displayOrderInCategory>
+		<abilities>
+			<li>RBSF_AbilityTreeWalk</li>
+		</abilities>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>oake</symbol></li>
+				<li><symbol>pine</symbol></li>
+				<li><symbol>fae</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>low</symbol></li>
+				<li><symbol>ne</symbol></li>
+				<li><symbol>wisp</symbol></li>
+				<li><symbol>zoop</symbol></li> <!-- This one's for you Zelan -->
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+	
 	<!-- Mech Terror / Mechanophobia / Mechaphobia Gene -->
 	<!-- Triggers RBSF_MinorCatatonic MentalBreakDef and RBSF_MechanophobiaThought-->
 	
@@ -376,7 +408,7 @@
 		<customEffectDescriptions>
 			<li>May have a mental breakdown when near mechanoids.</li>
 		</customEffectDescriptions>
-		<biostatMet>3</biostatMet>
+		<biostatMet>4</biostatMet>
 		<displayCategory>ResistanceAndWeakness</displayCategory>
 		<displayOrderInCategory>81</displayOrderInCategory>
 		<iconPath>UI/GeneIcons/RBSF_Mechanophobia</iconPath>

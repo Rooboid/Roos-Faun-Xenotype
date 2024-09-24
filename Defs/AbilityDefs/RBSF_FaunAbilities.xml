@@ -99,41 +99,58 @@
 		</stages>
 	</HediffDef>
 	
-	<!--====================== Tree Walk Ability ======================-->
-	<!-- teleports a pawn to a tree -->
+	<!--====================== Tree Skip Ability ======================-->
+	<!-- Teleports a pawn to a tree depending on Nature Connection Stat -->
 	
 	<AbilityDef>
 		<defName>RBSF_AbilityTreeWalk</defName>
-		<label>tree walk</label>
-		<description>The user ZOOP.</description>
+		<label>tree skip</label>
+		<description>The user can teleport to a nearby tree.</description>
 		<descriptionHyperlinks>
 			<GeneDef>RBSF_NaturalConnection</GeneDef>
 			<StatDef>RBSF_NatureConnection</StatDef>
 		</descriptionHyperlinks>
-		<iconPath>UI/GeneIcons/RBSF_SporeCloud</iconPath>
-		<cooldownTicksRange>60000</cooldownTicksRange>
+		<iconPath>UI/GeneIcons/RBSF_TreeSkip</iconPath>
+		<cooldownTicksRange>180000</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
 		<displayOrder>301</displayOrder>
-		<warmupStartSound>RBSF_ChokeVineWarmup</warmupStartSound> <!-- TODO -->
-		<charges>1</charges>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<warmupStartSound>RBSF_TreeSkipWarmup</warmupStartSound>
+		<charges>2</charges>
 		<statBases>
-			<Ability_Duration>5</Ability_Duration>
+			<Ability_Duration>0.5</Ability_Duration>
 		</statBases>
 		<verbProperties>
 			<verbClass>Roos_Faun_Xenotype.RBSF_Verb_CastAbilityTreewalk</verbClass>
-			<warmupEffecter>RBSF_ChokeVineWarmupEffecter</warmupEffecter>
+			<warmupEffecter>RBSF_TreeSkipWarmupEffect</warmupEffecter>
 			<range>10</range>
-			<warmupTime>0.5</warmupTime>
-			<drawAimPie>False</drawAimPie>
-			<soundCast>RBSF_ChokeVineCast</soundCast> <!-- TODO -->
+			<warmupTime>1</warmupTime>
+			<drawAimPie>True</drawAimPie>
+			<soundCast>RBSF_TreeSkipCast</soundCast>
 			<requireLineOfSight>False</requireLineOfSight>
 			<targetParams>
 				<!-- <targetSpecificThing>True</targetSpecificThing> -->
 				<canTargetPlants>True</canTargetPlants>
 			</targetParams>
 		</verbProperties>
-				<comps>
+		<comps>
 			<li Class="Roos_Faun_Xenotype.CompProperties_AbilityTreeWalk"/>
+			<li Class="CompProperties_AbilityEffecterOnTarget">
+				<effecterDef>RBSF_Skip_Exit</effecterDef>
+				<maintainForTicks>60</maintainForTicks>
+				<scale>1.55</scale>
+			</li>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDefs>
+					<li>PsycastSkipInnerExit</li>
+					<li>PsycastSkipOuterRingExit</li>
+				</fleckDefs>
+				<scale>1.55</scale>
+				<sound>Psycast_Skip_Exit</sound>
+				<preCastTicks>5</preCastTicks>
+			</li>
 		</comps>
 	</AbilityDef>
 	
@@ -151,7 +168,7 @@
 		<iconPath>UI/GeneIcons/RBSF_SporeCloud</iconPath>
 		<cooldownTicksRange>120000</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
-		<displayOrder>301</displayOrder>
+		<displayOrder>302</displayOrder>
 		<warmupStartSound>RBSF_SporeCloudWarmup</warmupStartSound>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -394,7 +411,7 @@
 		</children>
 	</EffecterDef>
 	
-		<EffecterDef>
+	<EffecterDef>
 		<defName>RBSF_SporeCloudPosEffect</defName>
 		<children>
 			<li>
@@ -424,7 +441,7 @@
 	
 	<!-- Spore Cloud Neg Mote -->
 	
-		<ThingDef ParentName="MoteBase">
+	<ThingDef ParentName="MoteBase">
 		<defName>Mote_SporeCloudNeg</defName>
 		<graphicData>
 			<texPath>Things/Mote/SporeCloud/SporeCloudNeg/RBSF_SporeCloudNeg</texPath>
@@ -440,9 +457,9 @@
 		</mote>
 	</ThingDef>
 	
-		<!-- Spore Cloud Pos Mote -->
+	<!-- Spore Cloud Pos Mote -->
 	
-		<ThingDef ParentName="MoteBase">
+	<ThingDef ParentName="MoteBase">
 		<defName>Mote_SporeCloudPos</defName>
 		<graphicData>
 			<texPath>Things/Mote/SporeCloud/SporeCloudPos/RBSF_SporeCloudPos</texPath>
@@ -459,39 +476,39 @@
 		
 	</ThingDef>
 	
-  <ThingDef ParentName="MoteBase">
-    <defName>RBSF_MushroomMotePos</defName>
-	    <graphicData>
-      <texPath>Things/Mote/SporeCloud/SporeShroomPos</texPath>
-      <graphicClass>Graphic_MoteRandom</graphicClass>
-	  <shaderType>Mote</shaderType>
-    </graphicData>
-    <altitudeLayer>MoteOverhead</altitudeLayer>
-    <mote>
-		<fadeInTime>0.4</fadeInTime>
-		<solidTime>0.2</solidTime>
-		<fadeOutTime>1</fadeOutTime>
-		<growthRate>1</growthRate>
-    </mote>
-  </ThingDef>
+	<ThingDef ParentName="MoteBase">
+		<defName>RBSF_MushroomMotePos</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeShroomPos</texPath>
+			<graphicClass>Graphic_MoteRandom</graphicClass>
+			<shaderType>Mote</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.4</fadeInTime>
+			<solidTime>0.2</solidTime>
+			<fadeOutTime>1</fadeOutTime>
+			<growthRate>1</growthRate>
+		</mote>
+	</ThingDef>
   
-    <ThingDef ParentName="MoteBase">
-    <defName>RBSF_MushroomMoteNeg</defName>
-	    <graphicData>
-      <texPath>Things/Mote/SporeCloud/SporeShroomNeg</texPath>
-      <graphicClass>Graphic_MoteRandom</graphicClass>
-	  <shaderType>Mote</shaderType>
-    </graphicData>
-    <altitudeLayer>MoteOverhead</altitudeLayer>
-    <mote>
-		<fadeInTime>0.4</fadeInTime>
-		<solidTime>0.2</solidTime>
-		<fadeOutTime>1</fadeOutTime>
-		<growthRate>1</growthRate>
-    </mote>
-  </ThingDef>
+	<ThingDef ParentName="MoteBase">
+		<defName>RBSF_MushroomMoteNeg</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeShroomNeg</texPath>
+			<graphicClass>Graphic_MoteRandom</graphicClass>
+			<shaderType>Mote</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.4</fadeInTime>
+			<solidTime>0.2</solidTime>
+			<fadeOutTime>1</fadeOutTime>
+			<growthRate>1</growthRate>
+		</mote>
+	</ThingDef>
   
-  	<ThingDef ParentName="MoteBase">
+	<ThingDef ParentName="MoteBase">
 		<defName>RBSF_SporeCloudWarmup</defName>
 		<graphicData>
 			<texPath>Things/Mote/SporeCloud/SporeCloudWarmup/RBSF_SporeCloudWarmup</texPath>
@@ -507,7 +524,7 @@
 		</mote>
 	</ThingDef>
   
-  		<EffecterDef>
+	<EffecterDef>
 		<defName>RBSF_SporeCloudChargeEffect</defName>
 		<children>
 			<li>
@@ -547,35 +564,35 @@
 				<burstCount>1</burstCount>
 				<rotationRate>-10</rotationRate>
 				<spawnLocType>OnSource</spawnLocType>
-				<scale>0.7</scale>
+				<scale>0.3</scale>
 			</li>
 		</children>
 	</EffecterDef>
 	
 	<!-- Spore Cloud Explosion -->
 	
-		<EffecterDef>
+	<EffecterDef>
 		<defName>RBSF_SporeCloudExplosionEffect</defName>
 		<children>
 			<li>
 				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
 				<fleckDef>RBSF_SporeCloudExplosionFleckA</fleckDef>
-				<burstCount>1~1</burstCount>
-				<scale>3</scale>
+				<burstCount>1</burstCount>
+				<scale>5</scale>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 			<li>
 				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
 				<fleckDef>RBSF_SporeCloudExplosionFleckB</fleckDef>
 				<burstCount>1~3</burstCount>
-				<scale>3</scale>
+				<scale>2.8~3.5</scale>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 			<li>
 				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
 				<fleckDef>RBSF_SporeCloudExplosionFleckC</fleckDef>
 				<burstCount>1</burstCount>
-				<scale>2</scale>
+				<scale>1~2</scale>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 			<li>
@@ -588,7 +605,7 @@
 		</children>
 	</EffecterDef>
 	
-		<!-- Spore Cloud Flecks -->
+	<!-- Spore Cloud Flecks -->
 	
 	<FleckDef ParentName="FleckBase">
 		<defName>RBSF_SporeCloudExplosionFleckA</defName>
@@ -596,27 +613,27 @@
 			<texPath>Things/Mote/SporeCloud/SporeCloudExplosion/RBSF_SporeCloudExplosionPuff</texPath>
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
-		<altitudeLayer>MoteLow</altitudeLayer>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<solidTime>1</solidTime>
 		<fadeInTime>0.1</fadeInTime>
 		<fadeOutTime>0.3</fadeOutTime>
 		<growthRate>-0.3</growthRate>
 	</FleckDef>
 	
-		<FleckDef ParentName="FleckBase">
+	<FleckDef ParentName="FleckBase">
 		<defName>RBSF_SporeCloudExplosionFleckB</defName>
 		<graphicData>
 			<texPath>Things/Mote/SporeCloud/SporeCloudExplosion/RBSF_SporeCloudExplosionSpores1</texPath>
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
-		<altitudeLayer>MoteLow</altitudeLayer>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<solidTime>0.3</solidTime>
 		<fadeInTime>0.3</fadeInTime>
 		<fadeOutTime>1</fadeOutTime>
 		<growthRate>0.5</growthRate>
 	</FleckDef>
 	
-		<FleckDef ParentName="FleckBase">
+	<FleckDef ParentName="FleckBase">
 		<defName>RBSF_SporeCloudExplosionFleckC</defName>
 		<graphicData>
 			<texPath>Things/Mote/SporeCloud/SporeCloudExplosion/RBSF_SporeCloudExplosionSpores2</texPath>
@@ -629,28 +646,133 @@
 		<growthRate>2</growthRate>
 	</FleckDef>
 	
-	<!-- Spore Damage -->
-
-<!-- 	<DamageDef>
-		<defName>RBSF_SporeCloudDamage</defName>
-		<label>spore cloud</label>
-		<workerClass>DamageWorker_AddInjury</workerClass>
-		<deathMessage>{0} has somehow died because of a spore cloud, which should not happen.</deathMessage>
-		<hediff>Bruise</hediff>
-		<defaultDamage>1</defaultDamage>
-		<canInterruptJobs>false</canInterruptJobs>
-		<makesAnimalsFlee>true</makesAnimalsFlee>
-		<impactSoundType>Bullet</impactSoundType>
-		<armorCategory>Blunt</armorCategory>
-		<isRanged>true</isRanged>
-		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
-		<damageEffecter>RBSF_SporeCloudExplosionEffect</damageEffecter>
-		<explosionCellFleck>RBSF_SporeCloudExplosionFleckA</explosionCellFleck>
-		<explosionInteriorEffecter>RBSF_SporeCloudExplosionEffect</explosionInteriorEffecter>
-		<explosionColorCenter>(228, 157, 245)</explosionColorCenter>
-		<explosionColorEdge>(0.3, 0.70, 0.88, 0.05)</explosionColorEdge>
-		<soundExplosion>RBSF_SporeCloudCast</soundExplosion>
-	</DamageDef> -->
-
+	<!-- What -->
+	
+	<!-- 	<EffecterDef>
+		<defName>RBSF_TreeSkipWarmupEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>RBSF_SporeCloudExplosionFleckA</fleckDef>
+				<burstCount>1</burstCount>
+				<scale>5</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>RBSF_SporeCloudExplosionFleckB</fleckDef>
+				<burstCount>1~3</burstCount>
+				<scale>2.8~3.5</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>RBSF_SporeCloudExplosionFleckC</fleckDef>
+				<burstCount>1</burstCount>
+				<scale>1~2</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>DustPuffLong</fleckDef>
+				<burstCount>1</burstCount>
+				<rotationRate>-20</rotationRate>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+		</children>
+	</EffecterDef> -->
+	
+	<!-- Tree Skip Warmup Effecter -->
+	
+	<EffecterDef>
+		<defName>RBSF_TreeSkipWarmupEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>RBSF_SporeCloudWarmup</moteDef>
+				<scale>4</scale>
+				<rotationRate>0</rotationRate>
+				<spawnLocType>OnSource</spawnLocType>
+				<ticksBetweenMotes>999</ticksBetweenMotes>
+				<positionRadius>0</positionRadius>
+				<color>(57,116,67)</color>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>1~2.5</scale>
+				<ticksBetweenMotes>5</ticksBetweenMotes>
+				<positionLerpFactor>0.2</positionLerpFactor>
+				<positionRadius>0.1</positionRadius>
+				<moteDef>Mote_SporeCloudPos</moteDef>
+				<attachToSpawnThing>true</attachToSpawnThing>
+				<color>(57,116,67)</color>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<!-- Tree Skip Exit Effecter -->
+	
+	<EffecterDef>
+		<defName>RBSF_Skip_Exit</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
+				<fleckDef>PsycastSkipFlashExit</fleckDef>
+				<initialDelayTicks>12</initialDelayTicks>
+				<burstCount>1~1</burstCount>
+				<scale>1~1</scale>
+				<rotation>0~0</rotation>
+				<spawnLocType>OnSource</spawnLocType>
+				<color>(57,116,67)</color>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
+				<fleckDef>PlainFlash</fleckDef>
+				<initialDelayTicks>14</initialDelayTicks>
+				<burstCount>1~1</burstCount>
+				<scale>7.0~7.0</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<color>(57,116,67)</color>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>Fleck_VaporizeRays_B</fleckDef>
+				<burstCount>1</burstCount>
+				<rotationRate>-10</rotationRate>
+				<spawnLocType>OnSource</spawnLocType>
+				<scale>0.3</scale>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.2</positionRadius>
+				<moteDef>Mote_ExtinguisherPuff</moteDef>
+				<burstCount>4~6</burstCount>
+				<speed>2~7</speed>
+				<scale>1~2</scale>
+				<color>(160,215,175)</color>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.2</positionRadius>
+				<moteDef>Mote_ExtinguisherPuff</moteDef>
+				<burstCount>4~6</burstCount>
+				<speed>2~7</speed>
+				<scale>2~3</scale>
+				<color>(160,215,175)</color>
+			</li>
+		</children>
+	</EffecterDef>
   
+	<FleckDef ParentName="FleckBase">
+		<defName>RBSF_LeafSpark</defName>
+		<graphicData>
+			<texPath>Things/Mote/TreeSkip/RBSF_TreeSkipLeaf</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.04</fadeInTime>
+		<solidTime>0.08</solidTime>
+		<fadeOutTime>0.13</fadeOutTime>
+	</FleckDef>
+
 </Defs>

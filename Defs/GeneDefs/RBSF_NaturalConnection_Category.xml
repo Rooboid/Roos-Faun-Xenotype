@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!--====================== Natural Connection Related Genes ======================-->
+	
+	<GeneCategoryDef>
+		<defName>RBSF_NaturalConnectionGeneCategory</defName>
+		<label>natural connection</label>
+		<displayPriorityInXenotype>508</displayPriorityInXenotype>
+	</GeneCategoryDef>
+
+	
+</Defs>
