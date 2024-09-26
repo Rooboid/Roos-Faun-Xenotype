@@ -17,16 +17,16 @@ namespace Roos_Faun_Xenotype
                 float severity;
                 switch (numPlants)
                 {
-                    case int i when i < 10:
+                    case int i when i < 5:
                         severity = 0.5f;
                         break;
-                    case int i when i < 20:
+                    case int i when i < 10:
                         severity = 1;
                         break;
-                    case int i when i < 35:
+                    case int i when i < 15:
                         severity = 2;
                         break;
-                    case int i when i < 70:
+                    case int i when i < 25:
                         severity = 3;
                         break;
                     default:
@@ -64,12 +64,12 @@ namespace Roos_Faun_Xenotype
             {
                 if (!plant.def.plant.IsTree) // Non-tree plants
                 {
-                    plantTotalWeight += 0.2f;
+                    plantTotalWeight += 0.3f;
                     continue;
                 }
                 if (plant.def == ThingDefOf.Plant_TreeGauranlen || plant.def == ThingDefOf.Plant_TreeAnima) // Special Trees
                 {
-                    plantTotalWeight += 35;
+                    plantTotalWeight += 15;
                     continue;
                 }
                 if (!plant.def.plant.isStump) // Regular Trees
