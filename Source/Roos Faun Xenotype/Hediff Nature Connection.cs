@@ -80,7 +80,7 @@ namespace Roos_Faun_Xenotype
 
         private static bool IsTree(Thing thing)
         {
-            if (thing.def.plant.IsTree && !thing.def.plant.isStump)
+            if (!thing.def.plant.IsTree || thing.def.plant.isStump)
             {
                 return false;
             }
