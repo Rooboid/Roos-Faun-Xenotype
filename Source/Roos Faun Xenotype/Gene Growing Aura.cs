@@ -19,7 +19,7 @@ namespace Roos_Faun_Xenotype
                 return;
 
             var natureConnection = pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
-            var hashTick = (int)(2400 / (natureConnection * 2));
+            var hashTick = (int)(2400 / 2 + (natureConnection * 2));
 
             if (!pawn.IsHashIntervalTick(hashTick))
             {
@@ -52,7 +52,7 @@ namespace Roos_Faun_Xenotype
                 //Grow plants equal to total of 0.1 day of growing.
                 //growDays is misleading due to days being 50% darkness
                 var growthPerDay = 1f / plant.def.plant.growDays;
-                var growthPerTrigger = growthPerDay / 10;
+                var growthPerTrigger = growthPerDay / 5;
                 plant.Growth += growthPerTrigger;
 
                 //make fleck and redraw map area
