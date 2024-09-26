@@ -283,9 +283,6 @@
 			<StatDef>RBSF_NatureConnection</StatDef>
 		</descriptionHyperlinks>
 		<iconPath>UI/GeneIcons/RBSF_NaturalConnection</iconPath>
-		<statFactors>
-			<RBSF_NatureConnection>1.10</RBSF_NatureConnection>
-		</statFactors>
 		<biostatCpx>1</biostatCpx>
 		<biostatMet>-1</biostatMet>
 		<displayCategory>RBSF_NaturalConnectionGeneCategory</displayCategory>
@@ -323,28 +320,28 @@
 				<label>inactive</label>
 				<minSeverity>0</minSeverity>
 				<statOffsets>
-					<RBSF_NatureConnection>0.0</RBSF_NatureConnection>
+					<RBSF_NatureConnection>0.20</RBSF_NatureConnection>
 				</statOffsets>
 			</li>
 			<li>
 				<label>weak</label>
 				<minSeverity>1</minSeverity>
 				<statOffsets>
-					<RBSF_NatureConnection>0.25</RBSF_NatureConnection>
+					<RBSF_NatureConnection>0.4</RBSF_NatureConnection>
 				</statOffsets>
 			</li>
 			<li>
 				<label>moderate</label>
 				<minSeverity>2</minSeverity>
 				<statOffsets>
-					<RBSF_NatureConnection>0.5</RBSF_NatureConnection>
+					<RBSF_NatureConnection>0.6</RBSF_NatureConnection>
 				</statOffsets>
 			</li>
 			<li>
 				<label>strong</label>
 				<minSeverity>3</minSeverity>
 				<statOffsets>
-					<RBSF_NatureConnection>0.75</RBSF_NatureConnection>
+					<RBSF_NatureConnection>0.8</RBSF_NatureConnection>
 				</statOffsets>
 			</li>
 			<li>
