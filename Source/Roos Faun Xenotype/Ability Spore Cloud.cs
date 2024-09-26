@@ -15,7 +15,7 @@ namespace Roos_Faun_Xenotype
             Pawn pawn = this.parent.pawn;
             IntVec3 position = target.Cell;
             Map map = pawn.Map;
-            float radius = 2.5f * this.parent.pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
+            float radius = 2 + (2f * this.parent.pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection));
 
             base.Apply(target, dest);
 
@@ -26,7 +26,7 @@ namespace Roos_Faun_Xenotype
         //Draws radius circle
         public override void DrawEffectPreview(LocalTargetInfo target)
         {
-            var adjustedRadius = 2.5f * this.parent.pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
+            var adjustedRadius = 2f + (2f * this.parent.pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection));
             GenDraw.DrawRadiusRing(target.Cell, adjustedRadius);
         }
 
@@ -93,7 +93,7 @@ namespace Roos_Faun_Xenotype
         //  Adjusts range to scale with nature connection when casting.
         public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true)
         {
-            var adjustedRange = 4 + 4 * this.caster.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
+            var adjustedRange = 4 + (4 * this.caster.GetStatValue(RBSF_DefOf.RBSF_NatureConnection));
             //Log.Message("Range adjusted to " + adjustedRange.ToString());
             this.verbProps.range = adjustedRange;
             return base.ValidateTarget(target, showMessages);
