@@ -57,7 +57,7 @@ namespace Roos_Faun_Xenotype
         }
     }
 
-    public class RBSF_Verb_CastAbilityTreewalk : Verb_CastAbilityTouch
+    public class RBSF_Verb_CastAbilityTreewalk : Verb_CastAbility
     {
         //  Adjusts range to scale with nature connection when casting.
         public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true)

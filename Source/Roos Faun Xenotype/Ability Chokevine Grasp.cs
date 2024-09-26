@@ -28,12 +28,10 @@ namespace Roos_Faun_Xenotype
         //  Adjusts range to scale with nature connection on gizmo update.
         public override void OnGizmoUpdate()
         {
-            base.OnGizmoUpdate();
-            var adjustedRange = 8 * this.parent.pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
-            //Log.Message("Range adjusted to " + adjustedRange.ToString() + " by gizmo update");
+            var adjustedRange = 5 + (8 * parent.pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection));
             this.parent.pawn.abilities.GetAbility(RBSF_DefOf.RBSF_AbilityChokevineGrasp).verb.verbProps.range = adjustedRange;
+            base.OnGizmoUpdate();
         }
-
     }
 
     public class RBSF_CompProperties_AbilityChokevineGrasp : CompProperties_AbilityEffect
@@ -45,20 +43,16 @@ namespace Roos_Faun_Xenotype
         public int stunDuration = 720;
     }
 
-    public class RBSF_Verb_CastAbilityChokevineGrasp : Verb_CastAbilityTouch
+    public class RBSF_Verb_CastAbilityChokevineGrasp : Verb_CastAbility
     {
 
         //  Adjusts range to scale with nature connection when casting.
         public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true)
         {
-            var adjustedRange = 8 * this.caster.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
-            //Log.Message("Range adjusted to " + adjustedRange.ToString());
+            var adjustedRange = 5 + (8 * caster.GetStatValue(RBSF_DefOf.RBSF_NatureConnection));
             this.verbProps.range = adjustedRange;
-
             return base.ValidateTarget(target, showMessages);
 
         }
     }
-
-
 }
