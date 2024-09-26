@@ -46,7 +46,6 @@
 		<description>Carriers of this gene sport a pair of antlers atop their heads.</description>
 		<iconPath>UI/GeneIcons/RBSF_DeerHorns</iconPath>
 		<displayOrderInCategory>113</displayOrderInCategory>
-		
 		<renderNodeProperties>
 			<li>
 				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
@@ -69,12 +68,12 @@
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<drawData>
 					<defaultData>
-						<layer>70</layer>
+						<layer>75</layer>
 					</defaultData>
 				</drawData>
 			</li>
 		</renderNodeProperties>
-		<exclusionTags> <!-- Compatibility with the Seren -->
+		<exclusionTags><!-- Compatibility with the Seren -->
 			<li>SerenSensors</li>
 		</exclusionTags>
 		<symbolPack>
@@ -131,18 +130,23 @@
 	</GeneDef>
 	
 	<!--====================== Functional Genes ======================-->
-	<!-- Unguligrade Legs (Added via RBSF_Patches, not via genedefs, in case user is using Roo's Minotaur Xenotype-->
+	<!-- Unguligrade Legs (Added via RBSF_Patches, not via genedefs, in case user is using Roo's Minotaur Xenotype -->
 		
-	<!-- 	<GeneDef>
+	<!--<GeneDef>
 		<defName>RBM_UnguligradeLegs</defName>
 		<label>unguligrade legs</label>
 		<description>Carriers of this gene are born with sturdy legs and cloven hooves. The fur on their legs extends up to their stomachs and covers their groin.</description>
 		<biostatCpx>1</biostatCpx>
-		<biostatMet>-1</biostatMet>
+		<biostatMet>-2</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<displayOrderInCategory>330</displayOrderInCategory>
 		<iconPath>UI/GeneIcons/RBM_BovineLegs</iconPath>
 		<iconColor>(0.75, 0.75, 0.75)</iconColor>
+									<statOffsets>
+								<MoveSpeed>0.15</MoveSpeed>
+								<FilthRate>3</FilthRate>
+								<MeleeDodgeChance>10</MeleeDodgeChance>
+							</statOffsets>
 		<symbolPack>
 			<prefixSymbols>
 				<li><symbol>faun</symbol></li>
@@ -158,19 +162,6 @@
 				<li><symbol>ped</symbol></li>
 			</suffixSymbols>
 		</symbolPack>
-		<modExtensions>
-			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VanillaGenesExpanded.GeneExtension">
-				<hediffsToBodyParts>
-					<li>
-						<hediff>UnguligradeLegPart</hediff>
-						<bodyparts>
-							<li>Leg</li>
-							<li>Leg</li>
-						</bodyparts>
-					</li>
-				</hediffsToBodyParts>
-			</li>
-		</modExtensions>
 	</GeneDef> -->
 
 	<!-- Reclusive -->
@@ -299,61 +290,6 @@
 		</symbolPack>
 	</GeneDef>
 	
-	<!--====================== Nature Connection HeDiff ======================-->
-	<!-- Given to Pawns by the Natural Connection Gene -->
-	
-	<HediffDef>
-		<defName>RBSF_NatureConnectionOffset</defName>
-		<label>natural connection</label>
-		<labelNoun>natural connection</labelNoun>
-		<defaultLabelColor>(105, 165, 80)</defaultLabelColor>
-		<hediffClass>HediffWithComps</hediffClass>
-		<everCurableByItem>false</everCurableByItem>
-		<tendable>false</tendable>
-		<displayWound>false</displayWound>
-		<description>This pawn's Nature Connection stat is increased depending on how much nature is around them.</description>
-		<comps>
-			<li Class="Roos_Faun_Xenotype.CompProperties_NatureConnectionHediff"/>
-		</comps>
-		<stages>
-			<li>
-				<label>inactive</label>
-				<minSeverity>0</minSeverity>
-				<statOffsets>
-					<RBSF_NatureConnection>0.20</RBSF_NatureConnection>
-				</statOffsets>
-			</li>
-			<li>
-				<label>weak</label>
-				<minSeverity>1</minSeverity>
-				<statOffsets>
-					<RBSF_NatureConnection>0.4</RBSF_NatureConnection>
-				</statOffsets>
-			</li>
-			<li>
-				<label>moderate</label>
-				<minSeverity>2</minSeverity>
-				<statOffsets>
-					<RBSF_NatureConnection>0.6</RBSF_NatureConnection>
-				</statOffsets>
-			</li>
-			<li>
-				<label>strong</label>
-				<minSeverity>3</minSeverity>
-				<statOffsets>
-					<RBSF_NatureConnection>0.8</RBSF_NatureConnection>
-				</statOffsets>
-			</li>
-			<li>
-				<label>flourishing</label>
-				<minSeverity>4</minSeverity>
-				<statOffsets>
-					<RBSF_NatureConnection>1</RBSF_NatureConnection>
-				</statOffsets>
-			</li>
-		</stages>
-	</HediffDef>
-	
 	<!-- Growing Aura -->
 
 	<GeneDef>
@@ -446,7 +382,7 @@
 		</symbolPack>
 	</GeneDef>
 	
-		<!-- Tree Skip -->
+	<!-- Tree Skip -->
 
 	<GeneDef>
 		<defName>RBSF_TreeSkip</defName>
@@ -473,7 +409,7 @@
 				<li><symbol>low</symbol></li>
 				<li><symbol>ne</symbol></li>
 				<li><symbol>wisp</symbol></li>
-				<li><symbol>zoop</symbol></li> <!-- This one's for you Zelan -->
+				<li><symbol>zoop</symbol></li><!-- This one's for you Zelan -->
 			</suffixSymbols>
 		</symbolPack>
 	</GeneDef>
@@ -483,7 +419,7 @@
 	
 	<GeneDef>
 		<defName>RBSF_Mechanophobia</defName>
-		<label>mechaphobia</label><!-- I hate that we have to change the name from the def, but the full word doesn't graphically fit on one line. -->
+		<label>mechaphobia</label><!-- I hate that we have to change the name from the def, but the full word doesn't fit on one line in the UI. -->
 		<labelShortAdj>mechaphobic</labelShortAdj>
 		<description>Carriers of this gene have a biological fear of mechanoids. When mechanoids are close, even allied ones, there is a chance that the pawn will collapse in fear at any moment.</description>
 		<customEffectDescriptions>
@@ -495,6 +431,7 @@
 		<iconPath>UI/GeneIcons/RBSF_Mechanophobia</iconPath>
 		<mentalBreakMtbDays>0.08</mentalBreakMtbDays>
 		<mentalBreakDef>RBSF_MinorCatatonic</mentalBreakDef>
+		<suppressedTraits><li>Transhumanist</li></suppressedTraits>
 		<!-- Symbol -->
 		<symbolPack>
 			<prefixSymbols>
@@ -507,21 +444,6 @@
 			</suffixSymbols>
 		</symbolPack>
 	</GeneDef>
-	
-	<!-- Mech Terror / Mechanophobia/ Mechaphobia Thought -->
-  
-	<ThoughtDef>
-		<defName>RBSF_MechanophobiaThought</defName>
-		<workerClass>Roos_Faun_Xenotype.ThoughtWorker_Mechanophobia</workerClass>
-		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
-		<stages>
-			<li>
-				<label>afraid of nearby mechanoids</label>
-				<description>I've never seen something so unnatural! I need to get out of here!</description>
-				<baseMoodEffect>-20</baseMoodEffect>
-			</li>
-		</stages>
-	</ThoughtDef>
 	
 	<!-- Myotonia Gene -->
 	
@@ -548,34 +470,16 @@
 		<symbolPack>
 			<prefixSymbols>
 				<li><symbol>myo</symbol></li>
-				<li><symbol>faint</symbol></li>
-				<li><symbol>pho</symbol></li>
-				<li><symbol>tende</symbol></li>
+				<li><symbol>eek</symbol></li>
 				<li><symbol>pyg</symbol></li>
 				<li><symbol>baa</symbol></li>
 			</prefixSymbols>
 			<suffixSymbols>
 				<li><symbol>nia</symbol></li>
-				<li><symbol>ssee</symbol></li>
 				<li><symbol>my</symbol></li>
 				<li><symbol>bia</symbol></li>
 			</suffixSymbols>
 		</symbolPack>
 	</GeneDef>
-	
-	<!-- Myotonia Thought -->
-  
-	<ThoughtDef>
-		<defName>RBSF_MyotoniaThought</defName>
-		<workerClass>Roos_Faun_Xenotype.ThoughtWorker_Myotonia</workerClass>
-		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
-		<stages>
-			<li>
-				<label>myotonic</label>
-				<description>Aaaaaagh! Scary!</description>
-				<baseMoodEffect>-20</baseMoodEffect>
-			</li>
-		</stages>
-	</ThoughtDef>
 	
 </Defs>

@@ -140,7 +140,7 @@
 			<match Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="DankPyon_Forest_Faction"]/xenotypeSet/xenotypeChances</xpath>
 				<value>
-					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.13</RBSF_Faun>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.05</RBSF_Faun>
 				</value>
 			</match>
 			<nomatch Class="PatchOperationAdd">
@@ -148,7 +148,7 @@
 				<value>
 					<xenotypeSet>
 						<xenotypeChances>
-							<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.13</RBSF_Faun>
+							<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.05</RBSF_Faun>
 						</xenotypeChances>
 					</xenotypeSet>
 				</value>
@@ -167,7 +167,7 @@
 			<match Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="DankPyon_Witch_Faction"]/xenotypeSet/xenotypeChances</xpath>
 				<value>
-					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.1</RBSF_Faun>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.05</RBSF_Faun>
 				</value>
 			</match>
 			<nomatch Class="PatchOperationAdd">
@@ -175,7 +175,7 @@
 				<value>
 					<xenotypeSet>
 						<xenotypeChances>
-							<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.1</RBSF_Faun>
+							<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.05</RBSF_Faun>
 						</xenotypeChances>
 					</xenotypeSet>
 				</value>
@@ -194,7 +194,7 @@
 			<match Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[@Name="FactionBase_Elders"]/xenotypeSet/xenotypeChances</xpath>
 				<value>
-					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.1</RBSF_Faun>
+					<RBSF_Faun MayRequire="Ludeon.RimWorld.Biotech">0.05</RBSF_Faun>
 				</value>
 			</match>
 		</match>

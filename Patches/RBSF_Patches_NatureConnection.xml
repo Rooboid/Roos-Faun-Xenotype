@@ -2,6 +2,88 @@
 <Patch>
 
 	<!--=========================== Roo's Satyr and Faun Xenotype Patches - Nature Connection =========================-->
+	
+	<!--============================== Vanilla ============================-->
+	<!-- Boosts appropriate stats in relation to the pawn's nature connection stat -->
+	
+	<!-- Patch PlantHarvestYield (Removed for now ) -->
+	
+<!-- 	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/StatDef[defName="PlantHarvestYield"]/statFactors</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName="PlantHarvestYield"]</xpath>
+			<value>
+				<statFactors>
+					<li>RBSF_NatureConnection</li>
+				</statFactors>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName="PlantHarvestYield"]/statFactors</xpath>
+			<value>
+				<li>RBSF_NatureConnection</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/StatDef[defName="DrugHarvestYield"]/statFactors</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName="DrugHarvestYield"]</xpath>
+			<value>
+				<statFactors>
+					<li>RBSF_NatureConnection</li>
+				</statFactors>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName="DrugHarvestYield"]/statFactors</xpath>
+			<value>
+				<li>RBSF_NatureConnection</li>
+			</value>
+		</match>
+	</Operation> -->
+	
+	<!-- Patches certain items to reduce Nature Connection stat -->
+	<!--Incendiary Launcher -->
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Gun_IncendiaryLauncher"]/equippedStatOffsets</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Gun_IncendiaryLauncher"]/equippedStatOffsets</xpath>
+			<value>
+				<RBSF_NatureConnectionOffset>-0.4</RBSF_NatureConnectionOffset>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Gun_IncendiaryLauncher"]</xpath>
+			<value>
+				<equippedStatOffsets>
+					<RBSF_NatureConnection>-0.4</RBSF_NatureConnection>
+				</equippedStatOffsets>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!--Molotovs -->
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov"]/equippedStatOffsets</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov"]/equippedStatOffsets</xpath>
+			<value>
+				<RBSF_NatureConnectionOffset>-0.2</RBSF_NatureConnectionOffset>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov"]</xpath>
+			<value>
+				<equippedStatOffsets>
+					<RBSF_NatureConnection>-0.2</RBSF_NatureConnection>
+				</equippedStatOffsets>
+			</value>
+		</nomatch>
+	</Operation>
 
 	<!--============================== Biotech ============================-->
 	<!-- Patches certain Biotech items to reduce Nature Connection stat -->
@@ -17,7 +99,7 @@
 			<match Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="Apparel_MechlordSuit"]/statBases</xpath>
 				<value>
-					<RBSF_NatureConnectionOffset>-0.5</RBSF_NatureConnectionOffset>
+					<RBSF_NatureConnectionOffset>-0.8</RBSF_NatureConnectionOffset>
 				</value>
 			</match>
 			<!-- Do nothing if no match -->
@@ -35,7 +117,7 @@
 			<match Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="Apparel_PackTox"]/statBases</xpath>
 				<value>
-					<RBSF_NatureConnectionOffset>-1.5</RBSF_NatureConnectionOffset>
+					<RBSF_NatureConnectionOffset>-0.5</RBSF_NatureConnectionOffset>
 				</value>
 			</match>
 			<!-- Do nothing if no match -->
@@ -89,14 +171,14 @@
 			<match Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="Gun_ToxbombLauncher"]/equippedStatOffsets</xpath>
 				<value>
-					<RBSF_NatureConnectionOffset>-1</RBSF_NatureConnectionOffset>
+					<RBSF_NatureConnectionOffset>-0.5</RBSF_NatureConnectionOffset>
 				</value>
 			</match>
 			<nomatch Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="Gun_ToxbombLauncher"]</xpath>
 				<value>
 					<equippedStatOffsets>
-						<RBSF_NatureConnection>-1</RBSF_NatureConnection>
+						<RBSF_NatureConnection>-0.5</RBSF_NatureConnection>
 					</equippedStatOffsets>
 				</value>
 			</nomatch>
@@ -128,47 +210,29 @@
 		</match>
 	</Operation>
 	
-	<!--============================== Vanilla ============================-->
-	<!-- Patches certain items to reduce Nature Connection stat -->
+	<!-- Genes - Patches so that certain genes decrease nature connection -->
 	
-	<!--Incendiary Launcher -->
-	
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="Gun_IncendiaryLauncher"]/equippedStatOffsets</xpath>
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="Gun_IncendiaryLauncher"]/equippedStatOffsets</xpath>
-			<value>
-				<RBSF_NatureConnectionOffset>-0.5</RBSF_NatureConnectionOffset>
-			</value>
-		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="Gun_IncendiaryLauncher"]</xpath>
-			<value>
-				<equippedStatOffsets>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/GeneDef[defName="PollutionRush"]/statOffsets</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="PollutionRush"]/statOffsets</xpath>
+				<value>
 					<RBSF_NatureConnection>-0.5</RBSF_NatureConnection>
-				</equippedStatOffsets>
-			</value>
-		</nomatch>
-	</Operation>
-	
-	<!--Molotovs -->
-	
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov"]/equippedStatOffsets</xpath>
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov"]/equippedStatOffsets</xpath>
-			<value>
-				<RBSF_NatureConnectionOffset>-0.4</RBSF_NatureConnectionOffset>
-			</value>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/GeneDef[defName="PollutionRush"]</xpath>
+				<value>
+					<statOffsets>
+						<RBSF_NatureConnection>-0.5</RBSF_NatureConnection>
+					</statOffsets>
+				</value>
+			</nomatch>
 		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="Weapon_GrenadeMolotov"]</xpath>
-			<value>
-				<equippedStatOffsets>
-					<RBSF_NatureConnection>-0.4</RBSF_NatureConnection>
-				</equippedStatOffsets>
-			</value>
-		</nomatch>
 	</Operation>
 	
 	<!--============================== Mods ============================-->
@@ -322,6 +386,103 @@
 				</value>
 			</nomatch>
 		</match>
+	</Operation>
+	
+	<!-- Genes - Patches so that certain genes decrease nature connection -->
+			
+	<!-- VFE - Phytokin -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Races Expanded - Phytokin</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/GeneDef[defName="VRE_Photosynthesis"]/statOffsets</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="VRE_Photosynthesis"]/statOffsets</xpath>
+				<value>
+					<RBSF_NatureConnection>0.3</RBSF_NatureConnection>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/GeneDef[defName="VRE_Photosynthesis"]</xpath>
+				<value>
+					<statOffsets>
+						<RBSF_NatureConnection>0.3</RBSF_NatureConnection>
+					</statOffsets>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Races Expanded - Phytokin</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/GeneDef[defName="VRE_SaplingBirth"]/statOffsets</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="VRE_SaplingBirth"]/statOffsets</xpath>
+				<value>
+					<RBSF_NatureConnection>0.2</RBSF_NatureConnection>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/GeneDef[defName="VRE_SaplingBirth"]</xpath>
+				<value>
+					<statOffsets>
+						<RBSF_NatureConnection>0.2</RBSF_NatureConnection>
+					</statOffsets>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Races Expanded - Phytokin</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/GeneDef[defName="VRE_PoluxAffinity"]/statOffsets</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="VRE_PoluxAffinity"]/statOffsets</xpath>
+				<value>
+					<RBSF_NatureConnection>0.3</RBSF_NatureConnection>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/GeneDef[defName="VRE_PoluxAffinity"]</xpath>
+				<value>
+					<statOffsets>
+						<RBSF_NatureConnection>0.3</RBSF_NatureConnection>
+					</statOffsets>
+				</value>
+			</nomatch>
+		</match>
+	</Operation>
+	
+		<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Races Expanded - Phytokin</li>
+		</mods>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/GeneDef[defName="VRE_AnimaAffinity"]/statOffsets</xpath>
+				<value>
+					<RBSF_NatureConnection>0.3</RBSF_NatureConnection>
+				</value>
+		</match>
+	</Operation>
+	
+		<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Races Expanded - Phytokin</li>
+		</mods>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/GeneDef[defName="VRE_GauranlenAffinity"]/statOffsets</xpath>
+				<value>
+					<RBSF_NatureConnection>0.3</RBSF_NatureConnection>
+				</value>
+			</match>
 	</Operation>
 	
 </Patch>

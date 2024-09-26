@@ -2,7 +2,6 @@
 <Patch>
 
 	<!--============================== Roo's Satyr and Faun Xenotype Patches ============================-->
-	
 	<!-- Removed functionality to turn unguligrade legs into individual HeDiffs; we were having too many compatibility issues with them and decided to remove it. -->
 	
 	<!--============================== Unguligrade patches ============================-->
@@ -27,6 +26,11 @@
 							<displayOrderInCategory>330</displayOrderInCategory>
 							<iconPath>UI/GeneIcons/RBM_BovineLegs</iconPath>
 							<iconColor>(0.75, 0.75, 0.75)</iconColor>
+							<statOffsets>
+								<MoveSpeed>0.15</MoveSpeed>
+								<FilthRate>3</FilthRate>
+								<MeleeDodgeChance>10</MeleeDodgeChance>
+							</statOffsets>
 							<fur>RBM_UnguligradeLegs</fur>
 							<!-- <tattoosVisible>false</tattoosVisible> -->
 							<symbolPack>
@@ -46,7 +50,6 @@
 							</symbolPack>
 							<renderNodeProperties>
 								<li>
-								
 									<debugLabel>Fur</debugLabel>
 									<nodeClass>PawnRenderNode_Fur</nodeClass>
 									<workerClass>PawnRenderNodeWorker_Fur</workerClass>
@@ -102,74 +105,6 @@
 				
 			</operations>
 		</nomatch>
-	</Operation>
-	
-	<!--============================== Nature Connection Patches ============================-->
-	<!-- Boosts appropriate stats in relation to the pawn's nature connection stat -->
-	
-	<!-- Patch PlantHarvestYield -->
-	
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/StatDef[defName="PlantHarvestYield"]/statFactors</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/StatDef[defName="PlantHarvestYield"]</xpath>
-			<value>
-				<statFactors>
-					<li>RBSF_NatureConnection</li>
-				</statFactors>
-			</value>
-		</nomatch>
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/StatDef[defName="PlantHarvestYield"]/statFactors</xpath>
-			<value>
-				<li>RBSF_NatureConnection</li>
-			</value>
-		</match>
-	</Operation>
-	
-	<!-- Patch DrugHarvestYield -->
-	
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/StatDef[defName="DrugHarvestYield"]/statFactors</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/StatDef[defName="DrugHarvestYield"]</xpath>
-			<value>
-				<statFactors>
-					<li>RBSF_NatureConnection</li>
-				</statFactors>
-			</value>
-		</nomatch>
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/StatDef[defName="DrugHarvestYield"]/statFactors</xpath>
-			<value>
-				<li>RBSF_NatureConnection</li>
-			</value>
-		</match>
-	</Operation>
-	
-	<!-- Patch PruningSpeed (If Ideology is Active -->
-	
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Ideology</li>
-		</mods>
-		<match Class="PatchOperationConditional">
-			<xpath>Defs/StatDef[defName="PruningSpeed"]/statFactors</xpath>
-			<nomatch Class="PatchOperationAdd">
-				<xpath>Defs/StatDef[defName="PruningSpeed"]</xpath>
-				<value>
-					<statFactors>
-						<li>RBSF_NatureConnection</li>
-					</statFactors>
-				</value>
-			</nomatch>
-			<match Class="PatchOperationAdd">
-				<xpath>Defs/StatDef[defName="PruningSpeed"]/statFactors</xpath>
-				<value>
-					<li>RBSF_NatureConnection</li>
-				</value>
-			</match>
-		</match>
 	</Operation>
 	
 	<!--============================== PawnKind Patches ============================-->
@@ -353,11 +288,14 @@
 						<li>
 							<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
 							<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-							<texPath>Things/Pawn/Humanlike/Horns/RBSF_SerenAntlers/RBSF_SerenAntlers</texPath>
-							<colorType>Skin</colorType>
+							<texPaths>
+								<li>Things/Pawn/Humanlike/Horns/RBSF_SerenAntlers/RBSF_SerenAntlers</li>
+							</texPaths>
+							<colorType>Custom</colorType>
+							<color>(255,255,255)</color>
 							<parentTagDef>Head</parentTagDef>
-							<useSkinShader>true</useSkinShader>
-							<useRottenColor>true</useRottenColor>
+							<useSkinShader>false</useSkinShader>
+							<useRottenColor>false</useRottenColor>
 							<rotDrawMode>Fresh, Rotting</rotDrawMode>
 							<drawData>
 								<defaultData>
@@ -369,11 +307,6 @@
 					<exclusionTags>
 						<li>SerenSensors</li>
 					</exclusionTags>
-					<biostatCpx>0</biostatCpx>
-					<endogeneCategory>Headbone</endogeneCategory>
-					<displayCategory>Cosmetic</displayCategory>
-					<iconColor>(0.75, 0.75, 0.75)</iconColor>
-					<randomChosen>true</randomChosen>
 				</GeneDef>
 			</value>
 		</match>

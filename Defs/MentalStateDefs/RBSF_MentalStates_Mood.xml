@@ -11,30 +11,6 @@
 		<workerClass>Roos_Faun_Xenotype.MentalBreakWorker_MinorCatatonic</workerClass>
 	</MentalBreakDef>
 	
-	<!-- Minor Catatonic Breakdown HeDiff -->
-	
-	<HediffDef ParentName="DiseaseBase">
-		<defName>RBSF_MinorCatatonicBreakdown</defName>
-		<label>frozen in fear</label>
-		<labelNoun>fear frozen</labelNoun>
-		<description>A state of mental shock caused by a genetic fear of something, causing the pawn to pass out.</description>
-		<comps>
-			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>2000~12500</disappearsAfterTicks> <!-- An in-game hour is 2500 ticks -->
-			</li>
-		</comps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<setMax>0.1</setMax>
-					</li>
-				</capMods>
-			</li>
-		</stages>
-	</HediffDef>
-	
 	<!-- Tiny Catatonic Breakdown - Caused by Myotonia gene pawns being near a trigger -->
 	
 	<MentalBreakDef>
@@ -45,27 +21,4 @@
 		<workerClass>Roos_Faun_Xenotype.MentalBreakWorker_TinyCatatonic</workerClass>
 	</MentalBreakDef>
 	
-	<!-- Tiny Catatonic Breakdown HeDiff -->
-	
-	<HediffDef ParentName="DiseaseBase">
-		<defName>RBSF_TinyCatatonicBreakdown</defName>
-		<label>myotonic</label>
-		<labelNoun>Myotonia</labelNoun>
-		<description>A state of paralytic shock caused by genetic myotonia. \n\nTriggers of myotonia include being near fire, manhunting animals and enemies.</description>
-		<comps>
-			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>500~1500</disappearsAfterTicks> <!-- An in-game hour is 2500 ticks -->
-			</li>
-		</comps>
-		<stages>
-			<li>
-				<capMods>
-					<li>
-						<capacity>Consciousness</capacity>
-						<setMax>0.1</setMax>
-					</li>
-				</capMods>
-			</li>
-		</stages>
-	</HediffDef>
 </Defs>

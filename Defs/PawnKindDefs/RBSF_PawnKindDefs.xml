@@ -10,7 +10,7 @@
 		<label>faun scientist</label>
 		<maxGenerationAge>85</maxGenerationAge>
 		<combatPower>65</combatPower>
-		<invNutrition>2.00</invNutrition>
+		<invNutrition>2.55</invNutrition>
 		<chemicalAddictionChance>0.06</chemicalAddictionChance>
 		<backstoryCryptosleepCommonality>0.8</backstoryCryptosleepCommonality>
 		<initialWillRange>2~3</initialWillRange>
@@ -105,7 +105,7 @@
 		<maxGenerationAge>50</maxGenerationAge>
 		<combatPower>150</combatPower>
 		<chemicalAddictionChance>0.06</chemicalAddictionChance>
-		<invNutrition>1</invNutrition>
+		<invNutrition>2.55</invNutrition>
 		<backstoryCryptosleepCommonality>0.7</backstoryCryptosleepCommonality>
 		<initialWillRange>0~1</initialWillRange>
 		<initialResistanceRange>5~30</initialResistanceRange>
@@ -253,7 +253,7 @@
 		<isFighter>True</isFighter>
 		<maxGenerationAge>60</maxGenerationAge>
 		<combatPower>50</combatPower>
-		<invNutrition>0</invNutrition>
+		<invNutrition>2.55</invNutrition>
 		<chemicalAddictionChance>0.08</chemicalAddictionChance>
 		<initialWillRange>2~3</initialWillRange>
 		<initialResistanceRange>5~18</initialResistanceRange>

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<!--====================== Nature Connection Ability Components ======================-->
-	<!-- Music Notes -->
-
-	<!-- VineStun Effect: Used by Faewhip and Anima Rod in RBSFE. Pawn becomes wrapped in vines, but it only looks OK if the pawn is also slowed. -->
+	<!--====================== Effects ======================-->
+	<!-- VineStun Effect: Also used by Faewhip and Anima Rod in RBSFE. Pawn becomes wrapped in vines, but it only looks OK if the pawn is also slowed. -->
   
 	<EffecterDef>
 		<defName>VineStun_Effect</defName>
@@ -40,24 +38,6 @@
 		</children>
 	</EffecterDef>
 	
-	<!--====================== Horn Ram Effect ======================-->
-	<!-- For Goat / Deer horns -->
-	
-	<!-- Ram Rings Fleck -->
-	
-	<FleckDef ParentName="FleckBase_Thrown">
-		<defName>RBSF_RamRings</defName>
-		<graphicData>
-			<texPath>Things/Mote/RamRings/RBSF_RamRings</texPath>
-			<shaderType>MoteGlow</shaderType>
-		</graphicData>
-		<altitudeLayer>MoteOverhead</altitudeLayer>
-		<fadeInTime>0.8</fadeInTime>
-		<solidTime>0.2</solidTime>
-		<fadeOutTime>0.2</fadeOutTime>
-		<growthRate>0.6</growthRate>
-	</FleckDef>
-	
 	<!-- Chokevine Warmup Effecter -->
 	
 	<EffecterDef>
@@ -84,6 +64,429 @@
 			</li>
 		</children>
 	</EffecterDef>
+	
+	<!-- Spore Cloud Warmup Effecter -->
+  
+	<EffecterDef>
+		<defName>RBSF_SporeCloudChargeEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>RBSF_SporeCloudWarmup</moteDef>
+				<scale>4</scale>
+				<rotationRate>0</rotationRate>
+				<spawnLocType>OnSource</spawnLocType>
+				<ticksBetweenMotes>999</ticksBetweenMotes>
+				<positionRadius>0</positionRadius>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>Mote_SporeCloudPos</moteDef>
+				<scale>1~2.5</scale>
+				<ticksBetweenMotes>5</ticksBetweenMotes>
+				<positionLerpFactor>0.2</positionLerpFactor>
+				<positionRadius>0.1</positionRadius>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>RBSF_MushroomMoteNeg</moteDef>
+				<spawnLocType>OnSource</spawnLocType>
+				<rotationRate>0.2</rotationRate>
+				<angle>-90~90</angle>
+				<speed>0</speed>
+				<burstCount>1</burstCount>
+				<ticksBetweenMotes>5</ticksBetweenMotes>
+				<positionLerpFactor>1</positionLerpFactor>
+				<scale>0.5~1.5</scale>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>Fleck_VaporizeRays_B</fleckDef>
+				<burstCount>1</burstCount>
+				<rotationRate>-10</rotationRate>
+				<spawnLocType>OnSource</spawnLocType>
+				<scale>0.2</scale>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<!-- Spore Cloud Explosion Effecter -->
+	
+	<EffecterDef>
+		<defName>RBSF_SporeCloudExplosionEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>RBSF_SporeCloudExplosionFleckA</fleckDef>
+				<burstCount>1</burstCount>
+				<scale>3~5</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>RBSF_SporeCloudExplosionFleckB</fleckDef>
+				<burstCount>1~3</burstCount>
+				<scale>2.8~3.5</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>RBSF_SporeCloudExplosionFleckC</fleckDef>
+				<burstCount>1</burstCount>
+				<scale>1~2</scale>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>DustPuffLong</fleckDef>
+				<burstCount>1</burstCount>
+				<rotationRate>-20</rotationRate>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<!-- Spore Cloud (Negative) -->
+	
+	<EffecterDef>
+		<defName>RBSF_SporeCloudNegEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>1~2.5</scale>
+				<ticksBetweenMotes>20</ticksBetweenMotes>
+				<positionLerpFactor>0.2</positionLerpFactor>
+				<positionRadius>0.1</positionRadius>
+				<moteDef>Mote_SporeCloudNeg</moteDef>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>RBSF_MushroomMoteNeg</moteDef>
+				<spawnLocType>OnSource</spawnLocType>
+				<rotationRate>0</rotationRate>
+				<angle>-90~90</angle>
+				<speed>0</speed>
+				<burstCount>1</burstCount>
+				<ticksBetweenMotes>50</ticksBetweenMotes>
+				<positionLerpFactor>1</positionLerpFactor>
+				<scale>0.5~1.5</scale>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<!-- Spore Cloud (Positive) -->
+	
+	<EffecterDef>
+		<defName>RBSF_SporeCloudPosEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>1~2.5</scale>
+				<ticksBetweenMotes>20</ticksBetweenMotes>
+				<positionLerpFactor>0.2</positionLerpFactor>
+				<positionRadius>0.1</positionRadius>
+				<moteDef>Mote_SporeCloudPos</moteDef>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>RBSF_MushroomMotePos</moteDef>
+				<spawnLocType>OnSource</spawnLocType>
+				<rotationRate>0</rotationRate>
+				<angle>-90~90</angle>
+				<speed>0</speed>
+				<burstCount>1</burstCount>
+				<ticksBetweenMotes>50</ticksBetweenMotes>
+				<positionLerpFactor>1</positionLerpFactor>
+				<scale>0.5~1.5</scale>
+				<attachToSpawnThing>true</attachToSpawnThing>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<!-- Tree Skip Warmup Effecter -->
+	
+	<EffecterDef>
+		<defName>RBSF_TreeSkipWarmupEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>RBSF_SporeCloudWarmup</moteDef>
+				<scale>4</scale>
+				<rotationRate>0</rotationRate>
+				<spawnLocType>OnSource</spawnLocType>
+				<ticksBetweenMotes>999</ticksBetweenMotes>
+				<positionRadius>0</positionRadius>
+				<color>(57,116,67)</color>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>Mote_SporeCloudPos</moteDef>
+				<scale>1~2.5</scale>
+				<ticksBetweenMotes>5</ticksBetweenMotes>
+				<positionLerpFactor>0.2</positionLerpFactor>
+				<positionRadius>0.1</positionRadius>
+				<attachToSpawnThing>true</attachToSpawnThing>
+				<color>(57,116,67)</color>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<!-- Tree Skip Exit Effecter -->
+	
+	<EffecterDef>
+		<defName>RBSF_Skip_Exit</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
+				<fleckDef>PsycastSkipFlashExit</fleckDef>
+				<initialDelayTicks>12</initialDelayTicks>
+				<burstCount>1~1</burstCount>
+				<scale>1~1</scale>
+				<rotation>0~0</rotation>
+				<spawnLocType>OnSource</spawnLocType>
+				<color>(57,116,67)</color>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggeredDelayed</subEffecterClass>
+				<fleckDef>PlainFlash</fleckDef>
+				<initialDelayTicks>14</initialDelayTicks>
+				<burstCount>1~1</burstCount>
+				<scale>7.0~7.0</scale>
+				<spawnLocType>OnSource</spawnLocType>
+				<color>(57,116,67)</color>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<fleckDef>Fleck_VaporizeRays_B</fleckDef>
+				<burstCount>1</burstCount>
+				<rotationRate>-10</rotationRate>
+				<spawnLocType>OnSource</spawnLocType>
+				<scale>0.3</scale>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.2</positionRadius>
+				<moteDef>Mote_ExtinguisherPuff</moteDef>
+				<burstCount>4~6</burstCount>
+				<speed>2~7</speed>
+				<scale>1~2</scale>
+				<color>(160,215,175)</color>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.2</positionRadius>
+				<moteDef>Mote_ExtinguisherPuff</moteDef>
+				<burstCount>4~6</burstCount>
+				<speed>2~7</speed>
+				<scale>2~3</scale>
+				<color>(160,215,175)</color>
+			</li>
+		</children>
+	</EffecterDef>
+	
+	<!--====================== Flecks ======================-->
+	<!-- Fae Fleck: Smoky Explosion -->
+	
+	<FleckDef ParentName="FleckBase">
+		<defName>FaeFleckA</defName>
+		<graphicData>
+			<texPath>Things/Mote/MusicAura/RBSF_MusicAura</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<solidTime>0</solidTime>
+		<fadeInTime>0.1</fadeInTime>
+		<fadeOutTime>0.4</fadeOutTime>
+		<growthRate>1</growthRate>
+	</FleckDef>
+	
+	<!-- ChokeVine Fleck: Vines emerging from a crack in the ground -->
+	
+	<FleckDef ParentName="FleckBase">
+		<defName>ChokevineFleckA</defName>
+		<graphicData>
+			<texPath>Things/Mote/ChokevineCrack/RBSF_ChokevineCrack</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<solidTime>1</solidTime>
+		<fadeInTime>0.5</fadeInTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>0</growthRate>
+	</FleckDef>
+	
+	<!-- Nature Growth Fleck: Green sparkle to indicate plants have grown -->
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>RBSF_NatureGrowthFleck</defName>
+		<graphicData>
+			<texPath>Things/Mote/NatureGrowthFleck/RBSF_GrowthFleck</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.04</fadeInTime>
+		<solidTime>0.03</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+	</FleckDef>
+	
+	<!-- Spore Cloud Flecks -->
+	
+	<FleckDef ParentName="FleckBase">
+		<defName>RBSF_SporeCloudExplosionFleckA</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeCloudExplosion/RBSF_SporeCloudExplosionPuff</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<solidTime>0.3</solidTime>
+		<fadeInTime>0.1</fadeInTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>-0.3</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase">
+		<defName>RBSF_SporeCloudExplosionFleckB</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeCloudExplosion/RBSF_SporeCloudExplosionSpores1</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<solidTime>0.1</solidTime>
+		<fadeInTime>0.3</fadeInTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>0.5</growthRate>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase">
+		<defName>RBSF_SporeCloudExplosionFleckC</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeCloudExplosion/RBSF_SporeCloudExplosionSpores2</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<solidTime>0.1</solidTime>
+		<fadeInTime>0.5</fadeInTime>
+		<fadeOutTime>3</fadeOutTime>
+		<growthRate>2</growthRate>
+	</FleckDef>
+	
+	<!--====================== Motes ======================-->
+	
+	<!-- Fae Vine Mote: Used by VineStun Effect, spawns static vine graphic on source -->
+	
+	<ThingDef ParentName="MoteBase">
+		<defName>Mote_FaeVine</defName>
+		<graphicData>
+			<texPath>Things/Mote/FaeVines/RBSF_FaeVines</texPath>
+		</graphicData>
+		<thingClass>MoteBubble</thingClass>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.3</fadeInTime>
+			<solidTime>2</solidTime>
+			<fadeOutTime>0.3</fadeOutTime>
+		</mote>
+	</ThingDef>
+	
+	<!-- Spore Cloud Negative Mote -->
+	
+	<ThingDef ParentName="MoteBase">
+		<defName>Mote_SporeCloudNeg</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeCloudNeg/RBSF_SporeCloudNeg</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>false</drawOffscreen>
+		<mote>
+			<fadeInTime>1</fadeInTime>
+			<solidTime>0</solidTime>
+			<fadeOutTime>1</fadeOutTime>
+			<growthRate>0.2</growthRate>
+		</mote>
+	</ThingDef>
+	
+	<!-- Spore Cloud Positive Mote -->
+	
+	<ThingDef ParentName="MoteBase">
+		<defName>Mote_SporeCloudPos</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeCloudPos/RBSF_SporeCloudPos</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>false</drawOffscreen>
+		<mote>
+			<fadeInTime>1</fadeInTime>
+			<solidTime>0</solidTime>
+			<fadeOutTime>1</fadeOutTime>
+			<growthRate>0.2</growthRate>
+		</mote>
+	</ThingDef>
+	
+	<!-- Spore Cloud Positive Mushroom Mote -->
+	
+	<ThingDef ParentName="MoteBase">
+		<defName>RBSF_MushroomMotePos</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeShroomPos</texPath>
+			<graphicClass>Graphic_MoteRandom</graphicClass>
+			<shaderType>Mote</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.4</fadeInTime>
+			<solidTime>0.2</solidTime>
+			<fadeOutTime>1</fadeOutTime>
+			<growthRate>1</growthRate>
+		</mote>
+	</ThingDef>
+	
+	<!-- Spore Cloud Negative Mushroom Mote -->
+  
+	<ThingDef ParentName="MoteBase">
+		<defName>RBSF_MushroomMoteNeg</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeShroomNeg</texPath>
+			<graphicClass>Graphic_MoteRandom</graphicClass>
+			<shaderType>Mote</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.4</fadeInTime>
+			<solidTime>0.2</solidTime>
+			<fadeOutTime>1</fadeOutTime>
+			<growthRate>1</growthRate>
+		</mote>
+	</ThingDef>
+	
+	<!-- Spore Cloud Warmup Mote -->
+  
+	<ThingDef ParentName="MoteBase">
+		<defName>RBSF_SporeCloudWarmup</defName>
+		<graphicData>
+			<texPath>Things/Mote/SporeCloud/SporeCloudWarmup/RBSF_SporeCloudWarmup</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<drawOffscreen>false</drawOffscreen>
+		<mote>
+			<fadeInTime>1.8</fadeInTime>
+			<solidTime>0</solidTime>
+			<fadeOutTime>0.5</fadeOutTime>
+			<growthRate>-2</growthRate>
+		</mote>
+	</ThingDef>
+	
+	<!--====================== Horn Ram Effect (Partially Unused) ======================-->
+	<!-- For Goat / Deer horns gene -->
 	
 	<EffecterDef>
 		<defName>RBSF_HornRamEffect</defName>
@@ -145,67 +548,20 @@
 		<offsetTowardsTarget>0.25~0.25</offsetTowardsTarget>
 		<positionRadius>0.1</positionRadius>
 	</EffecterDef>
-  
-	<!-- Fae Fleck: Smoky Explosion -->
 	
-	<FleckDef ParentName="FleckBase">
-		<defName>FaeFleckA</defName>
-		<graphicData>
-			<texPath>Things/Mote/MusicAura/RBSF_MusicAura</texPath>
-			<shaderType>TransparentPostLight</shaderType>
-			<renderInstanced>true</renderInstanced>
-		</graphicData>
-		<altitudeLayer>MoteOverhead</altitudeLayer>
-		<solidTime>0</solidTime>
-		<fadeInTime>0.1</fadeInTime>
-		<fadeOutTime>0.4</fadeOutTime>
-		<growthRate>1</growthRate>
-	</FleckDef>
-	
-	<!-- ChokeVine Fleck: Vines emerging from a crack in the ground -->
-	
-	<FleckDef ParentName="FleckBase">
-		<defName>ChokevineFleckA</defName>
-		<graphicData>
-			<texPath>Things/Mote/ChokevineCrack/RBSF_ChokevineCrack</texPath>
-			<shaderType>TransparentPostLight</shaderType>
-			<renderInstanced>true</renderInstanced>
-		</graphicData>
-		<altitudeLayer>MoteOverhead</altitudeLayer>
-		<solidTime>1</solidTime>
-		<fadeInTime>0.5</fadeInTime>
-		<fadeOutTime>1</fadeOutTime>
-		<growthRate>0</growthRate>
-	</FleckDef>
-	
-	<!-- Nature Growth Fleck: Green sparkle to indicate plants have grown -->
+	<!-- Ram Rings Fleck -->
 	
 	<FleckDef ParentName="FleckBase_Thrown">
-		<defName>RBSF_NatureGrowthFleck</defName>
+		<defName>RBSF_RamRings</defName>
 		<graphicData>
-			<texPath>Things/Mote/NatureGrowthFleck/RBSF_GrowthFleck</texPath>
-			<renderInstanced>true</renderInstanced>
+			<texPath>Things/Mote/RamRings/RBSF_RamRings</texPath>
+			<shaderType>MoteGlow</shaderType>
 		</graphicData>
 		<altitudeLayer>MoteOverhead</altitudeLayer>
-		<fadeInTime>0.04</fadeInTime>
-		<solidTime>0.03</solidTime>
-		<fadeOutTime>1</fadeOutTime>
+		<fadeInTime>0.8</fadeInTime>
+		<solidTime>0.2</solidTime>
+		<fadeOutTime>0.2</fadeOutTime>
+		<growthRate>0.6</growthRate>
 	</FleckDef>
 	
-	<!-- Fae Vine Mote: Used by VineStun Effect, spawns static vine graphic on source -->
-	
-	<ThingDef ParentName="MoteBase">
-		<defName>Mote_FaeVine</defName>
-		<graphicData>
-			<texPath>Things/Mote/FaeVines/RBSF_FaeVines</texPath>
-		</graphicData>
-		<thingClass>MoteBubble</thingClass>
-		<altitudeLayer>MoteOverhead</altitudeLayer>
-		<mote>
-			<fadeInTime>0.3</fadeInTime>
-			<solidTime>2</solidTime>
-			<fadeOutTime>0.3</fadeOutTime>
-		</mote>
-	</ThingDef>
-
 </Defs>

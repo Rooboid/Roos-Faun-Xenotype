@@ -107,7 +107,7 @@
 		<title>sacrifice</title>
 		<titleShort>sacrifice</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] was captured by a religious sect and was due to be offered to their God as a sacrifice. [PAWN_possessive] hopes of a gallant knight coming to [PAWN_possessive] rescue never came to fruition, so [PAWN_nameDef] took matters into [PAWN_possessive] own hooves, and [PAWN)pronoun] tunnelled [PAWN_possessive] way to freedom.</baseDesc>
+		<baseDesc>[PAWN_nameDef] was captured by a religious sect and was due to be offered to their God as a sacrifice. [PAWN_possessive] hopes of a gallant knight coming to [PAWN_possessive] rescue never came to fruition, so [PAWN_nameDef] took matters into [PAWN_possessive] own hooves, and [PAWN_pronoun] tunnelled [PAWN_possessive] way to freedom.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>

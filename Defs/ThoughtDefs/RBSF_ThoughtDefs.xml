@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	
-	<!--====================== Constricted Long (Thought) ======================-->
+	<!--====================== Ability Thoughts ======================-->
 	<!-- Thought given to pawns constricted by the ChokevineGrip Ability -->
   
 	<ThoughtDef>
@@ -17,5 +17,72 @@
 			</li>
 		</stages>
 	</ThoughtDef>
+	
+			<!-- Spore Cloud - Good Trip Thought -->
+
+	<ThoughtDef>
+		<defName>RBSF_GoodTripThought</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>RBSF_GoodTripHediff</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>pleasant spore trip</label>
+				<description>I can smell colours, I can see sounds...</description>
+				<baseMoodEffect>7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Spore Cloud - Bad Trip Thought -->
+
+	<ThoughtDef>
+		<defName>RBSF_BadTripThought</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>RBSF_BadTripHediff</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>bad spore trip</label>
+				<description>Everything around me is so bright and fuzzy...</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!--====================== Gene Thoughts ======================-->
+	<!-- Myotonia Thought -->
+  
+	<ThoughtDef>
+		<defName>RBSF_MyotoniaThought</defName>
+		<workerClass>Roos_Faun_Xenotype.ThoughtWorker_Myotonia</workerClass>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>myotonic</label>
+				<description>Aaaaaagh! Scary!</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Mech Terror / Mechanophobia/ Mechaphobia Thought -->
+  
+	<ThoughtDef>
+		<defName>RBSF_MechanophobiaThought</defName>
+		<workerClass>Roos_Faun_Xenotype.ThoughtWorker_Mechanophobia</workerClass>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>afraid of nearby mechanoids</label>
+				<description>I've never seen something so unnatural! I need to get out of here!</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+
   
 </Defs>

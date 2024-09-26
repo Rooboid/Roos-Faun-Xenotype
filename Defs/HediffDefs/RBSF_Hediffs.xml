@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--====================== Nature Connection HeDiff ======================-->
+	<!-- Given to Pawns by the Natural Connection Gene -->
+	
+	<HediffDef>
+		<defName>RBSF_NatureConnectionOffset</defName>
+		<label>natural connection</label>
+		<labelNoun>natural connection</labelNoun>
+		<defaultLabelColor>(105, 165, 80)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<everCurableByItem>false</everCurableByItem>
+		<tendable>false</tendable>
+		<displayWound>false</displayWound>
+		<description>This pawn's Nature Connection stat is increased depending on how much nature is around them.</description>
+		<comps>
+			<li Class="Roos_Faun_Xenotype.CompProperties_NatureConnectionHediff"/>
+		</comps>
+		<stages>
+			<li>
+				<label>inactive</label>
+				<minSeverity>0</minSeverity>
+				<statOffsets>
+					<RBSF_NatureConnection>0.20</RBSF_NatureConnection>
+				</statOffsets>
+			</li>
+			<li>
+				<label>weak</label>
+				<minSeverity>1</minSeverity>
+				<statOffsets>
+					<RBSF_NatureConnection>0.4</RBSF_NatureConnection>
+				</statOffsets>
+			</li>
+			<li>
+				<label>moderate</label>
+				<minSeverity>2</minSeverity>
+				<statOffsets>
+					<RBSF_NatureConnection>0.6</RBSF_NatureConnection>
+				</statOffsets>
+			</li>
+			<li>
+				<label>strong</label>
+				<minSeverity>3</minSeverity>
+				<statOffsets>
+					<RBSF_NatureConnection>0.8</RBSF_NatureConnection>
+				</statOffsets>
+			</li>
+			<li>
+				<label>flourishing</label>
+				<minSeverity>4</minSeverity>
+				<statOffsets>
+					<RBSF_NatureConnection>1</RBSF_NatureConnection>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Tiny Catatonic Breakdown HeDiff (Used by Myotonia gene) -->
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>RBSF_TinyCatatonicBreakdown</defName>
+		<label>myotonic</label>
+		<labelNoun>Myotonia</labelNoun>
+		<description>A state of paralytic shock caused by genetic myotonia. \n\nTriggers of myotonia include being near fire, manhunting animals and enemies.</description>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>500~1500</disappearsAfterTicks><!-- An in-game hour is 2500 ticks -->
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Minor Catatonic Breakdown HeDiff (Used by Mechaphobic gene) -->
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>RBSF_MinorCatatonicBreakdown</defName>
+		<label>frozen in fear</label>
+		<labelNoun>fear frozen</labelNoun>
+		<description>A state of mental shock caused by a genetic fear of something, causing the pawn to pass out.</description>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>2000~12500</disappearsAfterTicks><!-- An in-game hour is 2500 ticks -->
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Bad Trip Hediff - Applied to hostile pawns effected by Spore Cloud -->
+
+	<HediffDef>
+		<defName>RBSF_BadTripHediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>spore cloud high</label>
+		<labelNoun>bad trip</labelNoun>
+		<defaultLabelColor>(130, 160, 240)</defaultLabelColor>
+		<description>A debilitatingly bad trip due to being exposed to an enemy spore cloud.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<isBad>true</isBad>
+		<initialSeverity>20</initialSeverity>
+		<maxSeverity>20</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-60</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RBSF_SporeCloudNegEffect</stateEffecter>
+			</li>
+		</comps>
+		<injuryProps>
+			<destroyedLabel>destroyed</destroyedLabel>
+			<destroyedOutLabel>destroyed</destroyedOutLabel>
+		</injuryProps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>fading trip</label>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>10</minSeverity>
+				<label>bad trip</label>
+				<vomitMtbDays>0.1</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Good Trip Hediff - Applied to hostile pawns effected by Spore Cloud -->
+
+	<HediffDef>
+		<defName>RBSF_GoodTripHediff</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>spore cloud high</label>
+		<labelNoun>good trip</labelNoun>
+		<defaultLabelColor>(225, 162, 240)</defaultLabelColor>
+		<description>A fluffy and psychadelic trip caused by being exposed to an ally's spore cloud.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<maxSeverity>20</maxSeverity>
+		<isBad>false</isBad>
+		<initialSeverity>20</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-60</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>RBSF_SporeCloudPosEffect</stateEffecter>
+			</li>
+		</comps>
+		<injuryProps>
+			<destroyedLabel>destroyed</destroyedLabel>
+			<destroyedOutLabel>destroyed</destroyedOutLabel>
+		</injuryProps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>good trip</label>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- Vine Wrap HeDiff - Applied to pawns effected by chokevine grasp -->
+
+	<HediffDef>
+		<defName>RBSF_VineWrapHeDiffLong</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>constricted</label>
+		<labelNoun>constriction</labelNoun>
+		<defaultLabelColor>(105, 165, 80)</defaultLabelColor>
+		<description>The pawn is being constricted and is unable to move or use their weapon effectively.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<makesSickThought>false</makesSickThought>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<maxSeverity>1</maxSeverity>
+		<isBad>true</isBad>
+		<initialSeverity>1</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-90</severityPerDay>
+			</li>
+			<!-- 			<li Class="HediffCompProperties_RemoveIfOtherHediff" MayRequire="Rooboid.Minotaur">
+				<otherHediff>HeDiffSeeRed</otherHediff>
+				<stages>2~</stages>
+				<mtbHours>0</mtbHours>
+			</li> -->
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>VineStun_Effect</stateEffecter>
+			</li>
+		</comps>
+		<injuryProps>
+			<destroyedLabel>constricted</destroyedLabel>
+			<destroyedOutLabel>destroyed</destroyedOutLabel>
+		</injuryProps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>wrapped in vines</label>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<setMax>0.05</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>
