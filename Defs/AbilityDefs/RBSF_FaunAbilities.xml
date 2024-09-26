@@ -338,7 +338,7 @@
 		<everCurableByItem>false</everCurableByItem>
 		<tendable>false</tendable>
 		<displayWound>false</displayWound>
-		<description>This pawn makes plants around them grow faster. The more trees you have, the faster the plants will grow.</description>
+		<description>This pawn's Nature Connection stat is increased depending on how much nature is around them.</description>
 		<comps>
 			<li Class="Roos_Faun_Xenotype.CompProperties_NatureConnectionHediff"/>
 		</comps>
@@ -538,11 +538,11 @@
 			</li>
 			<li>
 				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>Mote_SporeCloudPos</moteDef>
 				<scale>1~2.5</scale>
 				<ticksBetweenMotes>5</ticksBetweenMotes>
 				<positionLerpFactor>0.2</positionLerpFactor>
 				<positionRadius>0.1</positionRadius>
-				<moteDef>Mote_SporeCloudPos</moteDef>
 				<attachToSpawnThing>true</attachToSpawnThing>
 			</li>
 			<li>
@@ -564,7 +564,7 @@
 				<burstCount>1</burstCount>
 				<rotationRate>-10</rotationRate>
 				<spawnLocType>OnSource</spawnLocType>
-				<scale>0.3</scale>
+				<scale>0.2</scale>
 			</li>
 		</children>
 	</EffecterDef>
@@ -578,7 +578,7 @@
 				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
 				<fleckDef>RBSF_SporeCloudExplosionFleckA</fleckDef>
 				<burstCount>1</burstCount>
-				<scale>5</scale>
+				<scale>3~5</scale>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 			<li>
@@ -614,9 +614,9 @@
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
 		<altitudeLayer>MoteOverhead</altitudeLayer>
-		<solidTime>1</solidTime>
+		<solidTime>0.3</solidTime>
 		<fadeInTime>0.1</fadeInTime>
-		<fadeOutTime>0.3</fadeOutTime>
+		<fadeOutTime>1</fadeOutTime>
 		<growthRate>-0.3</growthRate>
 	</FleckDef>
 	
@@ -627,7 +627,7 @@
 			<shaderType>TransparentPostLight</shaderType>
 		</graphicData>
 		<altitudeLayer>MoteOverhead</altitudeLayer>
-		<solidTime>0.3</solidTime>
+		<solidTime>0.1</solidTime>
 		<fadeInTime>0.3</fadeInTime>
 		<fadeOutTime>1</fadeOutTime>
 		<growthRate>0.5</growthRate>
@@ -646,42 +646,6 @@
 		<growthRate>2</growthRate>
 	</FleckDef>
 	
-	<!-- What -->
-	
-	<!-- 	<EffecterDef>
-		<defName>RBSF_TreeSkipWarmupEffect</defName>
-		<children>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-				<fleckDef>RBSF_SporeCloudExplosionFleckA</fleckDef>
-				<burstCount>1</burstCount>
-				<scale>5</scale>
-				<spawnLocType>OnSource</spawnLocType>
-			</li>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-				<fleckDef>RBSF_SporeCloudExplosionFleckB</fleckDef>
-				<burstCount>1~3</burstCount>
-				<scale>2.8~3.5</scale>
-				<spawnLocType>OnSource</spawnLocType>
-			</li>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-				<fleckDef>RBSF_SporeCloudExplosionFleckC</fleckDef>
-				<burstCount>1</burstCount>
-				<scale>1~2</scale>
-				<spawnLocType>OnSource</spawnLocType>
-			</li>
-			<li>
-				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
-				<fleckDef>DustPuffLong</fleckDef>
-				<burstCount>1</burstCount>
-				<rotationRate>-20</rotationRate>
-				<spawnLocType>OnSource</spawnLocType>
-			</li>
-		</children>
-	</EffecterDef> -->
-	
 	<!-- Tree Skip Warmup Effecter -->
 	
 	<EffecterDef>
@@ -699,11 +663,11 @@
 			</li>
 			<li>
 				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>Mote_SporeCloudPos</moteDef>
 				<scale>1~2.5</scale>
 				<ticksBetweenMotes>5</ticksBetweenMotes>
 				<positionLerpFactor>0.2</positionLerpFactor>
 				<positionRadius>0.1</positionRadius>
-				<moteDef>Mote_SporeCloudPos</moteDef>
 				<attachToSpawnThing>true</attachToSpawnThing>
 				<color>(57,116,67)</color>
 			</li>

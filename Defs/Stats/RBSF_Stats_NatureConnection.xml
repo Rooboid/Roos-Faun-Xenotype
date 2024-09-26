@@ -4,15 +4,18 @@
 	<StatDef>
 		<defName>RBSF_NatureConnection</defName>
 		<label>nature connection</label>
-		<description>How connected the pawn is with nature. This effects the strength of abilities used by pawns with the Natural Connection gene.</description>
+		<description>How connected the pawn is with nature.\n\nThis stat can be increased by having the Natural Connection gene or by wearing fae clothing. This stat can be lowered by equipping things that destroy nature, such as incendiary launchers.</description>
 		<descriptionHyperlinks>
 			<GeneDef>RBSF_NaturalConnection</GeneDef>
 			<ThingDef MayRequire="Rooboid.SatyrFaun.Expanded">RBSFE_Faegarms</ThingDef>
 			<ThingDef MayRequire="Rooboid.SatyrFaun.Expanded">RBSFE_KidFaegarms</ThingDef>
+			<ThingDef MayRequire="Rooboid.SatyrFaun.Expanded">RBSFE_Faerose</ThingDef>
+			<ThingDef MayRequire="Rooboid.SatyrFaun.Expanded">RBSFE_Faescarf</ThingDef>
 			<ThingDef MayRequire="Rooboid.SatyrFaun.Expanded">RBSFE_Faecloak</ThingDef>
 			<ThingDef MayRequire="Rooboid.SatyrFaun.Expanded">RBSFE_Faeleaf</ThingDef>
 			<ThingDef MayRequire="Rooboid.SatyrFaun.Expanded">RBSFE_Faemail</ThingDef>
 			<ThingDef MayRequire="Rooboid.SatyrFaun.Expanded">RBSFE_Faecrown</ThingDef>
+			<ThingDef MayRequire="Rooboid.SatyrFaun.Expanded">RBSFE_Faepron</ThingDef>
 			<ThingDef MayRequire="Rooboid.SatyrFaun.Expanded">RBSFE_Faecap</ThingDef>
 			<ThingDef MayRequire="Rooboid.SatyrFaun.Expanded">RBSFE_FaeBlade</ThingDef>
 			<ThingDef MayRequire="Rooboid.SatyrFaun.Expanded">RBSFE_FaeStaff</ThingDef>

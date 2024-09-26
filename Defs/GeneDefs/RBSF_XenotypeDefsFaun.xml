@@ -27,11 +27,13 @@
 			<li>Hair_DarkBrown</li>
 			<!-- Skills -->
 			<li>AptitudeTerrible_Melee</li>
-			<!-- Misc -->
+			<!-- Abilities -->
 			<li>RBSF_ChokevineGrasp</li>
 			<li>RBSF_SporeCloud</li>
 			<li>RBSF_TreeSkip</li>
+			<!-- Misc -->
 			<li>RBSF_NaturalConnection</li>
+			<li>RBSF_GrowingAura</li>
 			<li>RBSF_Mood_Reclusive</li>
 			<li>RBSF_Mechanophobia</li>
 			<li>MinTemp_SmallDecrease</li>

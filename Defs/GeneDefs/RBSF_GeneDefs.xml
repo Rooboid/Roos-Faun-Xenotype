@@ -278,7 +278,7 @@
 		<defName>RBSF_NaturalConnection</defName>
 		<geneClass>Roos_Faun_Xenotype.RBSF_NaturalConnection</geneClass>
 		<label>natural connection</label>
-		<description>Carriers of this gene are spiritually intertwined with nature. The more trees present within their home, the faster nearby plants will grow.\n\nThe rate of the plants' growth scales with the pawn's Nature Connection stat, which can be increased further by equipping certain weapons and items of clothing.</description>
+		<description>Carriers of this gene are spiritually intertwined with nature. Their Nature Connection stat increases when they are around nature, and decreases when they are not.</description>
 		<descriptionHyperlinks>
 			<StatDef>RBSF_NatureConnection</StatDef>
 		</descriptionHyperlinks>
@@ -287,7 +287,7 @@
 			<RBSF_NatureConnection>1.10</RBSF_NatureConnection>
 		</statFactors>
 		<biostatCpx>1</biostatCpx>
-		<biostatMet>-2</biostatMet>
+		<biostatMet>-1</biostatMet>
 		<displayCategory>RBSF_NaturalConnectionGeneCategory</displayCategory>
 		<displayOrderInCategory>10</displayOrderInCategory>
 		<symbolPack>
@@ -298,6 +298,35 @@
 			<suffixSymbols>
 				<li><symbol>sprout</symbol></li>
 				<li><symbol>yad</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+	
+		<!-- Natural Connection -->
+
+	<GeneDef>
+		<defName>RBSF_GrowingAura</defName>
+		<geneClass>Roos_Faun_Xenotype.RBSF_GrowingAura</geneClass>
+		<label>growing aura</label>
+		<description>Carriers of this gene passively increase the growth of plants around them. \n\nThe rate of the plants' growth scales with the pawn's Nature Connection stat, which can be increased by having the Natural Connection gene or by equipping certain items.</description>
+		<descriptionHyperlinks>
+			<StatDef>RBSF_NatureConnection</StatDef>
+		</descriptionHyperlinks>
+		<iconPath>UI/GeneIcons/RBSF_GrowingAura</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<displayCategory>RBSF_NaturalConnectionGeneCategory</displayCategory>
+		<displayOrderInCategory>15</displayOrderInCategory>
+		<symbolPack>
+			<prefixSymbols>
+				<li><symbol>synth</symbol></li>
+				<li><symbol>chlo</symbol></li>
+				<li><symbol>bio</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>esis</symbol></li>
+				<li><symbol>yll</symbol></li>
+				<li><symbol>stem</symbol></li>
 			</suffixSymbols>
 		</symbolPack>
 	</GeneDef>
