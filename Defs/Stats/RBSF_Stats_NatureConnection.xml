@@ -25,10 +25,10 @@
 			<ThingDef MayRequire="Rooboid.SatyrFaun.Expanded">RBSFE_AnimaRod</ThingDef>
 		</descriptionHyperlinks>
 		<category>BasicsPawn</category>
-		<defaultBaseValue>1</defaultBaseValue>
-		<hideAtValue>0</hideAtValue>
+		<defaultBaseValue>0</defaultBaseValue>
+		<!-- <hideAtValue>0</hideAtValue> -->
 		<toStringStyle>PercentZero</toStringStyle>
-		<minValue>0.3</minValue>
+		<!-- <minValue>-1</minValue> -->
 		<displayPriorityInCategory>696900</displayPriorityInCategory>
 		<parts>
 			<li Class="StatPart_GearStatOffset">
