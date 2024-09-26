@@ -326,60 +326,6 @@
 		</stages>
 	</ThoughtDef>
 	
-	<!--====================== Nature Connection HeDiff ======================-->
-	<!-- Given to Pawns by the Natural Connection Gene -->
-	
-	<HediffDef>
-		<defName>RBSF_NatureConnectionOffset</defName>
-		<label>natural connection</label>
-		<labelNoun>natural connection</labelNoun>
-		<defaultLabelColor>(105, 165, 80)</defaultLabelColor>
-		<hediffClass>HediffWithComps</hediffClass>
-		<everCurableByItem>false</everCurableByItem>
-		<tendable>false</tendable>
-		<displayWound>false</displayWound>
-		<description>This pawn's Nature Connection stat is increased depending on how much nature is around them.</description>
-		<comps>
-			<li Class="Roos_Faun_Xenotype.CompProperties_NatureConnectionHediff"/>
-		</comps>
-		<stages>
-			<li>
-				<label>inactive</label>
-				<minSeverity>0</minSeverity>
-				<statOffsets>
-					<RBSF_NatureConnection>0.0</RBSF_NatureConnection>
-				</statOffsets>
-			</li>
-			<li>
-				<label>weak</label>
-				<minSeverity>1</minSeverity>
-				<statOffsets>
-					<RBSF_NatureConnection>0.25</RBSF_NatureConnection>
-				</statOffsets>
-			</li>
-			<li>
-				<label>moderate</label>
-				<minSeverity>2</minSeverity>
-				<statOffsets>
-					<RBSF_NatureConnection>0.5</RBSF_NatureConnection>
-				</statOffsets>
-			</li>
-			<li>
-				<label>strong</label>
-				<minSeverity>3</minSeverity>
-				<statOffsets>
-					<RBSF_NatureConnection>0.75</RBSF_NatureConnection>
-				</statOffsets>
-			</li>
-			<li>
-				<label>flourishing</label>
-				<minSeverity>4</minSeverity>
-				<statOffsets>
-					<RBSF_NatureConnection>1</RBSF_NatureConnection>
-				</statOffsets>
-			</li>
-		</stages>
-	</HediffDef>
 	
 	<!-- Effects -->
 	

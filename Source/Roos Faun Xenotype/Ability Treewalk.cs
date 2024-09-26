@@ -36,7 +36,7 @@ namespace Roos_Faun_Xenotype
         {
             //if (MinotaurSettings.debugMessages) { Log.Message("RBM Is Running: (AbilityLactate) public override bool GizmoDisabled(out string reason)"); }
 
-            if (parent.pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection) < 2.0)
+            if (parent.pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection) < 1.8)
             {
                 reason = "Connection to nature too weak.";
                 return true;

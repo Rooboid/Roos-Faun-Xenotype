@@ -23,8 +23,9 @@ namespace Roos_Faun_Xenotype
 
             if (!pawn.IsHashIntervalTick(hashTick))
             {
-                growRandomNearbyPlants(pawn.Position, pawn.Map);
+                return;
             }
+            growRandomNearbyPlants(pawn.Position, pawn.Map);
         }
 
         public static void growRandomNearbyPlants(IntVec3 position, Map map)
