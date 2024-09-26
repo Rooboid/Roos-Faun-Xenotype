@@ -19,7 +19,7 @@ namespace Roos_Faun_Xenotype
                 return;
 
             var natureConnection = pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection);
-            var hashTick = (int)(2400 / 2 + (natureConnection * 2));
+            var hashTick = (int)(2400 / (2 + (natureConnection * 2)));
 
             if (!pawn.IsHashIntervalTick(hashTick))
             {
