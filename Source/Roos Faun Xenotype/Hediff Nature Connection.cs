@@ -17,13 +17,13 @@ namespace Roos_Faun_Xenotype
                 float severity;
                 switch (numPlants)
                 {
-                    case int i when i < 20:
+                    case int i when i < 10:
                         severity = 0.5f;
                         break;
-                    case int i when i < 35:
+                    case int i when i < 20:
                         severity = 1;
                         break;
-                    case int i when i < 50:
+                    case int i when i < 35:
                         severity = 2;
                         break;
                     case int i when i < 70:
@@ -62,29 +62,24 @@ namespace Roos_Faun_Xenotype
             float plantTotalWeight = 0;
             foreach (Thing plant in nearPlantsList)
             {
-                if (!IsTree(plant))
+                if (!plant.def.plant.IsTree) // Non-tree plants
                 {
                     plantTotalWeight += 0.2f;
                     continue;
                 }
-                // Special trees count 35x
-                if (plant.def == ThingDefOf.Plant_TreeGauranlen || plant.def == ThingDefOf.Plant_TreeAnima)
+                if (plant.def == ThingDefOf.Plant_TreeGauranlen || plant.def == ThingDefOf.Plant_TreeAnima) // Special Trees
                 {
                     plantTotalWeight += 35;
                     continue;
                 }
-                plantTotalWeight += 1; //Regular trees count 1x
+                if (!plant.def.plant.isStump) // Regular Trees
+                {
+                    plantTotalWeight += 1;
+                    continue;
+                }
+                plantTotalWeight -= 0.5f; // Tree Stump
             }
             return (int)plantTotalWeight;
-        }
-
-        private static bool IsTree(Thing thing)
-        {
-            if (!thing.def.plant.IsTree || thing.def.plant.isStump)
-            {
-                return false;
-            }
-            return true;
         }
     }
     public class CompProperties_NatureConnectionHediff : HediffCompProperties
