@@ -57,7 +57,7 @@ namespace Roos_Faun_Xenotype
         public override bool TryStart(Pawn pawn, string reason, bool causedByMood)
         {
             pawn.health.AddHediff(RBSF_DefOf.RBSF_MinorCatatonicBreakdown, null, null, null);
-            base.TrySendLetter(pawn, "RBSF_LetterMinorCatatonicMentalBreak", reason);
+            //base.TrySendLetter(pawn, "RBSF_LetterMinorCatatonicMentalBreak", reason);
             return true;
         }
     }
