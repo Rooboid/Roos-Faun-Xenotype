@@ -46,7 +46,7 @@
 		<stages>
 			<li>
 				<label>bad spore trip</label>
-				<description>Everything around me is so bright and fuzzy...</description>
+				<description>Urgh, everything around me is so bright and fuzzy...</description>
 				<baseMoodEffect>-5</baseMoodEffect>
 			</li>
 		</stages>

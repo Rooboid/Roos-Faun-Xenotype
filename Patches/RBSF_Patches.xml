@@ -27,7 +27,7 @@
 							<iconPath>UI/GeneIcons/RBM_BovineLegs</iconPath>
 							<iconColor>(0.75, 0.75, 0.75)</iconColor>
 							<statOffsets>
-								<MoveSpeed>0.15</MoveSpeed>
+								<MoveSpeed>0.10</MoveSpeed>
 								<FilthRate>3</FilthRate>
 								<MeleeDodgeChance>10</MeleeDodgeChance>
 							</statOffsets>

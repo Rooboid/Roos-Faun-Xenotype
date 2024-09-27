@@ -426,12 +426,15 @@
 			<li>May have a mental breakdown when near mechanoids.</li>
 		</customEffectDescriptions>
 		<biostatMet>4</biostatMet>
+		<biostatCpx>1</biostatCpx>
 		<displayCategory>ResistanceAndWeakness</displayCategory>
 		<displayOrderInCategory>81</displayOrderInCategory>
 		<iconPath>UI/GeneIcons/RBSF_Mechanophobia</iconPath>
 		<mentalBreakMtbDays>0.08</mentalBreakMtbDays>
 		<mentalBreakDef>RBSF_MinorCatatonic</mentalBreakDef>
-		<suppressedTraits><li>Transhumanist</li></suppressedTraits>
+		<suppressedTraits>
+		<li><def>Transhumanist</def></li>
+		</suppressedTraits>
 		<!-- Symbol -->
 		<symbolPack>
 			<prefixSymbols>
@@ -458,9 +461,7 @@
 		</customEffectDescriptions>
 		<iconPath>UI/GeneIcons/RBSF_Myotonia</iconPath>
 		<suppressedTraits>
-			<li>
-				<def>Pyromaniac</def>
-			</li>
+			<li><def>Pyromaniac</def></li>
 		</suppressedTraits>
 		<displayCategory>ResistanceAndWeakness</displayCategory>
 		<displayOrderInCategory>82</displayOrderInCategory>
