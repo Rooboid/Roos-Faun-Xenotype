@@ -17,6 +17,7 @@
 			<li>SatyrandFaun</li>
 			<li>SatyrWild</li>
 			<li>FaunWild</li>
+			<li>MinotaurTribe</li>
 		</spawnCategories>
 		<skillGains>
 			<Social>3</Social>
@@ -45,6 +46,7 @@
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>
 			<li>SatyrandFaun</li>
+			<li>Minotaur</li>
 		</spawnCategories>
 		<skillGains>
 			<Intellectual>7</Intellectual>
@@ -69,13 +71,14 @@
 		<title>archer</title>
 		<titleShort>archer</titleShort>
 		<slot>Childhood</slot>
-		<baseDesc>[PAWN_nameDef] learned the art of ranged combat from a young age, with [PAWN_possessive] mother — the clan leader — as [PAWN_possessive] teacher. Part of the clan’s oath was to never bring harm unto animals.</baseDesc>
+		<baseDesc>[PAWN_nameDef] learned the art of ranged combat from a young age, with [PAWN_possessive] mother — the clan leader — as [PAWN_possessive] teacher.\n\nPart of the clan’s oath was to never bring harm unto animals.</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>
 			<li>SatyrandFaun</li>
 			<li>FaunWild</li>
 			<li>SatyrWild</li>
+			<li>Minotaur</li>
 		</spawnCategories>
 		<skillGains>
 			<Shooting>6</Shooting>
@@ -216,7 +219,7 @@
 		</possessions>
 	</BackstoryDef>
 	
-		<!--============================== Archer ============================-->
+	<!--============================== Archer ============================-->
 	<!-- Cute -->
 	
 	<BackstoryDef>
@@ -349,6 +352,7 @@
 		<bodyTypeFemale>Hulk</bodyTypeFemale>
 		<spawnCategories>
 			<li>SatyrandFaun</li>
+			<li>Minotaur</li>
 		</spawnCategories>
 		<skillGains>
 			<Construction>8</Construction>
@@ -375,6 +379,7 @@
 		<bodyTypeFemale>Fat</bodyTypeFemale>
 		<spawnCategories>
 			<li>SatyrandFaun</li>
+			<li>Minotaur</li>
 		</spawnCategories>
 		<skillGains>
 			<Cooking>8</Cooking>

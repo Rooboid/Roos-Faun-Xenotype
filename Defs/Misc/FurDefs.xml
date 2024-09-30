@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <FurDef>
+<!-- Added by Patches -->
+
+<!--   <FurDef>
     <defName>RBM_UnguligradeLegs</defName>
 	<noGraphic>true</noGraphic>
     <bodyTypeGraphicPaths>
@@ -11,8 +13,8 @@
       <Fat>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Fat>
       <Thin>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Thin>
       <Child>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Child>
-      <Baby>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Baby><!-- Always covered by swaddled graphic -->
+      <Baby>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Baby>
     </bodyTypeGraphicPaths>
-  </FurDef>
+  </FurDef> -->
   
 </Defs>

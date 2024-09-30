@@ -16,6 +16,7 @@
 		<spawnCategories>
 			<li>FaunOnly</li>
 			<li>FaunWild</li>
+			<li>Minotaur</li>
 		</spawnCategories>
 		<skillGains>
 			<Social>-8</Social>
@@ -182,7 +183,6 @@
 			<Animals>5</Animals>
 			<Plants>5</Plants>
 			<Construction>5</Construction>
-
 		</skillGains>
 		<forcedTraits>
 			<Kind>0</Kind>
@@ -206,6 +206,7 @@
 		<spawnCategories>
 			<li>FaunOnly</li>
 			<li>Bard</li>
+			<li>MinotaurTribe</li>
 		</spawnCategories>
 		<skillGains>
 			<Artistic>5</Artistic>
@@ -217,7 +218,5 @@
 			<Industriousness>-1</Industriousness>
 		</forcedTraits>
 	</BackstoryDef>
-	
-
 	
 </Defs>

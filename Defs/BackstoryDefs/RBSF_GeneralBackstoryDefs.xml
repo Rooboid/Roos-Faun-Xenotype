@@ -15,6 +15,7 @@
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>
 			<li>SatyrandFaun</li>
+			<li>Minotaur</li>
 			<li>Tribal</li>
 		</spawnCategories>
 		<skillGains>
@@ -44,6 +45,7 @@
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<spawnCategories>
 			<li>SatyrandFaun</li>
+			<li>Minotaur</li>
 			<li>Tribal</li>
 			<li>Pirate</li>
 		</spawnCategories>
@@ -74,6 +76,7 @@
 			<li>Tribal</li>
 			<li>FaunWild</li>
 			<li>SatyrWild</li>
+			<li>MinotaurTribe</li>
 		</spawnCategories>
 		<skillGains>
 			<Crafting>9</Crafting>
@@ -99,7 +102,7 @@
 		<title>firework maker</title>
 		<titleShort>pyrotechnist</titleShort>
 		<slot>Adulthood</slot>
-		<baseDesc>[PAWN_nameDef] manufactured fireworks for spiritual and religious festivals. Being an alchemist of explosions taught [PAWN_objective] a surprising amount about firearms and other explosives, and thankfully enough, the thrill of the bangs and booms never seemed to get old.</baseDesc>
+		<baseDesc>[PAWN_nameDef] manufactured fireworks for spiritual and religious festivals. Being an alchemist of explosions taught [PAWN_objective] a surprising amount about firearms and other kinds explosives, especially the ones that killed.\n\nThe thrill of the bangs and booms of explosives never seemed to get old for [PAWN_nameDef].</baseDesc>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		<spawnCategories>

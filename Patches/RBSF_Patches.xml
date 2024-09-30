@@ -107,6 +107,30 @@
 		</nomatch>
 	</Operation>
 	
+	<!-- Add furdef if not already added -->
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/FurDef[defName="RBM_UnguligradeLegs"]</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+				<FurDef>
+					<defName>RBM_UnguligradeLegs</defName>
+					<noGraphic>true</noGraphic>
+					<bodyTypeGraphicPaths>
+						<Male>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Male>
+						<Female>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Female>
+						<Hulk>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Hulk>
+						<Fat>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Fat>
+						<Thin>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Thin>
+						<Child>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Child>
+						<Baby>Things/Pawn/Humanlike/Unguligrade Legs/RB_UnguligradeLegs</Baby>
+					</bodyTypeGraphicPaths>
+				</FurDef>
+			</value>
+		</nomatch>
+	</Operation>
+	
 	<!--============================== PawnKind Patches ============================-->
 	<!-- Gives DLC / mod-appropriate apparel / mounts to PawnKinds -->
 	
@@ -144,7 +168,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/BackstoryDef[defName="RBSF_ArcherFaun"]/forcedTraits</xpath>
 					<value>
-						<VTE_Ecologist>0</VTE_Ecologist>
+						<VTE_AnimalLover>0</VTE_AnimalLover>
 					</value>
 				</li>
 	
@@ -197,6 +221,62 @@
 						</forcedTraits>
 					</value>
 				</li>
+				
+				<!--Flower Child -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_FlowerChild"]/forcedTraits</xpath>
+					<value>
+						<VTE_Ecologist>0</VTE_Ecologist>
+					</value>
+				</li>
+				
+				<!--Introvert -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_Introvert"]/forcedTraits</xpath>
+					<value>
+						<VTE_Prude>0</VTE_Prude>
+					</value>
+				</li>
+				
+				<!--Charitable -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_Charitable"]/forcedTraits</xpath>
+					<value>
+						<VTE_Prude>0</VTE_Prude>
+					</value>
+				</li>
+				
+				<!--Animal Lover -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_AnimalLover"]/forcedTraits</xpath>
+					<value>
+						<VTE_AnimalLover>0</VTE_AnimalLover>
+					</value>
+				</li>
+				
+				<!-- Palaeontologist -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BackstoryDef[defName="RBSF_Palaeontologist"]/forcedTraits</xpath>
+					<value>
+						<VTE_Neat>0</VTE_Neat>
+					</value>
+				</li>
+				
+				<!-- Marine Biologist -->
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/BackstoryDef[defName="RBSF_MarineBiologist"]/forcedTraits/Undergrounder</xpath>
+					<value>
+						<VTE_ChildOfSea>0</VTE_ChildOfSea>
+					</value>
+				</li>
+				
+				
 			</operations>
 		</match>
 	</Operation>
@@ -245,15 +325,6 @@
 						<forcedTraits>
 							<RCT_Rockhound>0</RCT_Rockhound>
 						</forcedTraits>
-					</value>
-				</li>
-			
-				<!--Flower Child -->
-
-				<li Class="PatchOperationAdd">
-					<xpath>Defs/BackstoryDef[defName="RBSF_FlowerChild"]/forcedTraits</xpath>
-					<value>
-						<RCT_AnimalLover>0</RCT_AnimalLover>
 					</value>
 				</li>
 	
@@ -311,5 +382,20 @@
 			</value>
 		</match>
 	</Operation>
+	
+	<!-- Misc Patch to add Royalty DLC sound (Didn't work when I used MayRequire for some reason -->
+		
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/AbilityDef[defName="RBSF_AbilityTreeWalk"]/comps/li[3]</xpath>
+			<value>
+				<sound>Psycast_Skip_Exit</sound>
+			</value>
+		</match>
+	</Operation>
+
 
 </Patch>
