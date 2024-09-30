@@ -12,7 +12,7 @@ namespace Roos_Faun_Xenotype
             if (base.Pawn.IsHashIntervalTick(120))
             {
                 var numPlants = CountNearPlants(parent.pawn);
-                Log.Message(numPlants + " plant score near " + Pawn.Name.ToStringShort);
+                //Log.Message(numPlants + " plant score near " + Pawn.Name.ToStringShort);
                 //Log.Message("counted " + numPlants + " plants near " + parent.pawn.Name.ToStringShort);
                 float severity;
                 switch (numPlants)
