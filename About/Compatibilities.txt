@@ -2,8 +2,7 @@ Compatibilities:
 
 -------------------------------- Satyrs: --------------------------------
 
-Mod Icons: https://steamcommunity.com/sharedfiles/filedetails/?id=2937699914
-- A mod icon appears on loading screens for this mod. Thanks to Arquebus for granting permission to use the dll in this mod!
+Warning: Some of these compatibilities might be outdated in 1.5.
 
 SpeakUp: https://steamcommunity.com/sharedfiles/filedetails/?id=2502518544
 - Uncouth interraction has custom text. I'm currently working on adding unique dialogue for uncouth pawns when they do other things, like chitchat or cloudwatch. (Uncouth responses have been disabled in RBSF_Patches_SpeakUp, just because I couldn't get them to work correctly.
@@ -173,6 +172,3 @@ Melee Animation: https://steamcommunity.com/sharedfiles/filedetails/?id=29444888
 
 More Religious Origins: https://steamcommunity.com/sharedfiles/filedetails/?id=2620745910
 - Fae faction may have a Druidic structure.
-
-Hair Modding Plus: https://steamcommunity.com/sharedfiles/filedetails/?id=2947607004
-- Alpha masks added to new hairstyles.

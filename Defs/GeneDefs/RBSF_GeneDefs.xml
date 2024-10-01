@@ -96,7 +96,7 @@
 		<defName>RBSF_DeerHead</defName>
 		<label>deer head</label>
 		<labelShortAdj>cervid</labelShortAdj>
-		<description>Carriers of this gene have a cervid head.</description>
+		<description>Carriers of this gene have a humanoid-cervid head.</description>
 		<iconPath>UI/GeneIcons/RBSF_DeerHead</iconPath>
 		<displayCategory>Cosmetic</displayCategory>
 		<displayOrderInCategory>98</displayOrderInCategory>
