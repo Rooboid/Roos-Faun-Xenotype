@@ -38,6 +38,7 @@
 			<li>RBSF_Mechanophobia</li>
 			<li>MinTemp_SmallDecrease</li>
 			<li>MeleeDamage_Weak</li>
+			<li MayRequire="DanielWedemeyer.GeneticNaturalFocus">NaturalFocus</li>
 		</genes>
 	</XenotypeDef>
 </Defs>
