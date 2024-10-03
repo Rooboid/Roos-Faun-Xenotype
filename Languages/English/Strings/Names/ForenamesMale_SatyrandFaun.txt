@@ -56,7 +56,7 @@ balafon
 banjo
 bannyr
 bansuri
-baphomet 
+baphomet
 bara
 baracoco
 barbiton
@@ -201,7 +201,7 @@ faramir
 faramond
 farmyr
 fawn
-fermata 
+fermata
 filk
 fuocoso
 fyron
@@ -533,7 +533,7 @@ whim
 whistle
 woodgod
 wulfram
-xenagos 
+xenagos
 yaredi
 yoram
 yotar

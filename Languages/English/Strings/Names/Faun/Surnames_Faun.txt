@@ -12,7 +12,7 @@ ambrosiar
 andreou
 andreou
 animon
-athenaiou 
+athenaiou
 auletris
 babacchos
 bleat
@@ -76,7 +76,7 @@ goulia
 greco
 grisette
 guaire
-hadjidakis 
+hadjidakis
 hailun
 haimen
 halara
@@ -108,11 +108,11 @@ konos
 kortholt
 kozlov
 krampus
-ktenas 
+ktenas
 lasus
 libdus
 lillebonne
-limenios 
+limenios
 loganach
 lothario
 lyeronius
@@ -182,7 +182,7 @@ sari
 sciolto
 scirtus
 segovia
-sfetsas 
+sfetsas
 sgot
 shortstaff
 shortwood
@@ -192,7 +192,7 @@ smeal
 softwood
 sopra
 soprano
-sotades 
+sotades
 speoran
 stithios
 strevlo
@@ -227,7 +227,7 @@ tolmach
 tomias
 tonian
 tralles
-travlos 
+travlos
 tsatsos
 tuavios
 aronis
@@ -238,10 +238,10 @@ balum
 capripedes
 carillion
 hestika
-hetaera 
+hetaera
 hetaira
 tyrbald
-tyrtaeus 
+tyrtaeus
 ualas
 urchadainn
 valoudil
@@ -282,10 +282,10 @@ kringle
 tannenbaum
 wreathe
 victeros
-vlachos 
+vlachos
 voreas
 vulonis
-xyndas 
+xyndas
 yamas
 yosali
 yovanna
