@@ -2,48 +2,7 @@
 <Patch>
 
 	<!--=========================== Roo's Satyr and Faun Xenotype Patches - Nature Connection =========================-->
-	
-	<!--============================== Vanilla ============================-->
-	<!-- Boosts appropriate stats in relation to the pawn's nature connection stat -->
-	
-	<!-- Patch PlantHarvestYield (Removed for now ) -->
-	
-<!-- 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/StatDef[defName="PlantHarvestYield"]/statFactors</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/StatDef[defName="PlantHarvestYield"]</xpath>
-			<value>
-				<statFactors>
-					<li>RBSF_NatureConnection</li>
-				</statFactors>
-			</value>
-		</nomatch>
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/StatDef[defName="PlantHarvestYield"]/statFactors</xpath>
-			<value>
-				<li>RBSF_NatureConnection</li>
-			</value>
-		</match>
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/StatDef[defName="DrugHarvestYield"]/statFactors</xpath>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/StatDef[defName="DrugHarvestYield"]</xpath>
-			<value>
-				<statFactors>
-					<li>RBSF_NatureConnection</li>
-				</statFactors>
-			</value>
-		</nomatch>
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/StatDef[defName="DrugHarvestYield"]/statFactors</xpath>
-			<value>
-				<li>RBSF_NatureConnection</li>
-			</value>
-		</match>
-	</Operation> -->
-	
+
 	<!-- Patches certain items to reduce Nature Connection stat -->
 	<!--Incendiary Launcher -->
 	
@@ -461,28 +420,125 @@
 		</match>
 	</Operation>
 	
-		<Operation Class="PatchOperationFindMod">
+	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Vanilla Races Expanded - Phytokin</li>
 		</mods>
-			<match Class="PatchOperationAdd">
-				<xpath>Defs/GeneDef[defName="VRE_AnimaAffinity"]/statOffsets</xpath>
-				<value>
-					<RBSF_NatureConnection>0.3</RBSF_NatureConnection>
-				</value>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/GeneDef[defName="VRE_AnimaAffinity"]/statOffsets</xpath>
+			<value>
+				<RBSF_NatureConnection>0.3</RBSF_NatureConnection>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Races Expanded - Phytokin</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/GeneDef[defName="VRE_GauranlenAffinity"]/statOffsets</xpath>
+			<value>
+				<RBSF_NatureConnection>0.3</RBSF_NatureConnection>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Genes</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/GeneDef[defName="AG_ToxGasProducer"]</xpath>
+			<value>
+				<statOffsets>
+					<RBSF_NatureConnection>-0.3</RBSF_NatureConnection>
+				</statOffsets>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Genes</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/GeneDef[defName="AG_RotStinkProducer"]</xpath>
+			<value>
+				<statOffsets>
+					<RBSF_NatureConnection>-0.3</RBSF_NatureConnection>
+				</statOffsets>
+			</value>
 		</match>
 	</Operation>
 	
 		<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>Vanilla Races Expanded - Phytokin</li>
+			<li>Alpha Genes</li>
 		</mods>
-			<match Class="PatchOperationAdd">
-				<xpath>Defs/GeneDef[defName="VRE_GauranlenAffinity"]/statOffsets</xpath>
-				<value>
-					<RBSF_NatureConnection>0.3</RBSF_NatureConnection>
-				</value>
-			</match>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/GeneDef[defName="AG_Polluter"]</xpath>
+			<value>
+				<statOffsets>
+					<RBSF_NatureConnection>-0.5</RBSF_NatureConnection>
+				</statOffsets>
+			</value>
+		</match>
 	</Operation>
+	
+			<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Genes</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/GeneDef[defName="AG_AcidRainMaker"]</xpath>
+			<value>
+				<statOffsets>
+					<RBSF_NatureConnection>-0.5</RBSF_NatureConnection>
+				</statOffsets>
+			</value>
+		</match>
+	</Operation>
+	
+	<!--============================== Vanilla ============================-->
+	<!-- Boosts appropriate stats in relation to the pawn's nature connection stat -->
+	
+	<!-- Patch PlantHarvestYield (Removed for now ) -->
+	
+	<!-- 	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/StatDef[defName="PlantHarvestYield"]/statFactors</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName="PlantHarvestYield"]</xpath>
+			<value>
+				<statFactors>
+					<li>RBSF_NatureConnection</li>
+				</statFactors>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName="PlantHarvestYield"]/statFactors</xpath>
+			<value>
+				<li>RBSF_NatureConnection</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/StatDef[defName="DrugHarvestYield"]/statFactors</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName="DrugHarvestYield"]</xpath>
+			<value>
+				<statFactors>
+					<li>RBSF_NatureConnection</li>
+				</statFactors>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName="DrugHarvestYield"]/statFactors</xpath>
+			<value>
+				<li>RBSF_NatureConnection</li>
+			</value>
+		</match>
+	</Operation> -->
 	
 </Patch>
