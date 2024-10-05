@@ -486,21 +486,6 @@
 		</match>
 	</Operation>
 	
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Alpha Genes</li>
-			<li>Alpha Biomes</li>
-		</mods>
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/GeneDef[defName="AG_AcidRainMaker"]</xpath>
-			<value>
-				<statOffsets>
-					<RBSF_NatureConnection>-0.5</RBSF_NatureConnection>
-				</statOffsets>
-			</value>
-		</match>
-	</Operation>
-	
 	<!--============================== Vanilla ============================-->
 	<!-- Boosts appropriate stats in relation to the pawn's nature connection stat -->
 	
