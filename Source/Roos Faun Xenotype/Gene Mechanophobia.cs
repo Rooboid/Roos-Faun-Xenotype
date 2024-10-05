@@ -12,14 +12,14 @@ namespace Roos_Faun_Xenotype
             {
                 return ThoughtState.Inactive;
             }
-            if (p.genes == null || !p.genes.HasActiveGene(RBSF_DefOf.RBSF_Mechanophobia) || !ThoughtWorker_Mechanophobia.NearMech(p))
+            if (p.genes == null || !p.genes.HasActiveGene(RBSF_DefOf.RBSF_Mechanophobia) || !ThoughtWorker_Mechanophobia.NearScaryMech(p))
             {
                 return ThoughtState.Inactive;
             }
             return ThoughtState.ActiveAtStage(0);
         }
 
-        public static bool NearMech(Pawn pawn)
+        public static bool NearScaryMech(Pawn pawn)
         {
             Map mapHeld = pawn.MapHeld;
             if (mapHeld == null)
@@ -38,7 +38,14 @@ namespace Roos_Faun_Xenotype
                 Pawn nearPawn = intVec.GetFirstPawn(mapHeld);
                 if (nearPawn != null && nearPawn.RaceProps?.FleshType == FleshTypeDefOf.Mechanoid)
                 {
-                    return true;
+                    if (FaunSettings.mechanophobiaAffectsFriendly)
+                    {
+                        return true;
+                    }
+                    if (nearPawn.HostileTo(pawn))
+                    {
+                        return true;
+                    }
                 }
             }
             return false;
@@ -51,7 +58,7 @@ namespace Roos_Faun_Xenotype
     {
         public override bool BreakCanOccur(Pawn pawn)
         {
-            return pawn.Spawned && base.BreakCanOccur(pawn) && ThoughtWorker_Mechanophobia.NearMech(pawn);
+            return pawn.Spawned && base.BreakCanOccur(pawn) && ThoughtWorker_Mechanophobia.NearScaryMech(pawn);
         }
 
         public override bool TryStart(Pawn pawn, string reason, bool causedByMood)
