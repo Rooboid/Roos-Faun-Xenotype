@@ -1,6 +1,4 @@
-﻿using RimWorld;
-using System.Collections.Generic;
-using Verse;
+﻿using Verse;
 
 namespace Roos_Faun_Xenotype
 {
