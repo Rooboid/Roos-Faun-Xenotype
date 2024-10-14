@@ -103,6 +103,9 @@
 			<li>Social</li>
 			<li>Constructing</li>
 		</workDisables>
+		<possessions>
+			<RBSFE_XenotypeIndexFaun MayRequire="Rooboid.SatyrFaun.Expanded">1</RBSFE_XenotypeIndexFaun>
+		</possessions>
 	</BackstoryDef>
 	
 	<!--============================== Faun Backstories - Adulthood ============================-->
@@ -162,6 +165,9 @@
 		<workDisables>
 			<li>ManualDumb</li>
 		</workDisables>
+		<possessions>
+			<RBSFE_XenotypeIndexFaun MayRequire="Rooboid.SatyrFaun.Expanded">1</RBSFE_XenotypeIndexFaun>
+		</possessions>
 	</BackstoryDef>
 	
 	<!--============================== Apiologist ============================-->
