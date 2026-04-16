@@ -202,12 +202,12 @@
 	
 	<!--====================== Adds Xenotypes to Vanilla Factions - PawnKind Defs ======================-->
 	
-	<!-- Adds faun scientists to outlander innocents -->
+	<!-- Adds faun scientists to Empire -->
 		
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers</xpath>
+		<xpath>Defs/FactionDef[defname="Empire"]/pawnGroupMakers</xpath>
 		<match Class="PatchOperationAdd">
-			<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
+			<xpath>Defs/FactionDef[@Name=defname="Empire"]/pawnGroupMakers/li[2]/options</xpath>
 			<value>
 				<RBSF_FaunScientist>0.5</RBSF_FaunScientist>
 			</value>
