@@ -53,7 +53,8 @@ namespace Roos_Faun_Xenotype
             var nearPlantsList = new List<Thing>();
             foreach (var cell in cellList)
             {
-                if (cell == null || !cell.InBounds(mapHeld) || cell.Fogged(mapHeld)) continue;
+                //cell == null || removed as non-nullable
+                if ( !cell.InBounds(mapHeld) || cell.Fogged(mapHeld)) continue;
                 Plant plant = cell.GetPlant(mapHeld);
                 if (plant == null) continue;
                 nearPlantsList.Add(plant);

@@ -18,8 +18,17 @@ namespace Roos_Faun_Xenotype
             float radius = 2 + (2f * this.parent.pawn.GetStatValue(RBSF_DefOf.RBSF_NatureConnection));
 
             base.Apply(target, dest);
-
-            GenExplosion.DoExplosion(target.Cell, map, radius, DamageDefOf.Smoke, null, -1, -1f, null, null, null, null, null, 0f, 1, null, false, null, 0f, 1, 0f, false, null, null, null, true, 1f, 0f, true, null, 1f);
+            // old version
+            // GenExplosion.DoExplosion(target.Cell, map, radius, DamageDefOf.Smoke, null, -1, -1f, null, null, null, null, null, 0f, 1, null, false, null, 0f, 1, 0f, false, null, null, null, true, 1f, 0f, true, null, 1f);
+            GenExplosion.DoExplosion(
+                center: target.Cell,
+                map: map,
+                radius: radius,
+                damType: DamageDefOf.Smoke,
+                instigator: pawn,
+                damAmount: -1,
+                armorPenetration: -1f
+            );
             SporeExplodeInArea(position, map, radius, pawn);
         }
 

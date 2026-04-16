@@ -73,7 +73,8 @@ namespace Roos_Faun_Xenotype
             }
 
             // validate target is tree
-            if (target.Cell != null && target.Cell.InBounds(this.caster.Map) && !target.Cell.Fogged(this.caster.Map))
+            //target.Cell != null && removed as nun-nullable
+            if (target.Cell.InBounds(this.caster.Map) && !target.Cell.Fogged(this.caster.Map))
             {
                 PlantProperties plantProps = target.Cell.GetPlant(this.caster.Map)?.def?.plant;
                 if (plantProps != null && plantProps.IsTree && !plantProps.isStump)
